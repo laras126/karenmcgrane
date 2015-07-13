@@ -747,9 +747,6 @@ th {
   font-size: 0.825rem;
   margin: 0; }
 
-.block {
-  margin-bottom: 1.1rem; }
-
 .block_list-list {
   list-style-type: none;
   margin: 0;
@@ -759,3 +756,8 @@ th {
   color: #9E9E9E;
   font-size: 0.825rem;
   margin: 0; }
+
+.block {
+  margin-bottom: 1.1rem; }
+  .block .contain {
+    border: 1px solid #1C7FA6; }

@@ -1,3 +1,10 @@
 
-// Shameful styles here.
+// Styles to be removed go here.
 
+.block {
+	margin-bottom: $size-base;
+	
+	.contain {
+		border: $border-accent;
+	}
+}

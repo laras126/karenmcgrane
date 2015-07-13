@@ -1,0 +1,64 @@
+{
+    "key": "group_55a4313e5fba8",
+    "title": "Presentation",
+    "fields": [
+        {
+            "key": "field_55a431423a466",
+            "label": "Video",
+            "name": "video",
+            "type": "textarea",
+            "instructions": "Paste the video embed here. Only keep the <code>iframe<\/code> tag, remove any extras.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": 50,
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_55a431893a467",
+            "label": "Slides",
+            "name": "slides",
+            "type": "textarea",
+            "instructions": "Paste the slides embed code here. Again, remove non-<code>iframe<\/code> tags.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": 50,
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": "",
+            "readonly": 0,
+            "disabled": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "presentation"
+            }
+        ]
+    ],
+    "menu_order": 2,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "modified": 1436824850
+}

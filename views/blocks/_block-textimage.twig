@@ -2,10 +2,10 @@
 
 {% block content %}
 	{% if block.textimage_format == 'caption'%}
-		{{block.textimage_image}}
+		<img src="{{block.textimage_image}}" alt="Block image">
 		<p class="block--textimage__caption">{{block.textimage_caption}}</p>
 	{% elseif block.textimage_format == 'paragraph'%}
-		{{block.textimage_image}}
+		<img src="{{block.textimage_image}}" alt="Block image">
 		{{block.textimage_paragraph}}
 	{% endif %}
 {% endblock %}

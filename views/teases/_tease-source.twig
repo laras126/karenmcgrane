@@ -1,6 +1,7 @@
 {% extends "teases/tease.twig" %}
 
 {% block content %}
+<<<<<<< HEAD
 
 	<div class="tease-content">
 		<h5 class="title-tease title-tease--source">
@@ -43,4 +44,8 @@
 		{{function('edit_post_link', 'Edit', '<span class="edit-link">', '</span>', post.ID)}}
 	</div>
 
+=======
+	<h4><a href="{{post.source_url}}" target="blank">{{post.post_title}}</a></h4>
+	<p>{{post.source_blurb}}</p>
+>>>>>>> refactor-simple
 {% endblock %}
