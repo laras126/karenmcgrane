@@ -53,13 +53,9 @@
 			$context['site_footer_copyright'] = get_field('site_footer_copyright', 'options');
 			$context['site_footer_credits'] = get_field('site_footer_credits', 'options');
 
-			// Restrict content pro shortcuts	
-			$context['registration_page'] = get_page_by_title('Register');
-			$context['access'] = rcp_is_active();
-
 			return $context;
 		}
-
+		
 		function add_to_twig($twig){
 			/* this is where you can add your own fuctions to twig */
 			$twig->addExtension(new Twig_Extension_StringLoader());

@@ -5,8 +5,6 @@ module.exports = function(grunt, config) {
         config.jsSrcDir + '*.js'
     ];  
 
-    console.log(jsFileList);
-
 	grunt.config.merge({
 		
 		jshint: {

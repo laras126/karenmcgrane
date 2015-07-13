@@ -15,23 +15,29 @@
 
 	<ul class="block_list-list list--{{display}} list--{{type}}">
 		
-		{% for item in block.list_type_freeform %}
-			<li class="list-item--{{type}}">
-				<h5 class="list-item-title">{{item.item_title}}</h5>
-				<div class="list-item-desc">
-					{{item.item_description}}
-				</div>
-				{% if display == 'major' %}
-					{{item.item_image}}
-				{% endif %}
-			</li>
-		{% endfor %}
-
-		{% for post in block.list_type_connected_content %}
-			<li>
-				{% include 'teases/_tease-' ~ post.post_type ~ '.twig' %}
-			</li>
-		{% endfor %}
+		{% if type == "free_form" %}
+			{% for item in block.list_type_freeform %}
+				<li class="list-item--{{type}}">
+					<h5 class="list-item-title">{{item.item_title}}</h5>
+					<div class="list-item-desc">
+						{{item.item_description}}
+					</div>
+					{% if display == 'major' %}
+						{% if item.item_svg %}
+							{% include 'utility/svg.twig' with { file : item.item_svg, prefix : 'shape' } %}
+						{% elseif item.item_image %}	
+							<img src="{{TimberImage(item.item_image).src}}" alt="{{item.item_title}}">
+						{% endif %}
+					{% endif %}
+				</li>
+			{% endfor %}
+		{% elseif type == "connected_content" %}
+			{% for post in block.list_type_connected_content %}
+				<li>
+					{% include 'teases/_tease-' ~ post.post_type ~ '.twig' %}
+				</li>
+			{% endfor %}
+		{% endif %}
 			
 	</ul> <!-- /.list-{{display}} -->
 
