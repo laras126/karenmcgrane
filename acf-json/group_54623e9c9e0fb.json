@@ -26,29 +26,6 @@
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_559beac9c28af",
-                            "label": "Container",
-                            "name": "contain",
-                            "type": "radio",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": 33,
-                                "class": "",
-                                "id": ""
-                            },
-                            "choices": {
-                                "sm": "Small",
-                                "md": "Medium",
-                                "lg": "Large"
-                            },
-                            "other_choice": 0,
-                            "save_other_choice": 0,
-                            "default_value": "md",
-                            "layout": "horizontal"
-                        },
-                        {
                             "key": "field_558cd0e8f8689",
                             "label": "Heading",
                             "name": "block_heading",
@@ -97,29 +74,6 @@
                     "label": "Text and Image",
                     "display": "row",
                     "sub_fields": [
-                        {
-                            "key": "field_559beb69e48de",
-                            "label": "Container",
-                            "name": "contain",
-                            "type": "radio",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "choices": {
-                                "sm": "Small",
-                                "md": "Medium",
-                                "lg": "Large"
-                            },
-                            "other_choice": 0,
-                            "save_other_choice": 0,
-                            "default_value": "md",
-                            "layout": "horizontal"
-                        },
                         {
                             "key": "field_545a74693eedc",
                             "label": "Text Format",
@@ -231,29 +185,6 @@
                     "label": "List",
                     "display": "block",
                     "sub_fields": [
-                        {
-                            "key": "field_559beb7fe48df",
-                            "label": "Container",
-                            "name": "contain",
-                            "type": "radio",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "choices": {
-                                "sm": "Small",
-                                "md": "Medium",
-                                "lg": "Large"
-                            },
-                            "other_choice": 0,
-                            "save_other_choice": 0,
-                            "default_value": "md",
-                            "layout": "horizontal"
-                        },
                         {
                             "key": "field_54a1792d4f9c2",
                             "label": "List Title",
@@ -512,29 +443,6 @@
                     "display": "row",
                     "sub_fields": [
                         {
-                            "key": "field_559beb92e48e0",
-                            "label": "Container",
-                            "name": "contain",
-                            "type": "radio",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "choices": {
-                                "sm": "Small",
-                                "md": "Medium",
-                                "lg": "Large"
-                            },
-                            "other_choice": 0,
-                            "save_other_choice": 0,
-                            "default_value": "md",
-                            "layout": "horizontal"
-                        },
-                        {
                             "key": "field_54623f85b5036",
                             "label": "Shortcode\/HTML",
                             "name": "html",
@@ -562,29 +470,6 @@
                     "label": "Quote",
                     "display": "row",
                     "sub_fields": [
-                        {
-                            "key": "field_559beba4e48e1",
-                            "label": "Container",
-                            "name": "contain",
-                            "type": "radio",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "choices": {
-                                "sm": "Small",
-                                "md": "Medium",
-                                "lg": "Large"
-                            },
-                            "other_choice": 0,
-                            "save_other_choice": 0,
-                            "default_value": "md",
-                            "layout": "horizontal"
-                        },
                         {
                             "key": "field_558aeb54163d6",
                             "label": "Quote Text",
@@ -653,29 +538,6 @@
                     "label": "Call to Action",
                     "display": "block",
                     "sub_fields": [
-                        {
-                            "key": "field_559bebbbe48e2",
-                            "label": "Container",
-                            "name": "contain",
-                            "type": "radio",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "choices": {
-                                "sm": "Small",
-                                "md": "Medium",
-                                "lg": "Large"
-                            },
-                            "other_choice": 0,
-                            "save_other_choice": 0,
-                            "default_value": "md",
-                            "layout": "horizontal"
-                        },
                         {
                             "key": "field_548af71041917",
                             "label": "Text",
@@ -757,24 +619,29 @@
                 "operator": "==",
                 "value": "post"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "presentation"
+            }
         ]
     ],
-    "menu_order": 0,
+    "menu_order": 3,
     "position": "normal",
     "style": "seamless",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": [
         "the_content",
-        "excerpt",
         "custom_fields",
         "discussion",
         "comments",
+        "slug",
         "author",
         "format",
-        "featured_image",
         "send-trackbacks"
     ],
-    "modified": 1436822042,
-    "local": "json"
+    "modified": 1436824865
 }

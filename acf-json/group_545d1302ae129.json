@@ -151,7 +151,7 @@
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
-                "class": "wysiwg-short",
+                "class": "",
                 "id": ""
             },
             "default_value": "",
@@ -193,6 +193,5 @@
         "featured_image",
         "send-trackbacks"
     ],
-    "modified": 1436822042,
-    "local": "json"
+    "modified": 1436823175
 }

@@ -7,7 +7,7 @@
 		<p class="page-tagline">{{post.summary}}</p>
 	</header>
 
-	{% include 'partials/section-nav.twig'%}
+	{# {% include 'partials/section-nav.twig'%} #}
 	
 	{% for section in post.get_field('sections') %}
 		<section class="page-section" id="{{section.menu_item_title|replace({ (' '): '_' })}}">
