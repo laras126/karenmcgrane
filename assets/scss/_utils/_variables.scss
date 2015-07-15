@@ -16,6 +16,7 @@ $screen-xl:     60em;
 
 $white: 			#F2F2F2;
 $blue: 				#1C7FA6;
+$red: 				#AF3236;
 $l-teal: 			desaturate(#BDF2E3, 10%);
 $green: 			#1BBF54;
 $l-green: 			#D9F2A2;
@@ -28,8 +29,8 @@ $grey: 				#9E9E9E;
 // Color Scheme
 $color-accent-vlight:	$l-green;
 $color-accent-light:	$l-teal;
-$color-accent-med:		$blue;
-$color-accent-dark:		darken($blue, 20%);
+$color-accent-med:		$red;
+$color-accent-dark:		darken($red, 20%);
 
 // Alerts
 $color-alert-danger: 	lighten($l-green, 40%);
@@ -44,7 +45,7 @@ $color-text-medlight: 	lighten($color-text-med, 20%);
 $color-text-light: 		$white;
 
 // Links
-$color-link:			$blue;
+$color-link:			$red;
 $color-link-hover: 		darken($color-link, 20%);
 $color-link-active: 	darken($color-link, 40%);
 

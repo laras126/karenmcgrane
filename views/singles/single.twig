@@ -1,11 +1,49 @@
 {% extends "base.twig" %}
 
 {% block before_content %}
-	{% include 'headers/_header-single.twig' with { class : 'header-single' } %}
+	<header>
+		<div class="contain contain-md">
+
+			{% block before_header_content %}{% endblock %}
+
+			{% block header_content %}
+		
+				{% set display = post.header_display %}
+
+				<h1 class="title-page">{{post.post_title}}</h1>
+
+				{% if display == 'image' %}
+
+					{{post.header_image_desktop}}
+					{{post.header_image_tablet}}
+					{{post.header_image_mobile}}
+
+				{% endif %}
+	
+				{% include 'partials/connected-source.twig' %}
+
+				<p class="lead lead--header">{{post.header_tagline}}</p>
+				<p class="summary summary--header">{{post.header_summary}}</p>
+
+			{% endblock %}
+
+			{% block after_header_content %}{% endblock %}
+
+		</div>
+	</header>
 {% endblock %}
 
 {% block content %}
+
+	{% if post.has_terms('Presentation') %}
+		<h3>Video</h3>
+		{{post.video}}
+		<h3>Slides</h3>
+		{{post.slides}}
+	{% endif %}
+	
 	{% for block in post.get_field('blocks') %} 
 		{% include 'blocks/block-logic.twig' %}
 	{% endfor %}
+
 {% endblock %}

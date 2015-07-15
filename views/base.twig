@@ -10,7 +10,35 @@
         <div class="visually-hidden">{% include 'views/utility/svg-defs.svg' %}</div>
         
         {% block header %}
-            {% include 'headers/_header-site.twig' with { class: 'header-site', role: 'banner', contain: 'contain' } %}
+
+            <header role="banner" class="header header--site">
+            
+                <div class="contain contain-sm">
+                    <h1 class="site-title"><a href="{{site.link}}" title="{{site.name}}" rel="home">{{site.name}}</a></h1>
+                    <p>{{site.description}}</p>
+                </div>
+                
+                <nav class="nav nav--site contain contain-lg" role="navigation">
+                    <ul class="nav__list">
+                    {% for item in menu.items %}
+                        <li class="nav-item nav-item--site">
+                            <a href="{{item.link}}">{{item.title}}</a>
+                            {% if item.get_children %}
+                                <ul class="subnav subnav--site">
+                                {% for child in item.get_children %}
+                                    <li class="subnav-item">
+                                        <a href="{{child.get_link}}">{{child.title}}</a>
+                                    </li>
+                                {% endfor %}
+                                </ul>
+                            {% endif %}
+                        </li>
+                    {% endfor %}
+                    </ul>
+                </nav><!-- #access -->
+
+            </header> <!-- /.header--site -->
+
         {% endblock %}  
         
         <main class="site-main contain contain-md" role="main">

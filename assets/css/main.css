@@ -354,7 +354,7 @@ th {
   padding: 0; }
 
 .special {
-  color: #1C7FA6; }
+  color: #AF3236; }
 
 .meta {
   color: #9E9E9E;
@@ -484,12 +484,12 @@ body {
   color: #333; }
 
 a {
-  color: #1C7FA6;
+  color: #AF3236;
   text-decoration: none; }
   a:hover, a:focus {
-    color: #0d3c4f; }
+    color: #601b1e; }
   a:active {
-    color: black; }
+    color: #100505; }
   a:link {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3); }
 
@@ -576,7 +576,7 @@ input[type="url"],
 input[type="search"],
 input[type="tel"] {
   width: 100%;
-  border: 1px solid #1C7FA6; }
+  border: 1px solid #AF3236; }
   textarea:focus,
   input[type="text"]:focus,
   input[type="password"]:focus,
@@ -612,7 +612,7 @@ select:focus,
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
-  outline: 1px solid #1C7FA6;
+  outline: 1px solid #AF3236;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px; }
 
@@ -652,19 +652,19 @@ fieldset {
       background-color: black;
       color: #bfbfbf; }
   .btn-cta {
-    background-color: #0d3c4f;
+    background-color: #601b1e;
     color: #F2F2F2; }
     .btn-cta:hover {
-      background-color: black;
+      background-color: #100505;
       color: #F2F2F2; }
     .btn-cta:active {
       background-color: black;
       color: #bfbfbf; }
   .btn-readmore {
-    background-color: #1C7FA6;
+    background-color: #601b1e;
     color: #F2F2F2; }
     .btn-readmore:hover {
-      background-color: #0d3c4f;
+      background-color: #100505;
       color: #F2F2F2; }
     .btn-readmore:active {
       background-color: black;
@@ -687,7 +687,7 @@ fieldset {
     background-color: #85eeaa;
     color: #F2F2F2; }
   .alert-cta {
-    background-color: #23a0d2;
+    background-color: #cb494d;
     color: #F2F2F2; }
 
 .alert-img {
@@ -735,12 +735,12 @@ th {
 
 .shape {
   width: 100%;
-  fill: #0d3c4f; }
+  fill: #601b1e; }
 
 .icon {
-  fill: #0d3c4f; }
+  fill: #601b1e; }
   a .icon:hover {
-    fill: #1C7FA6; }
+    fill: #AF3236; }
 
 .tease__meta {
   color: #9E9E9E;
@@ -757,7 +757,17 @@ th {
   font-size: 0.825rem;
   margin: 0; }
 
+.header--site {
+  text-align: center; }
+
+.nav--site ul {
+  list-style-type: none;
+  display: flex; }
+
+.nav--site li {
+  flex: 1; }
+
 .block {
   margin-bottom: 1.1rem; }
   .block .contain {
-    border: 1px solid #1C7FA6; }
+    border: 1px solid #AF3236; }

@@ -21,7 +21,7 @@
 		'not_found_in_trash'  => __( 'Not found in Trash', 'tbx' ),
 	);
 	$rewrite = array(
-		'slug'                => 'Sources',
+		'slug'                => 'sources',
 		'with_front'          => true,
 		'pages'               => true,
 		'feeds'               => true,
@@ -45,7 +45,7 @@
 		'exclude_from_search' => true,
 		'publicly_queryable'  => true,
 		'rewrite'             => $rewrite,
-		'capability_type'     => 'page',
+		'capability_type'     => 'post',
 	);
 	register_post_type( 'source', $args );
 
@@ -73,11 +73,17 @@
 		'not_found'           => __( 'Not found', 'text_domain' ),
 		'not_found_in_trash'  => __( 'Not found in Trash', 'text_domain' ),
 	);
+	$rewrite = array(
+		'slug'                => 'presentations',
+		'with_front'          => true,
+		'pages'               => true,
+		'feeds'               => true,
+	);
 	$args = array(
 		'label'               => __( 'presentation', 'text_domain' ),
 		'description'         => __( 'The Presentation post type.', 'text_domain' ),
 		'labels'              => $labels,
-		'supports'            => array( 'title', 'excerpt', 'thumbnail', 'permalink'),
+		'supports'            => array( 'title', 'excerpt', 'thumbnail'),
 		'taxonomies'          => array( 'category', 'post_tag' ),
 		'hierarchical'        => false,
 		'public'              => true,
@@ -91,7 +97,11 @@
 		'has_archive'         => true,		
 		'exclude_from_search' => false,
 		'publicly_queryable'  => true,
-		'capability_type'     => 'post',
+		'rewrite'             => $rewrite,
+		'capability_type'     => 'page',
 	);
 	register_post_type( 'presentation', $args );
+ 
+
+
  ?>
