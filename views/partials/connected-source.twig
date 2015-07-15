@@ -1,0 +1,9 @@
+{% if post.connected_source %}
+	{% for item in post.get_field('connected_source') %}
+		{% if post.post_type == 'post' %}
+			<p>Originally published on {{item.souce_link ? '<a href="' ~ item.source_link ~ '" target="blank">' }}{{item.source_publication}}{{item.source_link ? '</a>'}}.</p>
+		{% elseif post.post_type == 'presentation' %}
+			<p>Presented at <a href="{{item.source_link}}" target="blank">{{item.source_publication}}</a>{{ item.source_date ? ', ' ~ item.source_date|date('F j, Y') }}</p>
+		{% endif %}
+	{% endfor %}
+{% endif %}
