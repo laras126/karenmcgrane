@@ -57,7 +57,7 @@
     letter-spacing: 1px;
 }
 
-@mixin meta($color: $color-text-med, $margin: false) {
+@mixin meta($color: $color-text-med, $margin: true) {
     color: $color;
     font-size: $size-sml;
 
