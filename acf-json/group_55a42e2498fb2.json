@@ -1,13 +1,13 @@
 {
     "key": "group_55a42e2498fb2",
-    "title": "Connected Source",
+    "title": "Primary Source",
     "fields": [
         {
             "key": "field_55a42e28911aa",
-            "label": "Source",
+            "label": "Primary Source",
             "name": "connected_source",
             "type": "relationship",
-            "instructions": "If this article is connected to a source e.g. article or event, select it here.",
+            "instructions": "If this post is connected to a particular source e.g. article that is being republished or an event for a presentation \u2013 citations should be in a List Block of the type Connected Content.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -52,5 +52,5 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "modified": 1436824787
+    "modified": 1438182964
 }
