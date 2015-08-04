@@ -21,7 +21,7 @@
             "taxonomy": [],
             "allow_null": 0,
             "multiple": 0,
-            "return_format": "object",
+            "return_format": "id",
             "ui": 1
         }
     ],
@@ -40,5 +40,5 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "modified": 1438710842
+    "modified": 1438714149
 }
