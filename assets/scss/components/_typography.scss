@@ -22,7 +22,16 @@ html {
 body {
 	font-family: $font-body;
 	font-size: $size-base; 
-	color: $color-text-dark;
+	color: $color-body-text;
+
+	.wf-loading & {
+		font-family: $font-sans-fallback;
+
+		h1, h2, h3, h4, h5, h6 {
+			font-family: $font-sans-fallback;
+			font-weight: $font-weight-heading;
+		}
+	}
 }
 
 a {
@@ -94,22 +103,20 @@ strong {
 blockquote {
 	font-size: $size-h4;
 	font-style: italic;
+	margin-left: $size-h3;
 
 	&:before {
-		// background-image: url(../img/svgs/quotes-left.svg);
-		// background-repeat: no-repeat;
+		background-image: url(../img/svg-min/quotes-left.min.svg);
+		background-repeat: no-repeat;
+		opacity: 0.7;
 
-		// content: " ";
+		content: " ";
 		
-		// width: $size-h3;
-		// height: $size-h3;
+		width: $size-h3;
+		height: $size-h3;
 		
-		// position: absolute;
-		// left: -$size-h4;
-
-		// @include bp(med) {
-		// 	left: -$size-h3;
-		// }	
+		position: absolute;
+		left: 0;
 	}
 }
 
@@ -120,7 +127,7 @@ p {
 
 
 /// @group typography-helpers
-/// @content [Semantic classes for typography. These may be extended in their associated partial.]
+/// @description [Semantic classes for typography. These may be extended in their associated partial.]
 
 .lead {
 	font-size: $size-h4;
