@@ -93,7 +93,7 @@
                             },
                             "other_choice": 0,
                             "save_other_choice": 0,
-                            "default_value": "paragraph",
+                            "default_value": "",
                             "layout": "vertical"
                         },
                         {
@@ -609,22 +609,8 @@
             },
             {
                 "param": "post_type",
-                "operator": "==",
-                "value": "page"
-            }
-        ],
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "post"
-            }
-        ],
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "presentation"
+                "operator": "!=",
+                "value": "source"
             }
         ]
     ],
@@ -644,5 +630,5 @@
         "featured_image",
         "send-trackbacks"
     ],
-    "modified": 1438183081
+    "modified": 1438709848
 }

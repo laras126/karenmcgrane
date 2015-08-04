@@ -4,10 +4,10 @@
     "fields": [
         {
             "key": "field_55a42e28911aa",
-            "label": "Primary Source",
+            "label": "Connected Source",
             "name": "connected_source",
-            "type": "relationship",
-            "instructions": "If this post is connected to a particular source e.g. article that is being republished or an event for a presentation \u2013 citations should be in a List Block of the type Connected Content.",
+            "type": "post_object",
+            "instructions": "Select a single connected source. If this is a presentation, select the connected event. If it's an article, select the connected publication.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -19,30 +19,18 @@
                 "source"
             ],
             "taxonomy": [],
-            "filters": [
-                "search",
-                "post_type",
-                "taxonomy"
-            ],
-            "elements": "",
-            "min": "",
-            "max": "",
-            "return_format": "object"
+            "allow_null": 0,
+            "multiple": 0,
+            "return_format": "object",
+            "ui": 1
         }
     ],
     "location": [
         [
             {
                 "param": "post_type",
-                "operator": "==",
-                "value": "post"
-            }
-        ],
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "presentation"
+                "operator": "!=",
+                "value": "source"
             }
         ]
     ],
@@ -52,5 +40,5 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "modified": 1438182964
+    "modified": 1438710842
 }

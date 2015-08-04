@@ -164,22 +164,8 @@
         [
             {
                 "param": "post_type",
-                "operator": "==",
-                "value": "page"
-            }
-        ],
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "post"
-            }
-        ],
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "presentation"
+                "operator": "!=",
+                "value": "source"
             }
         ]
     ],
@@ -200,5 +186,5 @@
         "featured_image",
         "send-trackbacks"
     ],
-    "modified": 1436825467
+    "modified": 1438709830
 }
