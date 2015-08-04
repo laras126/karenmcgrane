@@ -161,7 +161,7 @@ $(document).ready(function() {
 	// Plugins
 	// ----
 
-	$('.site-main').fitVids();
+	$('.site-main').fitVids({ customSelector: "iframe" });
 
 
 	// ----
