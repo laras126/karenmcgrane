@@ -1,0 +1,8 @@
+{% extends "teases/tease.twig" %}
+
+{% block tease_content %}
+	<h4><a href="{{post.guid}}">{{post.post_title}}</a></h4>
+	{% include 'partials/connected-source.twig' %}
+	<p>{{post.header_tagline}}</p>
+	<a href="{{post.guid}}" class="btn btn-readmore">Read more...</a>
+{% endblock %}

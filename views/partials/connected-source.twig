@@ -1,10 +1,10 @@
 {% if post.connected_source %}
-	{% for item in post.get_field('connected_source') %}
+	{% for item in post.connected_source %}
 		
 		{% set item = TimberPost(item) %}
 		
 		<p class="meta">
-		{% if post.post_type == 'post' %}
+		{% if post.post_type == 'article' %}
 			Originally published in {{item.source_url ? '<a href="' ~ item.source_url ~ '" target="blank">' }}{{item.source_publication}}{{item.source_url ? '</a>'}}.
 		{% elseif post.post_type == 'presentation' %}
 			Presented at {{item.source_url ? '<a href="' ~ item.source_url ~ '" target="blank">' }}{{item.source_publication}}{{item.source_url ? '</a>'}}{{ item.source_date ? ', ' ~ item.source_date|date('F j, Y') }}
