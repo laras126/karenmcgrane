@@ -1,19 +1,16 @@
 {% if post.connected_source %}
-	{% for item in post.connected_source %}
-		
-		{% set item = TimberPost(item) %}
-		
-		<p class="meta">
-		{% if post.post_type == 'article' %}
-			Originally published in {{item.source_url ? '<a href="' ~ item.source_url ~ '" target="blank">' }}{{item.source_publication}}{{item.source_url ? '</a>'}}.
-		{% elseif post.post_type == 'presentation' %}
-			Presented at {{item.source_url ? '<a href="' ~ item.source_url ~ '" target="blank">' }}{{item.source_publication}}{{item.source_url ? '</a>'}}{{ item.source_date ? ', ' ~ item.source_date|date('F j, Y') }}
-		{% endif %}
+	{% set item = TimberPost(post.connected_source) %}
 
-		{% if item.can_edit %}
-		    <a style="color: #55AD75;" href="{{item.edit_link}}"><em><strong>Edit Source</strong></em></a>
-		{% endif %}
-		</p>
+	<p class="meta">
+	{% if post.post_type == 'article' %}
+		Originally published in {{item.source_url ? '<a href="' ~ item.source_url ~ '" target="blank">' }}{{item.source_publication}}{{item.source_url ? '</a>'}}.
+	{% elseif post.post_type == 'presentation' %}
+		Presented at {{item.source_url ? '<a href="' ~ item.source_url ~ '" target="blank">' }}{{item.source_publication}}{{item.source_url ? '</a>'}}{{ item.source_date ? ', ' ~ item.source_date|date('F j, Y') }}
+	{% endif %}
 
-	{% endfor %}
+	{% if item.can_edit %}
+	    <a class="link--edit" href="{{item.edit_link}}">Edit Source</a>
+	{% endif %}
+	</p>
+
 {% endif %}
