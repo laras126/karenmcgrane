@@ -1,0 +1,49 @@
+{
+    "key": "group_55c0fc8b68c31",
+    "title": "Citations",
+    "fields": [
+        {
+            "key": "field_55c0fc90b7353",
+            "label": "Citations",
+            "name": "citations",
+            "type": "relationship",
+            "instructions": "Connect cited sources here. They will display as a list below the primary content.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "source"
+            ],
+            "taxonomy": [],
+            "filters": [
+                "search",
+                "post_type",
+                "taxonomy"
+            ],
+            "elements": "",
+            "min": "",
+            "max": "",
+            "return_format": "object"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "!=",
+                "value": "source"
+            }
+        ]
+    ],
+    "menu_order": 8,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "modified": 1438711054
+}
