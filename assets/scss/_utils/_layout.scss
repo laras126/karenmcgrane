@@ -9,6 +9,7 @@ $screens: (
 );
  
 .contain {
+	position: relative;
 	margin: 0 auto;
 	padding: 0 $size-base;
 }
