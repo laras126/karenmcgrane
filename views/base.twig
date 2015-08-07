@@ -18,24 +18,7 @@
                     <p>{{site.description}}</p>
                 </div>
                 
-                <nav class="nav nav--site contain contain-lg" role="navigation">
-                    <ul class="nav__list">
-                    {% for item in menu.items %}
-                        <li class="nav-item nav-item--site">
-                            <a href="{{item.link}}">{{item.title}}</a>
-                            {% if item.get_children %}
-                                <ul class="subnav subnav--site">
-                                {% for child in item.get_children %}
-                                    <li class="subnav-item">
-                                        <a href="{{child.get_link}}">{{child.title}}</a>
-                                    </li>
-                                {% endfor %}
-                                </ul>
-                            {% endif %}
-                        </li>
-                    {% endfor %}
-                    </ul>
-                </nav><!-- #access -->
+                {% include 'navs/_nav-site.twig' %}
 
             </header> <!-- /.header--site -->
 
