@@ -2,14 +2,13 @@
 
 {% block tease_content %}
 	<div class="contain-flex">
-		<div class="unit tease__main--article">
+		<div class="unit tease__main--default">
 			<h4><a href="{{post.link}}">{{post.post_title}}</a></h4>
 			{% include 'partials/connected-source.twig' %}
 			<p>{{post.header_tagline}}</p>
 		</div>
-		<div class="unit tease__more--article">
+		<div class="unit tease__more--default">
 			<a href="{{post.link}}">
-				{# {% include 'utility/svg.twig' with { file : 'arrow-right', prefix : 'icon' } %} #}
 				&rsaquo;
 			</a>
 		</div>

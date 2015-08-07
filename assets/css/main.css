@@ -764,21 +764,24 @@ th {
   color: #9E9E9E;
   font-size: 0.825rem; }
 
-.tease--article {
+.tease--article,
+.tease--presentation {
   border-bottom: 1px dotted #d1d1d1;
   padding-bottom: 1.43rem; }
-  .tease--article:last-child {
+  .tease--article:last-child,
+  .tease--presentation:last-child {
     border-bottom: none; }
-  .tease--article .unit {
+  .tease--article .unit,
+  .tease--presentation .unit {
     align-self: center; }
 
-.tease__more--article {
+.tease__more--default {
   flex: 1 0; }
-  .tease__more--article a {
+  .tease__more--default a {
     font-size: 4.125rem;
     padding-left: 1.1rem; }
 
-.tease__main--article {
+.tease__main--default {
   flex: 6 0; }
 
 .block_list-list {
