@@ -40,15 +40,3 @@ $buttons: (
     }
 }
 
-.btn--readmore {
-    float: right;
-
-    .contain-flex {
-        justify-content: flex-end;
-    }
-
-    .icon {
-        align-self: center;
-        fill: $color-link;
-    }
-}
