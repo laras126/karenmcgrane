@@ -1,11 +1,7 @@
-<div class="meta contain-flex">
-
 {% if site_footer_copyright %}
-	<p>&copy; {{site_footer_copyright}}.</p>
+	<div class="footer__copy"><p>&copy; {{site_footer_copyright}}.</p></div>
 {% endif %}
 
 {% if site_footer_credits %}
-	<p>{{site_footer_credits}}</p>
+	<div class="footer__credits">{{site_footer_credits}}</div>
 {% endif %}
-
-</div>

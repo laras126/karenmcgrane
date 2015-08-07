@@ -17,7 +17,7 @@ $screen-xl:     60em;
 $white: 			#F2F2F2;
 $blue: 				#3C7996;
 $red: 				#AF3236;
-$l-teal: 			desaturate(#BDF2E3, 10%);
+$l-teal: 			#BDF2E3;
 $green: 			#1BBF54;
 $l-green: 			#D9F2A2;
 $yellow: 			#FFBC2A;
@@ -118,7 +118,7 @@ $font-weight-strong: 	900;
 // ---- Utilities 
 // ----
 
-$border-accent: 	1px solid $color-accent-med;
+$border-accent: 	1px dotted $color-text-medlight;
 
 // Z-Index Scale
 $z-base: 			1;
