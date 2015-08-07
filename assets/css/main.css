@@ -772,6 +772,12 @@ th {
   color: #9E9E9E;
   font-size: 0.825rem; }
 
+.single__citations {
+  list-style-type: none;
+  padding-left: 0; }
+  .single__citations li {
+    color: #9E9E9E; }
+
 .header--site {
   text-align: center; }
 
