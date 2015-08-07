@@ -124,6 +124,12 @@
 		'not_found'           => __( 'Not found', 'text_domain' ),
 		'not_found_in_trash'  => __( 'Not found in Trash', 'text_domain' ),
 	);
+	$rewrite = array(
+		'slug'                => 'articles',
+		'with_front'          => true,
+		'pages'               => true,
+		'feeds'               => true,
+	);
 	$args = array(
 		'label'               => __( 'Article', 'text_domain' ),
 		'description'         => __( 'Article Description', 'text_domain' ),
