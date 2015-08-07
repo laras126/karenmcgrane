@@ -1,12 +1,17 @@
 {% extends "teases/tease.twig" %}
 
 {% block tease_content %}
-	<h4><a href="{{post.link}}">{{post.post_title}}</a></h4>
-	{% include 'partials/connected-source.twig' %}
-	<p>{{post.header_tagline}}</p>
-	<a href="{{post.link}}" class="btn--readmore">
-		<span class="contain-flex">
-			<span>Read more</span> {% include 'utility/svg.twig' with { file : 'arrow-right', prefix : 'icon' } %}
-		</span>
-	</a>
+	<div class="contain-flex">
+		<div class="unit tease__main--article">
+			<h4><a href="{{post.link}}">{{post.post_title}}</a></h4>
+			{% include 'partials/connected-source.twig' %}
+			<p>{{post.header_tagline}}</p>
+		</div>
+		<div class="unit tease__more--article">
+			<a href="{{post.link}}">
+				{# {% include 'utility/svg.twig' with { file : 'arrow-right', prefix : 'icon' } %} #}
+				&rsaquo;
+			</a>
+		</div>
+	</div>
 {% endblock %}

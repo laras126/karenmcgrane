@@ -1,3 +1,40 @@
 .tease--article {
-	@include clearfix;
+	// @include clearfix;
+	border-bottom: $border-accent;
+	padding-bottom: $size-h4;
+
+	&:last-child {
+		border-bottom: none;
+	}
+
+	.unit {
+		align-self: center;
+		
+	}
 }
+
+.tease__more--article {
+	flex: 1 0;
+	a {
+		font-size: $size-h1*1.5;
+		padding-left: $size-base;
+	}
+}
+
+.tease__main--article {
+	flex: 6 0;
+}
+
+
+// .article__readmore {
+//     float: right;
+
+//     .contain-flex {
+//         justify-content: flex-end;
+//     }
+
+//     .icon {
+//         align-self: center;
+//         fill: $color-link;
+//     }
+// }
