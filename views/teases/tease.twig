@@ -8,5 +8,7 @@
 		<a href="{{post.guid}}" class="btn btn-readmore">Read more...</a>
 	{% endblock %}
 
-	{% block after_tease_content %}{% endblock %}
+	{% block after_tease_content %}
+		{% include 'footers/_footer-tease.twig' %}
+	{% endblock %}
 </article>
