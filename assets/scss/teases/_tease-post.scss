@@ -15,11 +15,12 @@
 
 .tease__more--default {
 	flex: 1 0;
-	a {
-		font-size: $size-h1*1.5;
-		padding-left: $size-base;
-	}
 }
+
+	.more__icon {
+		font-size: $size-h1*1.5;
+		padding-left: $size-base;	
+	}
 
 .tease__main--default {
 	flex: 6 0;
