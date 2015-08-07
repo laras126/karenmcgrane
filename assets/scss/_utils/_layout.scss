@@ -25,6 +25,10 @@ $screens: (
 	flex-flow: row wrap;
 }
 
+.unit {
+	flex: 1 0;
+}
+
 .contain-flex .tease-source {
 
 	@include bp(md) {
