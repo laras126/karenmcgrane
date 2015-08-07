@@ -398,10 +398,10 @@ th {
   padding: 0 1.1rem; }
 
 .contain-sm {
-  max-width: 30em; }
+  max-width: 36em; }
 
 .contain-md {
-  max-width: 40em; }
+  max-width: 43em; }
 
 .contain-lg {
   max-width: 50em; }
@@ -417,7 +417,7 @@ th {
   padding-left: 1.1rem;
   padding-right: 1.1rem;
   padding-bottom: 1.1rem; }
-  @media (min-width: 40em) {
+  @media (min-width: 43em) {
     .contain-flex .tease-source {
       margin-right: 1%;
       margin-left: 1%;
@@ -690,7 +690,7 @@ fieldset {
 .alert {
   padding: 1.1rem;
   display: flex; }
-  @media (min-width: 30em) {
+  @media (min-width: 36em) {
     .alert {
       margin-right: -1.1rem;
       margin-left: -1.1rem; } }
@@ -782,12 +782,13 @@ th {
     color: #9E9E9E;
     font-size: 0.825rem; }
 
-.footer__copy {
-  float: left; }
-
-.footer__credits {
-  float: right;
-  text-align: right; }
+@media (min-width: 36em) {
+  .footer__chunk--copy {
+    float: left;
+    text-align: left; }
+  .footer__chunk--credits {
+    float: right;
+    text-align: right; } }
 
 .single__citations {
   list-style-type: none;
