@@ -458,11 +458,23 @@ body {
 img {
   max-width: 100%; }
 
+.header--site {
+  text-align: center; }
+
 .header--page__tagline {
   margin-bottom: 20px; }
 
 .header-single {
   margin-bottom: 1.1rem; }
+
+.nav__list--site {
+  list-style-type: none;
+  padding-left: 0; }
+
+.nav__item--site {
+  display: inline-block;
+  margin-left: 1.1rem;
+  margin-right: 1.1rem; }
 
 .nav-prev,
 .nav-next {
@@ -795,13 +807,3 @@ th {
   padding-left: 0; }
   .single__citations li {
     color: #9E9E9E; }
-
-.header--site {
-  text-align: center; }
-
-.nav--site ul {
-  list-style-type: none;
-  display: flex; }
-
-.nav--site li {
-  flex: 1; }

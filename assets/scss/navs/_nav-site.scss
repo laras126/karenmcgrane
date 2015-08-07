@@ -1,13 +1,15 @@
 
-.nav-site {
+.nav--site {
 
 }
 
-.nav-item-site {
-
+.nav__list--site {
+	list-style-type: none;
+	padding-left: 0;
 }
 
-.nav-subnav-site {
-
+.nav__item--site {
+	display: inline-block;
+	margin-left: $size-base;
+	margin-right: $size-base;
 }
-

@@ -1,0 +1,23 @@
+{% extends 'navs/nav.twig' %}
+
+{% set class = 'nav--site' %}
+{% set role = 'navigation' %}
+
+{% block nav_content %}    
+    <ul class="nav__list--site">
+    {% for item in menu.items %}
+        <li class="nav__item--site">
+            <a href="{{item.link}}">{{item.title}}</a>
+            {% if item.get_children %}
+                <ul class="subnav--site">
+                {% for child in item.get_children %}
+                    <li class="subnav__item">
+                        <a href="{{child.get_link}}">{{child.title}}</a>
+                    </li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+        </li>
+    {% endfor %}
+    </ul>
+{% endblock %}
