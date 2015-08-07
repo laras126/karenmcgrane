@@ -410,6 +410,9 @@ th {
   display: flex;
   flex-flow: row wrap; }
 
+.unit {
+  flex: 1 0; }
+
 .contain-flex .tease-source {
   margin-top: 1%;
   margin-bottom: 1%;
@@ -457,31 +460,6 @@ body {
 
 img {
   max-width: 100%; }
-
-.header--site {
-  text-align: center; }
-
-.header--page__tagline {
-  margin-bottom: 20px; }
-
-.header-single {
-  margin-bottom: 1.1rem; }
-
-.nav__list--site {
-  list-style-type: none;
-  padding-left: 0; }
-
-.nav__item--site {
-  display: inline-block;
-  margin-left: 1.1rem;
-  margin-right: 1.1rem; }
-
-.nav-prev,
-.nav-next {
-  flex: 1 0; }
-
-.nav-prev {
-  text-align: right; }
 
 html {
   font-size: 1.1rem;
@@ -688,17 +666,9 @@ fieldset {
       background-color: black;
       color: #bfbfbf; }
 
-.btn--readmore {
-  float: right; }
-  .btn--readmore .contain-flex {
-    justify-content: flex-end; }
-  .btn--readmore .icon {
-    align-self: center;
-    fill: #3C7996; }
-
-.link--edit {
+.link--edit a {
   color: #FFBC2A;
-  font-weight: 900; }
+  font-style: italic; }
 
 .alert {
   padding: 1.1rem;
@@ -765,17 +735,51 @@ th {
 .shape {
   width: 100%; }
 
+.header--site {
+  text-align: center; }
+
+.header--page__tagline {
+  margin-bottom: 20px; }
+
+.header-single {
+  margin-bottom: 1.1rem; }
+
+.nav__list--site {
+  list-style-type: none;
+  padding-left: 0; }
+
+.nav__item--site {
+  display: inline-block;
+  margin-left: 1.1rem;
+  margin-right: 1.1rem; }
+
+.nav-prev,
+.nav-next {
+  flex: 1 0; }
+
+.nav-prev {
+  text-align: right; }
+
 .tease__meta {
   color: #9E9E9E;
   font-size: 0.825rem; }
 
-.tease--article:before,
-.tease--article:after {
-  content: " ";
-  display: table; }
+.tease--article {
+  border-bottom: 1px dotted #d1d1d1;
+  padding-bottom: 1.43rem; }
+  .tease--article:last-child {
+    border-bottom: none; }
+  .tease--article .unit {
+    align-self: center; }
 
-.tease--article:after {
-  clear: both; }
+.tease__more--article {
+  flex: 1 0; }
+  .tease__more--article a {
+    font-size: 4.125rem;
+    padding-left: 1.1rem; }
+
+.tease__main--article {
+  flex: 6 0; }
 
 .block_list-list {
   list-style-type: none;

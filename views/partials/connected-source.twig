@@ -8,9 +8,7 @@
 		Presented at {{item.source_url ? '<a href="' ~ item.source_url ~ '" target="blank">' }}{{item.source_publication}}{{item.source_url ? '</a>'}}{{ item.source_date ? ', ' ~ item.source_date|date('F j, Y') }}
 	{% endif %}
 
-	{% if item.can_edit %}
-	    <a class="link--edit" href="{{item.edit_link}}">Edit Source</a>
-	{% endif %}
+	{% include 'utility/edit-link.twig' %}
 	</p>
 
 {% endif %}
