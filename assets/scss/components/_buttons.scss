@@ -6,8 +6,7 @@ $buttons: (
     danger:     ($color-alert-danger, $color-text-light),
     warning:    ($color-alert-warning, $color-text-light),
     success:    ($color-alert-success, $color-text-light),
-    cta:        ($color-cta-bkgd, $color-cta-text),
-    readmore:   ($color-accent-dark, $color-text-light)
+    cta:        ($color-cta-bkgd, $color-cta-text)
 );
  
 .btn {
@@ -16,11 +15,15 @@ $buttons: (
     margin-top: $size-sml;
     margin-bottom: $size-sml;
 
+    .icon {
+        fill: $color-text-light;   
+    }
+
     @each $name, $colors in $buttons {
         $bgcolor: nth($colors, 1);
         $fontcolor: nth($colors, 2);
 
-        &-#{$name} {
+        &--#{$name} {
             // TODO: Need to deal with hover styles.
             background-color: $bgcolor;
             color: $fontcolor;
@@ -34,5 +37,18 @@ $buttons: (
                 color: darken($fontcolor, 20%);
             }
         }
+    }
+}
+
+.btn--readmore {
+    float: right;
+
+    .contain-flex {
+        justify-content: flex-end;
+    }
+
+    .icon {
+        align-self: center;
+        fill: $color-link;
     }
 }

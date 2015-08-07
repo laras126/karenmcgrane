@@ -649,51 +649,52 @@ fieldset {
   padding: 0.66rem;
   margin-top: 0.825rem;
   margin-bottom: 0.825rem; }
-  .btn-danger {
+  .btn .icon {
+    fill: #F2F2F2; }
+  .btn--danger {
     background-color: white;
     color: #F2F2F2; }
-    .btn-danger:hover {
+    .btn--danger:hover {
       background-color: #9999ff;
       color: #F2F2F2; }
-    .btn-danger:active {
+    .btn--danger:active {
       background-color: blue;
       color: #bfbfbf; }
-  .btn-warning {
+  .btn--warning {
     background-color: #FFBC2A;
     color: #F2F2F2; }
-    .btn-warning:hover {
+    .btn--warning:hover {
       background-color: #c38600;
       color: #F2F2F2; }
-    .btn-warning:active {
+    .btn--warning:active {
       background-color: #2a1d00;
       color: #bfbfbf; }
-  .btn-success {
+  .btn--success {
     background-color: #1BBF54;
     color: #F2F2F2; }
-    .btn-success:hover {
+    .btn--success:hover {
       background-color: #0e662d;
       color: #F2F2F2; }
-    .btn-success:active {
+    .btn--success:active {
       background-color: black;
       color: #bfbfbf; }
-  .btn-cta {
+  .btn--cta {
     background-color: #AF3236;
     color: #F2F2F2; }
-    .btn-cta:hover {
+    .btn--cta:hover {
       background-color: #601b1e;
       color: #F2F2F2; }
-    .btn-cta:active {
+    .btn--cta:active {
       background-color: black;
       color: #bfbfbf; }
-  .btn-readmore {
-    background-color: #AF3236;
-    color: #F2F2F2; }
-    .btn-readmore:hover {
-      background-color: #601b1e;
-      color: #F2F2F2; }
-    .btn-readmore:active {
-      background-color: black;
-      color: #bfbfbf; }
+
+.btn--readmore {
+  float: right; }
+  .btn--readmore .contain-flex {
+    justify-content: flex-end; }
+  .btn--readmore .icon {
+    align-self: center;
+    fill: #3C7996; }
 
 .link--edit {
   color: #FFBC2A;
@@ -759,21 +760,22 @@ th {
 .icon {
   width: 1.1rem;
   height: 1.1rem;
-  display: block;
-  margin: 0 auto; }
+  display: inline-block; }
 
 .shape {
-  width: 100%;
-  fill: #AF3236; }
-
-.icon {
-  fill: #AF3236; }
-  a .icon:hover {
-    fill: #3C7996; }
+  width: 100%; }
 
 .tease__meta {
   color: #9E9E9E;
   font-size: 0.825rem; }
+
+.tease--article:before,
+.tease--article:after {
+  content: " ";
+  display: table; }
+
+.tease--article:after {
+  clear: both; }
 
 .block_list-list {
   list-style-type: none;
