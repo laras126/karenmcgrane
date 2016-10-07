@@ -6,7 +6,7 @@
 	<p>{{post.source_blurb}}</p>
 
 	{% if post.terms('category') %}
-		<p class="meta">
+		<p class="meta-dark">
 			<span class="meta-dark">Category: </span>
 			{% for type in post.terms('category') %}
 				{{type.name}}{{loop.last ? '' : ', '}}
@@ -15,8 +15,8 @@
 	{% endif %}
 
 	{% if post.terms('source_type') %}
-		<p class="meta">
-			<span class="meta-dark">Type: </span>
+		<p class="meta-dark">
+			Type:
 			{% for type in post.terms('source_type') %}
 				{{type.name}}{{loop.last ? '' : ', '}}
 			{% endfor %}
