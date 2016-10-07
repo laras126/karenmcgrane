@@ -1,7 +1,7 @@
 {% if post.connected_source %}
 	{% set item = TimberPost(post.connected_source) %}
 
-	<p class="meta">
+	<p class="meta-dark">
 	{% if post.post_type == 'article' %}
 		Originally published in {{item.source_url ? '<a href="' ~ item.source_url ~ '" target="blank">' }}{{item.source_publication}}{{item.source_url ? '</a>'}}.
 	{% elseif post.post_type == 'presentation' %}
