@@ -5,7 +5,5 @@
 {% set n_role = ' role="' ~ role ~ '"' %}
 
 <nav{{ class ? n_class }}{{role ? n_role }}>
-	<div class="contain {{contain}}">
-		{% block nav_content %}{% endblock %}
-	</div>
+	{% block nav_content %}{% endblock %}
 </nav>
