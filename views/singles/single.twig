@@ -1,36 +1,7 @@
 {% extends "base.twig" %}
 
 {% block before_content %}
-	<header>
-		<div class="contain-md">
-
-			{% block before_header_content %}{% endblock %}
-
-			{% block header_content %}
-
-				{% set display = post.header_display %}
-
-				<h1 class="title-page">{{post.post_title}}</h1>
-
-				{% if display == 'image' %}
-
-					{{post.header_image_desktop}}
-					{{post.header_image_tablet}}
-					{{post.header_image_mobile}}
-
-				{% endif %}
-
-				{% include 'partials/connected-source.twig' %}
-
-				<p class="lead lead--header">{{post.header_tagline}}</p>
-				<p class="summary summary--header">{{post.header_summary}}</p>
-
-			{% endblock %}
-
-			{% block after_header_content %}{% endblock %}
-
-		</div>
-	</header>
+	{% include 'headers/_header-single.twig' %}
 {% endblock %}
 
 {% block content %}
@@ -45,10 +16,11 @@
 
 	{% if post.citations %}
 		<h4>Citations</h4>
-		<ul class="single__citations">
+		<ul class="single-citations">
 			{% for item in post.get_field('citations') %}
-				<li class="citations__list">
-					<a href="{{item.source_url}}">{{item.post_title}}</a>
+				{% set item = TimberPost(item) %}
+				<li class="citations-list">
+					<a href="{{item.source_url}}">{{item.title}}</a>
 					{{item.source_author ? 'By ' ~ item.source_author}}
 					{{item.source_publication ? item.source_publication}}
 					{{item.source_date ? item.source_date|date('| F j, Y')}}

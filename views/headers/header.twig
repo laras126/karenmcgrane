@@ -5,32 +5,30 @@
 {% set h_role = ' role="' ~ role ~ '"' %}
 
 <header{{ class ? h_class }}{{role ? h_role }}>
-	<div class="contain-md">
 
-		{% block before_header_content %}
+	{% block before_header_content %}
 
-		{% endblock %}
+	{% endblock %}
 
-		{% block header_content %}
+	{% block header_content %}
 
-			{% set display = post.header_display %}
+		{% set display = post.header_display %}
 
-			<h1 class="title-page">{{post.post_title}}</h1>
+		<h1 class="title-page">{{post.post_title}}</h1>
 
-			{% if display == 'image' %}
+		{% if display == 'image' %}
 
-				{{post.header_image_desktop}}
-				{{post.header_image_tablet}}
-				{{post.header_image_mobile}}
+			{{post.header_image_desktop}}
+			{{post.header_image_tablet}}
+			{{post.header_image_mobile}}
 
-			{% endif %}
+		{% endif %}
 
-			<p class="lead lead--header">{{post.header_tagline}}</p>
-			<p class="summary summary--header">{{post.header_summary}}</p>
+		<p class="lead">{{post.header_tagline}}</p>
+		<p class="summary">{{post.header_summary}}</p>
 
-		{% endblock %}
+	{% endblock %}
 
-		{% block after_header_content %}{% endblock %}
+	{% block after_header_content %}{% endblock %}
 
-	</div>
 </header>
