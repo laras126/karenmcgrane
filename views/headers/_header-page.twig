@@ -3,10 +3,10 @@
 {% block before_header_content %}{% endblock %}
 
 {% block header_content %}
-	
+
 	{% set display = post.header_display %}
 
-	<h1 class="title-page">{{post.post_title}}</h1>
+	<h1 class="page-title">{{post.post_title}}</h1>
 
 	{% if display == 'image' %}
 
@@ -16,8 +16,8 @@
 
 	{% endif %}
 
-	<p class="lead lead--header">{{post.header_tagline}}</p>
-	<p class="summary summary--header">{{post.header_summary}}</p>
+	<p class="lead">{{post.header_tagline}}</p>
+	<p class="summary">{{post.header_summary}}</p>
 
 {% endblock %}
 
