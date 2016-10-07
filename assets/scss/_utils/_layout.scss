@@ -7,14 +7,14 @@ $screens: (
     md:    	$screen-md,
     lg: 	$screen-lg
 );
- 
+
 .contain {
 	position: relative;
 	margin: 0 auto;
-	padding: 0 $size-base;
+	padding: 0 $size-p;
 }
 
-@each $name, $size in $screens {  
+@each $name, $size in $screens {
     .contain-#{$name} {
    		max-width: $size;
     }
@@ -36,25 +36,25 @@ $screens: (
 		margin-left: 1%;
 		width: 48%;
 	}
-	
+
 	margin-top: 1%;
 	margin-bottom: 1%;
 
 	background-color: $color-accent-vlight;
-	padding-left: $size-base; 
-	padding-right: $size-base; 
-	padding-bottom: $size-base; 
-	
+	padding-left: $size-p;
+	padding-right: $size-p;
+	padding-bottom: $size-p;
+
 	// flex: 1 0;
 }
 
 /// @group bleeds
 /// @content [Bleed an element slightly out of its container.]
 
-@mixin bleed($size: $size-base) {
+@mixin bleed($size: $size-p) {
 	@include bp(sm) {
-		margin-right: -$size-base;
-	    margin-left: -$size-base;
+		margin-right: -$size-p;
+	    margin-left: -$size-p;
 	}
 }
 

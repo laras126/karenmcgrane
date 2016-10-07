@@ -1,6 +1,19 @@
 
-@import 'header-site';
-@import 'header-page';
-@import 'header-single';
-@import 'header-section';
-@import 'header-tease';
+.header {
+
+  &.-site {
+    text-align: center;
+  }
+
+  &.-page {
+
+  }
+
+  &.-single {
+    margin-bottom: $size-p;
+  }
+}
+
+.header-tagline {
+  margin-bottom: 20px;
+}

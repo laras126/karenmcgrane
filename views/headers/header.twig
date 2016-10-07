@@ -5,14 +5,14 @@
 {% set h_role = ' role="' ~ role ~ '"' %}
 
 <header{{ class ? h_class }}{{role ? h_role }}>
-	<div class="contain contain-md">
+	<div class="contain-md">
 
 		{% block before_header_content %}
-			
+
 		{% endblock %}
 
 		{% block header_content %}
-	
+
 			{% set display = post.header_display %}
 
 			<h1 class="title-page">{{post.post_title}}</h1>

@@ -1,7 +1,18 @@
-.header--page {
+.header {
 
-	&__tagline {
-		margin-bottom: 20px;
-	}
+  &.-site {
+    text-align: center;
+  }
 
+  &.-page {
+
+  }
+
+  &.-single {
+    margin-bottom: $size-p;
+  }
+}
+
+.header-tagline {
+	margin-bottom: 20px;
 }

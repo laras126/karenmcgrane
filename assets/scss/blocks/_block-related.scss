@@ -1,11 +1,11 @@
 
 // .block_related_page {
 // 	background-color: $accent-vlight;
-// 	padding-bottom: $size-base;
+// 	padding-bottom: $size-p;
 // }
 
 // .related-title {
-// 	margin-top: $size-base;
+// 	margin-top: $size-p;
 // }
 
 // .prompt-wrap {}
@@ -14,16 +14,16 @@
 // 		@include upperspace;
 // 		position: relative;
 // 		top: 0;
-		
+
 // 		@include bp(large) {
 // 			// transform: rotate(-90deg);
 // 			// IMPORTANT: Can't leave this like this
 // 			// transform-origin: left bottom;
 // 			// position: absolute;
-// 			// left: -$size-base;
+// 			// left: -$size-p;
 // 			// top: 82px;
 // 		}
-		
+
 // 		span {
 // 			position: relative;
 // 			padding: $sml/2 $sml;

@@ -6,25 +6,25 @@
 {% endblock %}
 
     <body class="{{body_class}} wf-loading" data-template="base.twig" id="pageTop">
-        
+
         <div class="visually-hidden">{% include 'views/utility/svg-defs.svg' %}</div>
-        
+
         {% block header %}
 
             <header role="banner" class="header header--site">
-            
-                <div class="contain contain-sm">
+
+                <div class="contain-sm">
                     <h1 class="site-title"><a href="{{site.link}}" title="{{site.name}}" rel="home">{{site.name}}</a></h1>
                     <p>{{site.description}}</p>
                 </div>
-                
+
                 {% include 'navs/_nav-site.twig' %}
 
             </header> <!-- /.header--site -->
 
-        {% endblock %}  
-        
-        <main class="site-main contain contain-md" role="main">
+        {% endblock %}
+
+        <main class="site-main contain-md" role="main">
 
             <div class="site-content">
 
@@ -47,7 +47,7 @@
         </main>
 
         {% block footer %}
-            {% include 'footers/_footer-site.twig' with { class : 'footer--site' } %}   
+            {% include 'footers/_footer-site.twig' with { class : 'footer--site' } %}
             {{ function('wp_footer') }}
         {% endblock %}
 

@@ -27,7 +27,7 @@
             "elements": "",
             "min": "",
             "max": "",
-            "return_format": "object"
+            "return_format": "id"
         }
     ],
     "location": [
@@ -36,6 +36,11 @@
                 "param": "post_type",
                 "operator": "!=",
                 "value": "source"
+            },
+            {
+                "param": "post_type",
+                "operator": "!=",
+                "value": "page"
             }
         ]
     ],
@@ -45,5 +50,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "modified": 1438711054
+    "active": 1,
+    "description": "",
+    "modified": 1472046512
 }

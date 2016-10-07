@@ -2,12 +2,12 @@
 
 {% block before_content %}
 	<header>
-		<div class="contain contain-md">
+		<div class="contain-md">
 
 			{% block before_header_content %}{% endblock %}
 
 			{% block header_content %}
-		
+
 				{% set display = post.header_display %}
 
 				<h1 class="title-page">{{post.post_title}}</h1>
@@ -19,7 +19,7 @@
 					{{post.header_image_mobile}}
 
 				{% endif %}
-	
+
 				{% include 'partials/connected-source.twig' %}
 
 				<p class="lead lead--header">{{post.header_tagline}}</p>
@@ -34,13 +34,27 @@
 {% endblock %}
 
 {% block content %}
-	
-	{% for block in post.get_field('blocks') %} 
+
+	{% for block in post.get_field('blocks') %}
 		{% include 'blocks/block-logic.twig' %}
 	{% endfor %}
 
 {% endblock %}
 
 {% block after_content %}
-	{% include 'footers/_footer-single.twig' %}
+
+	{% if post.citations %}
+		<h4>Citations</h4>
+		<ul class="single__citations">
+			{% for item in post.get_field('citations') %}
+				<li class="citations__list">
+					<a href="{{item.source_url}}">{{item.post_title}}</a>
+					{{item.source_author ? 'By ' ~ item.source_author}}
+					{{item.source_publication ? item.source_publication}}
+					{{item.source_date ? item.source_date|date('| F j, Y')}}
+				</li>
+			{% endfor %}
+		</ul>
+	{% endif %}
+
 {% endblock %}

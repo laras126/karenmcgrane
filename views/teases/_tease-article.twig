@@ -1,14 +1,14 @@
 {% extends "teases/tease.twig" %}
 
 {% block tease_content %}
-	<div class="contain-flex">
-		<div class="unit tease__main--default">
+	<div class="grid">
+		<div class="cell">
 			<h4><a href="{{post.link}}">{{post.post_title}}</a></h4>
 			{% include 'partials/connected-source.twig' %}
 			<p>{{post.header_tagline}}</p>
 		</div>
-		<div class="unit tease__more--default">
-			<a href="{{post.link}}" class="more__icon">
+		<div class="cell">
+			<a href="{{post.link}}" class="more-icon">
 				&rsaquo;
 			</a>
 		</div>

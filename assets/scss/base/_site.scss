@@ -9,7 +9,7 @@
 
 body {
 	word-wrap: break-word;
-	
+
 	@include bp(small) {
 		word-wrap: normal;
 	}

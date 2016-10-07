@@ -2,8 +2,9 @@
 
 {% block tease_content %}
 
-	<h5><a href="{{post.source_url}}" target="blank">{{post.post_title}}</a></h5>
+	<h5><a href="{{post.source_url}}" target="blank">{{post.title}}</a></h5>
 	<p>{{post.source_blurb}}</p>
+
 	{% if post.terms('category') %}
 		<p class="meta">
 			<span class="meta-dark">Category: </span>
@@ -21,10 +22,5 @@
 			{% endfor %}
 		</p>
 	{% endif %}
-
-	{# <p>Originally published on {{item.souce_link ? '<a href="' ~ item.source_link ~ '" target="blank">' }}{{item.source_publication}}{{item.source_link ? '</a>'}}.</p>
-	{% elseif post.post_type == 'presentation' %}
-		<p>Presented at <a href="{{item.source_link}}" target="blank">{{item.source_publication}}</a>{{ item.source_date ? ', ' ~ item.source_date|date('F j, Y') }}</p>
-	{% endif %} #}
 
 {% endblock %}

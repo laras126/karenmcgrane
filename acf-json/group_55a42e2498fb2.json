@@ -31,6 +31,11 @@
                 "param": "post_type",
                 "operator": "!=",
                 "value": "source"
+            },
+            {
+                "param": "post_type",
+                "operator": "!=",
+                "value": "page"
             }
         ]
     ],
@@ -40,5 +45,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "modified": 1438714149
+    "active": 1,
+    "description": "",
+    "modified": 1471570721
 }

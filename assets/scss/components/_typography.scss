@@ -2,7 +2,7 @@
 /// @group Typography
 
 html {
-	font-size: $size-base;
+	font-size: $size-contain-base;
 	line-height: $line-height-base;
 	font-weight: $font-weight-base;
 
@@ -21,7 +21,7 @@ html {
 
 body {
 	font-family: $font-body;
-	font-size: $size-base; 
+	font-size: $size-p;
 	color: $color-body-text;
 
 	.wf-loading & {
@@ -43,10 +43,10 @@ a {
 	}
 
 	&:active {
-		color: $color-link-active;	
+		color: $color-link-active;
 	}
 
-	// mobile tap color 
+	// mobile tap color
 	&:link {
 		-webkit-tap-highlight-color : rgba( 0, 0, 0, 0.3 );
 	}
@@ -74,7 +74,7 @@ h3 {
 	// margin-top: $size-h3;
 }
 
-h4 { 
+h4 {
 	font-size: $size-h4;
 	// margin-top: $size-h4;
 }
@@ -84,11 +84,11 @@ h5 {
 	font-family: $font-body;
 }
 
-h6 {	
+h6 {
 	font-family: $font-body;
 	font-size: $size-h6;
 	@include upperspace();
-	// margin-top: $size-base;
+	// margin-top: $size-p;
 }
 
 small {
@@ -111,10 +111,10 @@ blockquote {
 		opacity: 0.7;
 
 		content: " ";
-		
+
 		width: $size-h3;
 		height: $size-h3;
-		
+
 		position: absolute;
 		left: 0;
 	}

@@ -1,5 +1,5 @@
 <div class="block {{block_class}}{{blck.cta_rotate ? ' rotate-' ~ blck.cta_rotate }}">
-	<div class="contain contain-{{block.contain}}">
+	<div class="contain-{{block.contain ? block.contain : 'contain-md'}}">
 	<pre>{{block_class}}</pre>
 	{% block content %}
 		<p>Nothing in this Block</p>

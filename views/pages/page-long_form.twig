@@ -8,22 +8,22 @@
 	</header>
 
 	{# {% include 'partials/section-nav.twig'%} #}
-	
+
 	{% for section in post.get_field('sections') %}
 		<section class="page-section" id="{{section.menu_item_title|replace({ (' '): '_' })}}">
-			
+
 			<header class="section-header">
-				<div class="contain contain-md-squish">
+				<div class="contain-md">
 					<h3>{{section.section_title}}</h3>
 					<p class="lead">{{section.lead}}</p>
 				</div>
 			</header>
 
-			{% for block in section.blocks %} 
+			{% for block in section.blocks %}
 				{% include 'blocks/block-logic.twig' %}
 			{% endfor %}
 
 		</section>
 	{% endfor %}
-	
+
 {% endblock %}

@@ -1,5 +1,5 @@
-.tease--article,
-.tease--presentation {
+.tease {
+
 	border-bottom: $border-accent;
 	padding-bottom: $size-h4;
 
@@ -7,35 +7,32 @@
 		border-bottom: none;
 	}
 
+	&.-article {
+
+	}
+	&.-presentation {
+
+	}
+
 	.unit {
 		align-self: center;
-		
+	}
+
+}
+
+.tease-more {
+	&.-default {
+		flex: 1 0;
 	}
 }
 
-.tease__more--default {
-	flex: 1 0;
-}
-
-	.more__icon {
+	.more-icon {
 		font-size: $size-h1*1.5;
-		padding-left: $size-base;	
+		padding-left: $size-p;
 	}
 
-.tease__main--default {
-	flex: 6 0;
+.tease-main {
+	&.-default {
+		flex: 6 0;
+	}
 }
-
-
-// .article__readmore {
-//     float: right;
-
-//     .contain-flex {
-//         justify-content: flex-end;
-//     }
-
-//     .icon {
-//         align-self: center;
-//         fill: $color-link;
-//     }
-// }

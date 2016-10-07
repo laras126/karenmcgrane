@@ -13,7 +13,7 @@ $alert-colors: (
 
 
 .alert {
-    padding: $size-base;
+    padding: $size-p;
     @include bleed;
     display: flex;
 
@@ -42,5 +42,5 @@ $alert-colors: (
 }
 
 .alert-title {
-    margin-top: $size-base;
+    margin-top: $size-p;
 }

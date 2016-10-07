@@ -25,7 +25,7 @@
 
 		// Note that the following included files only need to contain the taxonomy/CPT/Menu arguments and register_whatever function. They are initialized here.
 		// http://generatewp.com is nice
-		
+
 		function register_post_types(){
 			require('lib/custom-types.php');
 		}
@@ -55,7 +55,7 @@
 
 			return $context;
 		}
-		
+
 		function add_to_twig($twig){
 			/* this is where you can add your own fuctions to twig */
 			$twig->addExtension(new Twig_Extension_StringLoader());
@@ -68,15 +68,15 @@
 	new StarterSite();
 
 
-	
+
 	/*
 	 **************************
 	 * Custom Theme Functions *
 	 **************************
 	 *
 	 * Namespaced "tsk" - find and replace with your own three-letter-thing.
-	 * 
-	 */ 
+	 *
+	 */
 
 	// Enqueue scripts
 	function tsk_scripts() {
@@ -101,11 +101,11 @@
 	}
 	add_action( 'wp_enqueue_scripts', 'tsk_scripts' );
 
-	
-	 
 
-	/* 
-	 * 
+
+
+	/*
+	 *
 	 * Nice to Haves
 	 *
 	 */
@@ -123,14 +123,14 @@
 	        $title = __( 'Testimonial Nickname' );
 		}
 		return $title;
-	} 
+	}
 	// add_filter( 'enter_title_here', 'tsk_title_placeholder_text' );
 
 
 
 	// Customize the editor style
 	// It's just the Bootstrap typography, but I like it. Got the idea from Roots.io.
-	
+
 	function tsk_editor_styles() {
 		add_editor_style( 'assets/css/editor-style.css' );
 	}
@@ -143,7 +143,7 @@
 		add_post_type_support( 'page', 'excerpt' );
 	}
 	add_action( 'init', 'tsk_add_excerpts_to_pages' );
-	
+
 
 
 	// Remove inline gallery styles
@@ -154,7 +154,7 @@
 
 
 	/*
-	 * 
+	 *
 	 * Plugin Helpers
 	 *
 	 */
@@ -182,12 +182,12 @@
 	// https://imperativeideas.com/making-custom-fields-work-yoast-wordpress-seo/
 
 	if ( is_admin() ) { // check to make sure we aren't on the front end
-		add_filter('wpseo_pre_analysis_post_content', 'tsk_add_custom_to_yoast');
+		// add_filter('wpseo_pre_analysis_post_content', 'tsk_add_custom_to_yoast');
 
 		function nl_add_custom_to_yoast( $content ) {
 			global $post;
 			$pid = $post->ID;
-			
+
 			$custom = get_post_custom($pid);
 			unset($custom['_yoast_wpseo_focuskw']); // Don't count the keyword in the Yoast field!
 
