@@ -14,7 +14,7 @@ $alert-colors: (
 
 .alert {
     padding: $size-p;
-    @include bleed;
+    // @include bleed;
     display: flex;
 
     @each $name, $colors in $alert-colors {

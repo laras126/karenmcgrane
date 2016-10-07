@@ -5,8 +5,16 @@
 
 }
 
+.tease-title {
+  font-size: $size-h2;
+}
+
 .tease-meta {
 	@include meta();
+}
+
+.tease-more {
+  margin-left: $size-sml;
 }
 
 @import 'tease-post';

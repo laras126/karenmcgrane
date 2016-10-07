@@ -1,15 +1,24 @@
 
-.nav--site {
+.site-nav {
 
 }
 
-.nav__list--site {
+.site-nav-list {
 	list-style-type: none;
 	padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.nav__item--site {
-	display: inline-block;
-	margin-left: $size-p;
-	margin-right: $size-p;
+.site-nav-list-item {
+  // flex-basis: 50%;
+  justify-content: space-around;
+  margin-right: $size-h4;
+  @include bp(nav) {
+    justify-content: flex-start;
+    // flex-basis: auto;
+  }
+	// margin-left: $size-p;
+	// margin-right: $size-p;
 }
+

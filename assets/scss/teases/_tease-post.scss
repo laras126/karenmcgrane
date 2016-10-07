@@ -1,38 +1,34 @@
-.tease {
+// .tease {
 
-	border-bottom: $border-accent;
-	padding-bottom: $size-h4;
+// 	border-bottom: $border-accent;
+// 	padding-bottom: $size-h4;
 
-	&:last-child {
-		border-bottom: none;
-	}
+// 	&:last-child {
+// 		border-bottom: none;
+// 	}
 
-	&.-article {
+// 	&.-article {
 
-	}
-	&.-presentation {
+// 	}
+// 	&.-presentation {
 
-	}
+// 	}
 
-	.unit {
-		align-self: center;
-	}
+// }
 
-}
+// .tease-more {
+// 	&.-default {
+// 		flex: 1 0;
+// 	}
+// }
 
-.tease-more {
-	&.-default {
-		flex: 1 0;
-	}
-}
+// 	.more-icon {
+// 		font-size: $size-h4;
+// 		padding-left: $size-p;
+// 	}
 
-	.more-icon {
-		font-size: $size-h1*1.5;
-		padding-left: $size-p;
-	}
-
-.tease-main {
-	&.-default {
-		flex: 6 0;
-	}
-}
+// .tease-main {
+// 	&.-default {
+// 		flex: 6 0;
+// 	}
+// }

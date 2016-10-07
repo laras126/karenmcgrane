@@ -24,6 +24,9 @@ $MQs: true;
     @else if $point == md {
       @media #{$bp-md} { @content; }
     }
+    @else if $point == nav {
+      @media #{$bp-md} { @content; }
+    }
     @else if $point == lg {
       @media #{$bp-lg} { @content; }
     }
@@ -61,129 +64,6 @@ $MQs: true;
 	&:active {
 		background: darken( $button-color, 40% );
 	}
-}
-
-
-
-// ----
-// Layout
-// ----
-
-// Containers
-
-$c-pad: 10%;
-
-@mixin contain($size: md) {
-  width: 95%;
-  margin: 0 auto;
-
-  @include bp(md) {
-    @if $size != xl {
-      max-width: $screen-lg;
-    }
-    @else {
-      max-width: $screen-xl;
-    }
-
-    @if $size == sm {
-      padding-left: $c-pad;
-      padding-right: $c-pad;
-    }
-    @elseif $size == md {
-      padding-left: $c-pad/2;
-      padding-right: $c-pad/2;
-    }
-  }
-}
-
-.contain-sm {
-  @include contain(sm);
-}
-
-.contain-md {
-  @include contain(md);
-}
-
-.contain-lg {
-  @include contain(lg);
-}
-
-.contain-lg {
-  @include contain(xl);
-}
-
-
-
-
-// Flexbox Layout
-
-$sizes: (
-  full:   100%,
-  half:   50%,
-  third:  33.333333%,
-  fourth: 25%,
-  fifth:  20%,
-  sixth:  16.66666667%
-);
-
-$gutter: $size-p;
-
-@mixin cell($size: false) {
-  @if $size != false {
-    flex: 0 0 map-get($sizes, $size);
-    max-width: map-get($sizes, $size); // Fix for Firefox
-  }
-}
-
-@mixin grid($guttered: true, $wrap: nowrap) {
-  display: flex;
-  flex-wrap: $wrap;
-
-  @if $guttered {
-    & > * {
-      padding-left: $gutter;
-      padding-right: $gutter;
-    }
-    margin-left: -$gutter;
-    margin-right: -$gutter;
-  }
-
-}
-
-.grid {
-  @include grid;
-}
-
-.cell-sixth {
-  @include cell(sixth);
-}
-
-.cell-fourth {
-  @include cell(fourth);
-}
-
-.cell-third {
-  @include cell(third);
-}
-
-.cell-half {
-  @include cell(half);
-}
-
-.cell-full {
-  @include cell(full);
-}
-
-
-@mixin clearfix() {
-    &:before,
-    &:after {
-        content: " "; // 1
-        display: table; // 2
-    }
-    &:after {
-        clear: both;
-    }
 }
 
 

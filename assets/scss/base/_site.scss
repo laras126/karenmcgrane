@@ -18,3 +18,24 @@ body {
 img {
 	max-width: 100%;
 }
+
+.site-header {
+  background-color: $color-accent-light;
+}
+
+.site-title {
+  margin-top: 0;
+  padding-top: $size-h4;
+  font-size: $size-h4;
+}
+
+.site-desc {
+  font-size: $size-h4;
+  @include bp(nav) {
+    font-size: $size-h2;
+  }
+
+  font-weight: $font-weight-strong;
+  line-height: $line-height-sm;
+  padding-bottom: $size-h2;
+}

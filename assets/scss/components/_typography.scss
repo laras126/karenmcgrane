@@ -38,12 +38,18 @@ a {
 	color: $color-link;
 	text-decoration: none;
 
+	p &, span & {
+		text-decoration: underline;
+	}
+
 	&:hover, &:focus {
 		color: $color-link-hover;
+		text-decoration: none;
 	}
 
 	&:active {
 		color: $color-link-active;
+		text-decoration: none;
 	}
 
 	// mobile tap color
@@ -60,7 +66,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-	font-size: $size-h1;
+	font-size: $size-h2;
 	margin-top: $size-h3;
 }
 

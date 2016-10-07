@@ -1,63 +1,126 @@
 
-/// @group containers
-/// @content [Containers for screen sized]
+// ----
+// Layout
+// ----
 
-$screens: (
-    sm:    	$screen-sm,
-    md:    	$screen-md,
-    lg: 	$screen-lg
-);
+// Containers
+
+$c-pad: 10%;
+
+@mixin contain($size: md) {
+  width: 90%;
+  margin: 0 auto;
+
+  @include bp(md) {
+    @if $size != xl {
+      max-width: $screen-lg;
+    }
+    @else {
+      max-width: $screen-xl;
+    }
+
+    @if $size == sm {
+      padding-left: $c-pad;
+      padding-right: $c-pad;
+    }
+    @elseif $size == md {
+      padding-left: $c-pad/2;
+      padding-right: $c-pad/2;
+    }
+  }
+}
 
 .contain {
-	position: relative;
-	margin: 0 auto;
-	padding: 0 $size-p;
+  @include contain();
 }
 
-@each $name, $size in $screens {
-    .contain-#{$name} {
-   		max-width: $size;
+.contain-sm {
+  @include contain(sm);
+}
+
+.contain-md {
+  @include contain(md);
+}
+
+.contain-lg {
+  @include contain(lg);
+}
+
+.contain-lg {
+  @include contain(xl);
+}
+
+
+
+
+// Flexbox Layout
+
+$sizes: (
+  full:   100%,
+  half:   50%,
+  third:  33.333333%,
+  fourth: 25%,
+  fifth:  20%,
+  sixth:  16.66666667%
+);
+
+$gutter: $size-p;
+
+@mixin cell($size: false) {
+  @if $size != false {
+    flex: 0 0 map-get($sizes, $size);
+    max-width: map-get($sizes, $size); // Fix for Firefox
+  }
+}
+
+@mixin grid($guttered: true, $wrap: nowrap) {
+  display: flex;
+  flex-wrap: $wrap;
+
+  @if $guttered {
+    & > * {
+      padding-left: $gutter;
+      padding-right: $gutter;
+    }
+    margin-left: -$gutter;
+    margin-right: -$gutter;
+  }
+
+}
+
+.grid {
+  @include grid;
+}
+
+.cell-sixth {
+  @include cell(sixth);
+}
+
+.cell-fourth {
+  @include cell(fourth);
+}
+
+.cell-third {
+  @include cell(third);
+}
+
+.cell-half {
+  @include cell(half);
+}
+
+.cell-full {
+  @include cell(full);
+}
+
+
+@mixin clearfix() {
+    &:before,
+    &:after {
+        content: " "; // 1
+        display: table; // 2
+    }
+    &:after {
+        clear: both;
     }
 }
-
-.contain-flex {
-	display: flex;
-	flex-flow: row wrap;
-}
-
-.unit {
-	flex: 1 0;
-}
-
-.contain-flex .tease-source {
-
-	@include bp(md) {
-		margin-right: 1%;
-		margin-left: 1%;
-		width: 48%;
-	}
-
-	margin-top: 1%;
-	margin-bottom: 1%;
-
-	background-color: $color-accent-vlight;
-	padding-left: $size-p;
-	padding-right: $size-p;
-	padding-bottom: $size-p;
-
-	// flex: 1 0;
-}
-
-/// @group bleeds
-/// @content [Bleed an element slightly out of its container.]
-
-@mixin bleed($size: $size-p) {
-	@include bp(sm) {
-		margin-right: -$size-p;
-	    margin-left: -$size-p;
-	}
-}
-
-
-
 
