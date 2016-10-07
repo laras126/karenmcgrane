@@ -11,16 +11,7 @@
 
         {% block header %}
 
-            <header role="banner" class="header header--site">
-
-                <div class="contain-sm">
-                    <h1 class="site-title"><a href="{{site.link}}" title="{{site.name}}" rel="home">{{site.name}}</a></h1>
-                    <p>{{site.description}}</p>
-                </div>
-
-                {% include 'navs/_nav-site.twig' %}
-
-            </header> <!-- /.header--site -->
+            {% include 'headers/_header-site.twig' with { class: 'site-header', role: 'banner' } %}
 
         {% endblock %}
 
@@ -47,7 +38,7 @@
         </main>
 
         {% block footer %}
-            {% include 'footers/_footer-site.twig' with { class : 'footer--site' } %}
+            {% include 'footers/_footer-site.twig' with { class : 'site-footer' } %}
             {{ function('wp_footer') }}
         {% endblock %}
 
