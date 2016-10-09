@@ -1,12 +1,13 @@
 <article class="tease -{{post.post_type}}" id="tease-{{post.ID}}">
-	{% block before_tease_content %}{% endblock %}
+	{% block tease_header %}
+    <h3 class="tease-title -{{post.post_type}}"><a href="{{post.link}}">{{post.post_title}}</a><span class="tease-more">&rsaquo;</span></h3>
+  {% endblock %}
 
-	{% block tease_content %}
-		<h3 class="tease-title"><a href="{{post.link}}">{{post.post_title}}</a></h3>
+  {% block tease_content %}
 		<p>{{post.header_summary}}</p>
 	{% endblock %}
 
-	{% block after_tease_content %}
-		{% include 'footers/_footer-tease.twig' %}
+	{% block tease_footer %}
+    {% include 'utility/edit-link.twig' %}
 	{% endblock %}
 </article>

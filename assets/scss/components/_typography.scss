@@ -38,7 +38,7 @@ a {
 	color: $color-link;
 	text-decoration: none;
 
-	p &, span & {
+	p &, span &, li & {
 		text-decoration: underline;
 	}
 

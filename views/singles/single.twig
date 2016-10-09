@@ -16,14 +16,14 @@
 
 	{% if post.citations %}
 		<h4>Citations</h4>
-		<ul class="single-citations">
+		<ul class="citations-list">
 			{% for item in post.get_field('citations') %}
 				{% set item = TimberPost(item) %}
-				<li class="citations-list">
-					<a href="{{item.source_url}}">{{item.title}}</a>
+				<li class="citations-list-item">
+					<a class="citation-link" href="{{item.source_url}}">{{item.title}}</a><span class="meta-dark">
 					{{item.source_author ? 'By ' ~ item.source_author}}
 					{{item.source_publication ? item.source_publication}}
-					{{item.source_date ? item.source_date|date('| F j, Y')}}
+					{{item.source_date ? item.source_date|date('| F j, Y')}}</span>
 				</li>
 			{% endfor %}
 		</ul>

@@ -7,6 +7,10 @@
 
 .tease-title {
   font-size: $size-h2;
+
+  &.-source {
+    font-size: $size-h4;
+  }
 }
 
 .tease-meta {

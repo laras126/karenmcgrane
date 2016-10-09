@@ -1,8 +1,6 @@
 {% extends "teases/tease.twig" %}
 
 {% block tease_content %}
-
-	<h5><a href="{{post.source_url}}" target="blank">{{post.title}}</a></h5>
 	<p>{{post.source_blurb}}</p>
 
 	{% if post.terms('category') %}
