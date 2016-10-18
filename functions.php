@@ -46,6 +46,10 @@
 			$context['notes'] = 'These values are available everytime you call Timber::get_context();';
 			$context['menu'] = new TimberMenu();
 			$context['site'] = $this;
+			$context['options'] = get_fields('options');
+			$context['articles_image'] = get_field('articles_image', 'options');
+			$context['presentations_image'] = get_field('presentations_image', 'options');
+			$context['sources_image'] = get_field('sources_image', 'options');
 
 			// Site-wide Settings
 			$context['site_callout_bool'] = get_field('site_callout_bool', 'options');
@@ -57,9 +61,7 @@
 		}
 
 		function add_to_twig($twig){
-			/* this is where you can add your own fuctions to twig */
 			$twig->addExtension(new Twig_Extension_StringLoader());
-			// $twig->addFilter('myfoo', new Twig_Filter_Function('myfoo'));
 			return $twig;
 		}
 
@@ -125,6 +127,19 @@
 		return $title;
 	}
 	// add_filter( 'enter_title_here', 'tsk_title_placeholder_text' );
+
+
+	// Update Media Image Sizes
+
+
+	update_option('thumbnail_size_w', 300);
+	update_option('thumbnail_size_h', 300);
+
+	update_option('medium_size_w', 700);
+	update_option('medium_size_h', 700);
+
+	update_option('large_size_w', 1150);
+	update_option('large_size_h', 1150);
 
 
 

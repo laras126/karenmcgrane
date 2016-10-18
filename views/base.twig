@@ -10,24 +10,20 @@
         <div class="visually-hidden">{% include 'views/utility/svg-defs.svg' %}</div>
 
         {% block header %}
-
-            {% include 'headers/_header-site.twig' with { class: 'site-header', role: 'banner' } %}
-
+          {% include 'headers/_header-site.twig' with { class: 'site-header', role: 'banner' } %}
         {% endblock %}
 
-        <main class="site-main contain-md" role="main">
+        <main class="site-main" role="main">
 
-            <div class="site-content">
+          {% block before_content %}{% endblock %}
 
-                {% block before_content %}{% endblock %}
-
-                {% block content %}
-                    Sorry, no content
-                {% endblock %}
-
-                {% block after_content %}{% endblock %}
-
+            <div class="site-content contain-md">
+              {% block content %}
+                  Sorry, no content
+              {% endblock %}
             </div>
+
+            {% block after_content %}{% endblock %}
 
             {% if sidebar %}
                 <aside class="site-sidebar">

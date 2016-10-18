@@ -1,10 +1,14 @@
 {% extends 'headers/header.twig' %}
 
+{% block before_header_content %}{% endblock %}
+
 {% block header_content %}
   <div class="contain-md">
     <h1 class="site-title"><a href="{{site.link}}" title="{{site.name}}" rel="home">Karen<br>McGrane</a></h1>
     {% include 'navs/_nav-site.twig' %}
-    <p class="site-desc">{{site.description}}</p>
-  </div>
 
+    {% if function('is_front_page', true) %}
+      <p class="site-desc">{{site.description}}</p>
+    {% endif %}
+  </div>
 {% endblock %}
