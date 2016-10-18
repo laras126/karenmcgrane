@@ -11,7 +11,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -19,17 +19,19 @@
                 "text": "Text Only",
                 "image": "Image"
             },
+            "allow_null": 0,
             "other_choice": 0,
             "save_other_choice": 0,
             "default_value": "",
-            "layout": "horizontal"
+            "layout": "horizontal",
+            "return_format": "value"
         },
         {
-            "key": "field_545a8498b0f4c",
-            "label": "Image - Desktop (1200x800)",
-            "name": "header_image_desktop",
+            "key": "field_58011eb56e223",
+            "label": "Header Image (size here)",
+            "name": "header_image",
             "type": "image",
-            "instructions": "The header image for large devices.",
+            "instructions": "",
             "required": 0,
             "conditional_logic": [
                 [
@@ -41,75 +43,11 @@
                 ]
             ],
             "wrapper": {
-                "width": 33,
+                "width": "50",
                 "class": "",
                 "id": ""
             },
-            "return_format": "url",
-            "preview_size": "thumbnail",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
-        },
-        {
-            "key": "field_558ade731439e",
-            "label": "Image - Tablet (800x600)",
-            "name": "header_image_tablet",
-            "type": "image",
-            "instructions": "The image to appear on tablet devices. Leave blank to use desktop image.",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_545a83096d4b5",
-                        "operator": "==",
-                        "value": "image"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": 33,
-                "class": "",
-                "id": ""
-            },
-            "return_format": "url",
-            "preview_size": "thumbnail",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
-        },
-        {
-            "key": "field_558ade2a1439d",
-            "label": "Image - Mobile (500x400)",
-            "name": "header_image_mobile",
-            "type": "image",
-            "instructions": "Header image to appear on small screens. Leave blank if the desktop image suffices.",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_545a83096d4b5",
-                        "operator": "==",
-                        "value": "image"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": 33,
-                "class": "",
-                "id": ""
-            },
-            "return_format": "url",
+            "return_format": "id",
             "preview_size": "thumbnail",
             "library": "all",
             "min_width": "",
@@ -186,5 +124,7 @@
         "featured_image",
         "send-trackbacks"
     ],
-    "modified": 1438711373
+    "active": 1,
+    "description": "",
+    "modified": 1476468582
 }
