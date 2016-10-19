@@ -17,7 +17,7 @@
 {% endblock %}
 
 {% block header_content %}
-  <div class="contain-md">
+  <div class="contain-lg">
 	 <h1 class="archive-title">{{title}}</h1>
 
 	 <p class="lead">{{post.header_tagline}}</p>
@@ -25,11 +25,6 @@
   </div>
   {# Ew. Ideally it would be this:
   {{Timber_Image(title ~ '_image').src('large')}} #}
-
-  {# {{dump(title|lower ~ '_image')}} #}
-  {# {% set archive_type =  %} #}
-  {# {{Timber_Image(title ~ '_image').src('large')}} #}
-
 
 {% endblock %}
 

@@ -3,7 +3,21 @@
 {% block footer_class %}-site{% endblock %}
 
 {% block footer_content %}
-	<div class="contain-md">
-		{% include 'site-options/site-colophon.twig' %}
-	</div>
+  <div class="contain-lg">
+  	<div class="grid">
+
+      <div class="cell">
+        {% if site_footer_copyright %}
+          <p>&copy; {{site_footer_copyright}}.</p>
+        {% endif %}
+      </div>
+
+      <div class="cell">
+        {% if site_footer_credits %}
+          {{site_footer_credits}}
+        {% endif %}
+      </div>
+
+  	</div>
+  </div>
 {% endblock %}
