@@ -24,19 +24,30 @@ img {
   display: flex;
 }
 
+.inner {
+  max-width: $screen-sm;
+}
+
 .site-title {
   margin-top: 0;
   padding-top: $size-h4;
-  font-size: $size-h4;
+  font-size: $size-h5;
 }
 
 .site-desc {
-  font-size: $size-h4;
   @include bp(nav) {
     font-size: $size-h2;
   }
 
+  font-size: $size-h4;
   font-weight: $font-weight-strong;
   line-height: $line-height-sm;
+  margin-top: $size-h3;
   padding-bottom: $size-h2;
+}
+
+.site-footer {
+  p {
+    font-size: $size-sml;
+  }
 }

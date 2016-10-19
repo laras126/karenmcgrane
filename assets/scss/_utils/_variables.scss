@@ -4,10 +4,10 @@
 // ----
 
 $screen-xs:     30em;
-$screen-sm:     36em;
-$screen-md:     43em;
+$screen-sm:     38em;
+$screen-md:     44em;
 $screen-lg:   	50em;
-$screen-xl:     60em;
+$screen-xl:     57em;
 
 
 
@@ -78,19 +78,19 @@ $color-table-rotate: 	lighten($color-alert-info, 50%);
 $size-contain-lg: 	110%;
 $size-contain-md: 	102%;
 $size-contain-sm: 	98%;
-$size-contain-base: 80%;
+$size-contain-base: 90%;
 
 $size-p:            1.25rem;
 
 $size-xsml:         $size-p*0.6;
-$size-sml:          $size-p*0.9;
+$size-sml:          $size-p*0.8;
 $size-xl:           $size-p*3.75;
 
-$size-h1:           $size-p*3.25;
+$size-h1:           $size-p*3;
 $size-h2:           $size-p*2.563;
 $size-h3:           $size-p*2;
 $size-h4:           $size-p*1.625;
-$size-h5:           $size-p*1;
+$size-h5:           $size-p*1.25;
 $size-h6:           $size-sml*1.063;
 
 
@@ -102,8 +102,8 @@ $size-h6:           $size-sml*1.063;
 $serif:				  'Georgia', serif;
 $sans-serif:		'Avenir W01', 'Arial', sans-serif;
 
-$line-height-base: 	1.5;
-$line-height-sm: 	  1.3;
+$line-height-base: 	1.4;
+$line-height-sm: 	  1.1;
 
 $font-sans-fallback:	'Helvetica', sans-serif;
 $font-serif-fallback: 'Georgia', serif;

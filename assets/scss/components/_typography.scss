@@ -3,18 +3,19 @@
 
 html {
 	font-size: $size-contain-base;
+	// line-height: $line-height-sm;
 	line-height: $line-height-base;
 	font-weight: $font-weight-base;
 
-	@include bp(small) {
+	@include bp(sm) {
 		font-size: $size-contain-sm;
 	}
 
-	@include bp(small) {
+	@include bp(md) {
 		font-size: $size-contain-md;
 	}
 
-	@include bp(small) {
+	@include bp(lg) {
 		font-size: $size-contain-lg;
 	}
 }
@@ -62,27 +63,35 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: $font-heading;
 	font-weight: $font-weight-heading;
 	margin-bottom: 0;
-	line-height: $line-height-sm;
+  line-height: $line-height-sm;
+
+	// line-height: $line-height-sm;
 }
 
 h1 {
-	font-size: $size-h2;
+  // font-size: $size-h3;
 	margin-top: $size-h3;
+
+  // @include bp(nav) {
+	font-size: $size-h2;
+  // }
+
 }
 
 h2 {
-	font-size: $size-h2;
-	// margin-top: $size-h3;
+	// font-size: $size-h4;
+
+	// @include bp(nav) {
+  	font-size: $size-h2;
+  // }
 }
 
 h3 {
 	font-size: $size-h3;
-	// margin-top: $size-h3;
 }
 
 h4 {
 	font-size: $size-h4;
-	// margin-top: $size-h4;
 }
 
 h5 {
@@ -94,7 +103,6 @@ h6 {
 	font-family: $font-body;
 	font-size: $size-h6;
 	@include upperspace();
-	// margin-top: $size-p;
 }
 
 small {
@@ -136,7 +144,7 @@ p {
 /// @description [Semantic classes for typography. These may be extended in their associated partial.]
 
 .lead {
-	font-size: $size-h4;
+	font-size: $size-h5;
 }
 
 .summary {

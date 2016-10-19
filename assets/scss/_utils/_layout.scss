@@ -7,47 +7,41 @@
 
 $c-pad: 10%;
 
-@mixin contain($size: md) {
+@mixin contain($size) {
   width: 90%;
   margin: 0 auto;
+  max-width: $size;
 
   @include bp(md) {
-    @if $size != xl {
-      max-width: $screen-lg;
-    }
-    @else {
-      max-width: $screen-xl;
-    }
-
-    @if $size == sm {
-      padding-left: $c-pad;
-      padding-right: $c-pad;
-    }
-    @elseif $size == md {
-      padding-left: $c-pad/2;
-      padding-right: $c-pad/2;
-    }
+    width: 80%;
   }
+
+  //   @if $size == sm {
+  //     padding-left: $c-pad;
+  //     padding-right: $c-pad;
+  //   }
+  //   @elseif $size == md {
+  //     padding-left: $c-pad/2;
+  //     padding-right: $c-pad/2;
+  //   }
+  // }
 }
 
-.contain {
-  @include contain();
-}
 
 .contain-sm {
-  @include contain(sm);
+  @include contain($screen-sm);
 }
 
 .contain-md {
-  @include contain(md);
+  @include contain($screen-md);
 }
 
 .contain-lg {
-  @include contain(lg);
+  @include contain($screen-lg);
 }
 
-.contain-lg {
-  @include contain(xl);
+.contain-xl {
+  @include contain($screen-xl);
 }
 
 

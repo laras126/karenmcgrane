@@ -7,18 +7,28 @@
 	list-style-type: none;
 	padding-left: 0;
   display: flex;
-  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .site-nav-list-item {
   // flex-basis: 50%;
-  justify-content: space-around;
-  margin-right: $size-h4;
+  display: flex;
+  align-items: center;
+  // margin-right: $size-h4;
+  flex-direction: column;
+
   @include bp(nav) {
     justify-content: flex-start;
-    // flex-basis: auto;
   }
-	// margin-left: $size-p;
-	// margin-right: $size-p;
+
+  a {
+    font-size: $size-xsml;
+    text-decoration: none;
+
+    @include bp(nav) {
+      font-size: $size-p;
+    }
+  }
 }
 
