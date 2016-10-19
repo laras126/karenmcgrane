@@ -1,1 +1,15 @@
 {% extends "teases/tease.twig" %}
+
+{% block after_tease_header %}
+  {# {% for item in post.get_field('connected_source') %} #}
+    {# hey #}
+    {% set item = TimberPost(post.get_field('connected_source')) %}
+    <p class="meta-dark">
+    {% if item.source_publication %}
+      {{ item.source_publication ? 'Originally published in ' }}<a href="{{item.source_url}}">{{item.source_publication}}</a>
+    {% endif %}
+    {{ item.source_date ? item.source_date|date('| F j, Y') }}
+    {{ item.source_author ? 'By ' ~ item.source_author}}
+    </p>
+  {# {% endfor %} #}
+{% endblock %}
