@@ -17,10 +17,12 @@
 
           {% block before_content %}{% endblock %}
 
-            <div class="site-content contain-md">
-              {% block content %}
-                  Sorry, no content
-              {% endblock %}
+            <div class="site-content contain-lg">
+                <div class="inner">
+                  {% block content %}
+                      Sorry, no content
+                  {% endblock %}
+                </div>
             </div>
 
             {% block after_content %}{% endblock %}
