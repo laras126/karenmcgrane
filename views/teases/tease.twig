@@ -4,7 +4,7 @@
   {% endblock %}
 
   {% block tease_content %}
-		<p>{{post.header_summary}}</p>
+		<p>{{post.header_summary ? post.header_summary : post.header_tagline }}</p>
 	{% endblock %}
 
 	{% block tease_footer %}
