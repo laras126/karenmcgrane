@@ -7,5 +7,5 @@
       {{img.src('thumbnail')}} 300w,
       {{img.src('medium')}} 600w,
       {% if size != thumb %}{{img.src('large')}} 900w{% endif %}"
-  class="lazyload blur-up {{class}}" />
+  {{class ? 'class="' ~ class ~ '"'}} />
 

@@ -12,7 +12,7 @@
 	  {% if display == 'image' %}
 	    <div class="header-image-wrap">
 	      <div class="contain-lg">
-	      	{% include 'utility/srcset.twig' with { id: post.header_image } %}
+	      	{% include 'utility/srcset.twig' with { id: post.header_image, class: "header-image" } %}
 	      </div>
 	    </div>
 	  {% endif %}

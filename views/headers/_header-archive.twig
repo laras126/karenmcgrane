@@ -1,14 +1,16 @@
+{# She wants to make you a cocktail so we will go to Cantina #}
+
 {% extends 'headers/header.twig' %}
 
 {% block before_header_content %}
   <div class="header-image-wrap">
     <div class="contain-lg">
       {% if title == 'Presentations' %}
-        {% include 'utility/srcset.twig' with { id: presentations_image } %}
+        {% include 'utility/srcset.twig' with { id: presentations_image, class: 'header-image' } %}
       {% elseif title == 'Articles' %}
-        {% include 'utility/srcset.twig' with { id: articles_image } %}
+        {% include 'utility/srcset.twig' with { id: articles_image, class: 'header-image' } %}
       {% elseif title == 'Sources' %}
-        {% include 'utility/srcset.twig' with { id: sources_image } %}
+        {% include 'utility/srcset.twig' with { id: sources_image, class: 'header-image' } %}
       {% endif %}
     </div>
   </div>
