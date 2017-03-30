@@ -12,8 +12,8 @@
     <ul class="site-nav-list">
     {% for item in menu.items %}
       <li class="site-nav-list-item">
-        <a href="{{item.link}}">
-          <img src="{{site.link}}/wp-content/uploads/menu-icons/{{item.title|lower|replace({ (space):
+        <a href="{{item.link}}" class="nav-item-img-link">
+          <img class="nav-item-img" src="{{site.link}}/wp-content/uploads/menu-icons/{{item.title|lower|replace({ (space):
           replace_space })|replace({ (dot): replace_dot })}}.png" alt="">
         </a>
         <a href="{{item.link}}">
@@ -28,7 +28,6 @@
           {% endfor %}
           </ul>
         {% endif %}
-
       </li>
     {% endfor %}
     </ul>
