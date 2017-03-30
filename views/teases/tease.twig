@@ -7,12 +7,12 @@
 
   {% block after_tease_header %}{% endblock %}
 
-  {% include 'utility/edit-link.twig' %}
 
   {% block tease_content %}
     <p>{{post.header_summary ? post.header_summary : post.header_tagline }}</p>
   {% endblock %}
 
   {% block tease_footer %}
-	{% endblock %}
+    {% include 'utility/edit-link.twig' %}
+  {% endblock %}
 </article>
