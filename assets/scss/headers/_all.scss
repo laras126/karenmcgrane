@@ -1,12 +1,16 @@
 
 .header {
 
+  &.-site {
+
+  }
+
   &.-page {
 
   }
 
   &.-single {
-    margin-bottom: $size-p;
+    margin-bottom: $size-h3;
   }
 }
 
