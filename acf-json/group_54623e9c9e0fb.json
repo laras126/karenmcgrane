@@ -62,7 +62,8 @@
                             "default_value": "",
                             "tabs": "all",
                             "toolbar": "text_based",
-                            "media_upload": 1
+                            "media_upload": 1,
+                            "delay": 0
                         }
                     ],
                     "min": "",
@@ -76,10 +77,10 @@
                     "sub_fields": [
                         {
                             "key": "field_545a74693eedc",
-                            "label": "Text Format",
+                            "label": "Format",
                             "name": "textimage_format",
                             "type": "radio",
-                            "instructions": "What format should the text be?",
+                            "instructions": "What format should the text be? If you choose \"caption\", add the caption within the WordPress image caption area.",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -88,50 +89,32 @@
                                 "id": ""
                             },
                             "choices": {
-                                "caption": "Caption",
-                                "paragraph": "Paragraph"
+                                "caption": "Caption\/Wide",
+                                "inline": "Inline"
                             },
+                            "allow_null": 0,
                             "other_choice": 0,
                             "save_other_choice": 0,
                             "default_value": "",
-                            "layout": "vertical",
-                            "allow_null": 0,
+                            "layout": "horizontal",
                             "return_format": "value"
                         },
                         {
-                            "key": "field_545a73ad3eeda",
-                            "label": "Text",
-                            "name": "textimage_paragraph",
-                            "type": "wysiwyg",
-                            "instructions": "The text will display in a paragraph format next to the image. The paragraph text should be related to any text above and below.",
+                            "key": "field_581a4f3259885",
+                            "label": "Alignment",
+                            "name": "textimage_alignment",
+                            "type": "radio",
+                            "instructions": "Should the image be on the right or left?",
                             "required": 0,
                             "conditional_logic": [
                                 [
                                     {
                                         "field": "field_545a74693eedc",
                                         "operator": "==",
-                                        "value": "paragraph"
+                                        "value": "inline"
                                     }
                                 ]
                             ],
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "tabs": "all",
-                            "toolbar": "text_based",
-                            "media_upload": 0
-                        },
-                        {
-                            "key": "field_581a4f3259885",
-                            "label": "Alignment",
-                            "name": "alignment",
-                            "type": "radio",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
                             "wrapper": {
                                 "width": "",
                                 "class": "",
@@ -149,18 +132,18 @@
                             "return_format": "value"
                         },
                         {
-                            "key": "field_5485990b20199",
-                            "label": "Caption",
-                            "name": "textimage_caption",
-                            "type": "textarea",
-                            "instructions": "The caption to be displayed next to the image.",
+                            "key": "field_545a73ad3eeda",
+                            "label": "Text",
+                            "name": "textimage_text",
+                            "type": "wysiwyg",
+                            "instructions": "The text will display in a paragraph format next to the image. The paragraph text should be related to any text above and below.",
                             "required": 0,
                             "conditional_logic": [
                                 [
                                     {
                                         "field": "field_545a74693eedc",
                                         "operator": "==",
-                                        "value": "caption"
+                                        "value": "inline"
                                     }
                                 ]
                             ],
@@ -170,12 +153,10 @@
                                 "id": ""
                             },
                             "default_value": "",
-                            "placeholder": "",
-                            "maxlength": "",
-                            "rows": 4,
-                            "new_lines": "br",
-                            "readonly": 0,
-                            "disabled": 0
+                            "tabs": "all",
+                            "toolbar": "text_based",
+                            "media_upload": 0,
+                            "delay": 0
                         },
                         {
                             "key": "field_545a74233eedb",
@@ -190,7 +171,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "return_format": "url",
+                            "return_format": "id",
                             "preview_size": "thumbnail",
                             "library": "all",
                             "min_width": "",
@@ -322,8 +303,8 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "min": "",
-                            "max": "",
+                            "min": 0,
+                            "max": 0,
                             "layout": "block",
                             "button_label": "Add Item",
                             "sub_fields": [
@@ -425,7 +406,8 @@
                                     "default_value": "",
                                     "tabs": "visual",
                                     "toolbar": "links_only",
-                                    "media_upload": 0
+                                    "media_upload": 0,
+                                    "delay": 0
                                 }
                             ],
                             "collapsed": ""
@@ -489,7 +471,8 @@
                             "default_value": "",
                             "tabs": "text",
                             "toolbar": "full",
-                            "media_upload": 0
+                            "media_upload": 0,
+                            "delay": 0
                         }
                     ],
                     "min": "",
@@ -585,7 +568,8 @@
                             "default_value": "",
                             "tabs": "all",
                             "toolbar": "links_only",
-                            "media_upload": 1
+                            "media_upload": 1,
+                            "delay": 0
                         },
                         {
                             "key": "field_558ae470bcbc6",
@@ -634,11 +618,6 @@
     "location": [
         [
             {
-                "param": "page_template",
-                "operator": "!=",
-                "value": "page-long_form.php"
-            },
-            {
                 "param": "post_type",
                 "operator": "!=",
                 "value": "source"
@@ -663,5 +642,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1478121658
+    "modified": 1490903339
 }
