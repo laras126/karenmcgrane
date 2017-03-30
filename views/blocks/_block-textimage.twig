@@ -1,14 +1,24 @@
 {% extends "blocks/block.twig" %}
 
 {% block content %}
-	{% if block.textimage_format == 'caption'%}
-		<img src="{{block.textimage_image}}" alt="Block image">
-		<p class="block--textimage__caption">{{block.textimage_caption}}</p>
-	{% elseif block.textimage_format == 'inline'%}
-    <div class="block-textimage -inline">
-      <div class="image-{{block.image_alignment}}"></div>
+
+  {% include 'utility/srcset.twig' with { id: block.textimage_image, class: block.textimage_alignment } %}
+
+  {% if block.textimage_format == 'caption'%}
+    <pre>caption</pre>
+    <p class="text-caption">{{TimberImage(block.textimage_image).caption}}</p>
+  {% else %}
+    <pre>inline</pre>
+    {{block.get_field('textimage_text')}}
+  {% endif %}
+
+  {{block.textimage_paragraph}}
+
+  {# {% elseif block.textimage_format == 'inline' or block.textimage_format == 'paragraph' %} #}
+    {# <div class="block-textimage -inline">
+      <div class="image-{{block.textimage_alignment}}">
+
+      </div>
       <img src="{{block.textimage_image}}" alt="Block image">
-    {{block.textimage_paragraph}}
-    </div>
-	{% endif %}
+    </div> #}
 {% endblock %}
