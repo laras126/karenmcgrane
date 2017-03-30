@@ -4,8 +4,8 @@
 // ----
 
 $screen-xs:     30em;
-$screen-sm:     38em;
-$screen-md:     44em;
+$screen-sm:     35em;
+$screen-md:     43em;
 $screen-lg:   	50em;
 $screen-xl:     57em;
 
@@ -81,6 +81,7 @@ $size-contain-sm: 	98%;
 $size-contain-base: 90%;
 
 $size-p:            1.25rem;
+$size-base:         $size-p;
 
 $size-xsml:         $size-p*0.6;
 $size-sml:          $size-p*0.8;
@@ -102,8 +103,9 @@ $size-h6:           $size-sml*1.063;
 $serif:				  'Georgia', serif;
 $sans-serif:		'Avenir W01', 'Arial', sans-serif;
 
-$line-height-base: 	1.4;
-$line-height-sm: 	  1.1;
+$line-height-lg:    1.7;
+$line-height-base: 	1.5;
+$line-height-sm: 	  1.3;
 
 $font-sans-fallback:	'Helvetica', sans-serif;
 $font-serif-fallback: 'Georgia', serif;
