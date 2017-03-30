@@ -62,10 +62,8 @@ a {
 h1, h2, h3, h4, h5, h6 {
 	font-family: $font-heading;
 	font-weight: $font-weight-heading;
-	margin-bottom: 0;
-  line-height: $line-height-sm;
-
-	// line-height: $line-height-sm;
+	margin-bottom: $size-p;
+	line-height: $line-height-sm;
 }
 
 h1 {
@@ -115,36 +113,43 @@ strong {
 }
 
 blockquote {
-	font-size: $size-h4;
+	font-size: $size-h5;
 	font-style: italic;
-	margin-left: $size-h3;
+	margin-left: $size-base;
+	padding-top: $size-xsml;
+	padding-bottom: $size-xsml;
 
 	&:before {
-		background-image: url(../img/svg-min/quotes-left.min.svg);
+		background-image: url(../img/svg-raw/quotes-left.svg);
 		background-repeat: no-repeat;
 		opacity: 0.7;
 
 		content: " ";
 
-		width: $size-h3;
-		height: $size-h3;
+		width: $size-h5;
+		height: $size-h5;
 
 		position: absolute;
-		left: 0;
+		margin-left: -$size-h4;
+		margin-top: $size-sml;
 	}
 }
 
 p {
-	margin-top: $size-xsml;
-	margin-bottom: $size-xsml;
+	margin-top: $size-sml;
+	margin-bottom: $size-p;
 }
 
+li {
+	margin-bottom: $size-sml;
+}
 
 /// @group typography-helpers
 /// @description [Semantic classes for typography. These may be extended in their associated partial.]
 
 .lead {
 	font-size: $size-h5;
+	line-height: $line-height-lg;
 }
 
 .summary {
