@@ -23,8 +23,7 @@
 		<div class="contain-lg">
 			<div class="inner">
 				<h1 class="header-title">{{post.post_title}}</h1>
-				<p class="lead">{{post.header_tagline}}</p>
-				<p class="summary">{{post.header_summary}}</p>
+				{% include 'partials/connected-source.twig'%}
 			</div>
 		</div>
 	{% endblock %}
