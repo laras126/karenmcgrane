@@ -1,1 +1,10 @@
 {% extends 'headers/header.twig' %}
+
+{% block after_header_content %}
+  <div class="contain-md">
+    <div class="inner">
+      {% if post.header_tagline %}<p class="lead">{{post.header_tagline}}</p>{% endif %}
+      {% if post.header_summary %}<p class="summary">{{post.header_summary}}</p>{% endif %}
+    </div>
+  </div>
+{% endblock %}
