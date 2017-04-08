@@ -1,13 +1,11 @@
 {% extends "singles/single.twig" %}
 
-{% block before_header_content %}
-{% endblock %}
+{# {% block before_header_content %}
+{% endblock %} #}
 
-{% block after_header_content %}
-{% endblock %}
 
 {% block content %}
-	
+
 	{% if post.video %}
 		<h3>Video</h3>
 		{{post.video}}
@@ -17,8 +15,8 @@
 		<h3>Slides</h3>
 		{{post.slides}}
 	{% endif %}
-	
-	{% for block in post.get_field('blocks') %} 
+
+	{% for block in post.get_field('blocks') %}
 		{% include 'blocks/block-logic.twig' %}
 	{% endfor %}
 
