@@ -5,12 +5,11 @@
 {% endblock %}
 
 {% block content %}
-	{% if post.header_tagline %}<p class="lead">{{post.header_tagline}}</p>{% endif %}
-	{% if post.header_summary %}<p class="summary">{{post.header_summary}}</p>{% endif %}
+{# 	{% if post.header_tagline %}<p class="lead">{{post.header_tagline}}</p>{% endif %}
+	{% if post.header_summary %}<p class="summary">{{post.header_summary}}</p>{% endif %} #}
 	{% for block in post.get_field('blocks') %}
 		{% include 'blocks/block-logic.twig' %}
 	{% endfor %}
-
 {% endblock %}
 
 {% block after_content %}
