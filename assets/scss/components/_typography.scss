@@ -77,11 +77,7 @@ h1 {
 }
 
 h2 {
-	// font-size: $size-h4;
-
-	// @include bp(nav) {
-  	font-size: $size-h2;
-  // }
+	font-size: $size-h2;
 }
 
 h3 {
@@ -149,7 +145,7 @@ li {
 
 .lead {
 	font-size: $size-h5;
-	line-height: $line-height-lg;
+	line-height: $line-height-base;
 }
 
 .summary {
