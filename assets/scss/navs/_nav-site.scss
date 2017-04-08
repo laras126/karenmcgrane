@@ -10,6 +10,11 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  flex-wrap: wrap;
+
+  @include bp(nav) {
+    flex-wrap: nowrap;
+  }
 }
 
 .site-nav-list-item {
