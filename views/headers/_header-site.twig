@@ -5,7 +5,7 @@
 {% block header_content %}
   <div class="contain-lg">
     <div class="inner">
-      <h1 class="site-title"><a href="{{site.link}}" title="{{site.name}}" rel="home">Karen<br>McGrane</a></h1>
+      <h1 class="site-title"><a href="{{site.link}}" class="site-title-link" title="{{site.name}}" rel="home">Karen<br>McGrane</a></h1>
       {% include 'navs/_nav-site.twig' %}
 
       {% if function('is_front_page', true) %}
@@ -13,4 +13,21 @@
       {% endif %}
     </div>
   </div>
+
+    {% if function('is_archive') %}
+
+      <div class="header-image-wrap">
+        <div class="contain-lg">
+          {% if title == 'Presentations' %}
+            {% include 'utility/srcset.twig' with { id: presentations_image, class: 'header-image' } %}
+          {% elseif title == 'Articles' %}
+            {% include 'utility/srcset.twig' with { id: articles_image, class: 'header-image' } %}
+          {% elseif title == 'Sources' %}
+            {% include 'utility/srcset.twig' with { id: sources_image, class: 'header-image' } %}
+          {% endif %}
+        </div>
+      </div>
+
+    {% endif %}
+
 {% endblock %}
