@@ -2,7 +2,10 @@
 
 .tease {
   border-bottom: $border-accent;
-  padding-bottom: $size-h3/2;
+
+  .archive & {
+    padding-bottom: $size-h3/2;
+  }
 }
 
 .tease-blurb {
@@ -10,9 +13,9 @@
 }
 
 .tease-title {
-  // font-size: $size-h3;
-
-
+  > a {
+    text-decoration: none;
+  }
   &.-source {
     font-size: $size-h4;
   }
