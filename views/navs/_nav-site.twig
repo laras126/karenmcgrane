@@ -9,6 +9,7 @@
 {% set replace_dot = '-' %}
 
 {% block nav_content %}
+  <div class="inner">
     <ul class="site-nav-list">
     {% for item in menu.items %}
       <li class="site-nav-list-item">
@@ -31,4 +32,5 @@
       </li>
     {% endfor %}
     </ul>
+  </div>
 {% endblock %}
