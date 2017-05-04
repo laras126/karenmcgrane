@@ -24,30 +24,36 @@
 
 $header_img_size: 6.25rem;
 
-// @include bp(md) {
+.header-image-wrap {
+  width: 100%;
+  position: absolute;
+  bottom: -$header_img_size/2;
 
-  .header-image-wrap {
-    width: 100%;
-    position: absolute;
-    bottom: -$header_img_size/2;
-
-    img {
-      height: $header_img_size;
-      width: auto;
+  img {
+    height: $header_img_size;
+    width: auto;
+    margin: auto;
+    @include bp(nav) {
       float: right;
     }
   }
+}
 
-  .site-header {
+.site-header {
+  background-color: $color-accent-light;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: $size-p;
+
+
+  @include bp(md) {
+    padding-bottom: $header_img_size/3;
+    padding-top: $header_img_size/3;
+  }
+
+  .archive & { // May need to adjust this if header image is on more than archives
     position: relative;
     padding-bottom: $header_img_size;
     margin-bottom: $header_img_size;
-    @include bp(md) {
-      padding-top: $header_img_size - $size-h4;
-    }
   }
-// }
-
-.site-header {
-
 }
