@@ -73,7 +73,7 @@
                     "key": "545a739c3eed9",
                     "name": "block_textimage",
                     "label": "Text and Image",
-                    "display": "row",
+                    "display": "block",
                     "sub_fields": [
                         {
                             "key": "field_545a74693eedc",
@@ -84,13 +84,13 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "",
+                                "width": "50",
                                 "class": "",
                                 "id": ""
                             },
                             "choices": {
                                 "caption": "Caption\/Wide",
-                                "inline": "Inline"
+                                "inline": "Paragraph"
                             },
                             "allow_null": 0,
                             "other_choice": 0,
@@ -98,6 +98,33 @@
                             "default_value": "",
                             "layout": "horizontal",
                             "return_format": "value"
+                        },
+                        {
+                            "key": "field_590b862bbf409",
+                            "label": "Caption",
+                            "name": "caption",
+                            "type": "textarea",
+                            "instructions": "A short caption to be displayed under the image.",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_545a74693eedc",
+                                        "operator": "==",
+                                        "value": "caption"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": "",
+                            "rows": 4,
+                            "new_lines": ""
                         },
                         {
                             "key": "field_581a4f3259885",
@@ -116,13 +143,13 @@
                                 ]
                             ],
                             "wrapper": {
-                                "width": "",
+                                "width": "50",
                                 "class": "",
                                 "id": ""
                             },
                             "choices": {
-                                "right": "Right",
-                                "left": "Left"
+                                "left": "Left",
+                                "right": "Right"
                             },
                             "allow_null": 0,
                             "other_choice": 0,
@@ -307,6 +334,7 @@
                             "max": 0,
                             "layout": "block",
                             "button_label": "Add Item",
+                            "collapsed": "",
                             "sub_fields": [
                                 {
                                     "key": "field_545a7dc339b3e",
@@ -409,8 +437,7 @@
                                     "media_upload": 0,
                                     "delay": 0
                                 }
-                            ],
-                            "collapsed": ""
+                            ]
                         },
                         {
                             "key": "field_545fae2b2e782",
@@ -642,5 +669,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1490903339
+    "modified": 1493930169
 }
