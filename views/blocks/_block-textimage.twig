@@ -2,23 +2,18 @@
 
 {% block content %}
 
-  {% include 'utility/srcset.twig' with { id: block.textimage_image, class: block.textimage_alignment } %}
+  {{ block.textimage_format == 'inline' ? '<div class="inline-img-wrap">' }}
+
+    {% include 'utility/srcset.twig' with { id: block.textimage_image, class: 'textimage-image' } %}
+
+  {{ block.textimage_format == 'inline' ? '</div>' }}
 
   {% if block.textimage_format == 'caption'%}
-    <pre>caption</pre>
-    <p class="text-caption">{{TimberImage(block.textimage_image).caption}}</p>
+    <p class="caption">{{block.caption}}</p>
   {% else %}
-    <pre>inline</pre>
-    {{block.get_field('textimage_text')}}
+    <div class="inline-text-wrap">
+      {{block.textimage_text}}
+    </div>
   {% endif %}
 
-  {{block.textimage_paragraph}}
-
-  {# {% elseif block.textimage_format == 'inline' or block.textimage_format == 'paragraph' %} #}
-    {# <div class="block-textimage -inline">
-      <div class="image-{{block.textimage_alignment}}">
-
-      </div>
-      <img src="{{block.textimage_image}}" alt="Block image">
-    </div> #}
 {% endblock %}
