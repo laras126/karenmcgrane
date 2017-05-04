@@ -1,9 +1,6 @@
 
-/// @group Typography
-
 html {
 	font-size: $size-contain-base;
-	// line-height: $line-height-sm;
 	line-height: $line-height-base;
 	font-weight: $font-weight-base;
 
@@ -37,20 +34,20 @@ body {
 
 a {
 	color: $color-link;
-	text-decoration: none;
+	// text-decoration: none;
 
-	p &, span &, li & {
-		text-decoration: underline;
-	}
+	// p &, span &, li & {
+	// 	text-decoration: underline;
+	// }
 
 	&:hover, &:focus {
 		color: $color-link-hover;
-		text-decoration: none;
+		// text-decoration: none;
 	}
 
 	&:active {
 		color: $color-link-active;
-		text-decoration: none;
+		// text-decoration: none;
 	}
 
 	// mobile tap color
@@ -64,6 +61,10 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: $font-weight-heading;
 	margin-bottom: $size-p;
 	line-height: $line-height-sm;
+
+	// @include bp(lg) {
+	// 	line-height: $line-height-base;
+	// }
 }
 
 h1 {
@@ -81,10 +82,12 @@ h2 {
 }
 
 h3 {
+	margin-top: $size-h4;
 	font-size: $size-h3;
 }
 
 h4 {
+	margin-top: $size-h4;
 	font-size: $size-h4;
 }
 
@@ -112,8 +115,17 @@ blockquote {
 	font-size: $size-h5;
 	font-style: italic;
 	margin-left: $size-base;
+	margin-right: 0;
 	padding-top: $size-xsml;
 	padding-bottom: $size-xsml;
+
+	> p {
+		margin-bottom: 0;
+	}
+
+	@include bp(md) {
+		margin-left: $size-h4;
+	}
 
 	&:before {
 		background-image: url(../img/svg-raw/quotes-left.svg);
@@ -139,9 +151,6 @@ p {
 li {
 	margin-bottom: $size-sml;
 }
-
-/// @group typography-helpers
-/// @description [Semantic classes for typography. These may be extended in their associated partial.]
 
 .lead {
 	font-size: $size-h5;
