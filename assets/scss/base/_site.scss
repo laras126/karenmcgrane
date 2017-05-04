@@ -23,6 +23,7 @@ img {
 .site-header {
   background-color: $color-accent-light;
   display: flex;
+  flex-direction: column;
 }
 
 .inner {
@@ -35,12 +36,21 @@ img {
   font-size: $size-h5;
 }
 
+.site-title-link {
+  text-decoration: none;
+}
+
 .site-desc {
+  font-size: $size-h4;
+
   @include bp(nav) {
+    font-size: $size-h3;
+  }
+
+  @include bp(md) {
     font-size: $size-h2;
   }
 
-  font-size: $size-h4;
   font-weight: $font-weight-strong;
   line-height: $line-height-sm;
   margin-top: $size-base;
@@ -52,6 +62,8 @@ img {
   background-color: $color-accent-light;
   padding-top: $size-p;
   padding-bottom: $size-p;
+  margin-top: $size-h3;
+
   p {
     font-size: $size-sml;
   }
