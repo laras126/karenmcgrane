@@ -1,4 +1,4 @@
-<div class="block {{block_class}}{{' -' ~ block.textimage_format ~ ' -' ~ block.textimage_alignment}}">
+<div class="block {{block_class}}{{ block.acf_fc_layout == 'block_textimage' ? ' -' ~ block.textimage_format }}{{ block.textimage_alignment ? ' -' ~ block.textimage_alignment }}">
 	{% block content %}
 		<p>Nothing in this Block</p>
 	{% endblock %}
