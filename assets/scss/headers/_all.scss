@@ -18,10 +18,36 @@
   margin-bottom: $size-h3;
 }
 
-.header-image-wrap {
-  background-color: $color-accent-light;
-}
-
 .header-image {
   display: block;
+}
+
+$header_img_size: 6.25rem;
+
+// @include bp(md) {
+
+  .header-image-wrap {
+    width: 100%;
+    position: absolute;
+    bottom: -$header_img_size/2;
+
+    img {
+      height: $header_img_size;
+      width: auto;
+      float: right;
+    }
+  }
+
+  .site-header {
+    position: relative;
+    padding-bottom: $header_img_size;
+    margin-bottom: $header_img_size;
+    @include bp(md) {
+      padding-top: $header_img_size - $size-h4;
+    }
+  }
+// }
+
+.site-header {
+
 }
