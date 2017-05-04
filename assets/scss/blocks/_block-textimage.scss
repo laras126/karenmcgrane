@@ -1,32 +1,64 @@
 
-// figure {
-// 	margin: 0;
-// }
+figure {
+	margin: 0;
+}
 
-// .caption {}
+.block_textimage {
 
-// 	img.caption-image {
-// 		border-top: $accent-border;
-// 	}
+  &.-inline {
+    @include bp(md) {
+      display: flex;
+    }
+  }
 
-// .textimage-image {
+}
 
-// 	@include bp(small) {
-// 		padding-right: $gutter;
-// 	}
+.inline-img-wrap {
+  @include bp(md) {
+    display: flex;
+    align-items: center;
 
-// 	@include bp(med) {
-// 		margin-left: percentage(1/7)*-1;
-// 	}
-	
-// 	@include bp(large) {
-// 		margin-left: percentage(2/7)*-1;
-// 	}
+    flex-grow: 1;
+    flex-basis: 500px;
 
-// 	padding-bottom: $gutter/2;
-// 	position: relative;
-// }
+    .-right & {
+      order: 1;
+      margin-left: $size-base;
+      margin-right: -9%;
+    }
 
-// .textimage-text {
-	
-// }
+    .-left & {
+      order: 0;
+      margin-right: $size-base;
+      margin-left: -9%;
+    }
+  }
+}
+
+.inline-text-wrap {
+  flex-grow: 3;
+  flex-basis: 500px;
+  @include bp(lg) {
+    flex-shrink: 0;
+  }
+}
+
+@include bp(md) {
+  .textimage-image {
+    .-caption & {
+      margin-left: -5%;
+      margin-right: -5%;
+      width: 110%;
+      max-width: none;
+    }
+  }
+}
+
+.caption {
+  @include meta($margin: false);
+  text-align: center;
+
+  @include bp(xl) {
+    text-align: left;
+  }
+}
