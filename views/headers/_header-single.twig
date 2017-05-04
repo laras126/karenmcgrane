@@ -1,7 +1,16 @@
 {% extends 'headers/header.twig' %}
 
+{% block header_content %}
+  <div class="contain-lg">
+    <div class="inner">
+      <h1 class="header-title">{{post.post_title}}</h1>
+      {% include 'partials/connected-source.twig'%}
+    </div>
+  </div>
+{% endblock %}
+
 {% block after_header_content %}
-  <div class="contain-md">
+  <div class="contain-lg">
     <div class="inner">
       {% if post.header_tagline %}<p class="lead">{{post.header_tagline}}</p>{% endif %}
       {% if post.header_summary %}<p class="summary">{{post.header_summary}}</p>{% endif %}
