@@ -1,12 +1,9 @@
 <article class="tease -{{post.post_type}}" id="tease-{{post.ID}}">
-
-
   {% block tease_header %}
     <h3 class="tease-title -{{post.post_type}}"><a href="{{post.link}}">{{post.post_title}}</a><span class="tease-more">&rsaquo;</span></h3>
   {% endblock %}
 
   {% block after_tease_header %}{% endblock %}
-
 
   {% block tease_content %}
     {{post.header_tagline ? '<p>' ~ post.header_tagline ~ '</p>' }}
