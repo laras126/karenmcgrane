@@ -24,9 +24,6 @@ $MQs: true;
     @else if $point == md {
       @media #{$bp-md} { @content; }
     }
-    @else if $point == nav {
-      @media #{$bp-md} { @content; }
-    }
     @else if $point == lg {
       @media #{$bp-lg} { @content; }
     }
