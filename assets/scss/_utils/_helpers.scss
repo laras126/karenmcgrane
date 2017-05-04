@@ -10,16 +10,16 @@
 
 .meta {
 	@include meta();
-	line-height: $line-height-sm;
+	// line-height: $line-height-sm;
 }
 
 	.meta-light {
-		line-height: $line-height-sm;
+		//line-height: $line-height-sm;
 		@include meta($color-text-light);
 	}
 
 	.meta-dark {
-		line-height: $line-height-sm;
+		// line-height: $line-height-sm;
 		@include meta($color-body-text);
 	}
 
