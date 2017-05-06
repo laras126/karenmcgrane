@@ -9,21 +9,18 @@
     {% include 'blocks/block-logic.twig' %}
   {% endfor %}
 
-  <h2 class="archive-title">Recent Articles</h2>
-  {% for article in recent_articles %}
-    {% include 'teases/_tease-minor.twig' with { post: article } %}
-  {% endfor %}
+  <section class="tease-loop">
+    <h2 class="archive-title">Recent Articles</h2>
+    {% for article in recent_articles %}
+      {% include 'teases/_tease-minor.twig' with { post: article } %}
+    {% endfor %}
+  </section>
 
-  <h2 class="archive-title">Recent Talks</h2>
-  {% for talk in recent_talks %}
-    {% include 'teases/_tease-minor.twig' with { post: talk } %}
-  {% endfor %}
-
-  {# {% block after_blocks %}{% endblock %} #}
-{% endblock %}
-{#
-{% block after_blocks %}
-
+  <section class="tease-loop">
+    <h2 class="archive-title">Recent Talks</h2>
+    {% for talk in recent_talks %}
+      {% include 'teases/_tease-minor.twig' with { post: talk } %}
+    {% endfor %}
+  </section>
 
 {% endblock %}
- #}

@@ -1,8 +1,13 @@
 
+.tease-loop {
+  margin-bottom: $size-h2;
+}
 
 .tease {
   border-bottom: $border-accent;
-
+  &:last-child {
+    border-bottom: none;
+  }
   .archive & {
     padding-bottom: $size-h3/2;
   }

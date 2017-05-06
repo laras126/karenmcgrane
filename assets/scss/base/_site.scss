@@ -54,11 +54,7 @@ img {
 
 .site-footer {
   background-color: $color-accent-light;
-  padding-top: $size-p;
-  padding-bottom: $size-p;
-  margin-top: $size-h3;
-
-  p {
-    font-size: $size-sml;
-  }
+  padding-top: $size-base;
+  padding-bottom: $size-base;
+  margin-top: $size-h1;
 }
