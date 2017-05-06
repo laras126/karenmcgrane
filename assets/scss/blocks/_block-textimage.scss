@@ -8,12 +8,19 @@ figure {
   &.-inline {
     @include bp(md) {
       display: flex;
+      align-items: center;
     }
   }
 
 }
 
 .inline-img-wrap {
+
+  > img {
+    display: block;
+    margin: auto;
+  }
+
   @include bp(md) {
     display: flex;
     align-items: center;
@@ -38,6 +45,8 @@ figure {
 .inline-text-wrap {
   flex-grow: 3;
   flex-basis: 500px;
+  display: flex;
+  flex-direction: column;
   @include bp(lg) {
     flex-shrink: 0;
   }

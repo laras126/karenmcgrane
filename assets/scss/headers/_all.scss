@@ -1,14 +1,7 @@
 
+$header_img_size: 6.25rem;
+
 .header {
-
-  &.-site {
-
-  }
-
-  &.-page {
-
-  }
-
   &.-single {
     margin-bottom: $size-h3;
   }
@@ -21,8 +14,6 @@
 .header-image {
   display: block;
 }
-
-$header_img_size: 6.25rem;
 
 .header-image-wrap {
   width: 100%;
@@ -43,8 +34,7 @@ $header_img_size: 6.25rem;
   background-color: $color-accent-light;
   display: flex;
   flex-direction: column;
-  padding-bottom: $size-p;
-
+  padding-bottom: $size-base;
 
   @include bp(md) {
     padding-bottom: $header_img_size/3;
