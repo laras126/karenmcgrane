@@ -3,6 +3,7 @@
 // Layout
 // ----
 
+
 // Containers
 
 $c-pad: 10%;
@@ -15,18 +16,7 @@ $c-pad: 10%;
   @include bp(md) {
     width: 80%;
   }
-
-  //   @if $size == sm {
-  //     padding-left: $c-pad;
-  //     padding-right: $c-pad;
-  //   }
-  //   @elseif $size == md {
-  //     padding-left: $c-pad/2;
-  //     padding-right: $c-pad/2;
-  //   }
-  // }
 }
-
 
 .contain-sm {
   @include contain($screen-sm);
@@ -47,7 +37,7 @@ $c-pad: 10%;
 
 
 
-// Flexbox Layout
+// Flexbox Grid
 
 $sizes: (
   full:   100%,
@@ -107,11 +97,13 @@ $gutter: $size-p;
 }
 
 
+// In case floats are used:
+
 @mixin clearfix() {
     &:before,
     &:after {
-        content: " "; // 1
-        display: table; // 2
+        content: " ";
+        display: table;
     }
     &:after {
         clear: both;
