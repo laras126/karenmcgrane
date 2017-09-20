@@ -1,44 +1,45 @@
 {% block html_head_container %}
-{% include 'html-header.twig' %}
+    {% include 'html-header.twig' %}
+
     {% block head %}
     {% endblock %}
-    </head>
+</head>
 {% endblock %}
 
-    <body class="{{body_class}} wf-loading" data-template="base.twig" id="pageTop">
+<body class="{{body_class}} wf-loading" data-template="base.twig" id="pageTop">
 
-        <div class="visually-hidden">{% include 'views/utility/svg-defs.svg' %}</div>
+    <div class="visually-hidden">{% include 'views/utility/svg-defs.svg' %}</div>
 
-        {% block header %}
-          {% include 'headers/_header-site.twig' with { class: 'site-header', role: 'banner' } %}
-        {% endblock %}
+    {% block header %}
+      {% include 'headers/_header-site.twig' with { class: 'site-header', role: 'banner' } %}
+    {% endblock %}
 
-        <main class="site-main" role="main">
+    <main class="site-main" role="main">
 
-          {% block before_content %}{% endblock %}
+      {% block before_content %}{% endblock %}
 
-            <div class="site-content contain-lg">
-                <div class="inner">
-                  {% block content %}
-                      Sorry, no content
-                  {% endblock %}
-                </div>
+        <div class="site-content contain-lg">
+            <div class="inner">
+              {% block content %}
+                  Sorry, no content
+              {% endblock %}
             </div>
+        </div>
 
-            {% block after_content %}{% endblock %}
+        {% block after_content %}{% endblock %}
 
-            {% if sidebar %}
-                <aside class="site-sidebar">
-                    {{sidebar}}
-                </aside>
-            {% endif %}
+        {% if sidebar %}
+            <aside class="site-sidebar">
+                {{sidebar}}
+            </aside>
+        {% endif %}
 
-        </main>
+    </main>
 
-        {% block footer %}
-            {% include 'footers/_footer-site.twig' with { class : 'site-footer' } %}
-            {{ function('wp_footer') }}
-        {% endblock %}
+    {% block footer %}
+        {% include 'footers/_footer-site.twig' with { class : 'site-footer' } %}
+        {{ function('wp_footer') }}
+    {% endblock %}
 
-    </body>
+</body>
 </html>
