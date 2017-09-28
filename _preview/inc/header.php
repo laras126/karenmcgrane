@@ -8,7 +8,7 @@ $rootpath = $_SERVER['DOCUMENT_ROOT'];
 <head>
 <meta charset="utf-8" />
 
-<title><?php echo $pageTitle; ?></title>
+<title><?php echo $pageTitle; ?><?php if ( $bodyClass !== "home" ) { ?> — Karen McGrane<?php } ?></title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -38,7 +38,7 @@ if ( isset( $criticalCSS ) ) {
 
 </head>
 
-<?php if ( $bodyClass ) { ?>
+<?php if ( isset( $bodyClass ) ) { ?>
 <body id="www-karenmcgrane-com" class="tmpl-<?php echo $bodyClass; ?>">
 <?php } else { ?>
 <body id="www-karenmcgrane-com">
@@ -49,31 +49,31 @@ if ( isset( $criticalCSS ) ) {
 
     <nav>
         <ul class="site-nav">
-            <li>
+            <li<?php if ($bodyClass == "talks") { ?> aria-describedby="current-page"<?php } ?>>
                 <a href="#">
                     <img src="../dist/assets/svg/talks.svg" alt="" />
                     Talks
                 </a>
             </li>
-            <li>
+            <li<?php if ($bodyClass == "articles") { ?> aria-describedby="current-page"<?php } ?>>
                 <a href="#">
                     <img src="../dist/assets/svg/articles.svg" alt="" />
                     Articles
                 </a>
             </li>
-            <li>
+            <li<?php if ($bodyClass == "sources") { ?> aria-describedby="current-page"<?php } ?>>
                 <a href="#">
                     <img src="../dist/assets/svg/sources.svg" alt="" />
                     Sources
                 </a>
             </li>
-            <li>
+            <li<?php if ($bodyClass == "contact") { ?> aria-describedby="current-page"<?php } ?>>
                 <a href="#">
                     <img src="../dist/assets/svg/contact.svg" alt="" />
                     Contact
                 </a>
             </li>
-            <li>
+            <li<?php if ($bodyClass == "books") { ?> aria-describedby="current-page"<?php } ?>>
                 <a href="#">
                     <img src="../dist/assets/svg/books.svg" alt="" />
                     Books

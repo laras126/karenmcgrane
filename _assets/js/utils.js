@@ -1,6 +1,6 @@
 (function( win, undefined ){
 
-    var PP = win.PP;
+    var KM = win.KM;
 
     // loadJS: load a JS file asynchronously. Included from https://github.com/filamentgroup/loadJS/
     function loadJS( src, cb ){
@@ -16,7 +16,7 @@
         return script;
     }
 
-    PP.utils.loadJS = loadJS;
+    KM.utils.loadJS = loadJS;
 
     // cookie function from https://github.com/filamentgroup/cookie/
     function cookie( name, value, days ){
@@ -47,6 +47,6 @@
     }
 
     // expose it
-    PP.utils.cookie = cookie;
+    KM.utils.cookie = cookie;
 
 }( this ));

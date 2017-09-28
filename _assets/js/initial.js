@@ -4,8 +4,8 @@
     "use strict";
 
     // Environment variables
-    var PP = win.PP,
-        utils = PP.utils,
+    var KM = win.KM,
+        utils = KM.utils,
         docClasses = [];
 
     if ( "sessionStorage" in window ) {
@@ -32,7 +32,7 @@
                 weight: 900
             } );
 
-            // When the fonts above are loaded, we'll attach a .fonts-loaded class to the document. (Per https://www.filamentgroup.com/lab/font-events.html) We'll also append the class to the `html`.
+            // When the fonts above are loaded, we'll attach a .fonts-loaded class to the document. (Per https://www.filamentgroup.com/lab/font-events.html)
             win.Promise
                 .all( [
                     avenir.load(),
