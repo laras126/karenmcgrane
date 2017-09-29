@@ -5,8 +5,20 @@ body {
     font: normal 1em/1.5 $fonts-sans-initial;
     margin: 0 auto;
     max-width: 36em;
-    padding-left: 2vw;
-    padding-right: 2vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+@media (min-width: 30em) {
+    body {
+        padding-left: 2vw;
+        padding-right: 2vw;
+    }
+}
+@media (min-width: 50em) {
+    body {
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
 }
 .fonts-loaded body {
     font-family: $fonts-sans;
@@ -61,9 +73,18 @@ a:focus {
 .region {
     margin: 0 auto;
     padding: 3vw 3.225806451612903225%;    /* 40 / 1240 */
-    max-width: 75em;    /* 1200/16 */
 }
 
+
+
+/*
+
+Masthead
+
+*/
+.site-mast {
+    margin-bottom: 1em;
+}
 .site-mast a,
 .site-footer a {
     color: #FFF;
@@ -77,7 +98,13 @@ a:focus {
     line-height: 1.375;  /* 66/48 */
     max-width: 16em;
 }
-@media (min-width: 40em) {
+@media (min-width: 50em) {
+    .site-mast {
+        margin: 2em auto;
+        padding-left: 0;
+        padding-right: 0;
+        width: 65.517241379310344827%;    /* 760/1160 */
+    }
     .tagline {
         font-size: 3em; /* 48/16 */
     }
@@ -142,7 +169,7 @@ a:focus {
     .site-nav img {
         flex: 1;
     }
-    @media (min-width: 50em) {
+    @media (min-width: 40em) {
         .site-mast,
         .site-mast > * {
             display: flex;
@@ -373,6 +400,12 @@ Teasers!
 Entry styles
 
 */
+.article-content:before,
+.article-content:after {
+    content: "";
+    display: table;
+    clear: both;
+}
 .article-content img {
     height: auto;
 }
@@ -452,7 +485,56 @@ Entry styles
 .article-content li ul {
     margin: 0.5em 0;
 }
-
+// Images!
+.alignnone,
+.alignleft,
+.alignright {
+    display: block;
+    width: 100%;
+}
+.wp-caption {
+    color: #999;
+    font-size: 0.9em;
+    margin: 1.5em 0;
+}
+.wp-caption img {
+    border-bottom: 1px solid #DEDEDE;
+    display: block;
+    padding-bottom: 0.75em;
+    margin-bottom: 0.75em;
+    width: 100%;
+}
+@media (min-width: 40em) {
+    .alignleft,
+    .alignright {
+        margin-bottom: 1.5em;
+        margin-top: 0;
+        width: 47.5%;    /* 361/760 */
+    }
+    .wp-caption {
+        margin-bottom: 2em;
+    }
+    .alignleft {
+        clear: left;
+        float: left;
+        margin-right: 5%;    /* 40/760 */
+    }
+    .alignright {
+        clear: right;
+        float: right;
+        margin-left: 5%;    /* 40/760 */
+    }
+}
+@media (min-width: 50em) {
+    .alignleft {
+        margin-left: -13.157894736842105263%;    /* 100/760 */
+        margin-right: 5.263157894736842105%;    /* 40/760 */
+    }
+    .alignright {
+        margin-left: 5.263157894736842105%;    /* 40/760 */
+        margin-right: -13.157894736842105263%;    /* 100/760 */
+    }
+}
 
 
 /*
@@ -594,12 +676,31 @@ Main content
     }
     @media (min-width: 50em) {
         .tmpl-entry .content-main {
-            display: grid;
-            grid-template-columns: 65.517241379310344827% 31.034482758620689655%;    /* 760/1160, 360/1160 */
-            grid-column-gap: 3.448275862068965517%;    /* 40/1160 */
+            padding-left: 0;
+            padding-right: 0;
         }
         .tmpl-entry .content-main > .group {
-            grid-column: 1;
+            margin: 0 auto;
+            width: 65.517241379310344827%;    /* 760/1160, 360/1160 */
         }
+    }
+}
+
+
+
+/*
+
+Footer
+
+*/
+.site-footer {
+    text-align: center;
+}
+@media (min-width: 50em) {
+    .site-footer {
+        margin: 0 auto;
+        padding-left: 0;
+        padding-right: 0;
+        width: 65.517241379310344827%;    /* 760/1160, 360/1160 */
     }
 }
