@@ -9,7 +9,7 @@ require("inc/header.php" );
     <section class="region about-karen">
         <h2 class="hed">Meet Karen McGrane.</h2>
 
-        <img src="../dist/assets/fpo/karen.png" alt="" />
+        <p class="photo" style="background-image: url( '../dist/assets/fpo/karen.png' );"><img src="../dist/assets/fpo/karen.png" alt="" /></p>
 
         <div class="content">
             <p>A few sentences about Karen welcoming people to the site. Donec id elit non mi porta gravida at eget metus. Vestibulum id ligula porta felis euismod semper. Donec sed odio dui. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo.</p>

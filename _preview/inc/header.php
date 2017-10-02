@@ -84,8 +84,8 @@ if ( isset( $criticalCSS ) ) {
 </header>
 
 <?php if ( isset( $bodyClass ) && $bodyClass == "home" ) { ?>
-<div class="region">
-    <p class="tagline">On a good day, I make the web more awesome. On a bad day, I just make it suck less.</p>
+<div class="site-tagline region">
+    <p>On a good day, I make the web more awesome. On a bad day, I just make it suck less.</p>
 </div>
 <?php } ?>
 
