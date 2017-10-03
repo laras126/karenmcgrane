@@ -115,7 +115,7 @@ require("inc/header.php" );
             </section>
 
             <section class="article-citations">
-                <h2 class="hed-section">Citations</h2>
+                <h2 class="hed-section-sub">Citations</h2>
 
                 <ul class="teaser-list">
                     <li class="teaser">

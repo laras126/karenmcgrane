@@ -256,6 +256,58 @@ Masthead
     }
 }
 
+
+
+/*
+
+Page content
+
+*/
+.site-content .region {
+    background: #FFF;
+    color: #333;
+    margin-bottom: 5em;
+    position: relative;
+}
+.site-content .region:before,
+.site-content .region:after {
+    background-color: #2F2F2F;
+    background-color: rgba( 47, 47, 47, 0.6 );
+    content: "";
+    height: 0.5em;
+    left: 0;
+    right: 0;
+    position: absolute;
+}
+.site-content .region:before {
+    top: -0.5em;
+}
+.site-content .region:after {
+    bottom: -0.5em;
+}
+.site-content .region:last-child {
+    margin-bottom: 0;
+}
+
+// Main page heading
+.hed-lead {
+    clear: both;
+    font-size: 2.25em;    /* 36 / 16 */
+    line-height: 1.175;
+    margin-bottom: 1em;
+}
+// Section subhed — uppercased, smaller hed
+.hed-section-sub {
+    clear: both;
+    color: #545454;
+    font-size: 0.875em;    /* 14 / 16 */
+    font-weight: 800;
+    line-height: 1.35;
+    margin-bottom: 3em;
+    text-transform: uppercase;
+}
+
+/* List with source titles + article counts */
 .sources-count-list {
     font-size: 1.125em;    /* 18 / 16 */
     list-style: none;
@@ -301,6 +353,15 @@ Masthead
 .sources-count-list a:focus dd {
     color: inherit;
 }
+.group-full .source-count dt {
+    flex: 1 1 60%;
+}
+.group-full .source-count dd {
+    flex: 1 1 40%;
+}
+.group-full .source-count .a11y {
+    position: static !important;
+}
 @media ( min-width: 40em ) {
     .group-full .sources-count-list {
         display: flex;
@@ -315,48 +376,10 @@ Masthead
     }
 }
 
-
-
-/*
-
-Page content
-
-*/
-.site-content .region {
-    background: #FFF;
-    color: #333;
-    margin-bottom: 5em;
-    position: relative;
-}
-.site-content .region:before,
-.site-content .region:after {
-    background-color: #2F2F2F;
-    background-color: rgba( 47, 47, 47, 0.6 );
-    content: "";
-    height: 0.5em;
-    left: 0;
-    right: 0;
-    position: absolute;
-}
-.site-content .region:before {
-    top: -0.5em;
-}
-.site-content .region:after {
-    bottom: -0.5em;
-}
-.site-content .region:last-child {
-    margin-bottom: 0;
-}
-
-// Section header — uppercased, smaller hed
-.hed-section {
-    clear: both;
-    color: #545454;
-    font-size: 0.875em;    /* 14 / 16 */
-    font-weight: 800;
-    line-height: 1.35;
-    margin-bottom: 3em;
-    text-transform: uppercase;
+.header-more {
+    align-items: baseline;
+    display: flex;
+    justify-content: space-between;
 }
 
 
@@ -396,18 +419,18 @@ Teasers!
         margin-bottom: 0;
         width: 21.024967148488830486%;    /* 160/761 */
     }
-    .teaser-inner {
+    img + .teaser-inner {
         margin-right: 26.315789473684210526%;    /* 200/760 */
     }
 }
 .teaser-inner > time,
 .article-meta,
 .teaser-meta {
+    color: #999;
     font-size: 0.875em;    /* 14/16 */
 }
 .teaser-inner > time,
 .article-meta {
-    color: #999;
     text-transform: uppercase;
 }
 .hed-teaser {
@@ -416,6 +439,9 @@ Teasers!
     line-height: 1.25;    /* 45 / 36 */
     margin: 0.2em 0;
 }
+.sources-list .hed-teaser {
+    font-size: 1.25em;
+}
 @media (min-width: 30em) {
     .hed-teaser {
         font-size: 1.5em;
@@ -423,6 +449,7 @@ Teasers!
 }
 .teaser p {
     font-size: 0.9375em;  /* 15/16 */
+    margin-bottom: 0.5em;
     margin-top: 0;
 }
 @media (min-width: 40em) {
@@ -445,17 +472,20 @@ Teasers!
     padding-left: 0.25em;
 }
 .link-more {
-    background: #27A99C;
+    color: #ED3E00;
+    border: 1px solid #ED3E00;
     border-radius: 0.25em;
-    color: #FFF;
     font-size: 0.875em;    /* 14/16 */
     padding: 0.25em 0.35em;
     text-decoration: none;
 }
 .link-more:hover,
 .link-more:focus {
-    background-color: #2785A9;
+    background-color: #ED3E00;
     color: #FFF;
+}
+.link-more:after {
+    padding-left: 0;
 }
 /* “Caps” finish off a section, and are aligned to the right on wider screens */
 .cap {
@@ -762,49 +792,42 @@ About module
 
 
 /*
-Main content
+Various and sundry grid layouts
 */
+.has-cards > .group {
+    border-top: 0.5em solid #EEE;
+    padding: 0.75em 0;
+}
 @supports ( display: grid ) {
     @media (min-width: 40em) {
-        .content-main.has-sidebar {
+        .has-sidebar {
             display: grid;
             grid-template-columns: 65.517241379310344827% 31.034482758620689655%;    /* 760/1160, 360/1160 */
             grid-column-gap: 3.448275862068965517%;    /* 40/1160 */
         }
-        .content-main.has-sidebar > .group {
+        .has-sidebar > .group {
             grid-column: 1;
         }
-        .content-main.has-sidebar > .group-alt {
+        .has-sidebar > .group-alt {
             grid-column: 2;
         }
 
-        .content-main.has-cards {
+        .has-cards {
             display: grid;
             grid-template-columns: repeat( 2, 48.275862068965517241% );    /* 760/1160, 360/1160 */
             grid-column-gap: 3.448275862068965517%;    /* 40/1160 */
         }
-        .content-main.has-cards > .group {
+        .has-cards > .group {
             margin-bottom: 4em;
         }
-        .content-main.has-cards > .group:nth-child( 1 ) {
+        .has-cards > .group:nth-child( 2n + 1 ) {
             grid-column: 1;
-            grid-row: 1;
         }
-        .content-main.has-cards > .group:nth-child( 2 ) {
+        .has-cards > .group:nth-child( 2n ) {
             grid-column: 2;
-            grid-row: 1;
         }
-        .content-main.has-cards > .group:nth-child( 3 ) {
-            grid-column: 1;
-            grid-row: 2;
-        }
-        .content-main.has-cards > .group:nth-child( 4 ) {
-            grid-column: 2;
-            grid-row: 2;
-        }
-        .content-main.has-cards > .group-full {
+        .has-cards > .group-full {
             grid-column: 1 / 3;
-            grid-row: 3;
         }
     }
     @media (min-width: 50em) {

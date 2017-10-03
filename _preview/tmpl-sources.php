@@ -6,133 +6,146 @@ $pageTitle = "Sources";
 require("inc/header.php" );
 ?>
 
-    <div class="region content-main has-cards">
-        <div class="group">
-            <h2 class="hed-section">Mobile-only Users</h2>
+    <div class="region content-main">
+        <h1 class="hed-lead">Sources</h1>
 
-            <ol class="teaser-list">
-                <li class="teaser">
+        <div class="has-cards">
+            <section class="group">
+                <header class="header-more">
+                    <h2 class="hed-section-sub">Mobile-only Users</h2>
 
-                    <div class="teaser-inner">
-                        <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">Mobile &gt; Local</a></h3>
+                    <a class="link-more" href="#">Browse 64 more <span class="a11y">sources filed under “Mobile-only Users”</span></a>
+                </header>
 
-                        <p><cite>Harvard Business Review</cite>, <time datetime="2017-09-27">Sept 27, 2017</time></p>
-                    </div><!-- /end .teaser-inner -->
-                </li><!-- /end .teaser -->
-                <li class="teaser">
-                    <div class="teaser-inner">
-                        <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">Mobile &gt; Local</a></h3>
+                <ol class="teaser-list sources-list">
+                    <li class="teaser">
 
-                        <p><cite>Harvard Business Review</cite>, <time datetime="2017-09-27">Sept 27, 2017</time></p>
-                    </div><!-- /end .teaser-inner -->
-                </li><!-- /end .teaser -->
-                <li class="teaser">
-                    <div class="teaser-inner">
-                        <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">Mobile &gt; Local</a></h3>
+                        <div class="teaser-inner">
+                            <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">Mobile &gt; Local</a></h3>
 
-                        <p><cite>Harvard Business Review</cite>, <time datetime="2017-09-27">Sept 27, 2017</time></p>
-                    </div><!-- /end .teaser-inner -->
-                </li><!-- /end .teaser -->
-            </ol>
+                            <p class="teaser-meta"><cite>Harvard Business Review</cite>, <time datetime="2017-09-27">Sept 27, 2017</time></p>
+                        </div><!-- /end .teaser-inner -->
+                    </li><!-- /end .teaser -->
+                    <li class="teaser">
+                        <div class="teaser-inner">
+                            <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">Mobile &gt; Local</a></h3>
 
-            <p class="cap"><a class="link-more" href="#">More on Mobile-only Users</a></p>
-        </div><!-- /end .group -->
+                            <p class="teaser-meta"><cite>Harvard Business Review</cite>, <time datetime="2017-09-27">Sept 27, 2017</time></p>
+                        </div><!-- /end .teaser-inner -->
+                    </li><!-- /end .teaser -->
+                    <li class="teaser">
+                        <div class="teaser-inner">
+                            <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">Mobile &gt; Local</a></h3>
 
-        <div class="group">
-            <h2 class="hed-section">M-Dot Websites</h2>
+                            <p>This article summarizes the historical development of major advances in human-computer interaction technology, emphasizing the pivotal role of university research in the advancement of the field.</p>
 
-            <ol class="teaser-list">
-                <li class="teaser">
+                            <p class="teaser-meta"><cite>Harvard Business Review</cite>, <time datetime="2017-09-27">Sept 27, 2017</time></p>
+                        </div><!-- /end .teaser-inner -->
+                    </li><!-- /end .teaser -->
+                </ol><!-- /end .teaser-list -->
+            </section><!-- /end .group -->
 
-                    <div class="teaser-inner">
-                        <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">Mobile &gt; Local</a></h3>
+            <section class="group">
+                <header class="header-more">
+                    <h2 class="hed-section-sub">M-Dot Websites</h2>
+                    <a class="link-more" href="#">Browse 27 more <span class="a11y">sources filed under “M-Dot Websites”</span></a>
+                </header>
 
-                        <p><cite>Harvard Business Review</cite>, <time datetime="2017-09-27">Sept 27, 2017</time></p>
-                    </div><!-- /end .teaser-inner -->
-                </li><!-- /end .teaser -->
-                <li class="teaser">
-                    <div class="teaser-inner">
-                        <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">Mobile &gt; Local</a></h3>
+                <ol class="teaser-list sources-list">
+                    <li class="teaser">
 
-                        <p><cite>Harvard Business Review</cite>, <time datetime="2017-09-27">Sept 27, 2017</time></p>
-                    </div><!-- /end .teaser-inner -->
-                </li><!-- /end .teaser -->
-                <li class="teaser">
-                    <div class="teaser-inner">
-                        <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">Mobile &gt; Local</a></h3>
+                        <div class="teaser-inner">
+                            <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">Mobile &gt; Local</a></h3>
 
-                        <p><cite>Harvard Business Review</cite>, <time datetime="2017-09-27">Sept 27, 2017</time></p>
-                    </div><!-- /end .teaser-inner -->
-                </li><!-- /end .teaser -->
-            </ol>
+                            <p class="teaser-meta"><cite>Harvard Business Review</cite>, <time datetime="2017-09-27">Sept 27, 2017</time></p>
+                        </div><!-- /end .teaser-inner -->
+                    </li><!-- /end .teaser -->
+                    <li class="teaser">
+                        <div class="teaser-inner">
+                            <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">Mobile &gt; Local</a></h3>
 
-            <p class="cap"><a class="link-more" href="#">More on M-Dot Websites</a></p>
-        </div><!-- /end .group -->
+                            <p>This article summarizes the historical development of major advances in human-computer interaction technology.</p>
 
-        <div class="group">
-            <h2 class="hed-section">Accessibility</h2>
+                            <p class="teaser-meta"><cite>Harvard Business Review</cite>, <time datetime="2017-09-27">Sept 27, 2017</time></p>
+                        </div><!-- /end .teaser-inner -->
+                    </li><!-- /end .teaser -->
+                    <li class="teaser">
+                        <div class="teaser-inner">
+                            <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">Mobile &gt; Local</a></h3>
 
-            <ol class="teaser-list">
-                <li class="teaser">
+                            <p class="teaser-meta"><cite>Harvard Business Review</cite>, <time datetime="2017-09-27">Sept 27, 2017</time></p>
+                        </div><!-- /end .teaser-inner -->
+                    </li><!-- /end .teaser -->
+                </ol><!-- /end .teaser-list -->
+            </section><!-- /end .group -->
 
-                    <div class="teaser-inner">
-                        <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">Mobile &gt; Local</a></h3>
+            <section class="group">
+                <header class="header-more">
+                    <h2 class="hed-section-sub">Accessibility</h2>
+                    <a class="link-more" href="#">Browse 11 more <span class="a11y">sources filed under “Accessibility”</span></a>
+                </header>
 
-                        <p><cite>Harvard Business Review</cite>, <time datetime="2017-09-27">Sept 27, 2017</time></p>
-                    </div><!-- /end .teaser-inner -->
-                </li><!-- /end .teaser -->
-                <li class="teaser">
-                    <div class="teaser-inner">
-                        <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">Mobile &gt; Local</a></h3>
+                <ol class="teaser-list sources-list">
+                    <li class="teaser">
 
-                        <p><cite>Harvard Business Review</cite>, <time datetime="2017-09-27">Sept 27, 2017</time></p>
-                    </div><!-- /end .teaser-inner -->
-                </li><!-- /end .teaser -->
-                <li class="teaser">
-                    <div class="teaser-inner">
-                        <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">Mobile &gt; Local</a></h3>
+                        <div class="teaser-inner">
+                            <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">Mobile &gt; Local</a></h3>
 
-                        <p><cite>Harvard Business Review</cite>, <time datetime="2017-09-27">Sept 27, 2017</time></p>
-                    </div><!-- /end .teaser-inner -->
-                </li><!-- /end .teaser -->
-            </ol>
+                            <p class="teaser-meta"><cite>Harvard Business Review</cite>, <time datetime="2017-09-27">Sept 27, 2017</time></p>
+                        </div><!-- /end .teaser-inner -->
+                    </li><!-- /end .teaser -->
+                    <li class="teaser">
+                        <div class="teaser-inner">
+                            <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">Mobile &gt; Local</a></h3>
 
-            <p class="cap"><a class="link-more" href="#">More on Accessibility</a></p>
-        </div><!-- /end .group -->
+                            <p class="teaser-meta"><cite>Harvard Business Review</cite>, <time datetime="2017-09-27">Sept 27, 2017</time></p>
+                        </div><!-- /end .teaser-inner -->
+                    </li><!-- /end .teaser -->
+                    <li class="teaser">
+                        <div class="teaser-inner">
+                            <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">Mobile &gt; Local</a></h3>
 
-        <div class="group">
-            <h2 class="hed-section">Content Strategy</h2>
+                            <p class="teaser-meta"><cite>Harvard Business Review</cite>, <time datetime="2017-09-27">Sept 27, 2017</time></p>
+                        </div><!-- /end .teaser-inner -->
+                    </li><!-- /end .teaser -->
+                </ol><!-- /end .teaser-list -->
+            </section><!-- /end .group -->
 
-            <ol class="teaser-list">
-                <li class="teaser">
+            <section class="group">
+                <header class="header-more">
+                    <h2 class="hed-section-sub">Content Strategy</h2>
+                    <a class="link-more" href="#">Browse 11 more <span class="a11y">sources filed under “Content Strategy”</span></a>
+                </header>
 
-                    <div class="teaser-inner">
-                        <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">Mobile &gt; Local</a></h3>
+                <ol class="teaser-list sources-list">
+                    <li class="teaser">
+                        <div class="teaser-inner">
+                            <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">Mobile &gt; Local</a></h3>
+                            <p class="teaser-meta"><cite>Harvard Business Review</cite>, <time datetime="2017-09-27">Sept 27, 2017</time></p>
+                        </div><!-- /end .teaser-inner -->
+                    </li><!-- /end .teaser -->
+                    <li class="teaser">
+                        <div class="teaser-inner">
+                            <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">Mobile &gt; Local</a></h3>
 
-                        <p><cite>Harvard Business Review</cite>, <time datetime="2017-09-27">Sept 27, 2017</time></p>
-                    </div><!-- /end .teaser-inner -->
-                </li><!-- /end .teaser -->
-                <li class="teaser">
-                    <div class="teaser-inner">
-                        <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">Mobile &gt; Local</a></h3>
+                            <p>This article summarizes the historical development of major advances in human-computer interaction technology, emphasizing the pivotal role of university research in the advancement of the field.</p>
 
-                        <p><cite>Harvard Business Review</cite>, <time datetime="2017-09-27">Sept 27, 2017</time></p>
-                    </div><!-- /end .teaser-inner -->
-                </li><!-- /end .teaser -->
-                <li class="teaser">
-                    <div class="teaser-inner">
-                        <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">Mobile &gt; Local</a></h3>
+                            <p class="teaser-meta"><cite>Harvard Business Review</cite>, <time datetime="2017-09-27">Sept 27, 2017</time></p>
+                        </div><!-- /end .teaser-inner -->
+                    </li><!-- /end .teaser -->
+                    <li class="teaser">
+                        <div class="teaser-inner">
+                            <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">Mobile &gt; Local</a></h3>
 
-                        <p><cite>Harvard Business Review</cite>, <time datetime="2017-09-27">Sept 27, 2017</time></p>
-                    </div><!-- /end .teaser-inner -->
-                </li><!-- /end .teaser -->
-            </ol>
-
-            <p class="cap"><a class="link-more" href="#">More on Content Strategy</a></p>
-        </div><!-- /end .group -->
+                            <p class="teaser-meta"><cite>Harvard Business Review</cite>, <time datetime="2017-09-27">Sept 27, 2017</time></p>
+                        </div><!-- /end .teaser-inner -->
+                    </li><!-- /end .teaser -->
+                </ol><!-- /end .teaser-list -->
+            </section><!-- /end .group -->
+        </div>
 
         <div class="group-full">
-            <h2 class="hed-section">Additional Sources</h2>
+            <h2 class="hed-section-sub">Additional Sources</h2>
 
             <ol class="sources-count-list">
                 <li>
