@@ -9,7 +9,7 @@ require("inc/header.php" );
     <div class="region content-main">
         <h1 class="hed-lead">Sources</h1>
 
-        <div class="has-cards">
+        <div class="l-50-50">
             <section class="group">
                 <header class="header-more">
                     <h2 class="hed-section-sub">Mobile-only Users</h2>
@@ -142,7 +142,7 @@ require("inc/header.php" );
                     </li><!-- /end .teaser -->
                 </ol><!-- /end .teaser-list -->
             </section><!-- /end .group -->
-        </div>
+        </div><!-- /end .l-50-50 -->
 
         <div class="group-full">
             <h2 class="hed-section-sub">Additional Sources</h2>

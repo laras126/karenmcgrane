@@ -17,7 +17,7 @@ require("inc/header.php" );
     </section>
 
     <div class="region content-main">
-        <div class="has-sidebar">
+        <div class="l-60-40">
             <div class="group p-more">
                 <h2 class="hed-section-sub">Recent Articles</h2>
 

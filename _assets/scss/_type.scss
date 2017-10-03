@@ -5,22 +5,6 @@ redistribute, convert, modify or reverse engineer this font software. Please con
 Imaging with any questions regarding Web Fonts:  http://www.fonts.com
 */
 
-/* Avenir Book (300) */
-@font-face {
-    font-family: "Avenir W01";
-    src: url( "/wp-content/themes/karenmcgrane/dist/assets/type/065a6b14-b2cc-446e-9428-271c570df0d9.woff2" ) format( "woff2" ),
-         url( "/wp-content/themes/karenmcgrane/dist/assets/type/65d75eb0-2601-4da5-a9a4-9ee67a470a59.woff" ) format( "woff" ) ;
-    font-weight: 300;
-}
-
-@font-face {
-    font-family: "Avenir W01";
-    src: url( "/wp-content/themes/karenmcgrane/dist/assets/type/476612d9-282d-4f76-95cd-b4dd31e7ed21.woff2" ) format( "woff2" ),
-         url( "/wp-content/themes/karenmcgrane/dist/assets/type/f1ebae2b-5296-4244-8771-5f40e60a564a.woff" ) format( "woff" );
-    font-style: oblique;
-    font-weight: 300;
-}
-
 /* Avenir Roman (400) */
 @font-face {
     font-family: "Avenir W01";
@@ -37,52 +21,18 @@ Imaging with any questions regarding Web Fonts:  http://www.fonts.com
     font-weight: 400;
 }
 
-/* Avenir Medium (500) */
-@font-face {
-    font-family: "Avenir W01";
-    src: url( "/wp-content/themes/karenmcgrane/dist/assets/type/e4d36745-a861-4a49-aa17-6510e67429d3.woff2" ) format( "woff2" ),
-         url( "/wp-content/themes/karenmcgrane/dist/assets/type/2cac77ec-9bc0-4ee7-87e4-27650190744f.woff" ) format( "woff" );
-    font-weight: 500;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Avenir W01";
-    src: url( "/wp-content/themes/karenmcgrane/dist/assets/type/695a9fa5-9f57-4800-9993-3684d520f107.woff2" ) format( "woff2" ),
-         url( "/wp-content/themes/karenmcgrane/dist/assets/type/e0af2f49-a399-482b-a54e-d745e268ec80.woff" ) format( "woff" );
-    font-weight: 500;
-    font-style: oblique;
-}
-
 /* Avenir Heavy (800) */
-@font-face{
+@font-face {
     font-family: "Avenir W01";
     src: url( "/wp-content/themes/karenmcgrane/dist/assets/type/d513e15e-8f35-4129-ad05-481815e52625.woff2" ) format( "woff2" ),
          url( "/wp-content/themes/karenmcgrane/dist/assets/type/61bd362e-7162-46bd-b67e-28f366c4afbe.woff" ) format( "woff" );
     font-weight: 800;
 }
 
-@font-face{
+@font-face {
     font-family: "Avenir W01";
     src: url( "/wp-content/themes/karenmcgrane/dist/assets/type/3c210c80-960f-4684-850b-25390b4d08af.woff2" ) format( "woff2" ),
          url( "/wp-content/themes/karenmcgrane/dist/assets/type/cb5c71ad-e582-4d00-929c-67fbfaeb1c27.woff" ) format( "woff" );
     font-style: oblique;
     font-weight: 800;
-}
-
-/* Avenir Black (900) */
-@font-face {
-    font-family: "Avenir W01";
-    src: url( "/wp-content/themes/karenmcgrane/dist/assets/type/16695c2d-c755-45a2-bdcf-c54843f39afd.woff2" ) format( "woff2" ),
-         url( "/wp-content/themes/karenmcgrane/dist/assets/type/5a05cf7f-f332-456f-ae67-d8c26e0d35b3.woff" ) format( "woff" );
-    font-weight: 900;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Avenir W01";
-    src: url( "/wp-content/themes/karenmcgrane/dist/assets/type/7c7d3040-c381-4ac9-bff7-90b1fdea4739.woff2" ) format( "woff2" ),
-         url( "/wp-content/themes/karenmcgrane/dist/assets/type/36ec15b9-f8da-447f-8fed-a9cfdfb91fbb.woff" ) format( "woff" );
-    font-weight: 900;
-    font-style: oblique;
 }
