@@ -2,7 +2,7 @@ body {
     background: #474747;
     color: #FFF;
     font-size: calc( 14px + ( 16 - 14 ) * ( ( 100vw - 300px ) / ( 1400 - 300) ));
-    font: normal 1em/1.5 $fonts-sans-initial;
+    font: 400 1em/1.5 $fonts-sans-initial;
     margin: 0 auto;
     max-width: 36em;
     padding-left: 1vw;
@@ -93,7 +93,7 @@ Masthead
     text-decoration: none;
 }
 .site-tagline p {
-    font-weight: 900;
+    font-weight: 800;
     font-size: 2em;
     line-height: 1.375;  /* 66/48 */
     max-width: 16em;
@@ -292,7 +292,7 @@ Page content
     clear: both;
     color: #545454;
     font-size: 0.875em;    /* 14 / 16 */
-    font-weight: 900;
+    font-weight: 800;
     line-height: 1.35;
     margin-bottom: 3em;
     text-transform: uppercase;
