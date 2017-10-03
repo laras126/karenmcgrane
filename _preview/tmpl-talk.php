@@ -20,6 +20,18 @@ require("inc/header.php" );
             </header>
 
             <section class="article-content">
+                <h3>Video</h3>
+
+                <div class="embed-vimeo">
+                    <iframe src="//player.vimeo.com/video/103071010" title="Karen McGrane – Content in a Zombie Apocalypse – beyond tellerrand Düsseldorf 2014" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" width="696" height="392" frameborder="0"></iframe>
+                </div>
+
+                <h3>Slides</h3>
+
+                <iframe src="https://www.slideshare.net/slideshow/embed_code/22494253" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" width="696" height="570"></iframe>
+
+                <h3>Transcript</h3>
+
                 <ol class="slide-list">
                     <li class="slide">
                         <p class="slide-img">
@@ -108,20 +120,38 @@ require("inc/header.php" );
                 <ul class="teaser-list">
                     <li class="teaser">
                         <div class="teaser-inner">
-                            <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">Great Works of Fiction Presents: The Mobile Context</a></h3>
-                            <p class="teaser-meta">By Stephen Hay, <time datetime="2017-09-27">September 27, 2017</time></p>
+                            <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">4 ways content management systems are evolving &amp; why it matters to journalists</a></h3>
+                            <p class="teaser-meta">Poynter, <time datetime="2011-06-13">June 13, 2011</time></p>
                         </div><!-- /end .teaser-inner -->
                     </li><!-- /end .teaser -->
                     <li class="teaser">
                         <div class="teaser-inner">
-                            <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">Mobile SEO is a Myth</a></h3>
-                            <p class="teaser-meta"><cite>Search Engine Journal</cite>, <time datetime="2017-09-27">October 17, 2011</time></p>
+                            <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">Breaking Down Condé Nast’s E-Sales</a></h3>
+                            <p class="teaser-meta"><cite>Adweek</cite>, <time datetime="2011-08-02">August 2, 2011</time></p>
                         </div><!-- /end .teaser-inner -->
                     </li><!-- /end .teaser -->
                     <li class="teaser">
                         <div class="teaser-inner">
-                            <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">A Third Citation Might Go Here</a></h3>
-                            <p class="teaser-meta">By Author Name for <cite>Publication Name</cite>, <time datetime="2017-09-27">September 27, 2017</time></p>
+                            <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">Condé Nast Is Experiencing Technical Difficulties</a></h3>
+                            <p class="teaser-meta"><time datetime="2011-07-09">July 9, 2011</time></p>
+                        </div><!-- /end .teaser-inner -->
+                    </li><!-- /end .teaser -->
+                    <li class="teaser">
+                        <div class="teaser-inner">
+                            <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">COPE: Create Once, Publish Everywhere</a></h3>
+                            <p class="teaser-meta">By Daniel Jacobson, <time datetime="2009-10-13">October 13, 2009</time></p>
+                        </div><!-- /end .teaser-inner -->
+                    </li><!-- /end .teaser -->
+                    <li class="teaser">
+                        <div class="teaser-inner">
+                            <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">Managing Enterprise Content: A Unified Content Strategy</a></h3>
+                            <p class="teaser-meta">By Ann Rockley</p>
+                        </div><!-- /end .teaser-inner -->
+                    </li><!-- /end .teaser -->
+                    <li class="teaser">
+                        <div class="teaser-inner">
+                            <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">Nimble Report</a></h3>
+                            <p class="teaser-meta">By Rachel Lovinger</p>
                         </div><!-- /end .teaser-inner -->
                     </li><!-- /end .teaser -->
                 </ul>
