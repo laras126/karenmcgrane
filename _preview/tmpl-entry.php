@@ -8,9 +8,11 @@ require("inc/header.php" );
 
     <div class="region content-main">
 
-        <article class="group" datetime="2017-09-27">
+        <article datetime="2017-09-27">
             <footer>
-                <p class="article-meta">An <a href="#">article</a> posted on <time datetime="2017-09-27 19:00">Sept 27, 2017</time></p>
+                <div class="article-meta">
+                    <p>An <a href="#">article</a> originally published in <a href="">The Pastry Box Project</a>.</p>
+                </div>
             </footer>
 
             <header>
@@ -20,6 +22,12 @@ require("inc/header.php" );
             </header>
 
             <section class="article-content">
+                <p>Here’s a brief summary. It could be long, it could be short, it could be full of lorem ipsum dolor sit amet, nihil accusantium laboriosam reprehenderit officia expedita illo maxime.</p>
+
+                <p class="lead-image full">
+                    <img src="http://fpoimg.com/1920x1080" alt="">
+                </p>
+
                 <p>Just because someone is doing a search from a mobile device doesn’t make it a local search. And just because someone is looking for local content doesn’t imply they’re using a mobile device. Just because many local searches are from mobile devices does not imply that most mobile searches are for local information. If you’re a visual thinker, here’s a Venn diagram that may help:</p>
 
                 <p><img class=" wp-image-651 alignnone" title="Mobile not Local Venn Diagram" src="http://karenmcgrane.files.wordpress.com/2012/07/mobile-not-local-venn.png?w=918&amp;h=600" alt="Mobile is more than local. Don't generalize that all mobile content is local content." width="612" height="400"></p>
@@ -101,41 +109,29 @@ require("inc/header.php" );
                 <p>If I could prioritize the efforts of our community over the next 3-5 years, I’d spend 80% of our efforts on the problem of cleaning up our desktop content and getting it all (at least, all the good stuff) onto mobile. Let’s use our 20% experimental time to explore how to prioritize content differently based on what we think we can intuit about user intention based on device and location. And let’s give each of those problems the appropriate weight in our discussions.</p>
             </section>
 
-            <section class="article-sources">
-                <h2 class="hed-section">Related Articles</h2>
+            <section class="article-citations">
+                <h2 class="hed-section">Citations</h2>
 
-                <ol class="teaser-list">
+                <ul class="teaser-list">
                     <li class="teaser">
-
-                        <img src="../dist/assets/fpo/450x450.png" alt="" />
-
                         <div class="teaser-inner">
-                            <time datetime="2017-09-27">Sept 27, 2017</time>
-
-                            <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">Mobile &gt; Local</a></h3>
-                            <p>Arguments for a separate mobile website often are based on a belief that mobile users want localized information. <a class="read-more" href="#">Read more</a></p>
+                            <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">Great Works of Fiction Presents: The Mobile Context</a></h3>
+                            <p class="teaser-meta">By Stephen Hay, <time datetime="2017-09-27">September 27, 2017</time></p>
                         </div><!-- /end .teaser-inner -->
                     </li><!-- /end .teaser -->
                     <li class="teaser">
                         <div class="teaser-inner">
-                            <time datetime="2017-09-24">Sept 24, 2017</time>
-
-                            <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">How To Live Out Of A Suitcase</a></h3>
-                            <p>I’ve spent the better part of the past couple of years traveling as much as I’ve been home. TripIt tells me I’m in first place among my friends for number of days on the road—a dubious honor. <a class="read-more" href="#">Read more</a></p>
+                            <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">Mobile SEO is a Myth</a></h3>
+                            <p class="teaser-meta"><cite>Search Engine Journal</cite>, <time datetime="2017-09-27">October 17, 2011</time></p>
                         </div><!-- /end .teaser-inner -->
                     </li><!-- /end .teaser -->
                     <li class="teaser">
-
-                        <img src="../dist/assets/fpo/450x450.png" alt="" />
-
                         <div class="teaser-inner">
-                            <time datetime="2017-09-17">Sept 17, 2017</time>
-
-                            <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">What I do matters. Yours is bullshit.</a></h3>
-                            <p>A conversation at the magazine, on the movie set, and in our industry. <a class="read-more" href="#">Read more</a></p>
+                            <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">A Third Citation Might Go Here</a></h3>
+                            <p class="teaser-meta">By Author Name for <cite>Publication Name</cite>, <time datetime="2017-09-27">September 27, 2017</time></p>
                         </div><!-- /end .teaser-inner -->
                     </li><!-- /end .teaser -->
-                </ol>
+                </ul>
             </section>
         </article><!-- /end .group -->
 

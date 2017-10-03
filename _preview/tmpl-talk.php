@@ -102,41 +102,29 @@ require("inc/header.php" );
 
             </section>
 
-            <section class="article-sources">
-                <h2 class="hed-section">Related Articles</h2>
+            <section class="article-citations">
+                <h2 class="hed-section">Citations</h2>
 
-                <ol class="teaser-list">
+                <ul class="teaser-list">
                     <li class="teaser">
-
-                        <img src="../dist/assets/fpo/450x450.png" alt="" />
-
                         <div class="teaser-inner">
-                            <time datetime="2017-09-27">Sept 27, 2017</time>
-
-                            <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">Mobile &gt; Local</a></h3>
-                            <p>Arguments for a separate mobile website often are based on a belief that mobile users want localized information. <a class="read-more" href="#">Read more</a></p>
+                            <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">Great Works of Fiction Presents: The Mobile Context</a></h3>
+                            <p class="teaser-meta">By Stephen Hay, <time datetime="2017-09-27">September 27, 2017</time></p>
                         </div><!-- /end .teaser-inner -->
                     </li><!-- /end .teaser -->
                     <li class="teaser">
                         <div class="teaser-inner">
-                            <time datetime="2017-09-24">Sept 24, 2017</time>
-
-                            <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">How To Live Out Of A Suitcase</a></h3>
-                            <p>I’ve spent the better part of the past couple of years traveling as much as I’ve been home. TripIt tells me I’m in first place among my friends for number of days on the road—a dubious honor. <a class="read-more" href="#">Read more</a></p>
+                            <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">Mobile SEO is a Myth</a></h3>
+                            <p class="teaser-meta"><cite>Search Engine Journal</cite>, <time datetime="2017-09-27">October 17, 2011</time></p>
                         </div><!-- /end .teaser-inner -->
                     </li><!-- /end .teaser -->
                     <li class="teaser">
-
-                        <img src="../dist/assets/fpo/450x450.png" alt="" />
-
                         <div class="teaser-inner">
-                            <time datetime="2017-09-17">Sept 17, 2017</time>
-
-                            <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">What I do matters. Yours is bullshit.</a></h3>
-                            <p>A conversation at the magazine, on the movie set, and in our industry. <a class="read-more" href="#">Read more</a></p>
+                            <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">A Third Citation Might Go Here</a></h3>
+                            <p class="teaser-meta">By Author Name for <cite>Publication Name</cite>, <time datetime="2017-09-27">September 27, 2017</time></p>
                         </div><!-- /end .teaser-inner -->
                     </li><!-- /end .teaser -->
-                </ol>
+                </ul>
             </section>
         </article><!-- /end .group -->
 
