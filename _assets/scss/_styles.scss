@@ -330,7 +330,10 @@ Page content
     font-size: 1.25em;    /* 20 / 16 */
     font-weight: 800;
     line-height: 1.35;
-    margin-bottom: 2.75em;
+    margin: 2em 0;
+}
+.hed-section-sub:first-child {
+    margin-top: 0;
 }
 
 /* List with source titles + article counts */
