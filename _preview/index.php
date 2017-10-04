@@ -108,11 +108,12 @@ a {
                 <h2>Prototypes</h2>
 
                 <ul>
-                    <li><a href="tmpl-home.php">Homepage</a></li>
-                    <li><a href="tmpl-entry.php">Article/entry detail</a></li>
                     <li><a href="tmpl-books.php">Books</a></li>
-                    <li><a href="tmpl-talk.php">Talk detail</a></li>
+                    <li><a href="tmpl-contact.php">Contact</a></li>
+                    <li><a href="tmpl-entry.php">Article/entry detail</a></li>
+                    <li><a href="tmpl-home.php">Homepage</a></li>
                     <li><a href="tmpl-sources.php">Sources Landing</a></li>
+                    <li><a href="tmpl-talk.php">Talk detail</a></li>
                 </ul>
             </li>
         </ol>

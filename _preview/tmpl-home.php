@@ -176,7 +176,7 @@ require("inc/header.php" );
                     </li>
                 </ol>
             </div><!-- /end .group-alt.p-less -->
-        </div>
+        </div><!-- /end .l-60-40 -->
     </div><!-- /end .region.content-main -->
 
 <?php

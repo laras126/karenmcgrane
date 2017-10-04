@@ -6,9 +6,9 @@ $pageTitle = "Mobile > Local";
 require("inc/header.php" );
 ?>
 
-    <div class="region content-main">
+    <div class="region content-main l-sole">
 
-        <article datetime="2017-09-27">
+        <article class="group" datetime="2017-09-27">
             <footer>
                 <div class="article-meta">
                     <p>An <a href="#">article</a> originally published in <a href="">The Pastry Box Project</a>.</p>
