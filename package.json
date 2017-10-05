@@ -17,19 +17,19 @@
   },
   "homepage": "https://github.com/laras126/",
   "devDependencies": {
-    "browsersync-ssi": "latest",
-    "connect-ssi": "latest",
-    "grunt": "~0.4.1",
-    "grunt-browser-sync": "latest",
-    "grunt-contrib-concat": "latest",
-    "grunt-contrib-connect": "*",
-    "grunt-contrib-copy": "*",
-    "grunt-contrib-sass": "*",
-    "grunt-contrib-uglify": "gruntjs/grunt-contrib-uglify#harmony",
-    "grunt-contrib-watch": "latest",
-    "grunt-grunticon": "latest",
-    "grunt-jsonmin": "latest",
-    "matchdep": "~0.1.2"
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-connect": "*",
+    "gulp-sass": "*",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-svgmin": "^1.2.2",
+    "gulp-uglify": "*",
+    "gulp-watch": "*",
+    "gulpicon": "*",
+    "matchdep": "~0.1.2",
+    "path": "^0.12.7"
   },
   "dependencies": {
     "lazysizes": "^2.0.0"
