@@ -1,7 +1,10 @@
 
 "use strict";
 
+var _config = require( "./config.json" );
+
 var gulp = require( "gulp" );
+var browserSync = require( 'browser-sync' ).create();
 
 require( "matchdep" )
     .filterDev( "gulp-*" )
@@ -9,37 +12,21 @@ require( "matchdep" )
         global[ module.replace( /^gulp-/, "" ) ] = require( module );
     } );
 
-var browsersync = require('browser-sync').create();
+gulp.task( 'serve', function() {
 
-var _config = {
-    dir: {
-        input: "_assets/",
-        tmpl: "_preview/",
-        output: "dist/assets/"
-    }
-};
-
-gulp.task( 'browser-sync', function() {
-
-    browsersync.init( {
-        files: [
-            _config.dir.output + "**/*",
-            _config.dir.tmpl + "**/*.php"
-        ],
-        options: {
-            proxy: "local.karenmcgrane",
-            port: 8080,
-            watchTask: true
-        }
+    browserSync.init( {
+        proxy: _config.host,
+        port: 8080,
+        watchTask: true
     } );
-} );
 
-gulp.task( 'connect', function() {
-    connect.server( {
-        port: 3005,
-        host: "local.karenmcgrane",
-        base: "./" + _config.dir.tmpl
-    } );
+    gulp.watch( _config.dir.input + "scss/**/*.scss", [ 'sass' ] );
+    gulp.watch( _config.dir.input + "js/**/*", [ "js" ] );
+    gulp.watch( [
+        "*.php",
+        "views/*.twig"
+    ] ).on( 'change', browserSync.reload );
+
 } );
 
 gulp.task( "copy", function() {
@@ -101,21 +88,13 @@ gulp.task( "sass", function() {
         .pipe( autoprefixer( {
             browsers: 'last 3 versions'
         } ) )
-        .pipe( gulp.dest( _config.dir.output + "css/" ) );
+        .pipe( gulp.dest( _config.dir.output + "css/" ) )
+        .pipe( browserSync.stream() );;
 } );
-
-gulp.task( "watch" , function () {
-    gulp.watch( _config.dir.tmpl + "*.php", [ "copy" ] );
-    gulp.watch( _config.dir.input + "scss/**/*", [ "sass" ] );
-    gulp.watch( _config.dir.input + "js/**/*", [ "js" ] );
-    gulp.watch( "gulpfile.js", [ "js", "sass", "copy" ] );
-});
 
 gulp.task( "default", [
     "js",
     "sass",
     "copy",
-    "connect",
-    "browser-sync",
-    "watch"
+    "serve"
 ] );
