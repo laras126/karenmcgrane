@@ -61,9 +61,7 @@ body {
 
 a {
     color: #27A99C;
-    -webkit-transition: color 0.2s, background-color 0.2s;
-         -o-transition: color 0.2s, background-color 0.2s;
-            transition: color 0.2s, background-color 0.2s;
+    transition: color 0.2s, background-color 0.2s;
 }
 a:hover,
 a:focus {
@@ -372,9 +370,7 @@ Page content
     flex: 1 0 15%;
     margin-left: 0;
     text-align: right;
-    -webkit-transition: color 0.2s;
-         -o-transition: color 0.2s;
-            transition: color 0.2s;
+    transition: color 0.2s;
     width: 15%;
 }
 .sources-count-list a:hover dd,
