@@ -1,121 +1,100 @@
 
-'use strict';
+"use strict";
 
-var gulp = require('gulp'),
-    sass = require('gulp-sass'),
-    autoprefix = require('gulp-autoprefixer'),
-    cssnano = require('gulp-cssnano'),
-    modernizr = require('gulp-modernizr'),
-    concat = require('gulp-concat'),
-    uglify = require('gulp-uglify'),
-    rename = require('gulp-rename'),
-    svgstore = require('gulp-svgstore'),
-    sourcemaps = require('gulp-sourcemaps'),
-    svgmin = require('gulp-svgmin'),
-    path = require('path'),
-    modernizr = require('gulp-modernizr'),
-    browserSync = require('browser-sync').create();
+var _config = require( "./config.json" );
 
+var gulp = require( "gulp" );
+var browserSync = require( 'browser-sync' ).create();
 
-// Directory and file shortcuts
-var sassDir = 'assets/scss/',
-    cssDir = 'assets/css/',
-    cssDist = 'assets/css/build/',
-    jsDir = 'assets/js/',
-    jsDist = 'assets/js/build/',
-    imgDir = 'assets/img/';
+require( "matchdep" )
+    .filterDev( "gulp-*" )
+    .forEach( function( module ) {
+        global[ module.replace( /^gulp-/, "" ) ] = require( module );
+    } );
 
-var jsFileList = [
-    jsDir + 'vendor/flickity.min.js',
-    jsDir + 'vendor/flickity.bglazyload.js',
-    jsDir + 'vendor/fitvids.js',
-    jsDir + 'src/_main.js'
-];
+gulp.task( 'serve', function() {
 
-var jsHeadList = [
-    jsDir + 'build/modernizr-custom.js',
-    jsDir + 'vendor/lazysizes.min.js',
-    jsDir + 'vendor/picturefill.min.js'
-];
+    browserSync.init( {
+        proxy: _config.host,
+        port: 8080,
+        watchTask: true
+    } );
 
-gulp.task('sass', function () {
-  return gulp.src(sassDir + 'main.scss')
-    .pipe(sourcemaps.init())
-    .pipe(sass({
-      errLogToConsole: false,
-      onError: function(err) {
-          return notify().write(err);
-      }}))
-    // .pipe(sass().on('error', sass.logError))
-    .pipe(sourcemaps.write())
-    .pipe(autoprefix({
-        browsers: 'last 5 versions'
-    }))
-    .pipe(gulp.dest(cssDir));
-    // TODO: make two tasks, or run both for min and unmin files
-    // .pipe(cssnano())
-    // .pipe(rename({suffix: '.min'}))
-    // .pipe(gulp.dest(cssDist));
-});
+    gulp.watch( _config.dir.input + "scss/**/*.scss", [ 'sass' ] );
+    gulp.watch( _config.dir.input + "js/**/*", [ "js" ] );
+    gulp.watch( [
+        "*.php",
+        "views/*.twig"
+    ] ).on( 'change', browserSync.reload );
 
-// These could be consolidated into another function
-gulp.task('scripts', function() {
-  return gulp.src(jsFileList)
-    .pipe(concat('scripts.js'))
-    .pipe(gulp.dest(jsDist))
-    .pipe(rename({suffix: '.min'}))
-    .pipe(uglify())
-    .pipe(gulp.dest(jsDist));
-});
+} );
 
-gulp.task('modernizr', function() {
-  gulp.src(jsDir + '**/*.js')
-    .pipe(modernizr())
-    .pipe(gulp.dest(jsDist))
-});
+gulp.task( "copy", function() {
+    var fonts = gulp.src( _config.dir.input + "type/**" )
+        .pipe( gulp.dest( _config.dir.output + "type/" ) );
 
-gulp.task('scripts-head', function() {
-  return gulp.src(jsHeadList)
-    .pipe(concat('scripts-head.js'))
-    .pipe(gulp.dest(jsDist))
-    .pipe(rename({suffix: '.min'}))
-    .pipe(uglify())
-    .pipe(gulp.dest(jsDist));
-});
+    var fpo = gulp.src( _config.dir.input + "fpo/**" )
+        .pipe( gulp.dest( _config.dir.output + "fpo/" ) );
 
-gulp.task('modernizr', function() {
-  gulp.src(jsFileList)
-    .pipe(modernizr())
-    .pipe(gulp.dest(jsDist));
-});
+    var svg = gulp.src( _config.dir.input + "svg/**" )
+        .pipe( gulp.dest( _config.dir.output + "svg/" ) );
 
-gulp.task('svgstore', function () {
-    return gulp
-        .src(imgDir + 'svg-raw/*.svg')
-        .pipe(rename({prefix: 'shape-'}))
-        .pipe(svgmin(function (file) {
-            var prefix = path.basename(file.relative, path.extname(file.relative));
-            return {
-                plugins: [{
-                    cleanupIDs: {
-                        prefix: prefix + '-',
-                        minify: true
-                    }
-                }]
+    return [ fonts, fpo, svg ];
+} );
+
+gulp.task( "js", function() {
+    var initial = {
+        src: [
+            _config.dir.input + "js/config.js",
+            _config.dir.input + "js/utils.js",
+            _config.dir.input + "js/lib/fontfaceobserver.js",
+            // initial.js needs to be last.
+            _config.dir.input + "js/initial.js"
+        ],
+        name: "initial.js",
+        output: _config.dir.output + "js/"
+    };
+
+    var picturefill = {
+        src: _config.dir.input + "js/lib/picturefill.js",
+        name: "picturefill.js",
+        output: _config.dir.output + "js/lib/"
+    };
+
+    var js_initial = gulp.src( initial.src )
+        .pipe( concat( initial.name ) )
+        .pipe( uglify() )
+        .pipe( gulp.dest( initial.output ) );
+
+    var js_picturefill = gulp.src( picturefill.src )
+        .pipe( concat( picturefill.name ) )
+        .pipe( uglify() )
+        .pipe( gulp.dest( picturefill.output ) );
+
+    return js_picturefill;
+} );
+
+gulp.task( "sass", function() {
+    return gulp.src( _config.dir.input + "scss/main.scss" )
+        .pipe( sourcemaps.init() )
+        .pipe( sass( {
+            style: "compressed",
+            errLogToConsole: false,
+            onError: function(err) {
+                return notify().write(err);
             }
-        }))
-        .pipe(svgstore())
-        .pipe(rename('svg-defs.svg'))
-        .pipe(gulp.dest('views/partials'));
-});
+        } ) )
+        .pipe( sourcemaps.write() )
+        .pipe( autoprefixer( {
+            browsers: 'last 3 versions'
+        } ) )
+        .pipe( gulp.dest( _config.dir.output + "css/" ) )
+        .pipe( browserSync.stream() );;
+} );
 
-gulp.task('browser-sync', function() {
-    browserSync.init({
-        proxy: 'twc.local'
-    });
-});
-
-gulp.task('watch', function () {
-  gulp.watch(sassDir + '**/*.scss', ['sass']);
-  gulp.watch(jsDir + 'src/*.js', ['scripts']);
-});
+gulp.task( "default", [
+    "js",
+    "sass",
+    "copy",
+    "serve"
+] );
