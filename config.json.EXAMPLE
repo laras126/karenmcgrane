@@ -1,0 +1,8 @@
+{
+    "dir": {
+        "input": "_assets/",
+        "tmpl": "_preview/",
+        "output": "dist/assets/"
+    },
+    "host": "local.karenmcgrane"
+}

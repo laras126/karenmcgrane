@@ -9,15 +9,16 @@
     <meta name="description" content="{{site.description}}">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="pingback" href="{{site.pingback_url}}" />
     <script>
-       WebFontConfig = {
-          monotype: {
-            projectId: 'a237f8a7-35da-4826-ac87-21645f7dc602',
-            version: 12345
-          }
-       };
+    (function() {
+        var mtiTracking = document.createElement('script');
+        mtiTracking.type='text/javascript';
+        mtiTracking.async='true';
+        mtiTracking.src='mtiFontTrackingCode.js';
+        ( document.getElementsByTagName( 'head' )[ 0 ] || document.getElementsByTagName( 'body' )[ 0 ] ).appendChild( mtiTracking );
+    })();
 
        (function(d) {
           var wf = d.createElement('script'), s = d.scripts[0];
