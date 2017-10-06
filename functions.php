@@ -101,7 +101,6 @@
 		}
 
 	}
-	add_action( 'wp_enqueue_scripts', 'tsk_scripts' );
 
 
 
