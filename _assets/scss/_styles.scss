@@ -82,6 +82,9 @@ textarea {
 
 
 
+
+
+
 /*
 
 Basic layout scaffolding
@@ -91,8 +94,61 @@ Basic layout scaffolding
     margin: 0 auto;
     padding: 3vw 3.225806451612903225%;    /* 40 / 1240 */
 }
-header.region {
-//    background: rgba( 71, 71, 71, 0.4 );
+
+/*
+Various and sundry grid layouts
+*/
+.l-50-50 > .group {
+    border-top: 0.5em solid #EEE;
+    padding: 0.75em 0;
+}
+.tmpl-books .l-50-50 > .group {
+    border-top: none;
+    padding-top: 0;
+    display: flex;
+}
+@supports ( display: grid ) {
+    @media (min-width: 40em) {
+        .l-60-40 {
+            display: grid;
+            grid-template-columns: 65.517241379310344827% 31.034482758620689655%;    /* 760/1160, 360/1160 */
+            grid-column-gap: 3.448275862068965517%;    /* 40/1160 */
+        }
+        .l-60-40 > .group {
+            grid-column: 1;
+        }
+        .l-60-40 > .group-alt {
+            grid-column: 2;
+        }
+
+        .l-50-50 {
+            display: grid;
+            grid-template-columns: repeat( 2, 48.275862068965517241% );    /* 760/1160, 360/1160 */
+            grid-column-gap: 3.448275862068965517%;    /* 40/1160 */
+        }
+        .l-50-50 > .group {
+            margin-bottom: 4em;
+        }
+        .l-50-50 > .group:nth-child( 2n + 1 ) {
+            grid-column: 1;
+        }
+        .l-50-50 > .group:nth-child( 2n ) {
+            grid-column: 2;
+        }
+        .l-50-50 > .group-full {
+            grid-column: 1 / 3;
+        }
+    }
+    @media (min-width: 50em) {
+        .l-sole {
+            margin-left: -3.448275862068965517%;     /* 40/1160 */
+            margin-right: -3.448275862068965517%;    /* 40/1160 */
+        }
+        .l-sole > .group {
+            margin: 0 auto;
+            width: 61.290322580645161290%;    /* 760/1240 */
+        }
+    }
 }
 
 
@@ -638,13 +694,13 @@ Entry styles
 }
 .full {
     margin: 2em 0;
-    margin-left: -3.448275862068965517%;    /* 40/1160 */
+    margin-left: -3.448275862068965517%;    /* 40/1240 */
     width: 106.896551724137931034%;    /* 1240/1160 */
 }
 @supports ( display: grid ) {
     @media (min-width: 50em) {
         .full {
-            margin-left: -31.555%;    /* 240/1240 */
+            margin-left: -31.555%;    /* 240/1160 */
             width: 163.157894736842105263%;    /* 1240/760 */
         }
     }
@@ -704,6 +760,7 @@ Entry styles
 }
 
 
+
 /*
 
 Slides!
@@ -736,10 +793,6 @@ li.slide {
     }
 }
 @media (min-width: 50em) {
-    ol.slide-list {
-        margin-left: -25%;
-        width: 150%;
-    }
     li.slide {
         display: flex;
     }
@@ -927,65 +980,6 @@ Contact
 .links-social a:hover img,
 .links-social a:focus img {
     transform: scale( 1.2 );
-}
-
-
-/*
-
-Various and sundry grid layouts
-
-*/
-.l-50-50 > .group {
-    border-top: 0.5em solid #EEE;
-    padding: 0.75em 0;
-}
-.tmpl-books .l-50-50 > .group {
-    border-top: none;
-    padding-top: 0;
-    display: flex;
-}
-@supports ( display: grid ) {
-    @media (min-width: 40em) {
-        .l-60-40 {
-            display: grid;
-            grid-template-columns: 65.517241379310344827% 31.034482758620689655%;    /* 760/1160, 360/1160 */
-            grid-column-gap: 3.448275862068965517%;    /* 40/1160 */
-        }
-        .l-60-40 > .group {
-            grid-column: 1;
-        }
-        .l-60-40 > .group-alt {
-            grid-column: 2;
-        }
-
-        .l-50-50 {
-            display: grid;
-            grid-template-columns: repeat( 2, 48.275862068965517241% );    /* 760/1160, 360/1160 */
-            grid-column-gap: 3.448275862068965517%;    /* 40/1160 */
-        }
-        .l-50-50 > .group {
-            margin-bottom: 4em;
-        }
-        .l-50-50 > .group:nth-child( 2n + 1 ) {
-            grid-column: 1;
-        }
-        .l-50-50 > .group:nth-child( 2n ) {
-            grid-column: 2;
-        }
-        .l-50-50 > .group-full {
-            grid-column: 1 / 3;
-        }
-    }
-    @media (min-width: 50em) {
-        .l-sole {
-            padding-left: 0;
-            padding-right: 0;
-        }
-        .l-sole > .group {
-            margin: 0 auto;
-            width: 61.290322580645161290%;    /* 760/1240 */
-        }
-    }
 }
 
 

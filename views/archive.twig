@@ -5,7 +5,9 @@
 {% endblock %}
 
 {% block content %}
+    <section class="teaser-list">
 	{% for post in posts %}
 		{% include 'teases/_tease-' ~ post.post_type ~ '.twig' %}
 	{% endfor %}
+    </section>
 {% endblock %}

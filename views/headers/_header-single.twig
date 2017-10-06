@@ -1,19 +1,31 @@
 {% extends 'headers/header.twig' %}
 
 {% block header_content %}
-  <div class="contain-lg">
-    <div class="inner">
-      <h1 class="header-title">{{post.post_title}}</h1>
-      {% include 'partials/connected-source.twig'%}
-    </div>
-  </div>
-{% endblock %}
+    <footer>
+        <div class="article-meta">
+            <p>
 
-{% block after_header_content %}
-  <div class="contain-lg">
-    <div class="inner">
-      {% if post.header_tagline %}<p class="lead">{{post.header_tagline}}</p>{% endif %}
-      {% if post.header_summary %}<p class="summary">{{post.header_summary}}</p>{% endif %}
-    </div>
-  </div>
+                A{% if post.post_type == 'article' %}n{% endif %} <a href="?post_type={{ post.post_type }}">{{ post.post_type }}</a>
+
+                {% if post.connected_source %}
+                    {% set item = TimberPost(post.connected_source) %}
+
+                    {% if post.post_type == 'article' %}
+                    originally published in {{item.source_url ? '<a href="' ~ item.source_url ~ '">' }}{{item.source_publication ? item.source_publication : item.post_title}}{{item.source_url ? '</a>'}}.
+                    {% elseif post.post_type == 'presentation' %}
+                    presented at {{item.source_url ? '<a href="' ~ item.source_url ~ '">' }}{{item.source_publication}}{{item.source_url ? '</a>'}}{{ item.source_date ? ', ' ~ item.source_date|date('F j, Y') }}.
+                    {% endif %}
+                {% else %}
+                published on {{ post.date|date('F j, Y') }}.
+                {% endif %}
+                {% include 'utility/edit-link.twig' %}
+            </p>
+        </div>
+    </footer>
+
+    <header>
+        <h2 class="hed-article-title">{{post.post_title}}</h2>
+
+        {% if post.header_tagline %}<p class="article-lead">{{post.header_tagline}}</p>{% endif %}
+    </header>
 {% endblock %}

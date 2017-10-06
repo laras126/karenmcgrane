@@ -78,7 +78,7 @@ gulp.task( "sass", function() {
     return gulp.src( _config.dir.input + "scss/main.scss" )
         .pipe( sourcemaps.init() )
         .pipe( sass( {
-            style: "compressed",
+            outputStyle: "compressed",
             errLogToConsole: false,
             onError: function(err) {
                 return notify().write(err);

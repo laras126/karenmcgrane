@@ -3,30 +3,16 @@
 {% block before_header_content %}{% endblock %}
 
 {% block header_content %}
-  <div class="contain-lg">
-    <div class="inner">
-      <h1 class="site-title"><a href="{{site.link}}" class="site-title-link" title="{{site.name}}" rel="home">Karen<br>McGrane</a></h1>
+    <div class="site-mast">
+        <h1 class="logo"><a href="{{site.link}}" rel="home">Karen McGrane<span>.</span></a></h1>
+
       {% include 'navs/_nav-site.twig' %}
-    </div>
+    </div><!-- /end .site-mast -->
+
     {% if function('is_front_page', true) %}
-      <p class="site-desc">{{site.description}}</p>
-    {% endif %}
-  </div>
-
-    {% if function('is_archive') %}
-
-      <div class="header-image-wrap">
-        <div class="contain-lg">
-          {% if title == 'Presentations' %}
-            {% include 'utility/srcset.twig' with { id: presentations_image, class: 'header-image' } %}
-          {% elseif title == 'Articles' %}
-            {% include 'utility/srcset.twig' with { id: articles_image, class: 'header-image' } %}
-          {% elseif title == 'Sources' %}
-            {% include 'utility/srcset.twig' with { id: sources_image, class: 'header-image' } %}
-          {% endif %}
-        </div>
-      </div>
-
+    <div class="site-tagline">
+        <p>{{site.description}}</p>
+    </div>{# /end .site-tagline #}
     {% endif %}
 
 {% endblock %}

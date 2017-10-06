@@ -6,40 +6,61 @@
 </head>
 {% endblock %}
 
-<body class="{{body_class}} wf-loading" data-template="base.twig" id="pageTop">
-
-    <div class="visually-hidden">{% include 'views/utility/svg-defs.svg' %}</div>
+{% if body_class %}
+<body id="www-karenmcgrane-com" class="{{body_class}}" data-template="base.twig">
+{% else %}
+<body id="www-karenmcgrane-com" data-template="base.twig">
+{% endif %}
 
     {% block header %}
-      {% include 'headers/_header-site.twig' with { class: 'site-header', role: 'banner' } %}
+      {% include 'headers/_header-site.twig' with { class: 'region', role: 'banner' } %}
     {% endblock %}
 
-    <main class="site-main" role="main">
+    <main class="site-content">
 
-      {% block before_content %}{% endblock %}
+        <div class="region content-main">
+            {% if sidebar %}
+            <div class="l-60-40">
+            {% else %}
+            <div class="l-sole">
+            {% endif %}
 
-        <div class="site-content contain-lg">
-            <div class="inner">
-              {% block content %}
+            <div class="group">
+                {% block before_content %}{% endblock %}
+
+                {% block content %}
                   Sorry, no content
-              {% endblock %}
-            </div>
-        </div>
+                {% endblock %}
 
-        {% block after_content %}{% endblock %}
+                {% block after_content %}{% endblock %}
+            </div><!-- /end .group -->
 
-        {% if sidebar %}
-            <aside class="site-sidebar">
-                {{sidebar}}
-            </aside>
-        {% endif %}
+            {% if sidebar %}
+                <aside class="group-alt">
+                    {{sidebar}}
+                </aside>
+            {% endif %}
+
+            {% if sidebar %}
+            </div><!-- /end .l-60-40 -->
+            {% else %}
+            </div><!-- /end .l-sole -->
+            {% endif %}
+
+
+        </div><!-- /end .region.content-main -->
 
     </main>
 
     {% block footer %}
-        {% include 'footers/_footer-site.twig' with { class : 'site-footer' } %}
+        {% include 'footers/_footer-site.twig' with { class : 'region site-footer' } %}
         {{ function('wp_footer') }}
     {% endblock %}
+
+<!-- States referenced by `aria-describedby` -->
+<div id="wayfinding" class="squelch">
+    <span id="current-page">Current page</span>
+</div>
 
 </body>
 </html>

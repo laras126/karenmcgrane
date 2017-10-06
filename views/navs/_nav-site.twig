@@ -3,21 +3,17 @@
 {% set class = 'site-nav' %}
 {% set role = 'navigation' %}
 
-{% set space = ' '%}
-{% set dot = '.'%}
+{% set space = ' ' %}
+{% set dot = '.' %}
 {% set replace_space = '-' %}
 {% set replace_dot = '-' %}
 
 {% block nav_content %}
-  <div class="inner">
-    <ul class="site-nav-list">
+    <ul class="site-nav">
     {% for item in menu.items %}
       <li class="site-nav-list-item">
-        <a href="{{item.link}}" class="nav-item-img-link">
-          <img class="nav-item-img" src="{{site.link}}/wp-content/uploads/menu-icons/{{item.title|lower|replace({ (space):
-          replace_space })|replace({ (dot): replace_dot })}}.png" alt="">
-        </a>
         <a href="{{item.link}}">
+          <img src="{{site.theme.link}}/dist/assets/svg/{{item.title|lower|replace({ (space):replace_space })|replace({ (dot): replace_dot })}}.svg" alt="" />
           {{item.title}}
         </a>
         {% if item.get_children %}
