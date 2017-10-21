@@ -57,6 +57,9 @@
 			$context['site_footer_copyright'] = get_field('site_footer_copyright', 'options');
 			$context['site_footer_credits'] = get_field('site_footer_credits', 'options');
 
+            // Template-specific helpers
+            $context['initial_js'] = file_get_contents(get_template_directory() . '/dist/assets/js/initial.js');
+
 			return $context;
 		}
 
@@ -101,7 +104,6 @@
 		}
 
 	}
-	add_action( 'wp_enqueue_scripts', 'tsk_scripts' );
 
 
 

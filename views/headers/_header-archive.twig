@@ -2,11 +2,9 @@
 {% extends 'headers/header.twig' %}
 
 {% block header_content %}
-  <div class="contain-lg">
-	 <h1 class="archive-title">{{title}}</h1>
-	 <h3 class="lead">{{post.header_tagline}}</h3>
-	 <p class="summary">{{post.header_summary}}</p>
-  </div>
+<h1 class="hed-lead">{{title}}</h1>
+<h3 class="lead">{{post.header_tagline}}</h3>
+<p class="summary">{{post.header_summary}}</p>
 {% endblock %}
 
 {% block after_header_content %}{% endblock %}

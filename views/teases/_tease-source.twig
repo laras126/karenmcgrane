@@ -1,14 +1,10 @@
 {% extends "teases/tease.twig" %}
 
-{% block tease_header %}
-    <h3 class="tease-title -{{post.post_type}}"><a href="{{post.source_url}}">{{post.post_title}}</a><span class="tease-more">&rsaquo;</span></h3>
-{% endblock %}
-
 {% block tease_content %}
 	<p>{{post.source_blurb}}</p>
 
 	{% if post.terms('category') %}
-		<p class="meta-dark">
+		<p class="teaser-meta">
 			<span class="meta-dark">Category: </span>
 			{% for type in post.terms('category') %}
 				<a href="{{type.link}}">{{type.name}}</a>{{loop.last ? '' : ', '}}
@@ -17,7 +13,7 @@
 	{% endif %}
 
 	{% if post.terms('source_type') %}
-		<p class="meta-dark">
+		<p class="teaser-meta">
 			Type:
 			{% for type in post.terms('source_type') %}
 				{{type.name}}{{loop.last ? '' : ', '}}

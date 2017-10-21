@@ -1,0 +1,8 @@
+@mixin fonts() {
+    & {
+        font-family: $fonts-sans-initial;
+    }
+    .fonts-loaded & {
+        font-family: $fonts-sans;
+    }
+}

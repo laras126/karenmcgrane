@@ -20,18 +20,19 @@
 .tease-title {
   > a {
     text-decoration: none;
+    &:after {
+        content: "›";
+        font-weight: 500;
+        margin-left: $size-sml;
+    }
   }
-  &.-source {
+  &.type-source {
     font-size: $size-h4;
   }
 }
 
 .tease-meta {
 	@include meta();
-}
-
-.tease-more {
-  margin-left: $size-sml;
 }
 
 @import 'tease-post';
