@@ -25,22 +25,28 @@ class StarterSite extends TimberSite {
 		add_filter( 'get_twig', array( $this, 'add_to_twig' ) );
 		add_action( 'init', array( $this, 'register_post_types' ) );
 		add_action( 'init', array( $this, 'register_taxonomies' ) );
+		add_action('init',  array( $this, 'register_acf_utils' ));
 
 		parent::__construct();
 	}
 
-	function register_post_types() {
-		//this is where you can register custom post types
+	function register_post_types(){
+		require('inc/custom-types.php');
 	}
 
-	function register_taxonomies() {
-		//this is where you can register custom taxonomies
+	function register_taxonomies(){
+		require('inc/taxonomies.php');
+	}
+
+	function register_menus() {
+		require('inc/menus.php');
+	}
+
+	function register_acf_utils() {
+		require('inc/acf-utils.php');
 	}
 
 	function add_to_context( $context ) {
-		$context['foo'] = 'bar';
-		$context['stuff'] = 'I am a value set in your functions.php file';
-		$context['notes'] = 'These values are available everytime you call Timber::get_context();';
 		$context['menu'] = new TimberMenu();
 		$context['site'] = $this;
 		return $context;
