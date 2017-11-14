@@ -1,22 +1,40 @@
-<!doctype html>
-<!--[if lt IE 7]><html class="no-js ie ie6 lt-ie9 lt-ie8 lt-ie7" {{ site.language_attributes }}> <![endif]-->
-<!--[if IE 7]><html class="no-js ie ie7 lt-ie9 lt-ie8" {{ site.language_attributes }}> <![endif]-->
-<!--[if IE 8]><html class="no-js ie ie8 lt-ie9" {{ site.language_attributes }}> <![endif]-->
-<!--[if gt IE 8]><!--><html class="no-js" {{ site.language_attributes }}> <!--<![endif]-->
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <meta charset="{{ site.charset }}" />
-        <title>
-            {% if wp_title %}
-                {{ wp_title }} - {{ site.name }}
-            {% else %}
-                {{ site.name }}
-            {% endif %}
-        </title>
-    <meta name="description" content="{{ site.description }}">
-    <link rel="stylesheet" href="{{ site.theme.link }}/dist/assets/css/main.css" type="text/css" media="screen" />
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="author" href="{{ site.theme.link }}/humans.txt" />
-    <link rel="pingback" href="{{ site.pingback_url }}" />
-    {{function('wp_head')}}
+  <meta charset="{{ site.charset }}" />
+  <title>{{ wp_title }}</title>
+  <meta name="description" content="{{ site.description }}">
+
+  <link rel="stylesheet" href="{{ site.theme.link }}/dist/assets/css/main.css" type="text/css" media="screen" />
+
+  {#
+    TODO: figure this out how best to do critical CSS in WP
+    {% if critcal_css %}
+      <style media="screen">{{ critical_css }}</style>
+      <noscript><link rel="stylesheet" href="{{ full_css }}"></noscript>
+    {% endif %}
+  #}
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="author" href="{{ site.theme.link }}/humans.txt" />
+  <link rel="pingback" href="{{ site.pingback_url }}" />
+
+  <script>{{ initial_js }}</script>
+  <script>document.createElement( "picture" );</script>
+  <script src="{{ site.theme.link }}/dist/assets/js/picturefill.js" async></script>
+  <script>
+    var MTIProjectId='a555b89b-28b3-4798-9e31-f3222456653c';
+    (function() {
+        var mtiTracking = document.createElement('script');
+        mtiTracking.type='text/javascript';
+        mtiTracking.async='true';
+        mtiTracking.src='mtiFontTrackingCode.js';
+
+        ( document.getElementsByTagName( 'head' )[ 0 ] || document.getElementsByTagName( 'body' )[ 0 ] ).appendChild( mtiTracking );
+    })();
+  </script>
+
+  {{fn('wp_head')}}

@@ -3,11 +3,11 @@
   <div class="site-mast">
     <h1 class="logo"><a href="{{site.link}}" rel="home">Karen McGrane<span>.</span></a></h1>
     {% include 'partials/site-nav.twig' %}
-  </div><!-- /end .site-mast -->
+  </div>{# /end .site-mast #}
 
-  {% if function('is_front_page', true) %}
+  {% if fn('is_front_page', true) %}
     <div class="site-tagline">
-      <p>{{site.description}}</p>
+      <p>{{ site.description }}</p>
     </div>{# /end .site-tagline #}
   {% endif %}
 

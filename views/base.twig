@@ -6,7 +6,8 @@
 	</head>
 {% endblock %}
 
-	<body class="{{body_class}}" data-template="base.twig">
+	<body id="www-karenmcgrane-com" class="{{body_class}}"  data-template="base.twig">
+
 		<header class="header" >
 			{% include "partials/site-header.twig" %}
 		</header>
@@ -29,7 +30,7 @@
 			<footer id="footer">
 				{% include 'footer.twig' %}
 			</footer>
-			{{ function('wp_footer') }}
+			{{ fn('wp_footer') }}
 		{% endblock %}
 	</body>
 </html>
