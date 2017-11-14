@@ -1,0 +1,33 @@
+
+{% set class = 'site-nav' %}
+{% set role = 'navigation' %}
+
+{# TODO: can maybe use custom Twig function for this #}
+{% set space = ' ' %}
+{% set dot = '.' %}
+{% set replace_space = '-' %}
+{% set replace_dot = '-' %}
+
+<nav class="site-nav">
+
+  <ul class="site-nav-list">
+    {% for item in menu.items %}
+      <li class="site-nav-list-item">
+        <a href="{{item.link}}">
+          <img src="{{site.theme.link}}/dist/assets/svg/{{item.title|lower|replace({ (space):replace_space })|replace({ (dot): replace_dot })}}.svg" alt="Icon for {{item.title}}" />
+          {{item.title}}
+        </a>
+        {% if item.get_children %}
+          <ul class="site-subnav-list">
+          {% for child in item.get_children %}
+              <li class="site-subnav-item">
+                  <a href="{{child.get_link}}">{{child.title}}</a>
+              </li>
+          {% endfor %}
+          </ul>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+
+</nav>
