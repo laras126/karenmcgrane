@@ -1,0 +1,19 @@
+{% extends "partials/blocks/block.twig" %}
+
+{% block content %}
+
+  {{ block.textimage_format == 'inline' ? '<div class="inline-img-wrap">' }}
+
+    {% include 'utility/srcset.twig' with { id: block.textimage_image, class: 'textimage-image' } %}
+
+  {{ block.textimage_format == 'inline' ? '</div>' }}
+
+  {% if block.textimage_format == 'caption'%}
+    <p class="caption">{{block.caption}}</p>
+  {% else %}
+    <div class="inline-text-wrap">
+      {{block.textimage_text}}
+    </div>
+  {% endif %}
+
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends "partials/blocks/block.twig" %}
+
+{% block content %}
+
+	{% set type = block.list_type %}
+	{% set display = block.list_display %}
+
+	{% if block.list_title %}
+		<h4 class="list-title">{{block.list_title}}</h4>
+	{% endif %}
+
+	{% if block.list_description %}
+		<p class="list-description">{{block.list_description}}</p>
+	{% endif %}
+
+	<ul class="block_list-list list--{{display}} list--{{type}}">
+
+		{% if type == "free_form" %}
+			{% for item in block.list_type_freeform %}
+				<li class="list-item--{{type}}">
+					<h5 class="list-item-title">{{item.item_title}}</h5>
+					<div class="list-item-desc">
+						{{item.item_description}}
+					</div>
+					{% if display == 'major' %}
+						{% if item.item_svg %}
+							{% include 'utility/svg.twig' with { file : item.item_svg, prefix : 'shape' } %}
+						{% elseif item.item_image %}
+							<img src="{{TimberImage(item.item_image).src}}" alt="{{item.item_title}}">
+						{% endif %}
+					{% endif %}
+				</li>
+			{% endfor %}
+		{% elseif type == "connected_content" %}
+			{% for post in block.list_type_connected_content %}
+				<li>
+					{% include 'teases/_tease-' ~ post.post_type ~ '.twig' %}
+				</li>
+			{% endfor %}
+		{% endif %}
+
+	</ul> <!-- /.list-{{display}} -->
+
+{% endblock %}

@@ -1,0 +1,16 @@
+
+{% set block_class = block.acf_fc_layout %}
+
+{% if block.acf_fc_layout == 'block_text' %}
+    {% include 'partials/blocks/_block-text.twig' %}
+{% elseif block.acf_fc_layout == 'block_textimage' %}
+    {% include 'partials/blocks/_block-textimage.twig' %}
+{% elseif block.acf_fc_layout == 'block_html' %}
+    {% include 'partials/blocks/_block-html.twig' %}
+{% elseif block.acf_fc_layout == 'block_list' %}
+    {% include 'partials/blocks/_block-list.twig' %}
+{% elseif block.acf_fc_layout == 'block_cta' %}
+    {% include 'partials/blocks/_block-cta.twig' %}
+{% elseif block.acf_fc_layout == 'block_quote' %}
+    {% include 'partials/blocks/_block-quote.twig' %}
+{% endif %}
