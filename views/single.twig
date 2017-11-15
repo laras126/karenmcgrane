@@ -1,4 +1,39 @@
-{% block html_head_container %}
+{% extends 'base.twig' %}
+
+{% block content %}
+
+    <div class="region content-main">
+
+        <div class="l-sole">
+
+            <article class="group" datetime="{{ post.date|date("y-m-d")}}">
+               <footer>
+                    <div class="article-meta">
+                        <p>An <a href="#">article</a> originally published in <a href="">The Pastry Box Project</a>.</p>
+                    </div>
+                </footer>
+
+                <header>
+                    <h2 class="hed-article-title">{{ post.title }}</h2>
+                    <p class="article-lead">{{ post.header_tagline }}</p>
+                </header>
+
+                <section class="article-content">
+                    {% for block in post.get_field('blocks') %}
+                        {% include 'partials/block-logic.twig' %}
+                    {% endfor %}
+                </section>
+
+            </article><!-- /end .group -->
+
+        </div><!-- /end .l-sole -->
+
+    </div><!-- /end .region.content-main.has-index -->
+
+{% endblock %}
+
+
+{# {% block html_head_container %}
     {% include 'html-header.twig' %}
 
     {% block head %}
@@ -13,7 +48,7 @@
 {% endif %}
 
     {% block header %}
-      {% include 'headers/_header-site.twig' with { class: 'region', role: 'banner' } %}
+
     {% endblock %}
 
     <main class="site-content">
@@ -63,4 +98,4 @@
 </div>
 
 </body>
-</html>
+</html> #}
