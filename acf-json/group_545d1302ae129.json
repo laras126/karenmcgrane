@@ -3,67 +3,11 @@
     "title": "Header",
     "fields": [
         {
-            "key": "field_545a83096d4b5",
-            "label": "Header Display",
-            "name": "header_display",
-            "type": "radio",
-            "instructions": "Select the type of page intro you would like.",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "text": "Text Only",
-                "image": "Image"
-            },
-            "allow_null": 0,
-            "other_choice": 0,
-            "save_other_choice": 0,
-            "default_value": "",
-            "layout": "horizontal",
-            "return_format": "value"
-        },
-        {
-            "key": "field_58011eb56e223",
-            "label": "Header Image (size here)",
-            "name": "header_image",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_545a83096d4b5",
-                        "operator": "==",
-                        "value": "image"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "id",
-            "preview_size": "thumbnail",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
-        },
-        {
             "key": "field_558add6512d17",
-            "label": "Header Tagline",
+            "label": "Header Lead",
             "name": "header_tagline",
             "type": "textarea",
-            "instructions": "A concise introduction to the page content. ",
+            "instructions": "A concise introduction to the page content.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -75,9 +19,7 @@
             "placeholder": "",
             "maxlength": "",
             "rows": 2,
-            "new_lines": "",
-            "readonly": 0,
-            "disabled": 0
+            "new_lines": ""
         },
         {
             "key": "field_545a8366b7ae4",
@@ -95,7 +37,8 @@
             "default_value": "",
             "tabs": "all",
             "toolbar": "links_only",
-            "media_upload": 0
+            "media_upload": 0,
+            "delay": 0
         }
     ],
     "location": [
@@ -126,5 +69,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1476468582
+    "modified": 1510703922
 }
