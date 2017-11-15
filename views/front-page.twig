@@ -1,25 +1,74 @@
-{% extends "base.twig" %}
+{% extends "base.twig" %} {% block content %}
 
-{% block content %}
- <section class="region about-karen">
-		<h2 class="hed">{{ post.about_intro }}</h2>
+<section class="region about-karen">
+	<h2 class="hed">{{ post.about_intro }}</h2>
 
-		<p class="photo" style="background-image: url( '{{ TimberImage(post.about_image).src('medium') }}' );"><img src="{{ TimberImage(post.about_image).src('large') }}" alt="" /></p>
+	<p class="photo" style="background-image: url( '{{ TimberImage(post.about_image).src('thumbnail') }}' );">
+		{# TODO/NOTE: research a better way of accessing the alt attribute #}
+		<img src="{{ TimberImage(post.about_image).src('large') }}" alt="{{ TimberImage(post.about_image)._wp_attachment_image_alt }}" />
+	</p>
 
-		<div class="content">
-			<p>{{ post.about_paragraph }}</p>
+	<div class="content">
+		<p>{{ post.about_paragraph }}</p>
+	</div>
+</section>
+
+<div class="region content-main">
+	<div class="l-60-40">
+		<div class="group p-more">
+			<h2 class="hed-section-sub">Recent Articles</h2>
+
+			<ol class="teaser-list">
+			{% for article in recent_articles %}
+
+				<li class="teaser">
+
+					<img src="{{ article.thumbnail.src('thumbnail') }}" alt="{{ article.thumbnail.alt }}" />
+
+					<div class="teaser-inner">
+						<time datetime="{{ article.date|date("y-m-d") }}">{{ article.date|date("M d, Y") }}</time>
+
+						<h3 class="hed-teaser">
+							<a class="hed-teaser-link" href="#">{{ article.title }}</a>
+						</h3>
+						<p>{{ article.header_tagline }}
+							<a class="read-more" href="{{ article.link }}">Read more</a>
+						</p>
+					</div> <!-- /end .teaser-inner -->
+				</li> <!-- /end .teaser -->
+				{% endfor %}
+			</ol>
+
+			<p class="cap">
+				<a class="link-more" href="#">Show all articles</a>
+			</p>
+
+			<h2 class="hed-section-sub">Recent Talks</h2>
+			<ol class="teaser-list">
+				<li class="teaser">
+					<div class="teaser-inner">
+						<h3 class="hed-teaser">
+							<a class="hed-teaser-link" href="#">Adapting Ourselves to Adaptive Content</a>
+						</h3>
+						<p>I speak often about how we need to adapt our content processes and workflow for multi-channel publishing, especially
+							for mobile. This presentation is one of my favorite talks I’ve ever given.
+							<a class="read-more" href="#">Read more</a>
+						</p>
+					</div> <!-- /end .teaser-inner -->
+				</li> <!-- /end .teaser -->
+
+				<li class="teaser">
+					<div class="teaser-inner">
+						<h3 class="hed-teaser">
+							<a class="hed-teaser-link" href="#">The Mobile Content Mandate</a>
+						</h3>
+					</div> <!-- /end .teaser-inner -->
+				</li> <!-- /end .teaser -->
+
+			</ol>
 		</div>
-	</section>
-{#
-	<div class="content-wrapper">
-		<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
-			<section class="article-content">
-				<h1 class="article-h1">{{post.title}}</h1>
-				<div class="article-body">
-					{{post.content}}
-				</div>
-			</section>
-		</article>
-	</div><!-- /content-wrapper --> #}
+
+	</div>
+</div>
 
 {% endblock %}
