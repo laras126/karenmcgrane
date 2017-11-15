@@ -1,6 +1,16 @@
 {% extends "base.twig" %}
 
 {% block content %}
+ <section class="region about-karen">
+		<h2 class="hed">{{ post.about_intro }}</h2>
+
+		<p class="photo" style="background-image: url( '{{ TimberImage(post.about_image).src('medium') }}' );"><img src="{{ TimberImage(post.about_image).src('large') }}" alt="" /></p>
+
+		<div class="content">
+			<p>{{ post.about_paragraph }}</p>
+		</div>
+	</section>
+{#
 	<div class="content-wrapper">
 		<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
 			<section class="article-content">
@@ -10,5 +20,6 @@
 				</div>
 			</section>
 		</article>
-	</div><!-- /content-wrapper -->
+	</div><!-- /content-wrapper --> #}
+
 {% endblock %}
