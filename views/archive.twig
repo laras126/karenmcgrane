@@ -1,0 +1,11 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+  <div class="region content-main">
+		<ol class="teaser-list">
+			{% for post in posts %}
+				{% include ['partials/tease-'~post.post_type~'.twig', 'tease.twig'] %}
+			{% endfor %}
+		</ol>
+{% endblock %}
