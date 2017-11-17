@@ -18,11 +18,17 @@
 			{% endblock %}
 		</main>
 
-		{% block footer %}
-			<footer id="footer">
-				{% include 'footer.twig' %}
-			</footer>
-			{{ fn('wp_footer') }}
-		{% endblock %}
+		<footer class="region site-footer">
+			{% include 'footer.twig' %}
+		</footer>
+
+		{# TODO: learn about this:
+		<!-- States referenced by `aria-describedby` -->
+		<div id="wayfinding" class="squelch">
+				<span id="current-page">Current page</span>
+		</div>  #}
+
+		{{ fn('wp_footer') }}
+
 	</body>
 </html>
