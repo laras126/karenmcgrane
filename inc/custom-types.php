@@ -73,7 +73,7 @@
 		'not_found_in_trash'  => __( 'Not found in Trash', 'text_domain' ),
 	);
 	$rewrite = array(
-		'slug'                => 'presentations',
+		'slug'                => 'talks',
 		'with_front'          => true,
 		'pages'               => true,
 		'feeds'               => true,
@@ -146,6 +146,7 @@
 		'show_in_nav_menus'   => true,
 		'can_export'          => true,
 		'has_archive'         => true,
+		'rewrite'             => $rewrite,
 		'exclude_from_search' => false,
 		'publicly_queryable'  => true,
 		'capability_type'     => 'post',
