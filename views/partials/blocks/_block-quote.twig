@@ -4,10 +4,9 @@
 
 	<blockquote>
 		<p>{{block.quote_text}}</p>
-		<footer>
-			<cite class="caption">&dash; <a href="{{block.quote_source_url}}" target="blank">{{block.quote_source}}</cite></a>
-		</footer>
+		<address>
+			<cite> {{ block.quote_source_url ? '<a href="' ~ block.quote_source_url ~ '">' }}{{block.quote_source}}{{ block.quote_source_url ? '</a>' }}</cite>
+		</address>
 	</blockquote>
-
 
 {% endblock %}
