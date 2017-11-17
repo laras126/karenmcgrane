@@ -2,10 +2,14 @@
 
 {% block content %}
 
+  {% set src = TimberImage(block.textimage_image).src('medium') %}
+  {% set alt = TimberImage(block.textimage_image)._wp_attachment_image_alt %}
+
   {{ block.textimage_format == 'inline' ? '<div class="inline-img-wrap">' }}
-
-    {% include 'utility/srcset.twig' with { id: block.textimage_image, class: 'textimage-image' } %}
-
+    <img src="{{ src }}"
+         srcset="{{ fn('wp_get_attachment_image_srcset', block.textimage_image, 'medium') }}"
+         sizes="{{ fn('wp_get_attachment_image_sizes', block.textimage_image) }}"
+         alt="{{ alt ? alt : TimberImage(block.textimage_image).title }}">
   {{ block.textimage_format == 'inline' ? '</div>' }}
 
   {% if block.textimage_format == 'caption'%}
