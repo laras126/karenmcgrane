@@ -19,55 +19,42 @@
 			<h2 class="hed-section-sub">Recent Articles</h2>
 
 			<ol class="teaser-list">
-			{% for article in recent_articles %}
-
-				<li class="teaser">
-
-					<img src="{{ article.thumbnail.src('thumbnail') }}" alt="{{ article.thumbnail.alt }}" />
-
-					<div class="teaser-inner">
-						<time datetime="{{ article.date|date("y-m-d") }}">{{ article.date|date("M d, Y") }}</time>
-
-						<h3 class="hed-teaser">
-							<a class="hed-teaser-link" href="#">{{ article.title }}</a>
-						</h3>
-						<p>{{ article.header_tagline }}
-							<a class="read-more" href="{{ article.link }}">Read more</a>
-						</p>
-					</div> <!-- /end .teaser-inner -->
-				</li> <!-- /end .teaser -->
+				{% for post in recent_articles %}
+					{% include 'partials/tease-article.twig' %}
 				{% endfor %}
 			</ol>
 
 			<p class="cap">
-				<a class="link-more" href="#">Show all articles</a>
+				<a class="link-more" href="{{ fn('get_post_type_archive_link', 'article') }}">Show all articles</a>
 			</p>
 
 			<h2 class="hed-section-sub">Recent Talks</h2>
 			<ol class="teaser-list">
-				<li class="teaser">
-					<div class="teaser-inner">
-						<h3 class="hed-teaser">
-							<a class="hed-teaser-link" href="#">Adapting Ourselves to Adaptive Content</a>
-						</h3>
-						<p>I speak often about how we need to adapt our content processes and workflow for multi-channel publishing, especially
-							for mobile. This presentation is one of my favorite talks I’ve ever given.
-							<a class="read-more" href="#">Read more</a>
-						</p>
-					</div> <!-- /end .teaser-inner -->
-				</li> <!-- /end .teaser -->
-
-				<li class="teaser">
-					<div class="teaser-inner">
-						<h3 class="hed-teaser">
-							<a class="hed-teaser-link" href="#">The Mobile Content Mandate</a>
-						</h3>
-					</div> <!-- /end .teaser-inner -->
-				</li> <!-- /end .teaser -->
-
+				{% for post in recent_talks %}
+					{% include 'partials/tease-presentation.twig' %}
+				{% endfor %}
 			</ol>
-		</div>
 
+			<p class="cap"><a class="link-more" href="{{ fn('get_post_type_archive_link', 'presentation') }}">Show all talks</a></p>
+
+		</div>
+		 <div class="group-alt p-less">
+			<h2 class="hed-section-sub">Recent Sources</h2>
+			<ol class="sources-count-list">
+				{# <pre>{{dump(recent_sources)}}</pre> #}
+				{% for cat in recent_sources_cats %}
+					<li>
+						<a href="#">
+							<dl class="source-count">
+								<dt>{{ cat.name }}<span class="a11y">:</span></dt>
+								<dd>
+									{{ cat.count }} <span class="a11y">sources</span>
+								</dd>
+							</dl>
+						</a>
+					</li>
+				{% endfor %}
+			</ol>
 	</div>
 </div>
 
