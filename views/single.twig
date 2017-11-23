@@ -19,9 +19,7 @@
                 </header>
 
                 <section class="article-content">
-                    {% for block in post.get_field('blocks') %}
-                        {% include 'partials/block-logic.twig' %}
-                    {% endfor %}
+                    {{ post.content }}
                 </section>
 
             </article><!-- /end .group -->
