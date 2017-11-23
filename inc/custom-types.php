@@ -134,7 +134,7 @@
 		'label'               => __( 'Article', 'text_domain' ),
 		'description'         => __( 'Article Description', 'text_domain' ),
 		'labels'              => $labels,
-		'supports'            => array( 'title', 'excerpt', 'thumbnail', 'page-attributes', ),
+		'supports'            => array( 'title', 'excerpt', 'thumbnail', 'page-attributes', 'editor'),
 		'taxonomies'          => array( 'category', 'post_tag' ),
 		'hierarchical'        => false,
 		'public'              => true,
