@@ -4,7 +4,7 @@
     "fields": [
         {
             "key": "field_558add6512d17",
-            "label": "Header Lead",
+            "label": "Lead",
             "name": "header_tagline",
             "type": "textarea",
             "instructions": "A concise introduction to the page content.",
@@ -39,6 +39,30 @@
             "toolbar": "links_only",
             "media_upload": 0,
             "delay": 0
+        },
+        {
+            "key": "field_5a4bd8fa0b4db",
+            "label": "Header Image",
+            "name": "header_image",
+            "type": "image",
+            "instructions": "Full-width image to appear below the summary.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
         }
     ],
     "location": [
@@ -62,10 +86,9 @@
         "revisions",
         "author",
         "format",
-        "featured_image",
         "send-trackbacks"
     ],
     "active": 1,
     "description": "",
-    "modified": 1511393051
+    "modified": 1514920239
 }
