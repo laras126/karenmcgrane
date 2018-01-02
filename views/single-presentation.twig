@@ -4,51 +4,51 @@
 
     <div class="region content-main">
 
-			<article class="group" datetime="{{ post.date|date("y-m-d")}}">
-					<footer>
-							<div class="article-meta">
-									<p>A <a href="#">talk</a> posted on <time datetime="{{ post.date|date("Y-m-d H:i") }}">{{ post.date }}</time>.</p>
-							</div>
-					</footer>
+		<article class="group" datetime="{{ post.date|date("y-m-d")}}">
+			<footer>
+					<div class="article-meta">
+							<p>A <a href="#">talk</a> posted on <time datetime="{{ post.date|date("Y-m-d H:i") }}">{{ post.date }}</time>.</p>
+					</div>
+			</footer>
 
-					<header>
-							<h2 class="hed-article-title">{{ post.title }}</h2>
-							<p class="article-lead">{{ post.header_tagline }}</p>
-					</header>
+			<header>
+					<h2 class="hed-article-title">{{ post.title }}</h2>
+					<p class="article-lead">{{ post.header_tagline }}</p>
+			</header>
 
-					<section class="article-content">
-						<h3>Video</h3>
+			<section class="article-content">
+				<h3>Video</h3>
 
-						<div class="embed-vimeo">
-								<iframe src="//player.vimeo.com/video/103071010" title="Karen McGrane – Content in a Zombie Apocalypse – beyond tellerrand Düsseldorf 2014" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" width="696" height="392" frameborder="0"></iframe>
-						</div>
+				<div class="embed-vimeo">
+					{{ post.video }}
+				</div>
 
-						<h3>Slides</h3>
+				<h3>Slides</h3>
 
-						<iframe src="https://www.slideshare.net/slideshow/embed_code/22494253" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" width="696" height="570"></iframe>
+				{{ post.slides }}
 
-						<h3>Transcript</h3>
+				<h3>Transcript</h3>
 
-						<ol class="slide-list">
-							{% for slide in post.get_field('contents') %}
-								{% set img = TimberImage(slide.image) %}
+				<ol class="slide-list">
+					{% for slide in post.get_field('contents') %}
+						{% set img = TimberImage(slide.image) %}
 
-								<li class="slide">
-										<p class="slide-img">
-											<img src="{{ img.src }}"
-												srcset="{{ fn('wp_get_attachment_image_srcset', slide.image, 'medium') }}"
-												sizes="{{ fn('wp_get_attachment_image_sizes', slide.image) }}"
-												alt="{{ img.title }}">
-										</p>
-										<div class="slide-content">
-												<p>{{ slide.text }}</p>
-										</div>
-								</li><!-- /end .slide -->
-							{% endfor %}
-						</ol>
-					</section>
+						<li class="slide">
+								<p class="slide-img">
+									<img src="{{ img.src }}"
+										srcset="{{ fn('wp_get_attachment_image_srcset', slide.image, 'medium') }}"
+										sizes="{{ fn('wp_get_attachment_image_sizes', slide.image) }}"
+										alt="{{ img.title }}">
+								</p>
+								<div class="slide-content">
+										<p>{{ slide.text }}</p>
+								</div>
+						</li><!-- /end .slide -->
+					{% endfor %}
+				</ol>
+			</section>
 
-			</article><!-- /end .group -->
+		</article><!-- /end .group -->
 
     </div><!-- /end .region.content-main.has-index -->
 
