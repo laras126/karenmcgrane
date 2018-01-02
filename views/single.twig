@@ -9,7 +9,10 @@
             <article class="group" datetime="{{ post.date|date("y-m-d")}}">
                <footer>
                     <div class="article-meta">
-                        <p>An <a href="#">article</a> originally published in <a href="">The Pastry Box Project</a>.</p>
+                        {% if post.connected_source %}
+                            {% set source = TimberPost(post.connected_source) %}
+                            <p>An <a href="#">article</a> originally published in <a href="{{ source.source_url }}">{{ source.source_publication }}</a>.</p>
+                        {% endif %}
                     </div>
                 </footer>
 
@@ -19,6 +22,14 @@
                 </header>
 
                 <section class="article-content">
+                    <p>{{ post.header_summary }}</p>
+                    <p class="lead-image full">
+                    {% set img = TimberImage(post.header_image) %}
+                    <img src="{{ img.src }}"
+                        srcset="{{ fn('wp_get_attachment_image_srcset', post.header_image, 'medium') }}"
+                        sizes="{{ fn('wp_get_attachment_image_sizes', post.header_image) }}"
+                        alt="{{ alt ? alt : img.title }}">
+                    </p>
                     {{ post.content }}
                 </section>
 
