@@ -4,14 +4,14 @@
     "fields": [
         {
             "key": "field_55a431423a466",
-            "label": "Video",
+            "label": "Video Embed",
             "name": "video",
             "type": "textarea",
             "instructions": "Paste the video embed here. Only keep the <code>iframe<\/code> tag, remove any extras.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": 50,
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -19,20 +19,18 @@
             "placeholder": "",
             "maxlength": "",
             "rows": "",
-            "new_lines": "",
-            "readonly": 0,
-            "disabled": 0
+            "new_lines": ""
         },
         {
             "key": "field_55a431893a467",
-            "label": "Slides",
+            "label": "Slides Embed",
             "name": "slides",
             "type": "textarea",
             "instructions": "Paste the slides embed code here. Again, remove non-<code>iframe<\/code> tags.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": 50,
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -40,9 +38,7 @@
             "placeholder": "",
             "maxlength": "",
             "rows": "",
-            "new_lines": "",
-            "readonly": 0,
-            "disabled": 0
+            "new_lines": ""
         },
         {
             "key": "field_5a43de56c07b9",
@@ -66,7 +62,7 @@
                 {
                     "key": "field_5a43de7cc07ba",
                     "label": "Slide",
-                    "name": "slide",
+                    "name": "image",
                     "type": "image",
                     "instructions": "",
                     "required": 0,
@@ -126,5 +122,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1514397435
+    "modified": 1514399369
 }
