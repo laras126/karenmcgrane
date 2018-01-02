@@ -4,96 +4,53 @@
 
     <div class="region content-main">
 
-        <div class="l-sole">
+			<article class="group" datetime="{{ post.date|date("y-m-d")}}">
+					<footer>
+							<div class="article-meta">
+									<p>A <a href="#">talk</a> posted on <time datetime="{{ post.date|date("Y-m-d H:i") }}">{{ post.date }}</time>.</p>
+							</div>
+					</footer>
 
-            <article class="group" datetime="{{ post.date|date("y-m-d")}}">
-               <footer>
-                    <div class="article-meta">
-                        <p>An <a href="#">article</a> originally published in <a href="">The Pastry Box Project</a>.</p>
-                    </div>
-                </footer>
+					<header>
+							<h2 class="hed-article-title">{{ post.title }}</h2>
+							<p class="article-lead">{{ post.header_tagline }}</p>
+					</header>
 
-                <header>
-                    <h2 class="hed-article-title">{{ post.title }}</h2>
-                    <p class="article-lead">{{ post.header_tagline }}</p>
-                </header>
+					<section class="article-content">
+						<h3>Video</h3>
 
-                <section class="article-content">
-                    {{ post.content }}
-                </section>
+						<div class="embed-vimeo">
+								<iframe src="//player.vimeo.com/video/103071010" title="Karen McGrane – Content in a Zombie Apocalypse – beyond tellerrand Düsseldorf 2014" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" width="696" height="392" frameborder="0"></iframe>
+						</div>
 
-            </article><!-- /end .group -->
+						<h3>Slides</h3>
 
-        </div><!-- /end .l-sole -->
+						<iframe src="https://www.slideshare.net/slideshow/embed_code/22494253" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" width="696" height="570"></iframe>
+
+						<h3>Transcript</h3>
+
+						<ol class="slide-list">
+							{% for slide in post.get_field('contents') %}
+								{% set img = TimberImage(slide.image) %}
+
+								<li class="slide">
+										<p class="slide-img">
+											<img src="{{ img.src }}"
+												srcset="{{ fn('wp_get_attachment_image_srcset', slide.image, 'medium') }}"
+												sizes="{{ fn('wp_get_attachment_image_sizes', slide.image) }}"
+												alt="{{ img.title }}">
+										</p>
+										<div class="slide-content">
+												<p>{{ slide.text }}</p>
+										</div>
+								</li><!-- /end .slide -->
+							{% endfor %}
+						</ol>
+					</section>
+
+			</article><!-- /end .group -->
 
     </div><!-- /end .region.content-main.has-index -->
 
 {% endblock %}
 
-
-{# {% block html_head_container %}
-    {% include 'html-header.twig' %}
-
-    {% block head %}
-    {% endblock %}
-</head>
-{% endblock %}
-
-{% if body_class %}
-<body id="www-karenmcgrane-com" class="{{body_class}}" data-template="base.twig">
-{% else %}
-<body id="www-karenmcgrane-com" data-template="base.twig">
-{% endif %}
-
-    {% block header %}
-
-    {% endblock %}
-
-    <main class="site-content">
-
-        <div class="region content-main">
-            {% if sidebar %}
-            <div class="l-60-40">
-            {% else %}
-            <div class="l-sole">
-            {% endif %}
-
-            <div class="group">
-                {% block before_content %}{% endblock %}
-
-                {% block content %}
-                  Sorry, no content
-                {% endblock %}
-
-                {% block after_content %}{% endblock %}
-            </div><!-- /end .group -->
-
-            {% if sidebar %}
-                <aside class="group-alt">
-                    {{sidebar}}
-                </aside>
-            {% endif %}
-
-            {% if sidebar %}
-            </div><!-- /end .l-60-40 -->
-            {% else %}
-            </div><!-- /end .l-sole -->
-            {% endif %}
-
-
-        </div><!-- /end .region.content-main -->
-
-    </main>
-
-    {% block footer %}
-        {% include 'footers/_footer-site.twig' with { class : 'region site-footer' } %}
-        {{ function('wp_footer') }}
-    {% endblock %}
-
-<!-- States referenced by `aria-describedby` -->
-<div id="wayfinding" class="squelch">
-    <span id="current-page">Current page</span>
-</div>
-
-</body>
-</html> #}
