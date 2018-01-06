@@ -1,13 +1,7 @@
 <?php
 /**
- * The template for displaying Archive pages.
- *
- * Used to display archive-type pages if nothing more specific matches a query.
- * For example, puts together date-based pages if no date.php file exists.
- *
- * Learn more: http://codex.wordpress.org/Template_Hierarchy
- *
- * Methods for TimberHelper can be found in the /lib sub-directory
+ * The template for displaying the Article post type archive
+ * Posts have been added to the query
  *
  * @package  WordPress
  * @subpackage  Timber
@@ -19,7 +13,6 @@ $templates = array( 'archive-article.twig' );
 $articles_posts_args = array(
 	'post_type' => array('article', 'post')
 );
-
 
 $context = Timber::get_context();
 
