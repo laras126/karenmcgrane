@@ -5,7 +5,7 @@
   <div class="region content-main">
 		<ol class="teaser-list">
 			{% for post in posts %}
-				{% include ['partials/tease-'~post.post_type~'.twig', 'tease.twig'] %}
+				{% include ['partials/tease-'~post.post_type~'.twig', 'partials/tease.twig'] %}
 			{% endfor %}
 		</ol>
 {% endblock %}
