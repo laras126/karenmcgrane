@@ -59,12 +59,14 @@ function kmg_post_date_comparison($a, $b) {
  * @return array An array containing the newest post from each category
  */
 
-function kmg_get_array_of_posts_from_each_category() {
+function kmg_get_array_of_posts_from_each_category($excluded_cats = null) {
 
 	$category_args = array(
 		'hide_empty' => true,
 		'orderby' => 'count',
-		'order' => 'DESC'
+		'order' => 'DESC',
+		// TODO Confirm this:
+		'exclude' => $excluded_cats
 	);
 
 	$categories = get_categories($category_args);
@@ -106,4 +108,36 @@ function kmg_get_array_of_categories_from_sorted_posts($posts_arr) {
 	}
 
 	return $categories_arr;
+}
+
+
+
+/**
+ * Get an array of sources module data for use in template
+ * @param array $category_arr Array of categories from which to build the data
+ * @param int $featured_count Number of modules to return
+ * @param array $excluded_cat_ids Array of category IDs to exclude
+ * @return array Array of data to be used in the to template context
+ */
+
+function kmg_sources_archive($module_count = 4, $excluded_cat_ids) {
+
+	$post_from_each_category = kmg_get_array_of_posts_from_each_category($excluded_cats);
+	usort($post_from_each_category, "kmg_post_date_comparison");
+	$sorted_cats = kmg_get_array_of_categories_from_sorted_posts($post_from_each_category);
+
+	$sources_modules_arr = [];
+
+	for( $i=0; $i < $module_count; $i++ ) {
+		$slug = $sorted_cats[$i]->slug;
+		$module = kmg_get_sources_module_data($slug);
+		array_push($sources_modules_arr, $module);
+	}
+
+	$data = array(
+		'modules' => $sources_modules_arr,
+		'remaining_cats' => array_slice($sorted_cats, 4)
+	);
+
+	return $data;
 }

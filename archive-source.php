@@ -14,17 +14,17 @@
  * @since   Timber 0.2
  */
 
-$post_from_each_category = kmg_get_array_of_posts_from_each_category();
-usort($post_from_each_category, "kmg_post_date_comparison");
-$sorted_cats = kmg_get_array_of_categories_from_sorted_posts($post_from_each_category);
+$excluded_cats = array(
+	get_cat_ID( 'By Karen' ),
+	get_cat_ID( 'About Karen' )
+);
+$module_count = 4;
 
-$templates = array( 'archive-source.twig' );
+$data = kmg_sources_archive($module_count, $excluded_cats);
 
 $context = Timber::get_context();
+$context['featured_modules'] = $data['modules'];
+$context['remaining_cats'] = $data['remaining_cats'];
 
-$context['newest_posts'] = $post_from_each_category;
-$context['cats'] = $sorted_cats;
 
-$context['test'] = count($post_from_each_category);
-
-Timber::render( $templates, $context );
+Timber::render( 'archive-source.twig', $context );
