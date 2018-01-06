@@ -1,7 +1,7 @@
 <?php
 
 /**
-   * Helper function to prepare a sources module
+   * Helper function to prepare a sources module for a category
    * @param string slug of the category term
    * @var int $POSTS_NUM Constant for number of posts to return
    * @return array An array data to be used in the template
@@ -95,6 +95,13 @@ function kmg_get_array_of_posts_from_each_category($excluded_cats = null) {
 
 /**
  * Build an array of categories from an array of posts
+ *
+ * NOTE: this returns only the first category of the targeted posts
+ * This is a problem for posts with more than one category.
+ * A potential solution is to build a temporary array of the categories
+ * encountered thus far, compare the category, and skip it if
+ * it exists in the temporary array
+ *
  * @param array $posts_array Array of posts sorted by date
  * @return array Array of categories from $posts_array
  */
@@ -103,7 +110,7 @@ function kmg_get_array_of_categories_from_sorted_posts($posts_arr) {
 	$categories_arr = [];
 
 	foreach ($posts_arr as $post) {
-		$cat = get_the_category( $post->ID )[0];
+		$cat = get_the_category( $post->ID )[0]; // Problem area
 		array_push($categories_arr, $cat);
 	}
 
@@ -113,7 +120,11 @@ function kmg_get_array_of_categories_from_sorted_posts($posts_arr) {
 
 
 /**
- * Get an array of sources module data for use in template
+ * Get an array of Sources module data for use in template
+ * Each "sources module" corresponds to a category term, displaying an array of Sources in that category
+ *
+ * The categories should be sorted by the ones with sources (a CPT) most recently published
+ *
  * @param array $category_arr Array of categories from which to build the data
  * @param int $featured_count Number of modules to return
  * @param array $excluded_cat_ids Array of category IDs to exclude
@@ -122,22 +133,28 @@ function kmg_get_array_of_categories_from_sorted_posts($posts_arr) {
 
 function kmg_sources_archive($module_count = 4, $excluded_cat_ids) {
 
+	// First, build an array of posts containing the most recent post from each category
 	$post_from_each_category = kmg_get_array_of_posts_from_each_category($excluded_cats);
+
+	// Sort that array by date
 	usort($post_from_each_category, "kmg_post_date_comparison");
 	$sorted_cats = kmg_get_array_of_categories_from_sorted_posts($post_from_each_category);
 
+	// Prepare an empty array to hold the custom sources module object
 	$sources_modules_arr = [];
 
+	// Prepare the module data for each of the featured sources modules and add it to the array
 	for( $i=0; $i < $module_count; $i++ ) {
 		$slug = $sorted_cats[$i]->slug;
 		$module = kmg_get_sources_module_data($slug);
 		array_push($sources_modules_arr, $module);
 	}
 
-	$data = array(
+	// Return the template data, including the module objects and an array of the remaining categories
+	$template_data = array(
 		'modules' => $sources_modules_arr,
 		'remaining_cats' => array_slice($sorted_cats, 4)
 	);
 
-	return $data;
+	return $template_data;
 }
