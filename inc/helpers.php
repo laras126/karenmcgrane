@@ -123,9 +123,8 @@ function kmg_get_array_of_categories_from_sorted_posts($posts_arr) {
  * Get an array of Sources module data for use in template
  * Each "sources module" corresponds to a category term, displaying an array of Sources in that category
  *
- * The categories should be sorted by the ones with sources (a CPT) most recently published
+ * The categories should be sorted by the ones with a source (a CPT) most recently published
  *
- * @param array $category_arr Array of categories from which to build the data
  * @param int $featured_count Number of modules to return
  * @param array $excluded_cat_ids Array of category IDs to exclude
  * @return array Array of data to be used in the to template context
