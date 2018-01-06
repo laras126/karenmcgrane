@@ -35,6 +35,3 @@
 	}
 	add_action('acf/input/admin_head', 'tsk_acf_admin_head');
 
-
-
-?>

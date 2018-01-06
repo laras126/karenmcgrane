@@ -27,6 +27,7 @@ function getSourcesCategoriesArray() {
   return $terms_arr;
 }
 
+
 $context = Timber::get_context();
 $post = new TimberPost();
 $context['post'] = $post;
