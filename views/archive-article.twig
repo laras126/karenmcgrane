@@ -3,11 +3,10 @@
 {% block content %}
 
 <div class="region content-main">
+	<h1 class="hed-lead">Articles</h1>
+
 	<div class="l-60-40">
 		<div class="group p-less">
-
-			<h2 class="hed-section-sub">Articles</h2>
-
 			<ol class="teaser-list">
 				{% for post in posts %}
 					{% include ['partials/tease-'~post.post_type~'.twig', 'partials/tease.twig'] %}
@@ -18,10 +17,10 @@
 			<section class="group">
 				<header class="header-more">
 					<h2 class="hed-section-sub">By Karen</h2>
-					<a class="link-more" href="#">Browse {{sourcesByKaren_more}} more <span class="a11y">sources filed under “Mobile-only Users”</span></a>
+					<a class="link-more" href="#">Browse {{sourcesByKaren.more_count}} more <span class="a11y">sources filed under “Mobile-only Users”</span></a>
 				</header>
 				<ol class="teaser-list sources-list">
-					{% for post in sourcesByKaren %}
+					{% for post in sourcesByKaren.posts %}
 						{% include 'partials/tease-source.twig' %}
 					{% endfor %}
 				</ol>
@@ -29,10 +28,10 @@
 			<section class="group">
 				<header class="header-more">
 					<h2 class="hed-section-sub">About Karen</h2>
-					<a class="link-more" href="#">Browse {{sourcesAboutKaren_more}} more <span class="a11y">sources filed under “Mobile-only Users”</span></a>
+					<a class="link-more" href="#">Browse {{sourcesAboutKaren.more_count}} more <span class="a11y">sources filed under “Mobile-only Users”</span></a>
 				</header>
 				<ol class="teaser-list sources-list">
-					{% for post in sourcesAboutKaren %}
+					{% for post in sourcesAboutKaren.posts %}
 						{% include 'partials/tease-source.twig' %}
 					{% endfor %}
 				</ol>

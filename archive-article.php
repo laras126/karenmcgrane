@@ -20,36 +20,11 @@ $articles_posts_args = array(
 	'post_type' => array('article', 'post')
 );
 
-// TODO make helper function for these
-$aboutKaren_cat = get_category_by_slug( 'about-karen' );
-$aboutKaren_count = $aboutKaren_cat->count;
-$aboutKaren_more = $aboutKaren_count - 3;
-
-$sourcesByKaren_args = array(
-	'post_type' => array('source'),
-	'posts_per_page' => 3,
-	'category_name' => 'by-karen'
-);
-
-$byKaren_cat = get_category_by_slug( 'by-karen' );
-$byKaren_count = $byKaren_cat->count;
-$byKaren_more = $byKaren_count - 3;
-
-$sourcesAboutKaren_args = array(
-	'post_type' => array('source'),
-	'posts_per_page' => 3,
-	'category_name' => 'about-karen'
-);
 
 $context = Timber::get_context();
 
 $context['posts'] = new Timber\PostQuery($articles_posts_args);
-$context['sourcesByKaren'] = new Timber\PostQuery($sourcesByKaren_args);
-$context['sourcesByKaren_more'] = $byKaren_more;
-
-$context['sourcesAboutKaren'] = new Timber\PostQuery($sourcesAboutKaren_args);
-$context['sourcesAboutKaren_more'] = $aboutKaren_more;
-
-$context['test'] = $byKaren_cat;
+$context['sourcesByKaren'] = kmg_get_sources_module_data('by-karen');
+$context['sourcesAboutKaren'] = kmg_get_sources_module_data('about-karen');
 
 Timber::render( $templates, $context );
