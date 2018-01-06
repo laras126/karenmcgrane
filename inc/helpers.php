@@ -3,7 +3,7 @@
 /**
    * Helper function to prepare a sources module
    * @param string slug of the category term
-	 * @var int $POSTS_NUM Constant for number of posts to return
+   * @var int $POSTS_NUM Constant for number of posts to return
    * @return array An array data to be used in the template
    */
 
