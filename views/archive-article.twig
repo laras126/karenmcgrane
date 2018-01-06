@@ -14,28 +14,8 @@
 			</ol>
 		</div>
 		<div class="group-alt p-less">
-			<section class="group">
-				<header class="header-more">
-					<h2 class="hed-section-sub">By Karen</h2>
-					<a class="link-more" href="#">Browse {{sourcesByKaren.more_count}} more <span class="a11y">sources filed under “Mobile-only Users”</span></a>
-				</header>
-				<ol class="teaser-list sources-list">
-					{% for post in sourcesByKaren.posts %}
-						{% include 'partials/tease-source.twig' %}
-					{% endfor %}
-				</ol>
-			</section>
-			<section class="group">
-				<header class="header-more">
-					<h2 class="hed-section-sub">About Karen</h2>
-					<a class="link-more" href="#">Browse {{sourcesAboutKaren.more_count}} more <span class="a11y">sources filed under “Mobile-only Users”</span></a>
-				</header>
-				<ol class="teaser-list sources-list">
-					{% for post in sourcesAboutKaren.posts %}
-						{% include 'partials/tease-source.twig' %}
-					{% endfor %}
-				</ol>
-			</section>
+			{% include 'partials/module-source-term.twig' with { data: sourcesByKaren } %}
+			{% include 'partials/module-source-term.twig' with { data: sourcesAboutKaren } %}
 		</div>
 	</div>
 {% endblock %}
