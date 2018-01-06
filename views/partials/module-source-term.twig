@@ -1,0 +1,11 @@
+<section class="group">
+	<header class="header-more">
+		<h2 class="hed-section-sub">{{ data.title }}</h2>
+		<a class="link-more" href="#">Browse {{ data.more_count }} more
+			<span class="a11y">sources filed under {{ data.title }}”</span>
+		</a>
+	</header>
+	<ol class="teaser-list sources-list">
+		{% for post in data.posts %} {% include 'partials/tease-source.twig' %} {% endfor %}
+	</ol>
+</section>
