@@ -2,10 +2,41 @@
 
 {% block content %}
 
-  <div class="region content-main">
-		<ol class="teaser-list">
-			{% for post in posts %}
-				{% include ['partials/tease-'~post.post_type~'.twig', 'partials/tease.twig'] %}
-			{% endfor %}
-		</ol>
+<div class="region content-main">
+	<div class="l-60-40">
+		<div class="group p-less">
+
+			<h2 class="hed-section-sub">Articles</h2>
+
+			<ol class="teaser-list">
+				{% for post in posts %}
+					{% include ['partials/tease-'~post.post_type~'.twig', 'partials/tease.twig'] %}
+				{% endfor %}
+			</ol>
+		</div>
+		<div class="group-alt p-less">
+			<section class="group">
+				<header class="header-more">
+					<h2 class="hed-section-sub">By Karen</h2>
+					<a class="link-more" href="#">Browse {{sourcesByKaren_more}} more <span class="a11y">sources filed under “Mobile-only Users”</span></a>
+				</header>
+				<ol class="teaser-list sources-list">
+					{% for post in sourcesByKaren %}
+						{% include 'partials/tease-source.twig' %}
+					{% endfor %}
+				</ol>
+			</section>
+			<section class="group">
+				<header class="header-more">
+					<h2 class="hed-section-sub">About Karen</h2>
+					<a class="link-more" href="#">Browse {{sourcesAboutKaren_more}} more <span class="a11y">sources filed under “Mobile-only Users”</span></a>
+				</header>
+				<ol class="teaser-list sources-list">
+					{% for post in sourcesAboutKaren %}
+						{% include 'partials/tease-source.twig' %}
+					{% endfor %}
+				</ol>
+			</section>
+		</div>
+	</div>
 {% endblock %}
