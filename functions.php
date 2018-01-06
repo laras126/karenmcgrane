@@ -61,3 +61,12 @@ class StarterSite extends TimberSite {
 }
 
 new StarterSite();
+
+/*
+
+ * Template and Query Helper Functions
+ *
+*/
+require('inc/helpers.php');
+
+
