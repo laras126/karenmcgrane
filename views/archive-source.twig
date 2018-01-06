@@ -6,51 +6,30 @@
 	<h1 class="hed-lead">Sources</h1>
 
 	<div class="l-50-50">
-		{% include 'partials/module-source-term.twig' with { module: sourcesByKaren } %}
+		{% for module in featured_modules %}
+			{% include 'partials/module-source-term.twig' with { data: module } %}
+		{% endfor %}
 	</div>
 
 	<div class="group-full">
 		<h2 class="hed-section-sub">Additional Sources</h2>
 
-		{{dump(test)}}
-
-		{% for post in newest_posts %}
-			{{ post.get_terms('category')|first }} // {{ post.date }} // {{ post.title }} <br>
-		{% endfor %}
-
-		<ul>
-			{% for cat in cats %}
-				<li>{{ cat.name }} // {{ cat.count }}</li>
-			{% endfor %}
-		</ul>
-
 		<ol class="sources-count-list">
-			<li>
-				<a href="#">
-					<dl class="source-count">
-						<dt>Guinea
-							<span class="a11y">:</span>
-						</dt>
-						<dd>
-							4
-							<span class="a11y">articles</span>
-						</dd>
-					</dl>
-				</a>
-			</li>
-			<li>z
-				<a href="#">
-					<dl class="source-count">
-						<dt>Italy
-							<span class="a11y">:</span>
-						</dt>
-						<dd>
-							7
-							<span class="a11y">articles</span>
-						</dd>
-					</dl>
-				</a>
-			</li>
+			{% for cat in remaining_cats %}
+				<li>
+					<a href="#">
+						<dl class="source-count">
+							<dt>{{ cat.name }}
+								<span class="a11y">:</span>
+							</dt>
+							<dd>
+								{{ cat.count }}
+								<span class="a11y">articles</span>
+							</dd>
+						</dl>
+					</a>
+				</li>
+			{% endfor %}
 		</ol>
 	</div> <!-- /end .group -->
 </div>
