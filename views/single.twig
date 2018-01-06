@@ -6,7 +6,7 @@
 
         <div class="l-sole">
 
-            <article class="group" datetime="{{ post.date|date("y-m-d")}}">
+            <article class="group" datetime="{{ post.date|date("y-m-d") }}">
                <footer>
                     <div class="article-meta">
                         {% if post.connected_source %}
@@ -33,6 +33,17 @@
                     {{ post.content }}
                 </section>
 
+                <section class="article-citations">
+                    <h2 class="hed-section-sub">Citations</h2>
+
+                    <ul class="teaser-list">
+                        {% for post in post.get_field('citations') %}
+                            {% include 'partials/tease-source.twig' %}
+                        {% endfor %}
+                    </ul>
+
+                </section>
+
             </article><!-- /end .group -->
 
         </div><!-- /end .l-sole -->
@@ -41,70 +52,3 @@
 
 {% endblock %}
 
-
-{# {% block html_head_container %}
-    {% include 'html-header.twig' %}
-
-    {% block head %}
-    {% endblock %}
-</head>
-{% endblock %}
-
-{% if body_class %}
-<body id="www-karenmcgrane-com" class="{{body_class}}" data-template="base.twig">
-{% else %}
-<body id="www-karenmcgrane-com" data-template="base.twig">
-{% endif %}
-
-    {% block header %}
-
-    {% endblock %}
-
-    <main class="site-content">
-
-        <div class="region content-main">
-            {% if sidebar %}
-            <div class="l-60-40">
-            {% else %}
-            <div class="l-sole">
-            {% endif %}
-
-            <div class="group">
-                {% block before_content %}{% endblock %}
-
-                {% block content %}
-                  Sorry, no content
-                {% endblock %}
-
-                {% block after_content %}{% endblock %}
-            </div><!-- /end .group -->
-
-            {% if sidebar %}
-                <aside class="group-alt">
-                    {{sidebar}}
-                </aside>
-            {% endif %}
-
-            {% if sidebar %}
-            </div><!-- /end .l-60-40 -->
-            {% else %}
-            </div><!-- /end .l-sole -->
-            {% endif %}
-
-
-        </div><!-- /end .region.content-main -->
-
-    </main>
-
-    {% block footer %}
-        {% include 'footers/_footer-site.twig' with { class : 'region site-footer' } %}
-        {{ function('wp_footer') }}
-    {% endblock %}
-
-<!-- States referenced by `aria-describedby` -->
-<div id="wayfinding" class="squelch">
-    <span id="current-page">Current page</span>
-</div>
-
-</body>
-</html> #}
