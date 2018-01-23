@@ -3,19 +3,14 @@
 {% block content %}
 
 <div class="region content-main">
-	<h1 class="hed-lead">Articles</h1>
-
-	<div class="l-60-40">
-		<div class="group p-less">
+	<div class="l-sole">
+		<div class="group">
+			<h1 class="hed-lead">Articles</h1>
 			<ol class="teaser-list">
 				{% for post in posts %}
 					{% include ['partials/tease-'~post.post_type~'.twig', 'partials/tease.twig'] %}
 				{% endfor %}
 			</ol>
-		</div>
-		<div class="group-alt p-less">
-			{% include 'partials/module-source-term.twig' with { data: sourcesByKaren } %}
-			{% include 'partials/module-source-term.twig' with { data: sourcesAboutKaren } %}
 		</div>
 	</div>
 {% endblock %}

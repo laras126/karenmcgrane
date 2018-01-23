@@ -3,9 +3,15 @@
 {% block content %}
 
   <div class="region content-main">
-		<ol class="teaser-list">
-			{% for post in posts %}
-				{% include ['partials/tease-'~post.post_type~'.twig', 'partials/tease.twig'] %}
-			{% endfor %}
-		</ol>
+		<div class="l-sole">
+			<div class="group">
+				<h1 class="hed-lead">{{ title }}</h1>
+				<ol class="teaser-list">
+					{% for post in posts %}
+						{% include ['partials/tease-'~post.post_type~'.twig', 'partials/tease.twig'] %}
+					{% endfor %}
+				</ol>
+			</div>
+		</div>
+	</div>
 {% endblock %}
