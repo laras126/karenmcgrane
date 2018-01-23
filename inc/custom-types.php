@@ -56,19 +56,19 @@
 	// ----
 
 	$labels = array(
-		'name'                => _x( 'Presentations', 'Post Type General Name', 'text_domain' ),
-		'singular_name'       => _x( 'Presentation', 'Post Type Singular Name', 'text_domain' ),
-		'menu_name'           => __( 'Presentations', 'text_domain' ),
-		'name_admin_bar'      => __( 'Presentation', 'text_domain' ),
-		'parent_item_colon'   => __( 'Parent Presentation:', 'text_domain' ),
-		'all_items'           => __( 'All Presentations', 'text_domain' ),
-		'add_new_item'        => __( 'Add New Presentation', 'text_domain' ),
+		'name'                => _x( 'Talks', 'Post Type General Name', 'text_domain' ),
+		'singular_name'       => _x( 'Talk', 'Post Type Singular Name', 'text_domain' ),
+		'menu_name'           => __( 'Talks', 'text_domain' ),
+		'name_admin_bar'      => __( 'Talk', 'text_domain' ),
+		'parent_item_colon'   => __( 'Parent Talk:', 'text_domain' ),
+		'all_items'           => __( 'All Talks', 'text_domain' ),
+		'add_new_item'        => __( 'Add New Talk', 'text_domain' ),
 		'add_new'             => __( 'Add New', 'text_domain' ),
-		'new_item'            => __( 'New Presentation', 'text_domain' ),
-		'edit_item'           => __( 'Edit Presentation', 'text_domain' ),
-		'update_item'         => __( 'Update Presentation', 'text_domain' ),
-		'view_item'           => __( 'View Presentation', 'text_domain' ),
-		'search_items'        => __( 'Search Presentation', 'text_domain' ),
+		'new_item'            => __( 'New Talk', 'text_domain' ),
+		'edit_item'           => __( 'Edit Talk', 'text_domain' ),
+		'update_item'         => __( 'Update Talk', 'text_domain' ),
+		'view_item'           => __( 'View Talk', 'text_domain' ),
+		'search_items'        => __( 'Search Talk', 'text_domain' ),
 		'not_found'           => __( 'Not found', 'text_domain' ),
 		'not_found_in_trash'  => __( 'Not found in Trash', 'text_domain' ),
 	);
@@ -80,7 +80,7 @@
 	);
 	$args = array(
 		'label'               => __( 'presentation', 'text_domain' ),
-		'description'         => __( 'The Presentation post type.', 'text_domain' ),
+		'description'         => __( 'The Talk post type.', 'text_domain' ),
 		'labels'              => $labels,
 		'supports'            => array( 'title', 'excerpt', 'thumbnail'),
 		'taxonomies'          => array( 'category', 'post_tag' ),
