@@ -1,5 +1,5 @@
-<?php
 
+<?php
 /**
    * Helper function to prepare a sources module for a category
    * @param string slug of the category term
@@ -9,11 +9,10 @@
 
 function kmg_get_sources_module_data($slug) {
 
+	$POSTS_NUM = 3;
 	$cat = get_category_by_slug( $slug );
 	$count = $cat->count;
 	$name = $cat->name;
-
-	$POSTS_NUM = 3;
 	$more_count = $count - $POSTS_NUM;
 
 	$query_args = array(
@@ -111,10 +110,12 @@ function kmg_get_array_of_categories_from_sorted_posts($posts_arr) {
 
 	foreach ($posts_arr as $post) {
 		$cat = get_the_category( $post->ID )[0]; // Problem area
-		array_push($categories_arr, $cat);
+		array_push($categories_arr, get_cat_ID($cat->name));
 	}
 
-	return $categories_arr;
+	$remove_dups = array_unique($categories_arr);
+
+	return $remove_dups;
 }
 
 
@@ -144,7 +145,8 @@ function kmg_sources_archive($module_count = 4, $excluded_cat_ids) {
 
 	// Prepare the module data for each of the featured sources modules and add it to the array
 	for( $i=0; $i < $module_count; $i++ ) {
-		$slug = $sorted_cats[$i]->slug;
+		$cat = get_category($sorted_cats[$i]);
+		$slug = $cat->slug;
 		$module = kmg_get_sources_module_data($slug);
 		array_push($sources_modules_arr, $module);
 	}
@@ -152,7 +154,8 @@ function kmg_sources_archive($module_count = 4, $excluded_cat_ids) {
 	// Return the template data, including the module objects and an array of the remaining categories
 	$template_data = array(
 		'modules' => $sources_modules_arr,
-		'remaining_cats' => array_slice($sorted_cats, 4)
+		'remaining_cat_ids' => array_slice($sorted_cats, 4),
+		'cats' => $sorted_cats
 	);
 
 	return $template_data;
