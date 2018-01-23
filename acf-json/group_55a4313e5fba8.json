@@ -116,11 +116,11 @@
     ],
     "menu_order": 2,
     "position": "normal",
-    "style": "default",
+    "style": "seamless",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1514399369
+    "modified": 1516045971
 }
