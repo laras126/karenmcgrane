@@ -17,7 +17,7 @@
 			{% for id in remaining_cat_ids %}
 				{% set cat = TimberTerm(id) %}
 				<li>
-					<a href="#">
+					<a href="{{ cat.link }}">
 						<dl class="source-count">
 							<dt>{{ cat.name }}
 								<span class="a11y">:</span>

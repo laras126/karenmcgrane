@@ -13,6 +13,7 @@ function kmg_get_sources_module_data($slug) {
 	$cat = get_category_by_slug( $slug );
 	$count = $cat->count;
 	$name = $cat->name;
+	$link = get_category_link( $cat );
 	$more_count = $count - $POSTS_NUM;
 
 	$query_args = array(
@@ -26,7 +27,8 @@ function kmg_get_sources_module_data($slug) {
 	$template_data = array(
 		'posts' => $posts,
 		'more_count' => $more_count,
-		'title' => $name
+		'title' => $name,
+		'link' => $link
 	);
 
 	return $template_data;
