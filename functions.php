@@ -69,4 +69,12 @@ new StarterSite();
 */
 require('inc/helpers.php');
 
-
+function kmg_add_custom_types_to_category( $query ) {
+  if( is_category() && empty( $query->query_vars['suppress_filters'] ) ) {
+    $query->set( 'post_type', array(
+     'source', 'nav_menu_item'
+		));
+	  return $query;
+	}
+}
+add_filter( 'pre_get_posts', 'kmg_add_custom_types_to_category' );
