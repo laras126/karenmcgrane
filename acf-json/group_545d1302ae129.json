@@ -23,10 +23,10 @@
         },
         {
             "key": "field_545a8366b7ae4",
-            "label": "Summary",
+            "label": "Text Above Image",
             "name": "header_summary",
             "type": "wysiwyg",
-            "instructions": "A short paragraph summarizing the page content. This will display below the page title. Optional.",
+            "instructions": "If you include a large header image below, use this field to add text above it.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -90,5 +90,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1514920239
+    "modified": 1516667846
 }
