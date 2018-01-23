@@ -13,9 +13,9 @@
 
 	<div class="group-full">
 		<h2 class="hed-section-sub">Additional Sources</h2>
-
 		<ol class="sources-count-list">
-			{% for cat in remaining_cats %}
+			{% for id in remaining_cat_ids %}
+				{% set cat = TimberTerm(id) %}
 				<li>
 					<a href="#">
 						<dl class="source-count">

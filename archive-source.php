@@ -24,7 +24,6 @@ $data = kmg_sources_archive($module_count, $excluded_cats);
 
 $context = Timber::get_context();
 $context['featured_modules'] = $data['modules'];
-$context['remaining_cats'] = $data['remaining_cats'];
-
+$context['remaining_cat_ids'] = $data['remaining_cat_ids'];
 
 Timber::render( 'archive-source.twig', $context );
