@@ -17,7 +17,5 @@ $articles_posts_args = array(
 $context = Timber::get_context();
 
 $context['posts'] = new Timber\PostQuery($articles_posts_args);
-$context['sourcesByKaren'] = kmg_get_sources_module_data('by-karen');
-$context['sourcesAboutKaren'] = kmg_get_sources_module_data('about-karen');
 
 Timber::render( $templates, $context );
