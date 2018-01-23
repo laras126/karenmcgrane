@@ -1,0 +1,42 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+	<div class="region content-main">
+		<div class="l-sole">
+			<div class="group">
+				<h2 class="hed-section-sub">Contact Karen.</h2>
+
+				{{ post.content }}
+
+				<h2 class="hed-section-sub">Connect with Karen:</h2>
+
+				<ul class="links-social">
+					{% for social in post.get_field('social') %}
+						<li><a href="{{ social.link }}"><img src="{{ TimberImage(social.icon).url }}" alt="{{ social.name}}" /></a></li>
+					{% endfor %}
+				</ul><!-- /end .links-social -->
+
+				<h2 class="hed-section-sub">Assets:</h2>
+
+				<ul>
+					{% for shot in post.get_field('headshots') %}
+						<li><a href="{{ shot.url }}">{{ shot.title }}</a></li>
+					{% endfor %}
+				</ul>
+
+				<h2 class="hed-section-sub">Short Bio:</h2>
+				{{ post.short_bio }}
+
+				<h2 class="hed-section-sub">Medium Bio:</h2>
+				{{ post.medium_bio }}
+
+				<h2 class="hed-section-sub">Long Bio:</h3>
+				{{ post.long_bio|wpautop }}
+
+			</div><!-- /end .group -->
+		</div><!-- /end .l-sole -->
+	</div><!-- /end .region.content-main.l-sole -->
+
+
+{% endblock %}
