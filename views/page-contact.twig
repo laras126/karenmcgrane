@@ -13,7 +13,7 @@
 
 				<ul class="links-social">
 					{% for social in post.get_field('social') %}
-						<li><a href="{{ social.link }}"><img src="{{ TimberImage(social.icon).url }}" alt="{{ social.name}}" /></a></li>
+						<li><a href="{{ social.link }}"><img src="{{ TimberImage(social.icon).src }}" alt="{{ social.name}}" /></a></li>
 					{% endfor %}
 				</ul><!-- /end .links-social -->
 
