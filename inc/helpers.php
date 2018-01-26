@@ -116,8 +116,9 @@ function kmg_get_array_of_categories_from_sorted_posts($posts_arr) {
 	}
 
 	$remove_dups = array_unique($categories_arr);
+	$cats_arr = array_values($remove_dups);
 
-	return $remove_dups;
+	return $cats_arr;
 }
 
 
