@@ -1,5 +1,5 @@
-
 <?php
+
 /**
    * Helper function to prepare a sources module for a category
    * @param string slug of the category term
