@@ -27,7 +27,7 @@
             "elements": "",
             "min": "",
             "max": "",
-            "return_format": "id"
+            "return_format": "object"
         }
     ],
     "location": [
@@ -52,5 +52,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1472046512
+    "modified": 1514941202
 }

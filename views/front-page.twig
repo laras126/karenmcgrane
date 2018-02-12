@@ -1,26 +1,60 @@
-{% extends "base.twig" %}
+{% extends "base.twig" %} {% block content %}
 
-{% block before_content %}
-  {% include 'headers/_header-front_page.twig' with { class: 'header -front_page' } %}
-{% endblock %}
+<section class="region about-karen">
+	<h2 class="hed">{{ post.about_intro }}</h2>
 
-{% block content %}
-  {% for block in post.get_field('blocks') %}
-    {% include 'blocks/block-logic.twig' %}
-  {% endfor %}
+	<p class="photo" style="background-image: url( '{{ TimberImage(post.about_image).src('thumbnail') }}' );">
+		{# TODO/NOTE: research a better way of accessing the alt attribute #}
+		<img src="{{ TimberImage(post.about_image).src('large') }}" alt="{{ TimberImage(post.about_image)._wp_attachment_image_alt }}" />
+	</p>
 
-    <h2 class="hed-section-sub">Recent Articles</h2>
-    <section class="teaser-list">
-        {% for article in recent_articles %}
-        {% include 'teases/_tease-minor.twig' with { post: article } %}
-        {% endfor %}
-    </section>
+	<div class="content">
+		<p>{{ post.about_paragraph }}</p>
+	</div>
+</section>
 
-    <h2 class="hed-section-sub">Recent Talks</h2>
-    <section class="teaser-list">
-        {% for talk in recent_talks %}
-        {% include 'teases/_tease-minor.twig' with { post: talk } %}
-        {% endfor %}
-    </section>
+<div class="region content-main">
+	<div class="l-60-40">
+		<div class="group p-more">
+			<h2 class="hed-section-sub">Recent Articles</h2>
+
+			<ol class="teaser-list">
+				{% for post in recent_articles %}
+					{% include 'partials/tease.twig' %}
+				{% endfor %}
+			</ol>
+
+			<p class="cap">
+				<a class="link-more" href="{{ fn('get_post_type_archive_link', 'article') }}">Show all articles</a>
+			</p>
+
+			<h2 class="hed-section-sub">Recent Talks</h2>
+			<ol class="teaser-list">
+				{% for post in recent_talks %}
+					{% include 'partials/tease-presentation.twig' %}
+				{% endfor %}
+			</ol>
+
+			<p class="cap"><a class="link-more" href="{{ fn('get_post_type_archive_link', 'presentation') }}">Show all talks</a></p>
+
+		</div>
+		 <div class="group-alt p-less">
+			<h2 class="hed-section-sub">Recent Sources</h2>
+			<ol class="sources-count-list">
+				{% for cat in recent_sources_cats %}
+					<li>
+						<a href="#">
+							<dl class="source-count">
+								<dt>{{ cat.name }}<span class="a11y">:</span></dt>
+								<dd>
+									{{ cat.count }} <span class="a11y">sources</span>
+								</dd>
+							</dl>
+						</a>
+					</li>
+				{% endfor %}
+			</ol>
+	</div>
+</div>
 
 {% endblock %}

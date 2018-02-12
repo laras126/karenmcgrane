@@ -1,0 +1,12 @@
+{% extends 'partials/tease.twig' %}
+
+{% block content %}
+	<div class="teaser-inner">
+		<h3 class="hed-teaser">
+			<a class="hed-teaser-link" href="{{ post.link }}">{{ post.title }}</a>
+		</h3>
+		<p>{{ post.header_tagline }}
+			<a class="read-more" href="{{ post.link }}">Read more</a>
+		</p>
+	</div> <!-- /end .teaser-inner -->
+{% endblock %}

@@ -1,0 +1,24 @@
+
+
+{# TODO: can maybe use custom Twig function for this #}
+{% set space = ' ' %}
+{% set dot = '.' %}
+{% set dash = '-' %}
+
+<nav>
+
+  <ul class="site-nav">
+    {% for item in menu.items %}
+      {# TODO: look into aria-describedby per beep's mock:
+      <li <?php if ($bodyClass == "articles") { ?> aria-describedby="current-page"<?php } ?>>
+      #}
+      <li>
+        <a href="{{item.link}}">
+          <img src="{{site.theme.link}}/dist/assets/svg/{{item.title|lower|replace({ (space):dash })|replace({ (dot): dash })}}.svg" alt="Icon for {{item.title}}" />
+          {{item.title}}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+
+</nav>

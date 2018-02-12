@@ -1,0 +1,24 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	<div class="region content-main">
+		<div class="l-50-50">
+			{% for book in post.get_field('books') %}
+				<div class="group">
+					<section class="book">
+						<h2 class="hed book-title">{{ book.book_title }}</h2>
+						<img src="{{ TimberImage(book.book_image).src }}" alt="Image of the {{ book.book_title }} book cover">
+
+						<div class="book-desc">
+								<p>{{ book.book_description }}</p>
+						</div><!-- /end .book-desc -->
+
+						<p class="cap"><a class="link-more" href="{{ book.buy_link }}">Buy now</a></p>
+					</section><!-- /end .book -->
+				</div><!-- /end .group -->
+			{% endfor %}
+
+		</div><!-- /end .l-50-50 -->
+	</div><!-- /end .region.content-main.has-index -->
+
+{% endblock %}

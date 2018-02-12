@@ -1,0 +1,37 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+<div class="region content-main">
+	<h1 class="hed-lead">Sources</h1>
+
+	<div class="l-50-50">
+		{% for module in featured_modules %}
+			{% include 'partials/module-source-term.twig' with { data: module } %}
+		{% endfor %}
+	</div>
+
+	<div class="group-full">
+		<h2 class="hed-section-sub">Additional Sources</h2>
+		<ol class="sources-count-list">
+			{% for id in remaining_cat_ids %}
+				{% set cat = TimberTerm(id) %}
+				<li>
+					<a href="{{ cat.link }}">
+						<dl class="source-count">
+							<dt>{{ cat.name }}
+								<span class="a11y">:</span>
+							</dt>
+							<dd>
+								{{ cat.count }}
+								<span class="a11y">articles</span>
+							</dd>
+						</dl>
+					</a>
+				</li>
+			{% endfor %}
+		</ol>
+	</div> <!-- /end .group -->
+</div>
+
+{% endblock %}

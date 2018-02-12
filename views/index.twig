@@ -1,7 +1,10 @@
 {% extends "base.twig" %}
 
 {% block content %}
+
 	{% for post in posts %}
-		{% include ['teases/_tease-'~post.post_type~'.twig', 'teases/tease.twig'] %}
+		{% include ['partials/tease-'~post.post_type~'.twig', 'tease.twig'] %}
 	{% endfor %}
+
+	{# {% include 'partial/pagination.twig' with { pagination: posts.pagination({show_all: false, mid_size: 3, end_size: 2}) } %} #}
 {% endblock %}

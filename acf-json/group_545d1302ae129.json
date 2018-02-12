@@ -3,47 +3,53 @@
     "title": "Header",
     "fields": [
         {
-            "key": "field_545a83096d4b5",
-            "label": "Header Display",
-            "name": "header_display",
-            "type": "radio",
-            "instructions": "Select the type of page intro you would like.",
+            "key": "field_558add6512d17",
+            "label": "Lead",
+            "name": "header_tagline",
+            "type": "textarea",
+            "instructions": "A concise introduction to the page content.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "",
                 "class": "",
                 "id": ""
             },
-            "choices": {
-                "text": "Text Only",
-                "image": "Image"
-            },
-            "allow_null": 0,
-            "other_choice": 0,
-            "save_other_choice": 0,
             "default_value": "",
-            "layout": "horizontal",
-            "return_format": "value"
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 2,
+            "new_lines": ""
         },
         {
-            "key": "field_58011eb56e223",
-            "label": "Header Image (size here)",
+            "key": "field_545a8366b7ae4",
+            "label": "Text Above Image",
+            "name": "header_summary",
+            "type": "wysiwyg",
+            "instructions": "If you include a large header image below, use this field to add text above it.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "links_only",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_5a4bd8fa0b4db",
+            "label": "Header Image",
             "name": "header_image",
             "type": "image",
-            "instructions": "",
+            "instructions": "Full-width image to appear below the summary.",
             "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_545a83096d4b5",
-                        "operator": "==",
-                        "value": "image"
-                    }
-                ]
-            ],
+            "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "",
                 "class": "",
                 "id": ""
             },
@@ -57,45 +63,6 @@
             "max_height": "",
             "max_size": "",
             "mime_types": ""
-        },
-        {
-            "key": "field_558add6512d17",
-            "label": "Header Tagline",
-            "name": "header_tagline",
-            "type": "textarea",
-            "instructions": "A concise introduction to the page content. ",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "maxlength": "",
-            "rows": 2,
-            "new_lines": "",
-            "readonly": 0,
-            "disabled": 0
-        },
-        {
-            "key": "field_545a8366b7ae4",
-            "label": "Summary",
-            "name": "header_summary",
-            "type": "wysiwyg",
-            "instructions": "A short paragraph summarizing the page content. This will display below the page title. Optional.",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "links_only",
-            "media_upload": 0
         }
     ],
     "location": [
@@ -113,18 +80,15 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": [
-        "the_content",
-        "excerpt",
         "custom_fields",
         "discussion",
         "comments",
         "revisions",
         "author",
         "format",
-        "featured_image",
         "send-trackbacks"
     ],
     "active": 1,
     "description": "",
-    "modified": 1476468582
+    "modified": 1516667846
 }

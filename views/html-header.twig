@@ -1,43 +1,40 @@
 <!DOCTYPE html>
-<html {{site.language_attributes}}>
+<html lang="en">
+
 <head>
-<meta charset="{{site.charset}}" />
+  <meta charset="{{ site.charset }}" />
+  <title>{{ wp_title }}</title>
+  <meta name="description" content="{{ site.description }}">
 
-<title>{{wp_title}}</title>
+  <link rel="stylesheet" href="{{ site.theme.link }}/dist/assets/css/main.css" type="text/css" media="screen" />
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+  {#
+    TODO: figure this out how best to do critical CSS in WP
+    {% if critcal_css %}
+      <style media="screen">{{ critical_css }}</style>
+      <noscript><link rel="stylesheet" href="{{ full_css }}"></noscript>
+    {% endif %}
+  #}
 
-<meta name="description" content="{{site.description}}" />
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link rel="pingback" href="{{site.pingback_url}}" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="author" href="{{ site.theme.link }}/humans.txt" />
+  <link rel="pingback" href="{{ site.pingback_url }}" />
 
-<meta name="fullCSS" content="{{site.theme.link}}/dist/assets/css/main.css" />
-<meta name="fullJS" content="{{site.theme.link}}/dist/assets/js/main.js" />
-<meta name="grunticon" id="grunticon" content="{{site.theme.link}}/dist/assets/svg/" />
+  <script>{{ initial_js }}</script>
+  <script>document.createElement( "picture" );</script>
+  <script src="{{ site.theme.link }}/dist/assets/js/lib/picturefill.js" async></script>
+  <script>
+    var MTIProjectId='a555b89b-28b3-4798-9e31-f3222456653c';
+    (function() {
+        var mtiTracking = document.createElement('script');
+        mtiTracking.type='text/javascript';
+        mtiTracking.async='true';
+        mtiTracking.src='mtiFontTrackingCode.js';
 
-{% if criticalcss %}
-<style media="screen">{{ criticalcss }}</style>
-<noscript><link rel="stylesheet" href="{{site.theme.link}}/dist/css/main.css?v={{ version }}" /></noscript>
-{% else %}
-<link rel="stylesheet" href="{{site.theme.link}}/dist/assets/css/main.css?v={{ version }}" />
-{% endif %}
+        ( document.getElementsByTagName( 'head' )[ 0 ] || document.getElementsByTagName( 'body' )[ 0 ] ).appendChild( mtiTracking );
+    })();
+  </script>
 
-<script>
-{{ initial_js }}
-</script>
-
-<script>document.createElement( "picture" );</script>
-<script src="{{site.theme.link}}/dist/assets/js/lib/picturefill.js" async></script>
-<script>
-var MTIProjectId='a555b89b-28b3-4798-9e31-f3222456653c';
-(function() {
-    var mtiTracking = document.createElement('script');
-    mtiTracking.type='text/javascript';
-    mtiTracking.async='true';
-    mtiTracking.src='mtiFontTrackingCode.js';
-
-    ( document.getElementsByTagName( 'head' )[ 0 ] || document.getElementsByTagName( 'body' )[ 0 ] ).appendChild( mtiTracking );
-})();
-</script>
-
-{{function('wp_head')}}
+  {{fn('wp_head')}}

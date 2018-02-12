@@ -1,9 +1,0 @@
-
-{# Base footer template #}
-
-{% set f_class = ' class="' ~ class ~ '"' %}
-{% set f_role = ' role="' ~ role ~ '"' %}
-
-<footer{{ class ? f_class }}{{role ? f_role }}>
-	{% block footer_content %}{% endblock %}
-</footer>

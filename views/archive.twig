@@ -1,13 +1,17 @@
-{% extends 'base.twig' %}
-
-{% block before_content %}
-	{% include 'headers/_header-archive.twig' %}
-{% endblock %}
+{% extends "base.twig" %}
 
 {% block content %}
-    <section class="teaser-list">
-	{% for post in posts %}
-		{% include 'teases/_tease-' ~ post.post_type ~ '.twig' %}
-	{% endfor %}
-    </section>
+
+  <div class="region content-main">
+		<div class="l-sole">
+			<div class="group">
+				<h1 class="hed-lead">{{ title }}</h1>
+				<ol class="teaser-list">
+					{% for post in posts %}
+						{% include ['partials/tease-'~post.post_type~'.twig', 'partials/tease.twig'] %}
+					{% endfor %}
+				</ol>
+			</div>
+		</div>
+	</div>
 {% endblock %}
