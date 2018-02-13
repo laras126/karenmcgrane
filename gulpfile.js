@@ -89,7 +89,7 @@ gulp.task( "sass", function() {
             browsers: 'last 3 versions'
         } ) )
         .pipe( gulp.dest( _config.dir.output + "css/" ) )
-        .pipe( browserSync.stream() );;
+        .pipe( browserSync.stream() );
 } );
 
 gulp.task( "default", [
