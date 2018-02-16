@@ -1,6 +1,6 @@
 <?php
 $rootpath = $_SERVER['DOCUMENT_ROOT'];
-$bodyClass = "entry";
+$bodyClass = "sect-articles tmpl-entry";
 $pageTitle = "Mobile > Local";
 
 require("inc/header.php" );

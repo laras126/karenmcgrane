@@ -1,6 +1,6 @@
 <?php
 $rootpath = $_SERVER['DOCUMENT_ROOT'];
-$bodyClass = "home";
+$bodyClass = "sect-home";
 $pageTitle = "Welcome to Karen McGrane’s website";
 
 require( "inc/header.php" );

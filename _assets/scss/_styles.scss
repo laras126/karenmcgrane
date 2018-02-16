@@ -41,7 +41,7 @@ body {
         background-size: 100% auto;
         background-attachment: fixed;
     }
-    body.colorful.tmpl-home {
+    body.colorful.sect-home {
         background-position: left 50vw top 50%;
     }
 }
@@ -175,7 +175,7 @@ body .region.site-nav {
     font-weight: 800;
 }
 @media ( min-width: 60em ) {
-    .tmpl-home .site-nav {
+    .sect-home .site-nav {
         background: linear-gradient( 110deg, #140322 0, #140322 34%, rgba( 20, 3, 34, 0 ) 34%, rgba( 20, 3, 34, 0 ) 100% );
     }
 }
@@ -210,10 +210,10 @@ body .region.site-nav {
 .logo .name-km {
     display: inline-block;
 }
-.tmpl-home .logo {
+.sect-home .logo {
     max-width: inherit;
 }
-.tmpl-home .logo .name-km {
+.sect-home .logo .name-km {
     display: block;
 }
 @media ( min-width: 50em ) {
@@ -276,10 +276,10 @@ body .region.site-nav {
     }
     @media ( min-width: 40em ) {
         .site-mast nav,
-        .tmpl-home .site-mast {
+        .sect-home .site-mast {
             display: flex;
         }
-        .tmpl-home .logo {
+        .sect-home .logo {
             align-self: flex-end;
             flex: 1 0 30%;
             margin: 0;
@@ -288,7 +288,7 @@ body .region.site-nav {
             margin: 0 0 1em;
             width: 63.3333333%;
         }
-        .tmpl-home .site-mast nav {
+        .sect-home .site-mast nav {
             flex: 1 0 63.3333333%;
             margin: 0;
             width: inherit;

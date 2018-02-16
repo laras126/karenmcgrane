@@ -1,6 +1,6 @@
 <?php
 $rootpath = $_SERVER['DOCUMENT_ROOT'];
-$bodyClass = "entry";
+$bodyClass = "sect-talks";
 $pageTitle = "Content in a Zombie Apocalypse";
 
 require("inc/header.php" );

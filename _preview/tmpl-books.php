@@ -1,6 +1,6 @@
 <?php
 $rootpath = $_SERVER['DOCUMENT_ROOT'];
-$bodyClass = "books";
+$bodyClass = "sect-books tmpl-books";
 $pageTitle = "Books";
 
 require("inc/header.php" );

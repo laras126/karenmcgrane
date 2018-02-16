@@ -49,7 +49,7 @@ var MTIProjectId='a555b89b-28b3-4798-9e31-f3222456653c';
 </head>
 
 <?php if ( isset( $bodyClass ) ) { ?>
-<body id="www-karenmcgrane-com" class="tmpl-<?php echo $bodyClass; ?>">
+<body id="www-karenmcgrane-com" class="<?php echo $bodyClass; ?>">
 <?php } else { ?>
 <body id="www-karenmcgrane-com">
 <?php } ?>

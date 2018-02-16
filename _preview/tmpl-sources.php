@@ -1,6 +1,6 @@
 <?php
 $rootpath = $_SERVER['DOCUMENT_ROOT'];
-$bodyClass = "sources";
+$bodyClass = "sect-sources";
 $pageTitle = "Sources";
 
 require("inc/header.php" );
