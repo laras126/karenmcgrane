@@ -89,8 +89,13 @@ legend {
     left: -1000em;
 }
 
-
-
+pre {
+    background: #EEE;
+    margin-left: -1em;
+    margin-right: -1em;
+    overflow: auto;
+    padding: 1em;
+}
 
 /*
 
@@ -561,7 +566,7 @@ Entry styles
 .article-content {
     line-height: 1.4;
 }
-@media (min-width: 40em) {
+@media ( min-width: 40em ) {
     .hed-article-title {
         font-size: 3em;
     }
@@ -570,7 +575,7 @@ Entry styles
     }
     .article-content {
         font-size: 1.15em;
-        line-height: inherit;
+        line-height: 1.45;
     }
 }
 .article-content {
@@ -627,7 +632,7 @@ Entry styles
 .article-content h4,
 .article-content h5,
 .article-content h6 {
-    margin-top: 2.5em;
+    margin-top: 1.5em;
 }
 .article-content code {
     color: #699BCD;
@@ -647,9 +652,15 @@ Entry styles
     margin: 0.5em 0;
 }
 // Embedded media
+.embed-video {
+    background: #ADA7B3;
+    padding: 1em;
+    padding: 3vw;
+}
 .article-content iframe {
     display: block;
-    width: 100%;
+    margin: 0 auto;
+    max-width: 100%;
 }
 // Images!
 .article-content img {
@@ -749,7 +760,7 @@ li.slide {
 .article-content ol.slide-list {
     margin-top: 2em;
 }
-@media (min-width: 40em) {
+@media ( min-width: 40em ) {
     .slide p {
         margin-top: 0;
     }
@@ -760,9 +771,21 @@ li.slide {
         width: 35%;
     }
 }
-@media (min-width: 50em) {
+@media ( min-width: 50em ) {
     li.slide {
         display: flex;
+        padding-bottom: 2.5em;
+        position: relative;
+        margin: 0 0 3em;
+    }
+    li.slide:after {
+        border-bottom: 1px solid #C0C0C0;
+        bottom: 0;
+        content: "";
+        height: 0;
+        left: 20%;
+        position: absolute;
+        width: 60%;
     }
     .slide-img {
         flex: 1 0 30%;
@@ -775,6 +798,9 @@ li.slide {
         margin-left: 3%;
         order: 2;
     }
+    .slide-content > :last-child {
+        margin-bottom: 0;
+    }
 }
 
 
@@ -784,8 +810,12 @@ li.slide {
 Compact nav (homepage lead-in)
 
 */
-.nav-compact.region {
+// Specificity fight 👎
+.region.nav-compact {
     background: inherit;
+}
+// Specificity fight 👎
+.site-content .region.nav-compact {
     margin: 0 0 1em;
 }
 .nav-compact ul,
