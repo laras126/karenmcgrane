@@ -56,6 +56,10 @@ time {
 a {
     color: #FFF;
 }
+a:hover,
+a:focus {
+    color: #CCC;
+}
 .deliverables {
     margin-top: 2em;
 }
@@ -94,6 +98,9 @@ a {
 .deliverables ul ul {
     margin: 0.5em 1em;
 }
+del {
+    opacity: 0.4;
+}
 </style>
 
 </head>
@@ -102,7 +109,7 @@ a {
 
 <div class="content">
     <nav>
-        <h1>Karen’s Website, 2017</h1>
+        <h1>Karen’s Website, <del>2017</del> 2018</h1>
         <ol class="deliverables">
             <li>
                 <h2>Prototypes</h2>
