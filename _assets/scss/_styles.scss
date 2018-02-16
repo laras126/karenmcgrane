@@ -247,6 +247,13 @@ body .region.site-nav {
 }
 .nav-list a {
     display: block;
+    opacity: 0.6;
+    transition: opacity 0.2s;
+}
+.nav-list a:hover,
+.nav-list a:focus,
+.nav-list [ aria-describedby="current-page" ] a {
+    opacity: 1;
 }
 .nav-list img {
     transition: transform 0.2s;
