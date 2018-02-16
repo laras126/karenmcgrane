@@ -22,7 +22,7 @@ require("inc/header.php" );
             <section class="article-content">
                 <h3>Video</h3>
 
-                <div class="embed-vimeo">
+                <div class="embed-video">
                     <iframe src="//player.vimeo.com/video/103071010" title="Karen McGrane – Content in a Zombie Apocalypse – beyond tellerrand Düsseldorf 2014" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" width="696" height="392" frameborder="0"></iframe>
                 </div>
 
