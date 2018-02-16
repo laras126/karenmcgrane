@@ -3,182 +3,109 @@ $rootpath = $_SERVER['DOCUMENT_ROOT'];
 $bodyClass = "home";
 $pageTitle = "Welcome to Karen McGrane’s website";
 
-require("inc/header.php" );
+require( "inc/header.php" );
 ?>
 
+    <header>
+        <nav class="nav-compact region">
+            <ul>
+                <li><a href="#">Articles</a></li>
+                <li><a href="#">Talks</a></li>
+                <li><a href="#">Books</a></li>
+                <li><a href="#">Sources</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
     <section class="region about-karen">
-        <h2 class="hed">Meet Karen McGrane.</h2>
+        <h2 class="hed about-hed"><cite class="name-km">Karen M<b>c</b>Grane</cite> has to write a paragraph about herself</h2>
 
-        <p class="photo" style="background-image: url( '../dist/assets/fpo/karen.png' );"><img src="../dist/assets/fpo/karen.png" alt="" /></p>
-
-        <div class="content">
-            <p>A few sentences about Karen welcoming people to the site. Donec id elit non mi porta gravida at eget metus. Vestibulum id ligula porta felis euismod semper. Donec sed odio dui. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo.</p>
+        <div class="about-content">
+            <p>But fortunately it is only 50-60 words, 75 at the most Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend. 500 characters</p>
         </div>
-    </section>
+    </section><!-- /end .region.about-karen -->
 
-    <div class="region content-main">
-        <div class="l-60-40">
-            <div class="group p-more">
-                <h2 class="hed-section-sub">Recent Articles</h2>
+    <ol class="region list-featured">
+        <li class="featured-item">
+            <div class="featured-content">
+                <h2><a class="hed-featured" href="#">Don’t Let Paper Paradigms Drive Your Digital Strategy</a></h2>
+                <p>The web isn't print. As we adapt to a world of connected devices, the way we think about our publishing process must change. Sometimes one teaser might be a bit longer than the others but still no more than 250 characters. <a class="read-more" href="#">Read more</a></p>
+                <span class="meta-featured"><a href="#">Harvard Business Review</a>, June 17, 2003</span>
+            </div><!-- /end .featured-content -->
+        </li>
+        <li class="featured-item">
+            <div class="featured-content">
+                <h2><a class="hed-featured" href="#">Career Day Special With A Future Web Designer</a></h2>
+                <p>An eighth grader asked me some questions about web design as a career, and I had some questions in response. Aim for 140 characters. <a class="read-more" href="#">Read more</a></p>
+                <span class="meta-featured"><a href="#">Harvard Business Review</a>, June 17, March 4, 2016</span>
+            </div><!-- /end .featured-content -->
+        </li>
+        <li class="featured-item has-image">
+            <img src="/wp-content/themes/karenmcgrane/_assets/fpo/slide-adaptive.png" alt="" />
+            <div class="featured-content">
+                <h2><a class="hed-featured" href="#">Adaptive: Content, Context, and Controversy</a></h2>
+                <p>We all know what responsive means, but what the heck is adaptive? In this talk I unpack what we mean when we talk about adaptive. <a class="read-more" href="#">Read more</a></p>
+                <span class="meta-featured"><a href="#">Harvard Business Review</a>, June 17, 2003</span>
+            </div><!-- /end .featured-content -->
+        </li>
+        <li class="featured-item">
+            <div class="featured-content">
+                <h2><a class="hed-featured" href="#">WYSIWTF</a></h2>
+                <p>How should content management tools guide content creators to focus on meaning and structure? What’s the right amount of control over presentation and styling in the CMS? <a class="read-more" href="#">Read more</a></p>
+                <span class="meta-featured"><a href="#">A List Apart</a>, May 2, 2013</span>
+            </div><!-- /end .featured-content -->
+        </li>
+        <li class="featured-item">
+            <div class="featured-content">
+                <h2><a class="hed-featured" href="#">The Alternative is Nothing</a></h2>
+                <p>The history of technology innovation is the history of disruption. New technologies become available and disrupt the market for more-established, higher-end products. <a class="read-more" href="#">Read more</a></p>
+                <span class="meta-featured"><a href="#">A List Apart</a>, June 6, 2013</span>
+            </div><!-- /end .featured-content -->
+        </li>
+    </ol><!-- /end .region.list-featured -->
 
-                <ol class="teaser-list">
-                    <li class="teaser">
+    <div class="region site-nav">
+        <div class="site-mast">
+            <h1 class="logo"><a href="#">More stuff from <cite class="name-km">Karen M<b>c</b>Grane:</cite></a></h1>
 
-                        <img src="../dist/assets/fpo/450x450.png" alt="" />
-
-                        <div class="teaser-inner">
-                            <time datetime="2017-09-27">Sept 27, 2017</time>
-
-                            <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">Mobile &gt; Local</a></h3>
-                            <p>Arguments for a separate mobile website often are based on a belief that mobile users want localized information. <a class="read-more" href="#">Read more</a></p>
-                        </div><!-- /end .teaser-inner -->
-                    </li><!-- /end .teaser -->
-                    <li class="teaser">
-                        <div class="teaser-inner">
-                            <time datetime="2017-09-24">Sept 24, 2017</time>
-
-                            <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">How To Live Out Of A Suitcase</a></h3>
-                            <p>I’ve spent the better part of the past couple of years traveling as much as I’ve been home. TripIt tells me I’m in first place among my friends for number of days on the road—a dubious honor. <a class="read-more" href="#">Read more</a></p>
-                        </div><!-- /end .teaser-inner -->
-                    </li><!-- /end .teaser -->
-                    <li class="teaser">
-
-                        <img src="../dist/assets/fpo/450x450.png" alt="" />
-
-                        <div class="teaser-inner">
-                            <time datetime="2017-09-17">Sept 17, 2017</time>
-
-                            <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">What I do matters. Yours is bullshit.</a></h3>
-                            <p>A conversation at the magazine, on the movie set, and in our industry. <a class="read-more" href="#">Read more</a></p>
-                        </div><!-- /end .teaser-inner -->
-                    </li><!-- /end .teaser -->
-                </ol>
-
-                <p class="cap"><a class="link-more" href="#">Show all articles</a></p>
-
-                <h2 class="hed-section-sub">Recent Talks</h2>
-
-                <ol class="teaser-list">
-                    <li class="teaser">
-                        <div class="teaser-inner">
-                            <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">Adapting Ourselves to Adaptive Content</a></h3>
-                            <p>I speak often about how we need to adapt our content processes and workflow for multi-channel publishing, especially for mobile. This presentation is one of my favorite talks I’ve ever given. <a class="read-more" href="#">Read more</a></p>
-                        </div><!-- /end .teaser-inner -->
-                    </li><!-- /end .teaser -->
-                    <li class="teaser">
-                        <div class="teaser-inner">
-                            <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">The Mobile Content Mandate</a></h3>
-                        </div><!-- /end .teaser-inner -->
-                    </li><!-- /end .teaser -->
-                    <li class="teaser">
-                        <div class="teaser-inner">
-                            <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">Content in a Zombie Apocalypse</a></h3>
-                        </div><!-- /end .teaser-inner -->
-                    </li><!-- /end .teaser -->
-                </ol>
-
-                <p class="cap"><a class="link-more" href="#">Show all talks</a></p>
-            </div><!-- /end .group.p-more -->
-
-            <div class="group-alt p-less">
-                <h2 class="hed-section-sub">Recent Sources</h2>
-
-                <ol class="sources-count-list">
-                    <li>
+            <nav>
+                <ul class="nav-list">
+                    <li class="nav-item"<?php if ($bodyClass == "articles") { ?> aria-describedby="current-page"<?php } ?>>
                         <a href="#">
-                            <dl class="source-count">
-                                <dt>Guinea<span class="a11y">:</span></dt>
-                                <dd>
-                                    4 <span class="a11y">articles</span>
-                                </dd>
-                            </dl>
+                            <img src="../dist/assets/svg/articles.svg" alt="" />
+                            Articles
                         </a>
                     </li>
-                    <li>
+                    <li class="nav-item"<?php if ($bodyClass == "talks") { ?> aria-describedby="current-page"<?php } ?>>
                         <a href="#">
-                            <dl class="source-count">
-                                <dt>Italy<span class="a11y">:</span></dt>
-                                <dd>
-                                    7 <span class="a11y">articles</span>
-                                </dd>
-                            </dl>
+                            <img src="../dist/assets/svg/talks.svg" alt="" />
+                            Talks
                         </a>
                     </li>
-                    <li>
+                    <li class="nav-item"<?php if ($bodyClass == "books") { ?> aria-describedby="current-page"<?php } ?>>
                         <a href="#">
-                            <dl class="source-count">
-                                <dt>Benin<span class="a11y">:</span></dt>
-                                <dd>
-                                    4 <span class="a11y">articles</span>
-                                </dd>
-                            </dl>
+                            <img src="../dist/assets/svg/books.svg" alt="" />
+                            Books
                         </a>
                     </li>
-                    <li>
+                    <li class="nav-item"<?php if ($bodyClass == "sources") { ?> aria-describedby="current-page"<?php } ?>>
                         <a href="#">
-                            <dl class="source-count">
-                                <dt>Bulgaria<span class="a11y">:</span></dt>
-                                <dd>
-                                    1 <span class="a11y">article</span>
-                                </dd>
-                            </dl>
+                            <img src="../dist/assets/svg/sources.svg" alt="" />
+                            Sources
                         </a>
                     </li>
-                    <li>
+                    <li class="nav-item"<?php if ($bodyClass == "contact") { ?> aria-describedby="current-page"<?php } ?>>
                         <a href="#">
-                            <dl class="source-count">
-                                <dt>Bermuda<span class="a11y">:</span></dt>
-                                <dd>
-                                    8 <span class="a11y">articles</span>
-                                </dd>
-                            </dl>
+                            <img src="../dist/assets/svg/contact.svg" alt="" />
+                            Contact
                         </a>
                     </li>
-                    <li>
-                        <a href="#">
-                            <dl class="source-count">
-                                <dt>Chile<span class="a11y">:</span></dt>
-                                <dd>
-                                    3 <span class="a11y">articles</span>
-                                </dd>
-                            </dl>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <dl class="source-count">
-                                <dt>The Most Incredibly Cayman Of All The Islands<span class="a11y">:</span></dt>
-                                <dd>
-                                    16 <span class="a11y">articles</span>
-                                </dd>
-                            </dl>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <dl class="source-count">
-                                <dt>New Zealand<span class="a11y">:</span></dt>
-                                <dd>
-                                    11 <span class="a11y">articles</span>
-                                </dd>
-                            </dl>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <dl class="source-count">
-                                <dt>Qatar<span class="a11y">:</span></dt>
-                                <dd>
-                                    11 <span class="a11y">articles</span>
-                                </dd>
-                            </dl>
-                        </a>
-                    </li>
-                </ol>
-            </div><!-- /end .group-alt.p-less -->
-        </div><!-- /end .l-60-40 -->
-    </div><!-- /end .region.content-main -->
+                </ul><!-- /end .nav-list -->
+            </nav>
+        </div><!-- /end .site-mast -->
+    </div><!-- /end .region -->
 
 <?php
-require("inc/footer.php" );
+require( "inc/footer.php" );
 ?>

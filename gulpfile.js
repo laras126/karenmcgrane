@@ -16,14 +16,13 @@ gulp.task( 'serve', function() {
 
     browserSync.init( {
         proxy: _config.host,
-        port: 8080,
         watchTask: true
     } );
 
     gulp.watch( _config.dir.input + "scss/**/*.scss", [ 'sass' ] );
     gulp.watch( _config.dir.input + "js/**/*", [ "js" ] );
     gulp.watch( [
-        "*.php",
+        "_preview/**/*.php",
         "views/*.twig"
     ] ).on( 'change', browserSync.reload );
 

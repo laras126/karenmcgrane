@@ -1,5 +1,5 @@
 body {
-    background: #474747;
+    background: #311B45 url( "/wp-content/themes/karenmcgrane/_assets/svg/bg.svg" ) -20% -20% / 14px auto;
     color: #FFF;
     font-size: calc( 14px + ( 16 - 14 ) * ( ( 100vw - 300px ) / ( 1400 - 300) ));
     font: 400 1em/1.5 $fonts-sans-initial;
@@ -60,12 +60,12 @@ body {
 }
 
 a {
-    color: #27A99C;
+    color: #805AA5;
     transition: color 0.2s, background-color 0.2s;
 }
 a:hover,
 a:focus {
-    color: #2785A9;
+    color: #280C43;
     text-decoration: none;
 }
 
@@ -80,7 +80,14 @@ textarea {
     font-family: inherit;
 }
 
-
+fieldset {
+    border: none;
+    padding: 0;
+}
+legend {
+    position: absolute;
+    left: -1000em;
+}
 
 
 
@@ -91,6 +98,7 @@ Basic layout scaffolding
 
 */
 .region {
+    color: #333;
     margin: 0 auto;
     padding: 3vw 3.225806451612903225%;    /* 40 / 1240 */
 }
@@ -158,6 +166,13 @@ Various and sundry grid layouts
 Masthead
 
 */
+.site-content .region.site-nav {
+    background: #1B082D;
+}
+.site-nav {
+    border: 10px solid #382645;
+    border-width: 10px 0;
+}
 .site-mast {
     margin-bottom: 1em;
 }
@@ -168,107 +183,34 @@ Masthead
 .site-mast a {
     text-decoration: none;
 }
-.site-tagline p {
-    font-weight: 800;
-    font-size: 1.5em;
-    line-height: 1.375;  /* 66/48 */
-    margin: 1.5em 0;
-    max-width: 16em;
-}
-.site-tagline p:first-child {
-    margin-top: 2em;
-}
 @supports ( display: grid ) {
     @media (min-width: 50em) {
-        .site-mast,
-        .site-tagline {
+        .site-mast {
             margin: 0 auto;
             padding-left: 0;
             padding-right: 0;
-            width: 65.517241379310344827%;    /* 760/1160 */
         }
         .site-mast {
             margin: 2em auto;
-        }
-        .site-tagline p {
-            font-size: 2em;    /* 44 / 16 */
-            margin: 1em 0;
-        }
-    }
-    @media (min-width: 70em) {
-        .site-tagline p {
-            font-size: 2.75em;    /* 44 / 16 */
         }
     }
 }
 
 .logo {
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: 800;
     line-height: 1.1;
     margin: 1em 0;
 }
+@media ( min-width: 50em ) {
+    .logo {
+        font-size: 2em;
+    }
+}
 .logo a {
     display: block;
-    max-width: 4.75em;
 }
-.logo span,
-.logo span:before,
-.logo span:after {
-    border-radius: 50%;
-    display: inline-block;
-    height: 0.2em;
-    margin-bottom: 0.15em;
-    margin-left: 0.07em;
-    text-indent: -1000em;
-    transition: background-color 0.2s, opacity 0.2s, transform 0.2s;
-    vertical-align: bottom;
-    width: 0.2em;
-}
-.logo span {
-    background: #4E87A2;
-    position: relative;
-    z-index: -1;
-}
-.logo a:focus span,
-.logo a:hover span {
-    background-color: #ED3E00;
-}
-.logo span:before,
-.logo span:after {
-    background: #FFF;
-    content: "";
-    left: 0;
-    opacity: 0.2;
-    pointer-events: none;
-    position: absolute;
-    transform-origin: 80% 80%;
-    z-index: -1;
-}
-.logo span:before {
-    transition-delay: 0.075s;
-    transform: scale( 30 );
-}
-.logo span:after {
-    transform: scale( 50 );
-    transition-delay: 0.15s;
-}
-.logo a:focus span:before,
-.logo a:hover span:before,
-.logo a:focus span:after,
-.logo a:hover span:after {
-    background-color: #D48266;
-}
-.logo a:focus span:before,
-.logo a:hover span:before {
-    opacity: 0.4;
-    transform: scale( 40 );
-}
-.logo a:focus span:after,
-.logo a:hover span:after {
-    transform: scale( 60 );
-}
-.site-nav {
+.nav-list {
     font-size: 0.8em;
     list-style: none;
     padding: 0;
@@ -276,46 +218,46 @@ Masthead
     max-width: 34em;
 }
 @media (min-width: 30em) {
-    .site-nav {
+    .nav-list {
         font-size: 1.125em;  /* 18/16 */
     }
 }
-.site-nav li {
+.nav-item {
     display: inline-block;
     margin-right: 2%;
     text-align: center;
     width: 17%;
 }
-.site-nav li:last-child {
+.nav-item:last-child {
     margin-right: 0;
 }
-.site-nav a {
+.nav-list a {
     display: block;
 }
-.site-nav img {
+.nav-list img {
     transition: transform 0.2s;
     transform-origin: 50% 100%;
 }
-.site-nav a:hover img,
-.site-nav a:focus img {
+.nav-list a:hover img,
+.nav-list a:focus img {
     transform: scale( 1.15 ) translateY( -0.15em );
 }
 @supports ( display: flex ) {
-    .site-nav {
+    .nav-list {
         display: flex;
         flex: 1;
         max-width: inherit;
     }
-    .site-nav li {
+    .nav-list li {
         display: flex;
         flex: 1 0 17%;
     }
-    .site-nav a {
+    .nav-list a {
         display: flex;
         flex: 1;
         flex-direction: column;
     }
-    .site-nav img {
+    .nav-list img {
         flex: 1;
     }
     @media (min-width: 40em) {
@@ -331,7 +273,7 @@ Masthead
         .site-mast nav {
             flex: 1 0 63.3333333%;
         }
-        .site-nav {
+        .nav-list {
             align-self: flex-end;
         }
     }
@@ -345,20 +287,19 @@ Page content
 
 */
 .site-content .region {
-    background: #FFF;
-    color: #333;
+    background-color: #FFF;
     margin-bottom: 5em;
     position: relative;
 }
 .site-content .region:before,
 .site-content .region:after {
-    background-color: #2F2F2F;
-    background-color: rgba( 47, 47, 47, 0.6 );
-    content: "";
-    height: 0.5em;
-    left: 0;
-    right: 0;
-    position: absolute;
+//    background-color: #2F2F2F;
+//    background-color: rgba( 47, 47, 47, 0.6 );
+////    content: "";
+//    height: 0.5em;
+//    left: 0;
+//    right: 0;
+//    position: absolute;
 }
 .site-content .region:before {
     top: -0.5em;
@@ -810,64 +751,249 @@ li.slide {
 }
 
 
+
+/*
+
+Compact nav (homepage lead-in)
+
+*/
+.nav-compact.region {
+    background: inherit;
+    margin: 0 0 1em;
+}
+.nav-compact ul,
+.nav-compact li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.nav-compact ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+.nav-compact li {
+    margin-right: 2em;
+}
+.nav-compact a {
+    color: #FFF;
+}
+
 /*
 
 About module
 
 */
-.about-karen .hed {
-    font-size: 1.75em;
-    line-height: 1.1;
-    margin: 0.5em 0;
+.region.about-karen {
+    background-color: #684F80;
 }
-.about-karen .photo {
-    background-size: auto;
-    background-position: -5000px 0;
-    background-repeat: no-repeat;
+.about-karen {
+    background:
+        url( "/wp-content/themes/karenmcgrane/_assets/fpo/intro-headshot.jpg" ) no-repeat 50% 0 / 100% auto;
+    color: #FFF;
+    outline: 20px solid #382645;
+    padding-top: 52.2%;    /* 522/1000 */
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min--moz-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
+    .about-karen {
+        background-image: url( "/wp-content/themes/karenmcgrane/_assets/fpo/intro-headshot@2x.jpg" );
+    }
+}
+.about-hed {
+    font-size: 1.75em;    /* 36 / 16 */
+    line-height: 1.27777777777777777777;     /* 46 / 36 */
+    margin: 1em 0;
+}
+.name-km {
+    display: block;
+    font-style: inherit;
+    text-transform: uppercase;
+}
+.name-km b {
+    text-transform: none;
+}
+.about-content {
+    line-height: 1.5;      /* 27 / 18 */
+    margin-top: auto;
+}
+.about-content p {
+    margin-bottom: 0.75em;
+}
+.about-content p:last-child {
     margin: 0;
 }
-.about-karen img {
+@media ( min-width: 43em ) {
+    .about-karen {
+        background:
+            linear-gradient( 90deg, rgba( 59, 20, 88, 0.7 ) 40%, rgba( 59, 20, 88, 0.7 ) 56%, rgba( 59, 20, 88, 0 ) 56%, rgba( 59, 20, 88, 0.00 ) 60% ),
+            url( "/wp-content/themes/karenmcgrane/_assets/fpo/intro-headshot.jpg" ) no-repeat 50% 0 / cover;
+        padding-top: 3vw;
+    }
+    @media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min--moz-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
+        .about-karen {
+            background:
+                linear-gradient( 90deg, rgba( 59, 20, 88, 0.7 ) 40%, rgba( 59, 20, 88, 0.7 ) 56%, rgba( 59, 20, 88, 0 ) 56%, rgba( 59, 20, 88, 0.00 ) 60% ),
+                url( "/wp-content/themes/karenmcgrane/_assets/fpo/intro-headshot@2x.jpg" ) no-repeat 50% 0 / cover;
+        }
+    }
+    .about-hed,
+    .about-content {
+        width: 55%;
+    }
+    .about-hed {
+        margin: 0 0 2em;
+        max-width: 14em;
+    }
+    .about-content {
+        max-width: 22em;
+    }
+}
+@media ( min-width: 54em ) {
+    .about-hed {
+        font-size: 2.25em;    /* 36 / 16 */
+    }
+    .about-content {
+        font-size: 1.125em;    /* 18 / 16 */
+    }
+}
+@media ( min-width: 68.75em ) {
+    .about-karen {
+        background:
+            linear-gradient( 104deg, rgba( 59, 20, 88, 0.7 ) 40%, rgba( 59, 20, 88, 0.7 ) 56%, rgba( 59, 20, 88, 0 ) 56%, rgba( 59, 20, 88, 0.00 ) 60% ),
+            url( "/wp-content/themes/karenmcgrane/_assets/fpo/intro-headshot.jpg" ) no-repeat 50% 0 / 100% auto;
+    }
+    @media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min--moz-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
+        .about-karen {
+            background:
+                linear-gradient( 104deg, rgba( 59, 20, 88, 0.7 ) 40%, rgba( 59, 20, 88, 0.7 ) 56%, rgba( 59, 20, 88, 0 ) 56%, rgba( 59, 20, 88, 0.00 ) 60% ),
+                url( "/wp-content/themes/karenmcgrane/_assets/fpo/intro-headshot@2x.jpg" ) no-repeat 50% 0 / 100% auto;
+        }
+    }
+    .about-karen:before,
+    .about-karen:after {
+        content: "";
+    }
+    .about-karen:before {
+        float: left;
+        padding-top: 52.2%;    /* 522/1000 */
+        padding-top: calc( 52.2% - 6vw );
+    }
+    .about-karen:after {
+        clear: both;
+        display: table;
+    }
+}
+
+
+
+/*
+
+Featured items (grid on homepage / section fronts)
+
+*/
+.region.list-featured {
+    background: none;
+    padding: 0;
+}
+.list-featured,
+.list-featured li {
+    list-style: none;
+}
+.featured-item {
+    background: #FFF;
+    grid-column-span: 1;
+    padding: 3vw 3.225806451612903225%;    /* 40 / 1240 */
+    margin-bottom: 2em;
+}
+@media ( min-width: 56.25em ) {
+    .list-featured {
+        display: grid;
+        grid-template-columns: repeat( 2, 1fr );
+        grid-gap: 2em;
+    }
+    .featured-item {
+        margin-bottom: 0;
+        padding: 3vw 6.4516129%;    /* 40/(1240/2) */
+    }
+}
+.featured-item,
+.featured-content {
+    display: flex;
+    flex-direction: column;
+}
+.featured-content {
+    min-height: 12em;
+    flex: 1;
+}
+.featured-item h2 {
+    margin: 0;
+    font-size: inherit;
+}
+.hed-featured {
+    font-size: 1.25em;     /* 20/16 */
+    line-height: 1.35;     /* 27/20 */
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.featured-item p {
+    flex: 1;
+    margin: 1em 0;
+    max-width: 30em;
+}
+.meta-featured {
+    color: #9D9D9D;
     display: block;
+    margin-top: auto;
+}
+.meta-featured a {
+    color: inherit;
+}
+.meta-featured a:hover,
+.meta-featured a:focus {
+    color: #555;
+}
+// Featured items with images (i.e., talk excerpts)
+.featured-item.has-image {
+    margin: 1em 0;
+    outline: 20px solid #1B082D;
+}
+.featured-item.has-image img {
+    display: block;
+    margin-bottom: 1em;
     width: 100%;
 }
-.about-karen .content {
-    font-size: 1.125em;    /* 18 / 16 */
-}
-@supports ( display: grid ) {
-    @media ( min-width: 45em ) {
-        .about-karen {
-            display: grid;
-            grid-template-rows: 50% 50%;
-            grid-template-columns: 3.225806451612903225% 45.161290322580645161% 3.225806451612903225% 48.387096774193548387% 3.225806451612903225%;   /* 40/1240; 560/1240; 40/1240; 600/1240; 40/1240 */
-            max-width: 80.625em;    /* 1290/16 */
-            padding: 0;
-        }
-        .about-karen .hed {
-            align-self: center;
-            font-size: 2em;
-            grid-column: 2;
-        }
-        .about-karen .content {
-            grid-column: 2;
-            grid-row: 2;
-        }
-        .about-karen .photo {
-            background-size: auto 100%;
-            background-position: 50% 50%;
-            align-self: stretch;
-            grid-column: 4 / 5;
-            grid-row: 1 / 3;
-        }
-        .about-karen img {
-            opacity: 0;
-        }
+@media ( min-width: 40em ) {
+    .featured-item.has-image {
+        display: grid;
+        grid-template-columns: 1fr 2em 1fr;
+        grid-column: 1 / -1;
+        padding: 3vw 3.225806451612903225%;    /* 40 / 1240 */
     }
-    @media ( min-width: 55em ) {
-        .about-karen .hed {
-            font-size: 3em;
-        }
+    .featured-item.has-image .featured-content {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .featured-item.has-image img {
+        grid-column: 3;
+        width: inherit;
+    }
+    .featured-item.has-image .hed-featured {
+        font-size: 1.5em;      /* 24/16 */
+        line-height: 1.375;    /* 33/24 */
+    }
+    .featured-item.has-image p {
+        font-size: 1.25em;    /* 20/16 */
+        line-height: 1.35;    /* 27/20 */
     }
 }
+@media ( min-width: 56.25em ) {
+    .featured-item.has-image .featured-content {
+        grid-column: 3;
+    }
+    .featured-item.has-image img {
+        grid-column: 1 / 2;
+    }
+}
+
 
 
 
@@ -990,13 +1116,7 @@ Footer
 
 */
 .site-footer {
+    color: #FFF;
+    font-weight: 800;
     text-align: center;
-}
-@media (min-width: 50em) {
-    .site-footer {
-        margin: 0 auto;
-        padding-left: 0;
-        padding-right: 0;
-        width: 65.517241379310344827%;    /* 760/1160 */
-    }
 }
