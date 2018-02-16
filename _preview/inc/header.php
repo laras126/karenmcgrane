@@ -55,7 +55,8 @@ var MTIProjectId='a555b89b-28b3-4798-9e31-f3222456653c';
 <?php } ?>
 
 <?php
-if ( isset( $bodyClass ) && $bodyClass != "home" ) {
+$is_home = ( isset( $bodyClass ) && ( strpos ( $bodyClass, "sect-home" ) !== false ) ) ? true : false;
+if ( $is_home === false ) {
     include( "mast.php" );
 }
 ?>
