@@ -10,7 +10,7 @@ require("inc/header.php" );
 
         <article class="group" datetime="2017-09-27">
             <footer>
-                <p class="article-meta">A <a href="#">talk</a> posted on <time datetime="2017-09-27 19:00">Sept 27, 2017</time></p>
+                <p class="article-meta">Presented at <a href="#">Beyond Tellerand</a> <time datetime="2017-09-27 19:00">Sept 27, 2017</time></p>
             </footer>
 
             <header>

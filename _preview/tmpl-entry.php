@@ -13,7 +13,7 @@ require("inc/header.php" );
             <article class="group" datetime="2017-09-27">
                 <footer>
                     <div class="article-meta">
-                        <p>An <a href="#">article</a> originally published in <a href="">The Pastry Box Project</a>.</p>
+                        <p>Originally created for <a href="#">The Pastry Box Project</a> <time>Month DD, YYYY</time></p>
                     </div>
                 </footer>
 

@@ -180,6 +180,9 @@ body .region.site-nav {
     font-weight: 800;
 }
 @media ( min-width: 60em ) {
+    .site-nav {
+        background: linear-gradient( 110deg, rgba( 20, 3, 34, 0 ) 0, rgba( 20, 3, 34, 0 ) 70%, #140322 70%, #140322 100% );
+    }
     .sect-home .site-nav {
         background: linear-gradient( 110deg, #140322 0, #140322 34%, rgba( 20, 3, 34, 0 ) 34%, rgba( 20, 3, 34, 0 ) 100% );
     }
@@ -260,6 +263,9 @@ body .region.site-nav {
 .nav-list [ aria-describedby="current-page" ] a {
     opacity: 1;
 }
+.nav-list [ aria-describedby="current-page" ] a {
+    cursor: default;
+}
 .nav-list img {
     transition: transform 0.2s;
     transform-origin: 50% 100%;
@@ -267,6 +273,10 @@ body .region.site-nav {
 .nav-list a:hover img,
 .nav-list a:focus img {
     transform: scale( 1.15 ) translateY( -0.15em );
+}
+.nav-list [ aria-describedby="current-page" ] a:hover img,
+.nav-list [ aria-describedby="current-page" ] a:focus img {
+    transform: none;
 }
 @supports ( display: flex ) {
     .nav-list {
@@ -449,6 +459,7 @@ Teasers!
 }
 .teaser {
     border-bottom: 1px solid #DEDEDE;
+    line-height: 1.4;
     margin-bottom: 2em;
     padding-bottom: 2em;
 }
@@ -485,6 +496,10 @@ Teasers!
 .teaser-inner > time,
 .article-meta {
     text-transform: uppercase;
+}
+.article-meta a,
+.article-meta time {
+    display: block;
 }
 .hed-teaser {
     font-size: 1.25em;
