@@ -1,7 +1,3 @@
-<header class="region site-nav">
-    <div class="site-mast">
-        <h1 class="logo"><a href="#">Karen McGrane<span>.</span></a></h1>
-
         <nav>
             <ul class="nav-list">
                 <li class="nav-item"<?php if ($bodyClass == "articles") { ?> aria-describedby="current-page"<?php } ?>>
@@ -36,5 +32,3 @@
                 </li>
             </ul><!-- /end .nav-list -->
         </nav>
-    </div><!-- /end .site-mast -->
-</header>

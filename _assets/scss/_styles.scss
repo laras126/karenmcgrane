@@ -167,15 +167,22 @@ Masthead
 
 */
 .site-content .region.site-nav {
-    background: #1B082D;
+    background-color: #1B082D;
 }
 .site-nav {
     border: 10px solid #382645;
     border-width: 10px 0;
+    font-weight: 800;
+}
+@media ( min-width: 60em ) {
+    .site-nav {
+        background: linear-gradient( 110deg, #140322 0, #140322 34%, rgba( 20, 3, 34, 0 ) 34%, rgba( 20, 3, 34, 0 ) 100% );
+    }
 }
 .site-mast {
     margin-bottom: 1em;
 }
+.site-mast,
 .site-mast a,
 .site-footer a {
     color: #FFF;
@@ -184,7 +191,7 @@ Masthead
     text-decoration: none;
 }
 @supports ( display: grid ) {
-    @media (min-width: 50em) {
+    @media ( min-width: 50em ) {
         .site-mast {
             margin: 0 auto;
             padding-left: 0;
@@ -197,8 +204,8 @@ Masthead
 }
 
 .logo {
+    display: block;
     font-size: 1.5em;
-    font-weight: 800;
     line-height: 1.1;
     margin: 1em 0;
 }
@@ -262,7 +269,7 @@ Masthead
     }
     @media (min-width: 40em) {
         .site-mast,
-        .site-mast > * {
+        .site-mast nav {
             display: flex;
         }
         .logo {
