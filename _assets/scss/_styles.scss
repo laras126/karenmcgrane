@@ -166,7 +166,7 @@ Various and sundry grid layouts
 Masthead
 
 */
-.site-content .region.site-nav {
+body .region.site-nav {
     background-color: #1B082D;
 }
 .site-nav {
@@ -175,7 +175,7 @@ Masthead
     font-weight: 800;
 }
 @media ( min-width: 60em ) {
-    .site-nav {
+    .tmpl-home .site-nav {
         background: linear-gradient( 110deg, #140322 0, #140322 34%, rgba( 20, 3, 34, 0 ) 34%, rgba( 20, 3, 34, 0 ) 100% );
     }
 }
@@ -193,12 +193,9 @@ Masthead
 @supports ( display: grid ) {
     @media ( min-width: 50em ) {
         .site-mast {
-            margin: 0 auto;
+            margin: 2em auto 0;
             padding-left: 0;
             padding-right: 0;
-        }
-        .site-mast {
-            margin: 2em auto;
         }
     }
 }
@@ -207,7 +204,17 @@ Masthead
     display: block;
     font-size: 1.5em;
     line-height: 1.1;
-    margin: 1em 0;
+    margin: 1em 0 0;
+    max-width: 20em;
+}
+.logo .name-km {
+    display: inline-block;
+}
+.tmpl-home .logo {
+    max-width: inherit;
+}
+.tmpl-home .logo .name-km {
+    display: block;
 }
 @media ( min-width: 50em ) {
     .logo {
@@ -224,7 +231,7 @@ Masthead
     margin: 0;
     max-width: 34em;
 }
-@media (min-width: 30em) {
+@media ( min-width: 30em ) {
     .nav-list {
         font-size: 1.125em;  /* 18/16 */
     }
@@ -267,18 +274,24 @@ Masthead
     .nav-list img {
         flex: 1;
     }
-    @media (min-width: 40em) {
-        .site-mast,
-        .site-mast nav {
+    @media ( min-width: 40em ) {
+        .site-mast nav,
+        .tmpl-home .site-mast {
             display: flex;
         }
-        .logo {
+        .tmpl-home .logo {
             align-self: flex-end;
             flex: 1 0 30%;
             margin: 0;
         }
         .site-mast nav {
+            margin: 0 0 1em;
+            width: 63.3333333%;
+        }
+        .tmpl-home .site-mast nav {
             flex: 1 0 63.3333333%;
+            margin: 0;
+            width: inherit;
         }
         .nav-list {
             align-self: flex-end;
