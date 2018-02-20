@@ -1,10 +1,13 @@
 body {
-    background: #311B45 url( "/wp-content/themes/karenmcgrane/_assets/svg/bg.svg" ) -20% -20% / 14px auto;
-    color: #FFF;
+    background: #311B45;
+    color: #FFFFF0;
     font-size: calc( 14px + ( 16 - 14 ) * ( ( 100vw - 300px ) / ( 1400 - 300) ));
-    font: 400 1em/1.5 $fonts-sans-initial;
+    font: 400 1em/1.45 $fonts-sans-initial;
     margin: 0 auto;
     max-width: 36em;
+}
+.fonts-loaded body {
+    font-family: $fonts-sans;
 }
 @media (min-width: 30em) {
     body {
@@ -23,9 +26,6 @@ body {
         padding-left: 7vw;
         padding-right: 7vw;
     }
-}
-.fonts-loaded body {
-    font-family: $fonts-sans;
 }
 @supports ( display: grid ) {
     body {
@@ -60,12 +60,12 @@ body {
 }
 
 a {
-    color: #805AA5;
+    color: #00ACBF;
     transition: color 0.2s, background-color 0.2s;
 }
 a:hover,
 a:focus {
-    color: #280C43;
+    color: #714698;
     text-decoration: none;
 }
 
@@ -112,7 +112,7 @@ Basic layout scaffolding
 Various and sundry grid layouts
 */
 .l-50-50 > .group {
-    border-top: 0.5em solid #EEE;
+    border-top: 0.5em solid #D5D3D7;
     padding: 0.75em 0;
 }
 .tmpl-books .l-50-50 > .group {
@@ -140,7 +140,7 @@ Various and sundry grid layouts
             grid-column-gap: 3.448275862068965517%;    /* 40/1160 */
         }
         .l-50-50 > .group {
-            margin-bottom: 4em;
+            margin-bottom: 1em;
         }
         .l-50-50 > .group:nth-child( 2n + 1 ) {
             grid-column: 1;
@@ -179,21 +179,13 @@ body .region.site-nav {
     border-width: 10px 0;
     font-weight: 800;
 }
-@media ( min-width: 60em ) {
-    .site-nav {
-        background: linear-gradient( 110deg, rgba( 20, 3, 34, 0 ) 0, rgba( 20, 3, 34, 0 ) 70%, #140322 70%, #140322 100% );
-    }
-    .sect-home .site-nav {
-        background: linear-gradient( 110deg, #140322 0, #140322 34%, rgba( 20, 3, 34, 0 ) 34%, rgba( 20, 3, 34, 0 ) 100% );
-    }
-}
 .site-mast {
     margin-bottom: 1em;
 }
 .site-mast,
 .site-mast a,
 .site-footer a {
-    color: #FFF;
+    color: #FFFFF0;
 }
 .site-mast a {
     text-decoration: none;
@@ -205,6 +197,9 @@ body .region.site-nav {
             padding-left: 0;
             padding-right: 0;
         }
+        .sect-home .site-mast {
+            margin-top: 0;
+        }
     }
 }
 
@@ -214,6 +209,11 @@ body .region.site-nav {
     line-height: 1.1;
     margin: 1em 0 0;
     max-width: 20em;
+}
+@media ( min-width: 60em ) {
+    .logo {
+        max-width: inherit;
+    }
 }
 .logo .name-km {
     display: inline-block;
@@ -255,16 +255,22 @@ body .region.site-nav {
 }
 .nav-list a {
     display: block;
+    font-size: 0.8em;
+    font-weight: 300;
+    letter-spacing: 0.075em;
     opacity: 0.6;
+    text-transform: uppercase;
     transition: opacity 0.2s;
 }
 .nav-list a:hover,
 .nav-list a:focus,
 .nav-list [ aria-describedby="current-page" ] a {
     opacity: 1;
+    text-transform: uppercase;
 }
 .nav-list [ aria-describedby="current-page" ] a {
     cursor: default;
+    font-style: italic;
 }
 .nav-list img {
     transition: transform 0.2s;
@@ -308,10 +314,9 @@ body .region.site-nav {
         }
         .site-mast nav {
             margin: 0 0 1em;
-            width: 63.3333333%;
         }
         .sect-home .site-mast nav {
-            flex: 1 0 63.3333333%;
+            flex: 1 0 68%;
             margin: 0;
             width: inherit;
         }
@@ -367,7 +372,7 @@ Page content
     font-size: 1.25em;    /* 20 / 16 */
     font-weight: 800;
     line-height: 1.35;
-    margin: 2em 0;
+    margin: 2em 0 1em;
 }
 .hed-section-sub:first-child {
     margin-top: 0;
@@ -454,11 +459,12 @@ Teasers!
 */
 .teaser-list {
     list-style: none;
-    padding-left: 0;
     margin-left: 0;
+    margin-top: 0;
+    padding-left: 0;
 }
 .teaser {
-    border-bottom: 1px solid #DEDEDE;
+    border-bottom: 1px solid #D5D3D7;
     line-height: 1.4;
     margin-bottom: 2em;
     padding-bottom: 2em;
@@ -502,7 +508,7 @@ Teasers!
     display: block;
 }
 .hed-teaser {
-    font-size: 1.25em;
+    font-size: 1.2em;
     font-weight: 400;
     line-height: 1.25;    /* 45 / 36 */
     margin: 0.2em 0;
@@ -532,8 +538,8 @@ Teasers!
     padding-left: 0.25em;
 }
 .link-more {
-    color: #ED3E00;
-    border: 1px solid #ED3E00;
+    color: #C03186;
+    border: 1px solid #C03186;
     border-radius: 0.25em;
     font-size: 0.875em;    /* 14/16 */
     padding: 0.25em 0.35em;
@@ -541,8 +547,8 @@ Teasers!
 }
 .link-more:hover,
 .link-more:focus {
-    background-color: #ED3E00;
-    color: #FFF;
+    background-color: #C03186;
+    color: #FFFFF0;
 }
 .link-more:after {
     padding-left: 0;
@@ -590,7 +596,6 @@ Entry styles
     }
     .article-content {
         font-size: 1.15em;
-        line-height: 1.45;
     }
 }
 .article-content {
@@ -847,7 +852,14 @@ Compact nav (homepage lead-in)
     margin-right: 2em;
 }
 .nav-compact a {
-    color: #FFF;
+    color: #FFFFF0;
+    opacity: 0.6;
+    text-transform: uppercase;
+    transition: opacity 0.2s;
+}
+.nav-compact a:hover,
+.nav-compact a:focus {
+    opacity: 1;
 }
 
 /*
@@ -916,7 +928,7 @@ About module
         max-width: 14em;
     }
     .about-content {
-        max-width: 22em;
+        max-width: 20em;
     }
 }
 @media ( min-width: 54em ) {
@@ -930,13 +942,13 @@ About module
 @media ( min-width: 68.75em ) {
     .about-karen {
         background:
-            linear-gradient( 104deg, rgba( 59, 20, 88, 0.7 ) 40%, rgba( 59, 20, 88, 0.7 ) 56%, rgba( 59, 20, 88, 0 ) 56%, rgba( 59, 20, 88, 0.00 ) 60% ),
+            linear-gradient( 104deg, rgba( 59, 20, 88, 0.7 ) 0, rgba( 59, 20, 88, 0.7 ) 45%, rgba( 59, 20, 88, 0 ) 45%, rgba( 59, 20, 88, 0.00 ) 100% ),
             url( "/wp-content/themes/karenmcgrane/_assets/fpo/intro-headshot.jpg" ) no-repeat 50% 0 / 100% auto;
     }
     @media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min--moz-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
         .about-karen {
             background:
-                linear-gradient( 104deg, rgba( 59, 20, 88, 0.7 ) 40%, rgba( 59, 20, 88, 0.7 ) 56%, rgba( 59, 20, 88, 0 ) 56%, rgba( 59, 20, 88, 0.00 ) 60% ),
+                linear-gradient( 104deg, rgba( 59, 20, 88, 0.7 ) 0, rgba( 59, 20, 88, 0.7 ) 45%, rgba( 59, 20, 88, 0 ) 45%, rgba( 59, 20, 88, 0.00 ) 100% ),
                 url( "/wp-content/themes/karenmcgrane/_assets/fpo/intro-headshot@2x.jpg" ) no-repeat 50% 0 / 100% auto;
         }
     }

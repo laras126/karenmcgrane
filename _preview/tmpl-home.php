@@ -67,10 +67,7 @@ require( "inc/header.php" );
 
     <div class="region site-nav">
         <div class="site-mast">
-            <h1 class="logo">More stuff from <cite class="name-km">Karen M<b>c</b>Grane:</cite></h1>
-
             <?php require( "inc/nav.php" ); ?>
-
         </div><!-- /end .site-mast -->
     </div><!-- /end .region -->
 

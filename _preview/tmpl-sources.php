@@ -151,7 +151,7 @@ require("inc/header.php" );
                 <li>
                     <a href="#">
                         <dl class="source-count">
-                            <dt>Guinea<span class="a11y">:</span></dt>
+                            <dt>Guinea</dt>
                             <dd>
                                 4 <span class="a11y">articles</span>
                             </dd>
@@ -161,7 +161,7 @@ require("inc/header.php" );
                 <li>
                     <a href="#">
                         <dl class="source-count">
-                            <dt>Italy<span class="a11y">:</span></dt>
+                            <dt>Italy</dt>
                             <dd>
                                 7 <span class="a11y">articles</span>
                             </dd>
@@ -171,7 +171,7 @@ require("inc/header.php" );
                 <li>
                     <a href="#">
                         <dl class="source-count">
-                            <dt>Benin<span class="a11y">:</span></dt>
+                            <dt>Benin</dt>
                             <dd>
                                 4 <span class="a11y">articles</span>
                             </dd>
@@ -181,7 +181,7 @@ require("inc/header.php" );
                 <li>
                     <a href="#">
                         <dl class="source-count">
-                            <dt>Bulgaria<span class="a11y">:</span></dt>
+                            <dt>Bulgaria</dt>
                             <dd>
                                 1 <span class="a11y">article</span>
                             </dd>
@@ -191,7 +191,7 @@ require("inc/header.php" );
                 <li>
                     <a href="#">
                         <dl class="source-count">
-                            <dt>Bermuda<span class="a11y">:</span></dt>
+                            <dt>Bermuda</dt>
                             <dd>
                                 8 <span class="a11y">articles</span>
                             </dd>
@@ -201,7 +201,7 @@ require("inc/header.php" );
                 <li>
                     <a href="#">
                         <dl class="source-count">
-                            <dt>Chile<span class="a11y">:</span></dt>
+                            <dt>Chile</dt>
                             <dd>
                                 3 <span class="a11y">articles</span>
                             </dd>
@@ -211,7 +211,7 @@ require("inc/header.php" );
                 <li>
                     <a href="#">
                         <dl class="source-count">
-                            <dt>The Most Incredibly Cayman Of All The Islands<span class="a11y">:</span></dt>
+                            <dt>The Most Incredibly Cayman Of All The Islands</dt>
                             <dd>
                                 16 <span class="a11y">articles</span>
                             </dd>
@@ -221,7 +221,7 @@ require("inc/header.php" );
                 <li>
                     <a href="#">
                         <dl class="source-count">
-                            <dt>New Zealand<span class="a11y">:</span></dt>
+                            <dt>New Zealand</dt>
                             <dd>
                                 11 <span class="a11y">articles</span>
                             </dd>
@@ -231,7 +231,7 @@ require("inc/header.php" );
                 <li>
                     <a href="#">
                         <dl class="source-count">
-                            <dt>Qatar<span class="a11y">:</span></dt>
+                            <dt>Qatar</dt>
                             <dd>
                                 11 <span class="a11y">articles</span>
                             </dd>
