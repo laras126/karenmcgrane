@@ -1192,3 +1192,19 @@ Footer
     font-weight: 800;
     text-align: center;
 }
+
+.legalese {
+    font-size: 0.85em;
+    font-weight: 500;
+    line-height: 1.35;
+    margin: 6em auto 0;
+    max-width: 40em;
+    opacity: 0.85;
+    text-align: justify;
+}
+.hed-legalese {
+    font-size: inherit;
+    font-weight: inherit;
+    text-align: center;
+    text-transform: uppercase;
+}
