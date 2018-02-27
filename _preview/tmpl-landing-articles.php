@@ -1,61 +1,29 @@
 <?php
 $rootpath = $_SERVER['DOCUMENT_ROOT'];
-$bodyClass = "sect-sources";
-$pageTitle = "Sources";
+$bodyClass = "sect-articles";
+$pageTitle = "Articles";
 
 require("inc/header.php" );
 ?>
 
     <div class="region content-main">
-        <h1 class="hed-lead">Sources</h1>
+        <h1 class="hed-lead">Articles</h1>
 
         <div class="l-50-50">
             <section class="group">
                 <header class="header-more">
-                    <h2 class="hed-section-sub">Mobile-only Users</h2>
+                    <h2 class="hed-section-sub">By Karen</h2>
 
                     <a class="link-more" href="#">Browse 64 more <span class="a11y">sources filed under “Mobile-only Users”</span></a>
                 </header>
 
-                <ol class="teaser-list sources-list">
+                <ol class="teaser-list">
                     <li class="teaser">
 
                         <div class="teaser-inner">
                             <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">Mobile &gt; Local</a></h3>
 
-                            <p class="teaser-meta"><cite>Harvard Business Review</cite>, <time datetime="2017-09-27">Sept 27, 2017</time></p>
-                        </div><!-- /end .teaser-inner -->
-                    </li><!-- /end .teaser -->
-                    <li class="teaser">
-                        <div class="teaser-inner">
-                            <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">Mobile &gt; Local</a></h3>
-
-                            <p class="teaser-meta"><cite>Harvard Business Review</cite>, <time datetime="2017-09-27">Sept 27, 2017</time></p>
-                        </div><!-- /end .teaser-inner -->
-                    </li><!-- /end .teaser -->
-                    <li class="teaser">
-                        <div class="teaser-inner">
-                            <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">Mobile &gt; Local</a></h3>
-
-                            <p>This article summarizes the historical development of major advances in human-computer interaction technology, emphasizing the pivotal role of university research in the advancement of the field.</p>
-
-                            <p class="teaser-meta"><cite>Harvard Business Review</cite>, <time datetime="2017-09-27">Sept 27, 2017</time></p>
-                        </div><!-- /end .teaser-inner -->
-                    </li><!-- /end .teaser -->
-                </ol><!-- /end .teaser-list -->
-            </section><!-- /end .group -->
-
-            <section class="group">
-                <header class="header-more">
-                    <h2 class="hed-section-sub">M-Dot Websites</h2>
-                    <a class="link-more" href="#">Browse 27 more <span class="a11y">sources filed under “M-Dot Websites”</span></a>
-                </header>
-
-                <ol class="teaser-list sources-list">
-                    <li class="teaser">
-
-                        <div class="teaser-inner">
-                            <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">Mobile &gt; Local</a></h3>
+                            <p>This article summarizes the historical development of major advances in human-computer interaction technology.</p>
 
                             <p class="teaser-meta"><cite>Harvard Business Review</cite>, <time datetime="2017-09-27">Sept 27, 2017</time></p>
                         </div><!-- /end .teaser-inner -->
@@ -73,6 +41,73 @@ require("inc/header.php" );
                         <div class="teaser-inner">
                             <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">Mobile &gt; Local</a></h3>
 
+                            <p>This article summarizes the historical development of major advances in human-computer interaction technology.</p>
+
+                            <p class="teaser-meta"><cite>Harvard Business Review</cite>, <time datetime="2017-09-27">Sept 27, 2017</time></p>
+                        </div><!-- /end .teaser-inner -->
+                    </li><!-- /end .teaser -->
+                    <li class="teaser">
+
+                        <div class="teaser-inner">
+                            <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">Mobile &gt; Local</a></h3>
+
+                            <p>This article summarizes the historical development of major advances in human-computer interaction technology.</p>
+
+                            <p class="teaser-meta"><cite>Harvard Business Review</cite>, <time datetime="2017-09-27">Sept 27, 2017</time></p>
+                        </div><!-- /end .teaser-inner -->
+                    </li><!-- /end .teaser -->
+                    <li class="teaser">
+                        <div class="teaser-inner">
+                            <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">Mobile &gt; Local</a></h3>
+
+                            <p>This article summarizes the historical development of major advances in human-computer interaction technology.</p>
+
+                            <p class="teaser-meta"><cite>Harvard Business Review</cite>, <time datetime="2017-09-27">Sept 27, 2017</time></p>
+                        </div><!-- /end .teaser-inner -->
+                    </li><!-- /end .teaser -->
+                    <li class="teaser">
+                        <div class="teaser-inner">
+                            <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">Mobile &gt; Local</a></h3>
+
+                            <p>This article summarizes the historical development of major advances in human-computer interaction technology.</p>
+
+                            <p class="teaser-meta"><cite>Harvard Business Review</cite>, <time datetime="2017-09-27">Sept 27, 2017</time></p>
+                        </div><!-- /end .teaser-inner -->
+                    </li><!-- /end .teaser -->
+                    <li class="teaser">
+
+                        <div class="teaser-inner">
+                            <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">Mobile &gt; Local</a></h3>
+
+                            <p>This article summarizes the historical development of major advances in human-computer interaction technology.</p>
+
+                            <p class="teaser-meta"><cite>Harvard Business Review</cite>, <time datetime="2017-09-27">Sept 27, 2017</time></p>
+                        </div><!-- /end .teaser-inner -->
+                    </li><!-- /end .teaser -->
+                    <li class="teaser">
+                        <div class="teaser-inner">
+                            <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">Mobile &gt; Local</a></h3>
+
+                            <p>This article summarizes the historical development of major advances in human-computer interaction technology.</p>
+
+                            <p class="teaser-meta"><cite>Harvard Business Review</cite>, <time datetime="2017-09-27">Sept 27, 2017</time></p>
+                        </div><!-- /end .teaser-inner -->
+                    </li><!-- /end .teaser -->
+                    <li class="teaser">
+                        <div class="teaser-inner">
+                            <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">Mobile &gt; Local</a></h3>
+
+                            <p>This article summarizes the historical development of major advances in human-computer interaction technology.</p>
+
+                            <p class="teaser-meta"><cite>Harvard Business Review</cite>, <time datetime="2017-09-27">Sept 27, 2017</time></p>
+                        </div><!-- /end .teaser-inner -->
+                    </li><!-- /end .teaser -->
+                    <li class="teaser">
+                        <div class="teaser-inner">
+                            <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">Mobile &gt; Local</a></h3>
+
+                            <p>This article summarizes the historical development of major advances in human-computer interaction technology.</p>
+
                             <p class="teaser-meta"><cite>Harvard Business Review</cite>, <time datetime="2017-09-27">Sept 27, 2017</time></p>
                         </div><!-- /end .teaser-inner -->
                     </li><!-- /end .teaser -->
@@ -81,15 +116,17 @@ require("inc/header.php" );
 
             <section class="group">
                 <header class="header-more">
-                    <h2 class="hed-section-sub">Accessibility</h2>
-                    <a class="link-more" href="#">Browse 11 more <span class="a11y">sources filed under “Accessibility”</span></a>
+                    <h2 class="hed-section-sub">About Karen</h2>
+                    <a class="link-more" href="#">Browse 27 more <span class="a11y">sources filed under “M-Dot Websites”</span></a>
                 </header>
 
-                <ol class="teaser-list sources-list">
+                <ol class="teaser-list">
                     <li class="teaser">
 
                         <div class="teaser-inner">
                             <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">Mobile &gt; Local</a></h3>
+
+                            <p>This article summarizes the historical development of major advances in human-computer interaction technology.</p>
 
                             <p class="teaser-meta"><cite>Harvard Business Review</cite>, <time datetime="2017-09-27">Sept 27, 2017</time></p>
                         </div><!-- /end .teaser-inner -->
@@ -98,37 +135,7 @@ require("inc/header.php" );
                         <div class="teaser-inner">
                             <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">Mobile &gt; Local</a></h3>
 
-                            <p class="teaser-meta"><cite>Harvard Business Review</cite>, <time datetime="2017-09-27">Sept 27, 2017</time></p>
-                        </div><!-- /end .teaser-inner -->
-                    </li><!-- /end .teaser -->
-                    <li class="teaser">
-                        <div class="teaser-inner">
-                            <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">Mobile &gt; Local</a></h3>
-
-                            <p class="teaser-meta"><cite>Harvard Business Review</cite>, <time datetime="2017-09-27">Sept 27, 2017</time></p>
-                        </div><!-- /end .teaser-inner -->
-                    </li><!-- /end .teaser -->
-                </ol><!-- /end .teaser-list -->
-            </section><!-- /end .group -->
-
-            <section class="group">
-                <header class="header-more">
-                    <h2 class="hed-section-sub">Content Strategy</h2>
-                    <a class="link-more" href="#">Browse 11 more <span class="a11y">sources filed under “Content Strategy”</span></a>
-                </header>
-
-                <ol class="teaser-list sources-list">
-                    <li class="teaser">
-                        <div class="teaser-inner">
-                            <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">Mobile &gt; Local</a></h3>
-                            <p class="teaser-meta"><cite>Harvard Business Review</cite>, <time datetime="2017-09-27">Sept 27, 2017</time></p>
-                        </div><!-- /end .teaser-inner -->
-                    </li><!-- /end .teaser -->
-                    <li class="teaser">
-                        <div class="teaser-inner">
-                            <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">Mobile &gt; Local</a></h3>
-
-                            <p>This article summarizes the historical development of major advances in human-computer interaction technology, emphasizing the pivotal role of university research in the advancement of the field.</p>
+                            <p>This article summarizes the historical development of major advances in human-computer interaction technology.</p>
 
                             <p class="teaser-meta"><cite>Harvard Business Review</cite>, <time datetime="2017-09-27">Sept 27, 2017</time></p>
                         </div><!-- /end .teaser-inner -->
@@ -136,6 +143,73 @@ require("inc/header.php" );
                     <li class="teaser">
                         <div class="teaser-inner">
                             <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">Mobile &gt; Local</a></h3>
+
+                            <p>This article summarizes the historical development of major advances in human-computer interaction technology.</p>
+
+                            <p class="teaser-meta"><cite>Harvard Business Review</cite>, <time datetime="2017-09-27">Sept 27, 2017</time></p>
+                        </div><!-- /end .teaser-inner -->
+                    </li><!-- /end .teaser -->
+                    <li class="teaser">
+
+                        <div class="teaser-inner">
+                            <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">Mobile &gt; Local</a></h3>
+
+                            <p>This article summarizes the historical development of major advances in human-computer interaction technology.</p>
+
+                            <p class="teaser-meta"><cite>Harvard Business Review</cite>, <time datetime="2017-09-27">Sept 27, 2017</time></p>
+                        </div><!-- /end .teaser-inner -->
+                    </li><!-- /end .teaser -->
+                    <li class="teaser">
+                        <div class="teaser-inner">
+                            <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">Mobile &gt; Local</a></h3>
+
+                            <p>This article summarizes the historical development of major advances in human-computer interaction technology.</p>
+
+                            <p class="teaser-meta"><cite>Harvard Business Review</cite>, <time datetime="2017-09-27">Sept 27, 2017</time></p>
+                        </div><!-- /end .teaser-inner -->
+                    </li><!-- /end .teaser -->
+                    <li class="teaser">
+                        <div class="teaser-inner">
+                            <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">Mobile &gt; Local</a></h3>
+
+                            <p>This article summarizes the historical development of major advances in human-computer interaction technology.</p>
+
+                            <p class="teaser-meta"><cite>Harvard Business Review</cite>, <time datetime="2017-09-27">Sept 27, 2017</time></p>
+                        </div><!-- /end .teaser-inner -->
+                    </li><!-- /end .teaser -->
+                    <li class="teaser">
+
+                        <div class="teaser-inner">
+                            <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">Mobile &gt; Local</a></h3>
+
+                            <p>This article summarizes the historical development of major advances in human-computer interaction technology.</p>
+
+                            <p class="teaser-meta"><cite>Harvard Business Review</cite>, <time datetime="2017-09-27">Sept 27, 2017</time></p>
+                        </div><!-- /end .teaser-inner -->
+                    </li><!-- /end .teaser -->
+                    <li class="teaser">
+                        <div class="teaser-inner">
+                            <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">Mobile &gt; Local</a></h3>
+
+                            <p>This article summarizes the historical development of major advances in human-computer interaction technology.</p>
+
+                            <p class="teaser-meta"><cite>Harvard Business Review</cite>, <time datetime="2017-09-27">Sept 27, 2017</time></p>
+                        </div><!-- /end .teaser-inner -->
+                    </li><!-- /end .teaser -->
+                    <li class="teaser">
+                        <div class="teaser-inner">
+                            <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">Mobile &gt; Local</a></h3>
+
+                            <p>This article summarizes the historical development of major advances in human-computer interaction technology.</p>
+
+                            <p class="teaser-meta"><cite>Harvard Business Review</cite>, <time datetime="2017-09-27">Sept 27, 2017</time></p>
+                        </div><!-- /end .teaser-inner -->
+                    </li><!-- /end .teaser -->
+                    <li class="teaser">
+                        <div class="teaser-inner">
+                            <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">Mobile &gt; Local</a></h3>
+
+                            <p>This article summarizes the historical development of major advances in human-computer interaction technology.</p>
 
                             <p class="teaser-meta"><cite>Harvard Business Review</cite>, <time datetime="2017-09-27">Sept 27, 2017</time></p>
                         </div><!-- /end .teaser-inner -->
@@ -145,7 +219,7 @@ require("inc/header.php" );
         </div><!-- /end .l-50-50 -->
 
         <div class="group-full">
-            <h2 class="hed-section-sub">Additional Sources</h2>
+            <h2 class="hed-section-sub">Additional Topics</h2>
 
             <ol class="sources-count-list">
                 <li>

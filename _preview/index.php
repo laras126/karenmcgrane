@@ -119,7 +119,11 @@ del {
                     <li><a href="tmpl-contact.php">Contact</a></li>
                     <li><a href="tmpl-entry.php">Article/entry detail</a></li>
                     <li><a href="tmpl-home.php">Homepage</a></li>
-                    <li><a href="tmpl-sources.php">Sources Landing</a></li>
+                    <li><a href="tmpl-testimonials.php">Testimonials</a></li>
+                    <li><a href="tmpl-landing-articles.php">Articles Landing</a></li>
+                    <li><a href="tmpl-landing-sources.php">Sources Landing</a></li>
+                    <li><a href="tmpl-landing-talks.php">Talks Landing</a></li>
+                    <li><a href="tmpl-landing-projects.php">Projects Landing</a></li>
                     <li><a href="tmpl-talk.php">Talk detail</a></li>
                 </ul>
             </li>

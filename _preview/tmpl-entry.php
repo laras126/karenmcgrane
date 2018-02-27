@@ -27,7 +27,7 @@ require("inc/header.php" );
                     <p>Here’s a brief summary. It could be long, it could be short, it could be full of lorem ipsum dolor sit amet, nihil accusantium laboriosam reprehenderit officia expedita illo maxime.</p>
 
                     <p class="lead-image full">
-                        <img src="http://fpoimg.com/1920x1080" alt="">
+                        <img src="http://fpoimg.com/1920x1080" alt="" />
                     </p>
 
                     <p>Just because someone is doing a search from a mobile device doesn’t make it a local search. And just because someone is looking for local content doesn’t imply they’re using a mobile device. Just because many local searches are from mobile devices does not imply that most mobile searches are for local information. If you’re a visual thinker, here’s a Venn diagram that may help:</p>
@@ -111,30 +111,54 @@ require("inc/header.php" );
                     <p>If I could prioritize the efforts of our community over the next 3-5 years, I’d spend 80% of our efforts on the problem of cleaning up our desktop content and getting it all (at least, all the good stuff) onto mobile. Let’s use our 20% experimental time to explore how to prioritize content differently based on what we think we can intuit about user intention based on device and location. And let’s give each of those problems the appropriate weight in our discussions.</p>
                 </section>
 
-                <section class="article-citations">
-                    <h2 class="hed-section-sub">Citations</h2>
+            <section class="article-citations">
+                <h2 class="hed-section-sub">Sources</h2>
 
-                    <ul class="teaser-list">
-                        <li class="teaser">
-                            <div class="teaser-inner">
-                                <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">Great Works of Fiction Presents: The Mobile Context</a></h3>
-                                <p class="teaser-meta">By Stephen Hay, <time datetime="2017-09-27">September 27, 2017</time></p>
-                            </div><!-- /end .teaser-inner -->
-                        </li><!-- /end .teaser -->
-                        <li class="teaser">
-                            <div class="teaser-inner">
-                                <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">Mobile SEO is a Myth</a></h3>
-                                <p class="teaser-meta"><cite>Search Engine Journal</cite>, <time datetime="2017-09-27">October 17, 2011</time></p>
-                            </div><!-- /end .teaser-inner -->
-                        </li><!-- /end .teaser -->
-                        <li class="teaser">
-                            <div class="teaser-inner">
-                                <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">A Third Citation Might Go Here</a></h3>
-                                <p class="teaser-meta">By Author Name for <cite>Publication Name</cite>, <time datetime="2017-09-27">September 27, 2017</time></p>
-                            </div><!-- /end .teaser-inner -->
-                        </li><!-- /end .teaser -->
-                    </ul>
-                </section>
+                <ul class="teaser-list">
+                    <li class="teaser">
+                        <div class="teaser-inner">
+                            <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">4 ways content management systems are evolving &amp; why it matters to journalists</a></h3>
+                            <p class="teaser-meta">Poynter, <time datetime="2011-06-13">June 13, 2011</time></p>
+                            <p>One of the easiest ways to understand how responsive and adaptive design differ is to consider it in terms of client versus server side delivery.</p>
+                        </div><!-- /end .teaser-inner -->
+                    </li><!-- /end .teaser -->
+                    <li class="teaser">
+                        <div class="teaser-inner">
+                            <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">Breaking Down Condé Nast’s E-Sales</a></h3>
+                            <p class="teaser-meta"><cite>Adweek</cite>, <time datetime="2011-08-02">August 2, 2011</time></p>
+                            <p>One of the easiest ways to understand how responsive and adaptive design differ is to consider it in terms of client versus server side delivery.</p>
+                        </div><!-- /end .teaser-inner -->
+                    </li><!-- /end .teaser -->
+                    <li class="teaser">
+                        <div class="teaser-inner">
+                            <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">Condé Nast Is Experiencing Technical Difficulties</a></h3>
+                            <p class="teaser-meta"><time datetime="2011-07-09">July 9, 2011</time></p>
+                            <p>One of the easiest ways to understand how responsive and adaptive design differ is to consider it in terms of client versus server side delivery.</p>
+                        </div><!-- /end .teaser-inner -->
+                    </li><!-- /end .teaser -->
+                    <li class="teaser">
+                        <div class="teaser-inner">
+                            <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">COPE: Create Once, Publish Everywhere</a></h3>
+                            <p class="teaser-meta">By Daniel Jacobson, <time datetime="2009-10-13">October 13, 2009</time></p>
+                            <p>One of the easiest ways to understand how responsive and adaptive design differ is to consider it in terms of client versus server side delivery.</p>
+                        </div><!-- /end .teaser-inner -->
+                    </li><!-- /end .teaser -->
+                    <li class="teaser">
+                        <div class="teaser-inner">
+                            <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">Managing Enterprise Content: A Unified Content Strategy</a></h3>
+                            <p class="teaser-meta">By Ann Rockley</p>
+                            <p>One of the easiest ways to understand how responsive and adaptive design differ is to consider it in terms of client versus server side delivery.</p>
+                        </div><!-- /end .teaser-inner -->
+                    </li><!-- /end .teaser -->
+                    <li class="teaser">
+                        <div class="teaser-inner">
+                            <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">Nimble Report</a></h3>
+                            <p class="teaser-meta">By Rachel Lovinger</p>
+                            <p>One of the easiest ways to understand how responsive and adaptive design differ is to consider it in terms of client versus server side delivery.</p>
+                        </div><!-- /end .teaser-inner -->
+                    </li><!-- /end .teaser -->
+                </ul>
+            </section>
             </article><!-- /end .group -->
 
         </div><!-- /end .l-sole -->

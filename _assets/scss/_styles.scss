@@ -116,9 +116,8 @@ Various and sundry grid layouts
     padding: 0.75em 0;
 }
 .tmpl-books .l-50-50 > .group {
-    border-top: none;
-    padding-top: 0;
     display: flex;
+    flex-direction: column;
 }
 @supports ( display: grid ) {
     @media (min-width: 40em) {
@@ -373,6 +372,8 @@ Page content
     font-weight: 800;
     line-height: 1.35;
     margin: 2em 0 1em;
+    padding: 0.25em 0;
+    text-transform: uppercase;
 }
 .hed-section-sub:first-child {
     margin-top: 0;
@@ -609,39 +610,50 @@ Entry styles
 .article-content > :first-child {
     margin-top: 0;
 }
-.article-content blockquote {
+blockquote {
     color: #444;
     font-size: 1.05em;
-    font-weight: 800;
-    margin: 2em 0;
+    margin: 2.5em 0;
+    padding-left: 4em;
+    position: relative;
 }
-.article-content blockquote:before,
-.article-content blockquote:after {
-    background: #444;
-    content: "";
+blockquote:before {
+    color: #444;
+    content: "“";
     display: block;
-    height: 0.5em;
-    margin: 1.5em 0;
-    max-width: 10em;
+    font-size: 5em;
+    font-style: italic;
+    font-weight: 800;
+    left: 0;
+    line-height: 1;
+    position: absolute;
+    top: 0;
 }
-.article-content blockquote address {
+.fonts-loaded blockquote:before {
+    top: -0.05em;
+}
+.article-content blockquote {
+    font-weight: 800;
+    padding-left: 0;
+}
+.article-content blockquote:before {
+    left: -0.75em;
+}
+blockquote address {
     color: #666;
     font-size: 0.9em;
     font-style: italic;
     font-weight: 400;
 }
 @media (min-width: 45em) {
-    .article-content blockquote {
-        padding-left: 0;
-    }
-    .article-content blockquote:before,
-    .article-content blockquote:after {
+    blockquote:before,
+    blockquote:after {
         margin-left: 0;
     }
-    .article-content blockquote address {
+    blockquote address {
         margin-left: 1.4em;
     }
-    .article-content blockquote address:before {
+    blockquote address:before {
         content: "—";
         margin-left: -1.3em;
     }
@@ -653,6 +665,14 @@ Entry styles
 .article-content h5,
 .article-content h6 {
     margin-top: 1.5em;
+}
+.article-content h2,
+.article-content h3,
+.article-content h4,
+.article-content h5,
+.article-content h6 {
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
 }
 .article-content code {
     color: #699BCD;
@@ -755,6 +775,42 @@ Entry styles
             margin-left: 5.263157894736842105%;    /* 40/760 */
             margin-right: -13.157894736842105263%;    /* 100/760 */
         }
+    }
+}
+
+
+
+/*
+
+Project list
+
+*/
+.list-projects {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+.list-projects li {
+    border-bottom: 1px solid #C0C0C0;
+    padding-top: 1.5em;
+    padding-bottom: 0.5em;
+}
+.hed-project {
+    font-size: 1em;
+    margin: 0;
+}
+@media ( min-width: 40em ) {
+    .list-projects li {
+        display: flex;
+    }
+    .hed-project {
+        flex: 1 0 5em;
+        margin-bottom: 1em;
+        padding-right: 1em;
+    }
+    .list-projects p {
+        flex: 1 0 75%;
+        margin-top: 0;
     }
 }
 
@@ -977,6 +1033,10 @@ Featured items (grid on homepage / section fronts)
 .region.list-featured {
     background: none;
     padding: 0;
+    margin: 2em 0;
+}
+.sect-home .region.list-featured {
+    margin: 0;
 }
 .list-featured,
 .list-featured li {
@@ -1036,44 +1096,48 @@ Featured items (grid on homepage / section fronts)
     color: #555;
 }
 // Featured items with images (i.e., talk excerpts)
-.featured-item.has-image {
+.featured-item.is-priority {
     margin: 1em 0;
     outline: 20px solid #1B082D;
 }
-.featured-item.has-image img {
+.featured-item.is-priority img {
     display: block;
     margin-bottom: 1em;
     width: 100%;
 }
 @media ( min-width: 40em ) {
-    .featured-item.has-image {
+    .featured-item.is-priority {
         display: grid;
         grid-template-columns: 1fr 2em 1fr;
         grid-column: 1 / -1;
         padding: 3vw 3.225806451612903225%;    /* 40 / 1240 */
     }
-    .featured-item.has-image .featured-content {
+    .featured-item.is-priority > p {
+        grid-column: 1 / -1;
+        max-width: 40em;
+    }
+    .featured-item.is-priority .featured-content {
         grid-column: 1;
         grid-row: 1;
     }
-    .featured-item.has-image img {
+    .featured-item.is-priority img {
         grid-column: 3;
         width: inherit;
     }
-    .featured-item.has-image .hed-featured {
+    .featured-item.is-priority .hed-featured {
         font-size: 1.5em;      /* 24/16 */
         line-height: 1.375;    /* 33/24 */
     }
-    .featured-item.has-image p {
+    .featured-item.is-priority p {
         font-size: 1.25em;    /* 20/16 */
         line-height: 1.35;    /* 27/20 */
     }
 }
 @media ( min-width: 56.25em ) {
-    .featured-item.has-image .featured-content {
+    .featured-item.is-priority .featured-content {
         grid-column: 3;
     }
-    .featured-item.has-image img {
+    .featured-item.is-priority img {
         grid-column: 1 / 2;
     }
 }

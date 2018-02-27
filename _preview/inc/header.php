@@ -8,7 +8,7 @@ $rootpath = $_SERVER['DOCUMENT_ROOT'];
 <head>
 <meta charset="utf-8" />
 
-<title><?php echo $pageTitle; ?><?php if ( $bodyClass !== "home" ) { ?> — Karen McGrane<?php } ?></title>
+<title><?php echo $pageTitle; ?><?php if ( isset( $bodyClass ) && $bodyClass !== "home" ) { ?> — Karen McGrane<?php } ?></title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 

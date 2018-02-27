@@ -41,7 +41,7 @@ require( "inc/header.php" );
                 <span class="meta-featured"><a href="#">Harvard Business Review</a>, June 17, March 4, 2016</span>
             </div><!-- /end .featured-content -->
         </li>
-        <li class="featured-item has-image">
+        <li class="featured-item is-priority">
             <img src="/wp-content/themes/karenmcgrane/_assets/fpo/slide-adaptive.png" alt="" />
             <div class="featured-content">
                 <h2><a class="hed-featured" href="#">Adaptive: Content, Context, and Controversy</a></h2>

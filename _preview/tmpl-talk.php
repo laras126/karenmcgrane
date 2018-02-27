@@ -90,68 +90,52 @@ require("inc/header.php" );
                         </div>
                     </li><!-- /end .slide -->
                 </ol><!-- /end .slide-list -->
-
-                <h3>Resources</h3>
-
-                <ol>
-                    <li><a href="https://bdconf.com/videos/jason-grigsby-the-immobile-web-bd-conf-april-2012/">The Immobile Web</a></li>
-                    <li><a href="http://qz.com/115304/google-is-preparing-for-screenless-computers/">Google is preparing for screenless computers</a></li>
-                    <li><a href="https://developers.google.com/glass/design/index">Google Glass UI Guidelines</a></li>
-                    <li><a href="http://www.impactlab.net/2008/09/12/the-ultimate-internet-toaster/">The Ultimate Internet Toaster</a></li>
-                    <li><a href="http://www.dailymail.co.uk/femail/article-2691777/Make-selfie-perfect-breakfast-New-novelty-toaster-burn-YOUR-face-bread.html">Make your selfie the perfect breakfast!</a></li>
-                    <li><a href="http://jonontech.com/2009/12/16/visions-of-jon-wcm-is-for-losers/">WCM is for Losers</a></li>
-                    <li><a href="http://www.newyorker.com/magazine/2011/05/16/creation-myth">Creation Myth</a></li>
-                    <li><a href="http://hyperland.com/TedCompOneLiners">Ted Nelson’s Computer Paradigm, Expressed as One-Liners</a></li>
-                    <li><a href="http://blog.intercom.io/why-cards-are-the-future-of-the-web/">Why cards are the future of the web</a></li>
-                    <li><a href="https://www.lullabot.com/blog/podcasts/insert-content-here/14-jared-stoneberg-and-lark-cookbook">Jared Stoneberg and The Lark Cookbook</a></li>
-                    <li><a href="http://www.niemanlab.org/2014/05/the-leaked-new-york-times-innovation-report-is-one-of-the-key-documents-of-this-media-age/">The leaked NY Times Innovation Report</a></li>
-                    <li><a href="http://www.washingtonpost.com/blogs/wonkblog/wp/2014/05/08/the-solutions-to-all-our-problems-may-be-buried-in-pdfs-that-nobody-reads/">The solutions to all our problems may be buried in PDFs that nobody reads</a></li>
-                    <li><a href="http://alistapart.com/article/battle-for-the-body-field">The Battle for the Body Field</a></li>
-                    <li><a href="http://alistapart.com/article/content-modelling-a-master-skill">Content Modelling: A Master Skill</a></li>
-                    <li><a href="www.clevegibbon.com/content-modeling/">Content Modeling Series by Cleve Gibbon</a></li>
-                    <li><a href="https://www.lullabot.com/blog/article/deblobbing-your-chunks-building-flexible-content-model">Deblobbing your chunks: Building a flexible content model</a></li>
-                </ol>
-
             </section>
 
             <section class="article-citations">
-                <h2 class="hed-section-sub">Citations</h2>
+                <h2 class="hed-section-sub">Sources</h2>
 
                 <ul class="teaser-list">
                     <li class="teaser">
                         <div class="teaser-inner">
                             <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">4 ways content management systems are evolving &amp; why it matters to journalists</a></h3>
                             <p class="teaser-meta">Poynter, <time datetime="2011-06-13">June 13, 2011</time></p>
+                            <p>One of the easiest ways to understand how responsive and adaptive design differ is to consider it in terms of client versus server side delivery.</p>
                         </div><!-- /end .teaser-inner -->
                     </li><!-- /end .teaser -->
                     <li class="teaser">
                         <div class="teaser-inner">
                             <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">Breaking Down Condé Nast’s E-Sales</a></h3>
                             <p class="teaser-meta"><cite>Adweek</cite>, <time datetime="2011-08-02">August 2, 2011</time></p>
+                            <p>One of the easiest ways to understand how responsive and adaptive design differ is to consider it in terms of client versus server side delivery.</p>
                         </div><!-- /end .teaser-inner -->
                     </li><!-- /end .teaser -->
                     <li class="teaser">
                         <div class="teaser-inner">
                             <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">Condé Nast Is Experiencing Technical Difficulties</a></h3>
                             <p class="teaser-meta"><time datetime="2011-07-09">July 9, 2011</time></p>
+                            <p>One of the easiest ways to understand how responsive and adaptive design differ is to consider it in terms of client versus server side delivery.</p>
                         </div><!-- /end .teaser-inner -->
                     </li><!-- /end .teaser -->
                     <li class="teaser">
                         <div class="teaser-inner">
                             <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">COPE: Create Once, Publish Everywhere</a></h3>
                             <p class="teaser-meta">By Daniel Jacobson, <time datetime="2009-10-13">October 13, 2009</time></p>
+                            <p>One of the easiest ways to understand how responsive and adaptive design differ is to consider it in terms of client versus server side delivery.</p>
                         </div><!-- /end .teaser-inner -->
                     </li><!-- /end .teaser -->
                     <li class="teaser">
                         <div class="teaser-inner">
                             <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">Managing Enterprise Content: A Unified Content Strategy</a></h3>
                             <p class="teaser-meta">By Ann Rockley</p>
+                            <p>One of the easiest ways to understand how responsive and adaptive design differ is to consider it in terms of client versus server side delivery.</p>
                         </div><!-- /end .teaser-inner -->
                     </li><!-- /end .teaser -->
                     <li class="teaser">
                         <div class="teaser-inner">
                             <h3 class="hed-teaser"><a class="hed-teaser-link" href="#">Nimble Report</a></h3>
                             <p class="teaser-meta">By Rachel Lovinger</p>
+                            <p>One of the easiest ways to understand how responsive and adaptive design differ is to consider it in terms of client versus server side delivery.</p>
                         </div><!-- /end .teaser-inner -->
                     </li><!-- /end .teaser -->
                 </ul>

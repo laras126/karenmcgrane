@@ -3,7 +3,7 @@
 <footer id="footer" class="region site-footer">
     <p>
         <a href="#www-karenmcgrane-com">Back to top</a>.
-    <?php if ( strpos ( $bodyClass, "sect-home" ) === false ) { ?>
+    <?php if ( isset( $bodyClass ) && strpos( $bodyClass, "sect-home" ) === false ) { ?>
         <a href="tmpl-home.php">Go home</a>.
     <?php } ?>
     </p>
