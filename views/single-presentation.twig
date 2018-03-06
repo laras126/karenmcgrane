@@ -18,13 +18,11 @@
 
 			<section class="article-content">
 				<h3>Video</h3>
-
 				<div class="embed-vimeo">
 					{{ post.video }}
 				</div>
 
 				<h3>Slides</h3>
-
 				{{ post.slides }}
 
 				<h3>Transcript</h3>
@@ -41,7 +39,7 @@
 										alt="{{ img.title }}">
 								</p>
 								<div class="slide-content">
-										<p>{{ slide.text }}</p>
+										{{ slide.text }}
 								</div>
 						</li><!-- /end .slide -->
 					{% endfor %}
