@@ -33,16 +33,18 @@
                     {{ post.content }}
                 </section>
 
-                <section class="article-citations">
-                    <h2 class="hed-section-sub">Citations</h2>
+                {% if post.get_field('citations') %}
+                    <section class="article-citations">
+                        <h2 class="hed-section-sub">Citations</h2>
 
-                    <ul class="teaser-list">
-                        {% for post in post.get_field('citations') %}
-                            {% include 'partials/tease-source.twig' %}
-                        {% endfor %}
-                    </ul>
+                        <ul class="teaser-list">
+                            {% for post in post.get_field('citations') %}
+                                {% include 'partials/tease-source.twig' %}
+                            {% endfor %}
+                        </ul>
 
-                </section>
+                    </section>
+                {% endif %}
 
             </article><!-- /end .group -->
 
