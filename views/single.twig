@@ -22,7 +22,7 @@
                 </header>
 
                 <section class="article-content">
-                    <p>{{ post.header_summary }}</p>
+                    {{ post.header_summary ? '<p>' ~ post.header_summary ~ '</p>'}}
                     <p class="lead-image full">
                     {% set img = TimberImage(post.header_image) %}
                     <img src="{{ img.src }}"
