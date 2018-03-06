@@ -11,7 +11,7 @@
                     <div class="article-meta">
                         {% if post.connected_source %}
                             {% set source = TimberPost(post.connected_source) %}
-                            <p>An <a href="#">article</a> originally published in <a href="{{ source.source_url }}">{{ source.source_publication }}</a>.</p>
+                            <p>An <a href="{{ post.permalink }}">article</a> originally published in <a href="{{ source.source_url }}">{{ source.source_publication }}</a>.</p>
                         {% endif %}
                     </div>
                 </footer>
