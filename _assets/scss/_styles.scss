@@ -257,30 +257,38 @@ body .region.site-nav {
     font-size: 0.8em;
     font-weight: 300;
     letter-spacing: 0.075em;
-    opacity: 0.6;
     text-transform: uppercase;
-    transition: opacity 0.2s;
 }
 .nav-list a:hover,
 .nav-list a:focus,
 .nav-list [ aria-describedby="current-page" ] a {
-    opacity: 1;
     text-transform: uppercase;
 }
 .nav-list [ aria-describedby="current-page" ] a {
     cursor: default;
     font-style: italic;
 }
-.nav-list img {
-    transition: transform 0.2s;
+.nav-icon {
+    display: block;
+    fill: #C0ABD2;
+    margin-bottom: 2em;
+    transition: fill 0.2s, transform 0.2s;
     transform-origin: 50% 100%;
+    width: 100%;
+    height: auto;
 }
-.nav-list a:hover img,
-.nav-list a:focus img {
+.nav-icon path {
+    fill: inherit;
+}
+a:hover .nav-icon,
+a:focus .nav-icon {
+    fill: #DABCF5;
     transform: scale( 1.15 ) translateY( -0.15em );
 }
-.nav-list [ aria-describedby="current-page" ] a:hover img,
-.nav-list [ aria-describedby="current-page" ] a:focus img {
+[ aria-describedby="current-page" ] .nav-icon,
+[ aria-describedby="current-page" ] a:hover .nav-icon,
+[ aria-describedby="current-page" ] a:focus .nav-icon {
+    fill: #FFF;
     transform: none;
 }
 @supports ( display: flex ) {
@@ -298,7 +306,7 @@ body .region.site-nav {
         flex: 1;
         flex-direction: column;
     }
-    .nav-list img {
+    .nav-icon {
         flex: 1;
     }
     @media ( min-width: 40em ) {
@@ -910,14 +918,11 @@ Compact nav (homepage lead-in)
 }
 .nav-compact a {
     color: #FFFFF0;
-    opacity: 0.6;
     text-transform: uppercase;
-    transition: opacity 0.2s;
+    transition: color 0.2s;
 }
-.nav-compact a:hover,
-.nav-compact a:focus {
-    opacity: 1;
-}
+
+
 
 /*
 
