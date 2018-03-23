@@ -2,7 +2,7 @@ svg.nav-icon {
   fill: $nav-color;
 }
 
-a:hover svg path.color-swap, .nav-icon path a:focus {
+a:hover svg path.color-swap, a:hover svg g.color-swap, .nav-icon path a:focus {
   fill: lighten($nav-color, 15%);
 }
 
