@@ -1,0 +1,155 @@
+svg.nav-icon {
+  fill: #C0ABD2;
+}
+
+a:hover svg path.color-swap {
+  fill: #fff; /* temp style, perhaps lighten fill */
+}
+
+svg.nav-icon path {
+  transition: fill 0.25s ease;
+}
+
+.on {
+  display: none;
+}
+a:hover .on {
+  display: block;
+}
+a:hover .off {
+  display: none;
+}
+.rotate-left,
+.rotate-right {
+  animation: rotate1 12s infinite linear;
+  animation-play-state: paused;
+}
+a:hover .rotate-left {
+  animation: rotate1 12s infinite linear;
+  animation-play-state: playing;
+}
+a:hover .rotate-right {
+  animation: rotate1 12s infinite linear;
+  animation-play-state: playing;
+}
+.rotate-left {
+  transform-origin: 148px 133px;
+}
+.rotate-right {
+  transform-origin: 378px 133px;
+}
+a:hover .flicker {
+  animation: flicker 0.3s linear;
+}
+@media (prefers-reduced-motion: reduce) {
+  a:hover .flicker {
+    animation: none !important;
+  }
+  .blink {
+    animation: none !important;
+  }
+}
+a:hover .turn {
+  transform: rotate(-40deg);
+  transform-origin: 400px 180px;
+  transition: transform 0.2s ease-in-out;
+}
+a:hover .move-right {
+  transform: translate(-15px, 0);
+}
+a:hover .move-left {
+  transform: translate(10px, 0);
+}
+.move-left,
+.move-right {
+  transition: all 0.15s ease;
+}
+
+.blink {
+  animation: blink-animation 0.2s steps(5, start) infinite;
+}
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+
+@keyframes rotate1 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 0.27861;
+  }
+  5% {
+    opacity: 0.34769;
+  }
+  10% {
+    opacity: 0.23604;
+  }
+  15% {
+    opacity: 0.90626;
+  }
+  20% {
+    opacity: 0.18128;
+  }
+  25% {
+    opacity: 0.83891;
+  }
+  30% {
+    opacity: 0.65583;
+  }
+  35% {
+    opacity: 0.67807;
+  }
+  40% {
+    opacity: 0.26559;
+  }
+  45% {
+    opacity: 0.84693;
+  }
+  50% {
+    opacity: 0.96019;
+  }
+  55% {
+    opacity: 0.08594;
+  }
+  60% {
+    opacity: 0.20313;
+  }
+  65% {
+    opacity: 0.71988;
+  }
+  70% {
+    opacity: 0.53455;
+  }
+  75% {
+    opacity: 0.37288;
+  }
+  80% {
+    opacity: 0.71428;
+  }
+  85% {
+    opacity: 0.70419;
+  }
+  90% {
+    opacity: 0.7003;
+  }
+  95% {
+    opacity: 0.36108;
+  }
+  100% {
+    opacity: 0.24387;
+  }
+}
