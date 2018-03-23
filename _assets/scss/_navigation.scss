@@ -1,9 +1,9 @@
 svg.nav-icon {
-  fill: #C0ABD2;
+  fill: $nav-color;
 }
 
 a:hover svg path.color-swap {
-  fill: #fff; /* temp style, perhaps lighten fill */
+  fill: lighten($nav-color, 15%);
 }
 
 svg.nav-icon path {
