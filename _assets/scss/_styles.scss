@@ -270,20 +270,12 @@ body .region.site-nav {
 }
 .nav-icon {
     display: block;
-    fill: #C0ABD2;
     margin-bottom: 2em;
-    transition: fill 0.2s, transform 0.2s;
-    transform-origin: 50% 100%;
     width: 100%;
     height: auto;
 }
 .nav-icon path {
     fill: inherit;
-}
-a:hover .nav-icon,
-a:focus .nav-icon {
-    fill: #DABCF5;
-    transform: scale( 1.15 ) translateY( -0.15em );
 }
 [ aria-describedby="current-page" ] .nav-icon,
 [ aria-describedby="current-page" ] a:hover .nav-icon,
@@ -305,9 +297,6 @@ a:focus .nav-icon {
         display: flex;
         flex: 1;
         flex-direction: column;
-    }
-    .nav-icon {
-        flex: 1;
     }
     @media ( min-width: 40em ) {
         .site-mast nav,
@@ -331,6 +320,79 @@ a:focus .nav-icon {
             align-self: flex-end;
         }
     }
+}
+
+svg.nav-icon {
+    fill: $nav-color;
+}
+a:hover svg path.color-swap,
+a:hover svg g.color-swap,
+.nav-icon path a:focus {
+    fill: lighten( $nav-color, 15% );
+}
+
+.nav-icon path {
+    transition: fill 0.25s ease;
+}
+
+.key-on,
+a:hover .key-off,
+a:focus .key-off {
+    display: none;
+}
+a:hover .key-on,
+a:focus .key-on {
+    display: block;
+}
+// “Rotate” animation (used in Sources icon)
+.rotate-left,
+.rotate-right {
+    animation: rotating 12s infinite linear;
+    animation-play-state: paused;
+}
+.rotate-left {
+    transform-origin: 148px 133px;
+}
+.rotate-right {
+    transform-origin: 378px 133px;
+}
+a:hover .rotate-left,
+a:focus .rotate-left,
+a:focus .rotate-right,
+a:hover .rotate-right {
+    animation: rotating 12s infinite linear;
+    animation-play-state: playing;
+}
+// “Flicker” animation (used in Talks icon)
+a:hover .flicker,
+a:focus .flicker {
+    animation: flicker 0.3s linear;
+}
+@media ( prefers-reduced-motion: reduce ) {
+    a:hover .flicker,
+    a:focus .flicker,
+    .blink {
+        animation: none;
+    }
+}
+a:hover .turn {
+    transform: rotate(-40deg);
+    transform-origin: 400px 180px;
+    transition: transform 0.2s ease-in-out;
+}
+a:hover .move-right {
+    transform: translate(-15px, 0);
+}
+a:hover .move-left {
+    transform: translate(10px, 0);
+}
+.move-left,
+.move-right {
+    transition: all 0.15s ease;
+}
+
+.blink {
+    animation: blink-animation 0.2s steps(5, start) infinite;
 }
 
 
