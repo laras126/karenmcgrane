@@ -13,7 +13,9 @@ Core app styles
 
 */
 @import "variables";
+@import "mixins";
+@import "animations";
 @import "type";
 // This is FPO; once the system’s gelled a bit more, we’ll break this down to smaller, more discrete partials
 @import "styles";
-@import "navigation";
+
