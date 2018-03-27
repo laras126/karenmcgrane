@@ -921,9 +921,10 @@ li.slide {
 @media ( min-width: 50em ) {
     li.slide {
         display: flex;
+        flex-direction: row-reverse;
+        margin: 0 0 3em;
         padding-bottom: 2.5em;
         position: relative;
-        margin: 0 0 3em;
     }
     li.slide:after {
         border-bottom: 1px solid #C0C0C0;
@@ -942,7 +943,7 @@ li.slide {
     }
     .slide-content {
         flex: 1 0 65%;
-        margin-left: 3%;
+        margin-right: 3%;
         order: 2;
     }
     .slide-content > :last-child {
