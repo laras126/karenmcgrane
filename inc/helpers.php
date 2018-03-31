@@ -1,11 +1,11 @@
 <?php
 
 /**
-   * Helper function to prepare a sources module for a category
-   * @param string slug of the category term
-   * @var int $POSTS_NUM Constant for number of posts to return
-   * @return array An array data to be used in the template
-   */
+ * Helper function to prepare a sources module for a category
+ * @param string slug of the category term
+ * @var int $POSTS_NUM Constant for number of posts to return
+ * @return array An array data to be used in the template
+ */
 
 function kmg_get_sources_module_data($slug) {
 
