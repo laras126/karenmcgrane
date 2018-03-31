@@ -11,7 +11,7 @@
                     <div class="article-meta">
                         {% if post.connected_source %}
                             {% set source = TimberPost(post.connected_source) %}
-                            <p>An <a href="#">article</a> originally published in <a href="{{ source.source_url }}">{{ source.source_publication }}</a>.</p>
+                            <p>An <a href="{{ post.permalink }}">article</a> originally published in <a href="{{ source.source_url }}">{{ source.source_publication }}</a>.</p>
                         {% endif %}
                     </div>
                 </footer>
@@ -22,7 +22,7 @@
                 </header>
 
                 <section class="article-content">
-                    <p>{{ post.header_summary }}</p>
+                    {{ post.header_summary ? '<p>' ~ post.header_summary ~ '</p>'}}
                     <p class="lead-image full">
                     {% set img = TimberImage(post.header_image) %}
                     <img src="{{ img.src }}"
@@ -33,16 +33,18 @@
                     {{ post.content }}
                 </section>
 
-                <section class="article-citations">
-                    <h2 class="hed-section-sub">Citations</h2>
+                {% if post.get_field('citations') %}
+                    <section class="article-citations">
+                        <h2 class="hed-section-sub">Citations</h2>
 
-                    <ul class="teaser-list">
-                        {% for post in post.get_field('citations') %}
-                            {% include 'partials/tease-source.twig' %}
-                        {% endfor %}
-                    </ul>
+                        <ul class="teaser-list">
+                            {% for post in post.get_field('citations') %}
+                                {% include 'partials/tease-source.twig' %}
+                            {% endfor %}
+                        </ul>
 
-                </section>
+                    </section>
+                {% endif %}
 
             </article><!-- /end .group -->
 

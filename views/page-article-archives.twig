@@ -1,0 +1,35 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+<div class="region content-main">
+	<div class="l-sole">
+		<div class="group">
+			<h2 class="hed-lead">Articles</h2>
+			<ol class="teaser-list">
+				{% for post in articles %}
+					{% include ['partials/tease-'~post.post_type~'.twig', 'partials/tease.twig'] %}
+				{% endfor %}
+			</ol>
+			<a class="link-more" href="{{ fn('get_post_type_archive_link', 'article') }}">See all articles</a>
+		</div>
+		<div class="group">
+			<h2 class="hed-lead">Posts</h2>
+			<ol class="teaser-list">
+				{% for post in articles %}
+					{% include ['partials/tease-'~post.post_type~'.twig', 'partials/tease.twig'] %}
+				{% endfor %}
+			</ol>
+			<a class="link-more" href="{{ fn('get_post_type_archive_link', 'post') }}">See all posts</a>
+		</div>
+		<div class="group">
+			<h2 class="hed-lead">About Karen</h2>
+			<ol class="teaser-list">
+				{% for post in sources %}
+					{% include ['partials/tease-'~post.post_type~'.twig', 'partials/tease.twig'] %}
+				{% endfor %}
+			</ol>
+			<a class="link-more" href="{{ fn('get_post_type_archive_link', 'source') }}">See all sources</a>
+		</div>
+	</div>
+{% endblock %}
