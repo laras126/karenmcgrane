@@ -5,6 +5,22 @@ redistribute, convert, modify or reverse engineer this font software. Please con
 Imaging with any questions regarding Web Fonts:  http://www.fonts.com
 */
 
+/* Avenir Book (300) */
+@font-face {
+    font-family: "Avenir W01";
+    src: url( "/wp-content/themes/karenmcgrane/dist/assets/type/065a6b14-b2cc-446e-9428-271c570df0d9.woff2" ) format( "woff2" ),
+         url( "/wp-content/themes/karenmcgrane/dist/assets/type/65d75eb0-2601-4da5-a9a4-9ee67a470a59.woff" ) format( "woff" );
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "Avenir W01";
+    src: url( "/wp-content/themes/karenmcgrane/dist/assets/type/476612d9-282d-4f76-95cd-b4dd31e7ed21.woff2" ) format( "woff2" ),
+         url( "/wp-content/themes/karenmcgrane/dist/assets/type/f1ebae2b-5296-4244-8771-5f40e60a564a.woff" ) format( "woff" );
+    font-style: oblique;
+    font-weight: 300;
+}
+
 /* Avenir Roman (400) */
 @font-face {
     font-family: "Avenir W01";
@@ -19,6 +35,14 @@ Imaging with any questions regarding Web Fonts:  http://www.fonts.com
          url( "/wp-content/themes/karenmcgrane/dist/assets/type/cdda031e-26e9-4269-83d1-5a218caa10db.woff" ) format( "woff" );
     font-style: oblique;
     font-weight: 400;
+}
+
+@font-face {
+    font-family: "Avenir W01";
+    src: url( "/wp-content/themes/karenmcgrane/dist/assets/type/695a9fa5-9f57-4800-9993-3684d520f107.woff2" ) format( "woff2" ),
+         url( "/wp-content/themes/karenmcgrane/dist/assets/type/e0af2f49-a399-482b-a54e-d745e268ec80.woff" ) format( "woff" );
+    font-style: oblique;
+    font-weight: 500;
 }
 
 /* Avenir Heavy (800) */

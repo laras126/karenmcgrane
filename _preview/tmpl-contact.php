@@ -1,6 +1,6 @@
 <?php
 $rootpath = $_SERVER['DOCUMENT_ROOT'];
-$bodyClass = "contact";
+$bodyClass = "sect-contact";
 $pageTitle = "Contact Karen";
 
 require("inc/header.php" );
@@ -9,26 +9,26 @@ require("inc/header.php" );
     <div class="region content-main">
         <div class="l-sole">
             <div class="group">
-                <h2 class="hed-section-sub">Contact Karen.</h2>
+                <h2 class="hed-section-sub">Contact Karen</h2>
 
                 <form class="contact-form" action="/contact/">
                     <p>
-                        <label for="contact-name">Name:</label>
+                        <label for="contact-name">Name</label>
                         <input id="contact-name" name="contact-name" type="text" required />
                     </p>
 
                     <p>
-                        <label for="contact-email">Email:</label>
+                        <label for="contact-email">Email</label>
                         <input id="contact-email" name="contact-email" type="email" required />
                     </p>
 
                     <p>
-                        <label for="contact-subject">Subject:</label>
+                        <label for="contact-subject">Subject</label>
                         <input id="contact-subject" name="contact-subject" type="email" />
                     </p>
 
                     <p>
-                        <label for="contact-body">Message:</label>
+                        <label for="contact-body">Message</label>
                         <textarea id="contact-body" name="contact-body" cols="30" rows="10" required></textarea>
                     </p>
 
@@ -36,7 +36,7 @@ require("inc/header.php" );
 
                 </form><!-- /end .contact-form -->
 
-                <h2 class="hed-section-sub">Connect with Karen:</h2>
+                <h2 class="hed-section-sub">Connect with Karen</h2>
 
                 <ul class="links-social">
                     <li><a href="#"><img src="/wp-content/themes/karenmcgrane/dist/assets/svg/icon-twitter.svg" alt="Twitter" /></a></li>
@@ -44,7 +44,14 @@ require("inc/header.php" );
                     <li><a href="#"><img src="/wp-content/themes/karenmcgrane/dist/assets/svg/icon-facebook.svg" alt="Facebook" /></a></li>
                 </ul><!-- /end .links-social -->
 
-                <h2 class="hed-section-sub">Assets:</h2>
+                <h2 class="hed-section-sub">Clients</h2>
+
+                <ul>
+                    <li><a href="#">Past Projects</a></li>
+                    <li><a href="#">Testimonials</a></li>
+                </ul>
+
+                <h2 class="hed-section-sub">Assets</h2>
 
                 <ul>
                     <li><a href="#">B&amp;W Web Headshot</a></li>
@@ -53,15 +60,15 @@ require("inc/header.php" );
                     <li><a href="#">Color Print Headshot</a></li>
                 </ul>
 
-                <h2 class="hed-section-sub">Short Bio:</h2>
+                <h2 class="hed-section-sub">Short Bio</h2>
 
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.</p>
 
-                <h2 class="hed-section-sub">Medium Bio:</h2>
+                <h2 class="hed-section-sub">Medium Bio</h2>
 
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.</p>
 
-                <h3>Long Bio:</h3>
+                <h3>Long Bio</h3>
 
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.</p>
 

@@ -16,14 +16,13 @@ gulp.task( 'serve', function() {
 
     browserSync.init( {
         proxy: _config.host,
-        port: 8080,
         watchTask: true
     } );
 
     gulp.watch( _config.dir.input + "scss/**/*.scss", [ 'sass' ] );
     gulp.watch( _config.dir.input + "js/**/*", [ "js" ] );
     gulp.watch( [
-        "*.php",
+        "_preview/**/*.php",
         "views/*.twig"
     ] ).on( 'change', browserSync.reload );
 
@@ -89,7 +88,7 @@ gulp.task( "sass", function() {
             browsers: 'last 3 versions'
         } ) )
         .pipe( gulp.dest( _config.dir.output + "css/" ) )
-        .pipe( browserSync.stream() );;
+        .pipe( browserSync.stream() );
 } );
 
 gulp.task( "default", [

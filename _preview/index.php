@@ -6,7 +6,7 @@
 <head>
 <meta charset="utf-8" />
 
-<title>Karen’s Website, 2017</title>
+<title>Karen’s Website, 2018</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -56,6 +56,10 @@ time {
 a {
     color: #FFF;
 }
+a:hover,
+a:focus {
+    color: #CCC;
+}
 .deliverables {
     margin-top: 2em;
 }
@@ -94,6 +98,9 @@ a {
 .deliverables ul ul {
     margin: 0.5em 1em;
 }
+del {
+    opacity: 0.4;
+}
 </style>
 
 </head>
@@ -102,7 +109,7 @@ a {
 
 <div class="content">
     <nav>
-        <h1>Karen’s Website, 2017</h1>
+        <h1>Karen’s Website, <del>2017</del> 2018</h1>
         <ol class="deliverables">
             <li>
                 <h2>Prototypes</h2>
@@ -112,7 +119,11 @@ a {
                     <li><a href="tmpl-contact.php">Contact</a></li>
                     <li><a href="tmpl-entry.php">Article/entry detail</a></li>
                     <li><a href="tmpl-home.php">Homepage</a></li>
-                    <li><a href="tmpl-sources.php">Sources Landing</a></li>
+                    <li><a href="tmpl-testimonials.php">Testimonials</a></li>
+                    <li><a href="tmpl-landing-articles.php">Articles Landing</a></li>
+                    <li><a href="tmpl-landing-sources.php">Sources Landing</a></li>
+                    <li><a href="tmpl-landing-talks.php">Talks Landing</a></li>
+                    <li><a href="tmpl-landing-projects.php">Projects Landing</a></li>
                     <li><a href="tmpl-talk.php">Talk detail</a></li>
                 </ul>
             </li>

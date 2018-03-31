@@ -7,14 +7,14 @@
 
 <nav>
 
-  <ul class="site-nav">
+  <ul class="nav-list">
     {% for item in menu.items %}
       {# TODO: look into aria-describedby per beep's mock:
-      <li <?php if ($bodyClass == "articles") { ?> aria-describedby="current-page"<?php } ?>>
+      <li class="nav-item"<?php if ( strpos ( $bodyClass, "sect-talks" ) !== false ) { ?> aria-describedby="current-page"<?php } ?>>
       #}
-      <li>
+      <li class="nav-item">
         <a href="{{item.link}}">
-          <img src="{{site.theme.link}}/dist/assets/svg/{{item.title|lower|replace({ (space):dash })|replace({ (dot): dash })}}.svg" alt="Icon for {{item.title}}" />
+          <img src="{{site.theme.link}}/dist/assets/svg/{{item.title|lower|replace({ (space):dash })|replace({ (dot): dash })}}.svg" alt="" />
           {{item.title}}
         </a>
       </li>
