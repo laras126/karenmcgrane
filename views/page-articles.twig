@@ -1,0 +1,33 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+<div class="region content-main">
+	<h1 class="hed-lead">Articles</h1>
+
+	<div class="l-50-50">
+		<section class="group">
+				<header class="header-more">
+					<h2 class="hed-section-sub">By Karen</h2>
+
+					<a class="link-more" href="#">Browse 64 more <span class="a11y">sources filed under “Mobile-only Users”</span></a>
+				</header>
+
+				<ol class="teaser-list">
+				{% for post in posts %}
+					<li class="teaser">
+						<div class="teaser-inner">
+							<h3 class="hed-teaser"><a class="hed-teaser-link" href="{{ post.link }}">{{ post.title }}</a></h3>
+							<p>{{ post.header_tagline }}</p>
+
+							{% if post.connected_source %}
+								{% set source = TimberPost(post.connected_source) %}
+								<p class="teaser-meta"><cite>{{ source.source_publication }}</cite>, <time datetime="{{source.source_date|date('Y-m-d')}}">{{source.source_date|date('F j, Y')}}</time></p>
+							{% endif %}
+						</div><!-- /end .teaser-inner -->
+					</li><!-- /end .teaser -->
+				{% endfor %}
+        </ol>
+			</div><!-- /end .group -->
+    </div><!-- /end .region.content-main.has-index -->
+{% endblock %}
