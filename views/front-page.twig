@@ -22,7 +22,7 @@
 	{% endfor %}
 
 	<li class="featured-item is-priority">
-		<img src="{{TimberImage(featured_talk.thumbnail).src}}" alt="" />
+		<img src="{{TimberImage(featured_talk.thumbnail).src}}" alt="{{TimberImage(featured_talk.thumbnail).alt}}" />
 		<div class="featured-content">
 			<h2><a class="hed-featured" href="{{ featured_talk.link }}">{{ featured_talk.title }}</a></h2>
 			<p>{{ featured_talk.header_tagline }} <a class="read-more" href="{{ featured_talk.link }}">Read more</a></p>
