@@ -14,7 +14,7 @@ if ( ! class_exists( 'Timber' ) ) {
 
 Timber::$dirname = array('templates', 'views');
 
-class StarterSite extends TimberSite {
+class KMGSite extends TimberSite {
 
 	function __construct() {
 		add_theme_support( 'post-formats' );
@@ -50,6 +50,7 @@ class StarterSite extends TimberSite {
 		$context['menu'] = new TimberMenu();
 		$context['site'] = $this;
 		$context['initial_js'] = file_get_contents(get_template_directory() . '/dist/assets/js/initial.js');
+
 		return $context;
 	}
 
@@ -60,7 +61,8 @@ class StarterSite extends TimberSite {
 
 }
 
-new StarterSite();
+new KMGSite();
+
 
 /*
 
@@ -78,3 +80,17 @@ function kmg_add_custom_types_to_category( $query ) {
 	}
 }
 add_filter( 'pre_get_posts', 'kmg_add_custom_types_to_category' );
+
+
+
+/*
+ * Get file contents from an SVG
+ * @param string | name of menu item that must match name of SVG file
+ * @return string | SVG markup
+ */
+
+function kmg_get_menu_icon($item) {
+	$name = strtolower($item);
+	$icon = file_get_contents(get_template_directory() . '/inc/svg/' . $name .'.svg');
+	return $icon;
+}
