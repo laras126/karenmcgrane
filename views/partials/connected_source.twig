@@ -1,0 +1,4 @@
+{% if item.connected_source %}
+	{% set source = TimberPost(item.connected_source) %}
+	<span class="meta-featured"><a href="{{ source.source_url }}">{{ source.source_publication }}</a>, {{source.source_date|date('F j, Y')}}</p>
+{% endif %}

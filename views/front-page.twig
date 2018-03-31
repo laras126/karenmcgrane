@@ -10,6 +10,46 @@
 	</div>
 </section>
 
+<ol class="region list-featured">
+	{% for post in featured_posts|slice(0,2) %}
+	<li class="featured-item">
+		<div class="featured-content">
+			<h2><a class="hed-featured" href="{{post.link}}">{{post.title}}</a></h2>
+			<p>{{post.header_tagline}} <a class="read-more" href="{{post.link}}">Read more</a></p>
+			{% include 'partials/connected_source.twig' with { item: post } %}
+		</div><!-- /end .featured-content -->
+	</li>
+	{% endfor %}
+
+	<li class="featured-item is-priority">
+		<img src="{{TimberImage(featured_talk.thumbnail).src}}" alt="" />
+		<div class="featured-content">
+			<h2><a class="hed-featured" href="{{ featured_talk.link }}">{{ featured_talk.title }}</a></h2>
+			<p>{{ featured_talk.header_tagline }} <a class="read-more" href="{{ featured_talk.link }}">Read more</a></p>
+			{% include 'partials/connected_source.twig' with { item: featured_talk } %}
+		</div><!-- /end .featured-content -->
+	</li>
+	{# Second two featured posts #}
+	{% for post in featured_posts|slice(2,4) %}
+		<li class="featured-item">
+			<div class="featured-content">
+				<h2><a class="hed-featured" href="{{post.link}}">{{post.title}}</a></h2>
+				<p>{{post.header_tagline}} <a class="read-more" href="{{post.link}}">Read more</a></p>
+				{% include 'partials/connected_source.twig' with { item: post } %}
+			</div><!-- /end .featured-content -->
+		</li>
+	{% endfor %}
+</ol><!-- /end .region.list-featured -->
+
+<div class="region site-nav">
+	<div class="site-mast">
+		{% include 'partials/nav.twig' %}
+	</div><!-- /end .site-mast -->
+</div><!-- /end .region -->
+
+
+
+{#
 <div class="region content-main">
 	<div class="l-60-40">
 		<div class="group p-more">
@@ -35,7 +75,7 @@
 			<p class="cap"><a class="link-more" href="{{ fn('get_post_type_archive_link', 'presentation') }}">Show all talks</a></p>
 
 		</div>
-		 <div class="group-alt p-less">
+		<div class="group-alt p-less">
 			<h2 class="hed-section-sub">Recent Sources</h2>
 			<ol class="sources-count-list">
 				{% for cat in recent_sources_cats %}
@@ -52,6 +92,6 @@
 				{% endfor %}
 			</ol>
 	</div>
-</div>
+</div> #}
 
 {% endblock %}
