@@ -3,7 +3,7 @@
 {% block content %}
 
 <div class="region content-main">
-	<h1 class="hed-lead">Articles</h1>
+	<h1 class="hed-lead">{{post.title}}</h1>
 
 	<div class="l-50-50">
 		<section class="group">
@@ -12,22 +12,43 @@
 
 					<a class="link-more" href="#">Browse 64 more <span class="a11y">sources filed under “Mobile-only Users”</span></a>
 				</header>
-
 				<ol class="teaser-list">
-				{% for post in posts %}
+					{% for post in posts %}
+						<li class="teaser">
+							<div class="teaser-inner">
+								<h3 class="hed-teaser"><a class="hed-teaser-link" href="{{ post.link }}">{{ post.title }}</a></h3>
+								<p>{{ post.header_tagline }}</p>
+
+								<p class="teaser-meta">
+									{% if post.connected_source %}
+										{% set source = TimberPost(post.connected_source) %}
+										<cite>{{ source.source_publication }}</cite>, <time datetime="{{source.source_date|date('Y-m-d')}}">{{source.source_date|date('F j, Y')}}</time>
+									{% else %}
+										<time datetime="{{source.source_date|date('Y-m-d')}}">{{source.source_date|date('F j, Y')}}</time>
+									{% endif %}
+								</p>
+							</div><!-- /end .teaser-inner -->
+						</li><!-- /end .teaser -->
+					{% endfor %}
+        </ol>
+		</section>
+		<section class="group">
+			<header class="header-more">
+				<h2 class="hed-section-sub">{{source_cat.name}}</h2>
+				<a class="link-more" href="#">Browse 27 more <span class="a11y">sources filed under “{{source_cat.name}}”</span></a>
+			</header>
+			<ol class="teaser-list">
+				{% for source in sources %}
 					<li class="teaser">
 						<div class="teaser-inner">
-							<h3 class="hed-teaser"><a class="hed-teaser-link" href="{{ post.link }}">{{ post.title }}</a></h3>
-							<p>{{ post.header_tagline }}</p>
-
-							{% if post.connected_source %}
-								{% set source = TimberPost(post.connected_source) %}
-								<p class="teaser-meta"><cite>{{ source.source_publication }}</cite>, <time datetime="{{source.source_date|date('Y-m-d')}}">{{source.source_date|date('F j, Y')}}</time></p>
-							{% endif %}
+							<h3 class="hed-teaser"><a class="hed-teaser-link" href="{{source.source_url}}">{{source.title}}</a></h3>
+							<p>{{source.source_blurb}}</p>
+							<p class="teaser-meta"><cite>{{source.source_publication}}</cite>, <time datetime="{{source.source_date|date('Y-m-d')}}">{{source.source_date|date('F j, Y')}}</time></p>
 						</div><!-- /end .teaser-inner -->
 					</li><!-- /end .teaser -->
 				{% endfor %}
-        </ol>
-			</div><!-- /end .group -->
-    </div><!-- /end .region.content-main.has-index -->
+			</ol>
+		</section>
+	</div><!-- /end .l-50-50 -->
+</div><!-- /end .region.content-main.has-index -->
 {% endblock %}
