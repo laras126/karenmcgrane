@@ -1,0 +1,21 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+    <ol class="region list-featured">
+        <li class="featured-item is-priority">
+            <p>{{post.header_tagline}}</p>
+        </li>
+		{% for talk in talks %}
+		<li class="featured-item is-priority">
+            <img src="{{talk.thumbnail.src}}" alt="{{talk.thumbnail.alt}}" />
+            <div class="featured-content">
+                <h2><a class="hed-featured" href="{{ talk.link }}">{{ talk.title }}</a></h2>
+                <p>{{ talk.header_tagline }} <a class="read-more" href="{{ talk.link }}">Read more</a></p>
+				{% include 'partials/connected_source.twig' with { item: talk } %}
+            </div><!-- /end .featured-content -->
+        </li>
+		{% endfor %}
+    </ol><!-- /end .region.list-featured -->
+
+{% endblock %}
