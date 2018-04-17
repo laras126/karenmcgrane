@@ -6,12 +6,13 @@
 $post = new TimberPost();
 $context = Timber::get_context();
 $source_cat = get_field('sources_on_articles', 'option');
-
+$paged = get_query_var('paged') ? get_query_var('paged') : 1;
 $posts_args = array(
 	'post_type' => 'post',
 	'posts_per_page' => 10,
 	'orderby' => 'date',
-	'order' => 'ASC'
+	'order' => 'ASC',
+	'paged' => $paged
 );
 
 $sources_args = array(
