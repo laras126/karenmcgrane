@@ -110,10 +110,16 @@ function kmg_get_menu_icon($item) {
 // remove_filter( 'template_redirect', 'redirect_canonical' );
 add_action( 'init', 'kmg_add_custom_rewrite_rules' );
 function kmg_add_custom_rewrite_rules() {
-    // add_rewrite_rule(
-		// 	'^sources/%category_name%/page/(([0-9]+)?)?/?$',
-		// 	'category.php?post_type=source&cat=$matches[1]&paged=$matches[2]', 'top'
-		// );
+    add_rewrite_rule(
+			'sources/(.+?)$',
+			'index.php?post_type=source&category_name=$matches[1]', 'top'
+		);
+
+		add_rewrite_rule(
+			'sources/(.+?)/page/?([0-9]{1,})/?$',
+			'index.php?category_name=$matches[1]&paged=$matches[2]&post_type=source', 'top'
+		);
+
 		add_rewrite_rule(
 			'^articles/page/(([0-9]+)?)?/?$',
 			'index.php?post_type=post&paged=$matches[2]', 'top'
