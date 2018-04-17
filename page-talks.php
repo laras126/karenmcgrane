@@ -5,7 +5,7 @@
 
 $talk_args = array(
 	'post_type' => 'presentation',
-	'posts_per_page' => 10
+	'posts_per_page' => -1
 );
 
 $context = Timber::get_context();
