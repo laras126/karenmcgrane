@@ -33,8 +33,8 @@
 	{% for post in featured_posts|slice(2,4) %}
 		<li class="featured-item">
 			<div class="featured-content">
-				<h2><a class="hed-featured" href="{{post.link}}">{{post.title}}</a></h2>
-				<p>{{post.header_tagline}} <a class="read-more" href="{{post.link}}">Read more</a></p>
+				<h2><a class="hed-featured" href="{{ post.link }}">{{ post.title }}</a></h2>
+				<p>{{ post.header_tagline }} <a class="read-more" href="{{ post.link }}">Read more</a></p>
 				{% include 'partials/connected_source.twig' with { item: post } %}
 			</div><!-- /end .featured-content -->
 		</li>
@@ -46,52 +46,5 @@
 		{% include 'partials/nav.twig' %}
 	</div><!-- /end .site-mast -->
 </div><!-- /end .region -->
-
-
-
-{#
-<div class="region content-main">
-	<div class="l-60-40">
-		<div class="group p-more">
-			<h2 class="hed-section-sub">Recent Articles</h2>
-
-			<ol class="teaser-list">
-				{% for post in recent_articles %}
-					{% include 'partials/tease.twig' %}
-				{% endfor %}
-			</ol>
-
-			<p class="cap">
-				<a class="link-more" href="{{ fn('get_post_type_archive_link', 'article') }}">Show all articles</a>
-			</p>
-
-			<h2 class="hed-section-sub">Recent Talks</h2>
-			<ol class="teaser-list">
-				{% for post in recent_talks %}
-					{% include 'partials/tease-presentation.twig' %}
-				{% endfor %}
-			</ol>
-
-			<p class="cap"><a class="link-more" href="{{ fn('get_post_type_archive_link', 'presentation') }}">Show all talks</a></p>
-
-		</div>
-		<div class="group-alt p-less">
-			<h2 class="hed-section-sub">Recent Sources</h2>
-			<ol class="sources-count-list">
-				{% for cat in recent_sources_cats %}
-					<li>
-						<a href="#">
-							<dl class="source-count">
-								<dt>{{ cat.name }}</dt>
-								<dd>
-									{{ cat.count }} <span class="a11y">sources</span>
-								</dd>
-							</dl>
-						</a>
-					</li>
-				{% endfor %}
-			</ol>
-	</div>
-</div> #}
 
 {% endblock %}
