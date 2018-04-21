@@ -125,3 +125,42 @@ function kmg_add_custom_rewrite_rules() {
 			'index.php?post_type=post&paged=$matches[2]', 'top'
 		);
 }
+
+
+/**
+ * Force populate the excerpt with text from the header tagline.
+ * @link https://wordpress.stackexchange.com/questions/40574/auto-populate-excerpt-field
+ */
+add_filter( 'default_excerpt', 'kmg_excerpt_content' );
+function kmg_excerpt_content( $content ) {
+	global $post;
+	$content = get_field('header_tagline', $post);
+	return $content;
+}
+
+/**
+ * Indicate nature of excerpt by filtering its title and caption.
+ * @link https://wpartisan.me/tutorials/wordpress-excerpt-label-description
+ */
+add_filter( 'gettext', 'kmg_excerpt_label', 10, 2 );
+function kmg_excerpt_label( $translation, $original ) {
+	if ( 'Excerpt' == $original ) {
+			return __( 'Excerpt for WordPress (copy of Lead)' );
+	} elseif ( false !== strpos( $original, 'Excerpts are optional hand-crafted summaries of your' ) ) {
+			return __( 'This content mirrors what is in the "Lead" field of the Header at the top of the post. Editing this does nothing.' );
+	}
+	return $translation;
+}
+
+
+
+
+// function custom_pre_get_posts($query)
+// {
+//     if (is_category()) {
+//         $query->set('page_val', get_query_var('paged'));
+//         $query->set('paged', 0);
+//     }
+// }
+
+// add_action('pre_get_posts', 'custom_pre_get_posts');
