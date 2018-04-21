@@ -9,7 +9,7 @@
 		<section class="group">
 				<header class="header-more">
 					<h2 class="hed-section-sub">By Karen</h2>
-					<a class="link-more" href="{{site.link}}/articles/page/2">Browse 64 more <span class="a11y">articles written by Karen</span></a>
+					<a class="link-more" href="{{site.link}}/articles/page/2">Browse {{by_karen_count}} more <span class="a11y">articles written by Karen</span></a>
 				</header>
 				<ol class="teaser-list">
 					{% for post in posts %}
@@ -49,5 +49,8 @@
 			</ol>
 		</section>
 	</div><!-- /end .l-50-50 -->
+
+	{% include 'partials/additional-sources.twig' with { cats: remaining_cat_ids, title: 'Additional Topics' } %}
+
 </div><!-- /end .region.content-main.has-index -->
 {% endblock %}
