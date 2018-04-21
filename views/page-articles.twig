@@ -21,9 +21,9 @@
 								<p class="teaser-meta">
 									{% if post.connected_source %}
 										{% set source = TimberPost(post.connected_source) %}
-										<cite>{{ source.source_publication }}</cite>, <time datetime="{{source.source_date|date('Y-m-d')}}">{{source.source_date|date('F j, Y')}}</time>
+										<cite>{{ source.source_publication }}</cite>, <time datetime="{{ source.source_date|date('Y-m-d') }}">{{ source.source_date|date('F j, Y') }}</time>
 									{% else %}
-										<time datetime="{{source.source_date|date('Y-m-d')}}">{{source.source_date|date('F j, Y')}}</time>
+										<time datetime="{{ post.date|date('Y-m-d') }}">{{ post.date|date('F j, Y') }}</time>
 									{% endif %}
 								</p>
 							</div><!-- /end .teaser-inner -->
