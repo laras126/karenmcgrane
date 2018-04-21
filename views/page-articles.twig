@@ -42,7 +42,7 @@
 						<div class="teaser-inner">
 							<h3 class="hed-teaser"><a class="hed-teaser-link" href="{{source.source_url}}">{{source.title}}</a></h3>
 							<p>{{source.source_blurb}}</p>
-							<p class="teaser-meta"><cite>{{source.source_publication}}</cite>, <time datetime="{{source.source_date|date('Y-m-d')}}">{{source.source_date|date('F j, Y')}}</time></p>
+							<p class="teaser-meta"><cite>{{source.source_publication}}</cite>, {% if source.source_date %}<time datetime="{{source.source_date|date('Y-m-d')}}">{{source.source_date|date('F j, Y')}}</time>{% endif %}</p>
 						</div><!-- /end .teaser-inner -->
 					</li><!-- /end .teaser -->
 				{% endfor %}
