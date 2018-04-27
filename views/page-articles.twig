@@ -4,37 +4,36 @@
 
 <div class="region content-main">
 	<h1 class="hed-lead">{{post.title}}</h1>
-
 	<div class="l-50-50">
 		<section class="group">
-				<header class="header-more">
-					<h2 class="hed-section-sub">By Karen</h2>
-					<a class="link-more" href="{{ site.link }}/articles/page/2">Browse {{ by_karen_count }} more <span class="a11y">articles written by Karen</span></a>
-				</header>
-				<ol class="teaser-list">
-					{% for post in posts %}
-						<li class="teaser">
-							<div class="teaser-inner">
-								<h3 class="hed-teaser"><a class="hed-teaser-link" href="{{ post.link }}">{{ post.title }}</a></h3>
-								<p>{{ post.header_tagline }}</p>
+			<header class="header-more">
+				<h2 class="hed-section-sub">By Karen</h2>
+				<a class="link-more" href="{{posts.pagination.next.link}}">Browse {{ by_karen_count }} more <span class="a11y">articles written by Karen</span></a>
+			</header>
+			<ol class="teaser-list">
+				{% for post in posts %}
+					<li class="teaser">
+						<div class="teaser-inner">
+							<h3 class="hed-teaser"><a class="hed-teaser-link" href="{{ post.link }}">{{ post.title }}</a></h3>
+							<p>{{ post.header_tagline }}</p>
 
-								<p class="teaser-meta">
-									{% if post.connected_source %}
-										{% set source = TimberPost(post.connected_source) %}
-										<cite>{{ source.source_publication }}</cite>, <time datetime="{{ source.source_date|date('Y-m-d') }}">{{ source.source_date|date('F j, Y') }}</time>
-									{% else %}
-										<time datetime="{{ post.date|date('Y-m-d') }}">{{ post.date|date('F j, Y') }}</time>
-									{% endif %}
-								</p>
-							</div><!-- /end .teaser-inner -->
-						</li><!-- /end .teaser -->
-					{% endfor %}
-        </ol>
+							<p class="teaser-meta">
+								{% if post.connected_source %}
+									{% set source = TimberPost(post.connected_source) %}
+									<cite>{{ source.source_publication }}</cite>, <time datetime="{{ source.source_date|date('Y-m-d') }}">{{ source.source_date|date('F j, Y') }}</time>
+								{% else %}
+									<time datetime="{{ post.date|date('Y-m-d') }}">{{ post.date|date('F j, Y') }}</time>
+								{% endif %}
+							</p>
+						</div><!-- /end .teaser-inner -->
+					</li><!-- /end .teaser -->
+				{% endfor %}
+			</ol>
 		</section>
 		<section class="group">
 			<header class="header-more">
 				<h2 class="hed-section-sub">{{source_cat.name}}</h2>
-				<a class="link-more" href="#">Browse {{ about_karen_count }} more <span class="a11y">sources filed under “{{source_cat.name}}”</span></a>
+				<a class="link-more" href="{{sources.pagination.next.link}}">Browse {{ about_karen_count }} more <span class="a11y">sources filed under “{{source_cat.name}}”</span></a>
 			</header>
 			<ol class="teaser-list">
 				{% for source in sources %}
