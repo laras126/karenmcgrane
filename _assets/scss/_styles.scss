@@ -47,12 +47,17 @@ body {
 }
 
 [hidden],
-.squelch {
+.squelch,
+.frm_hidden {
     display: none;
 }
-.a11y {
+.a11y,
+.frm_screen_reader,
+// I don’t know why both of these classes would be assigned, but when they are, let’s assume we should be as accessible as possible
+.frm_screen_reader.frm_hidden {
     clip: rect( 1px 1px 1px 1px );
     clip: rect( 1px,1px,1px,1px );
+    display: block;
     height: 1px;
     overflow: hidden;
     position: absolute !important;
@@ -1323,6 +1328,36 @@ Contact
 .links-social a:hover img,
 .links-social a:focus img {
     transform: scale( 1.2 );
+}
+
+/*
+“Formidable” styles
+*/
+.frm_error_style,
+.form-field {
+    display: block;
+    margin-bottom: 1em;
+}
+.frm_required_field label {
+    font-weight: bold;
+}
+.frm_required,
+.frm_error_style,
+.frm_error {
+    color: #D8411A;
+}
+.frm_error_style {
+    background: #FFD6D1;
+    padding: 1em;
+    margin-left: -1em;
+    margin-right: -1em;
+    margin-bottom: 3em;
+}
+.frm_error {
+    margin-bottom: 2em;
+}
+.frm_required.frm_hidden {
+    display: inline;
 }
 
 
