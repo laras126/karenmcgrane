@@ -14,11 +14,12 @@ if ( ! class_exists( 'Timber' ) ) {
 
 Timber::$dirname = array('templates', 'views');
 
-class StarterSite extends TimberSite {
+class KMGSite extends TimberSite {
 
 	function __construct() {
 		add_theme_support( 'post-formats' );
 		add_theme_support( 'post-thumbnails' );
+		add_theme_support( 'title-tag' );
 		add_theme_support( 'menus' );
 		add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption' ) );
 		add_filter( 'timber_context', array( $this, 'add_to_context' ) );
@@ -50,6 +51,7 @@ class StarterSite extends TimberSite {
 		$context['menu'] = new TimberMenu();
 		$context['site'] = $this;
 		$context['initial_js'] = file_get_contents(get_template_directory() . '/dist/assets/js/initial.js');
+
 		return $context;
 	}
 
@@ -60,7 +62,8 @@ class StarterSite extends TimberSite {
 
 }
 
-new StarterSite();
+new KMGSite();
+
 
 /*
 
@@ -78,3 +81,87 @@ function kmg_add_custom_types_to_category( $query ) {
 	}
 }
 add_filter( 'pre_get_posts', 'kmg_add_custom_types_to_category' );
+
+
+
+/*
+ * Get file contents from an SVG
+ * @param string | name of menu item that must match name of SVG file
+ * @return string | SVG markup
+ */
+
+function kmg_get_menu_icon($item) {
+	$name = strtolower($item);
+	$icon = file_get_contents(get_template_directory() . '/inc/svg/' . $name .'.svg');
+	return $icon;
+}
+
+/**
+ * Rewrite Rules and Pagination
+ *
+ * Categories are only used for sources on the front-end, and category.php is used to handle
+ * the sources-in-category pagination.
+ * Rewrite: sources/name/page/#
+ *
+ * Articles are posts, and index.php is used for pagination while page-articles.php
+ * accounts for page 1.
+ * Rewrite: articles/page/#
+ *
+ */
+// remove_filter( 'template_redirect', 'redirect_canonical' );
+add_action( 'init', 'kmg_add_custom_rewrite_rules' );
+function kmg_add_custom_rewrite_rules() {
+    // add_rewrite_rule(
+	// 	'sources/(.+?)$',
+	// 	'index.php?post_type=source&category_name=$matches[1]', 'top'
+	// );
+
+	// add_rewrite_rule(
+	// 	'sources/(.+?)/page/?([0-9]{1,})/?$',
+	// 	'index.php?category_name=$matches[1]&paged=$matches[2]&post_type=source', 'top'
+	// );`
+
+	add_rewrite_rule(
+		'^articles/page/(([0-9]+)?)?/?$',
+		'index.php?post_type=post&page=$matches[2]', 'top'
+	);
+}
+
+
+/**
+ * Force populate the excerpt with text from the header tagline.
+ * @link https://wordpress.stackexchange.com/questions/40574/auto-populate-excerpt-field
+ */
+add_filter( 'default_excerpt', 'kmg_excerpt_content' );
+function kmg_excerpt_content( $content ) {
+	global $post;
+	$content = get_field('header_tagline', $post);
+	return $content;
+}
+
+/**
+ * Indicate nature of excerpt by filtering its title and caption.
+ * @link https://wpartisan.me/tutorials/wordpress-excerpt-label-description
+ */
+add_filter( 'gettext', 'kmg_excerpt_label', 10, 2 );
+function kmg_excerpt_label( $translation, $original ) {
+	if ( 'Excerpt' == $original ) {
+			return __( 'Excerpt for WordPress (copy of Lead)' );
+	} elseif ( false !== strpos( $original, 'Excerpts are optional hand-crafted summaries of your' ) ) {
+			return __( 'This content mirrors what is in the "Lead" field of the Header at the top of the post. Editing this does nothing.' );
+	}
+	return $translation;
+}
+
+
+
+
+// function custom_pre_get_posts($query)
+// {
+//     if (is_category()) {
+//         $query->set('page_val', get_query_var('paged'));
+//         $query->set('paged', 0);
+//     }
+// }
+
+// add_action('pre_get_posts', 'custom_pre_get_posts');

@@ -1,0 +1,8 @@
+<span class="meta-featured">
+	{% if item.connected_source %}
+		{% set source = TimberPost(item.connected_source) %}
+		<a href="{{ source.source_url }}">{{ source.source_publication }}</a>, <time datetime="{{source.source_date|date('Y-m-d')}}">{{source.source_date|date('F j, Y')}}</time>
+	{% else %}
+		<time datetime="{{item.date|date('Y-m-d')}}">{{item.date|date('F j, Y')}}</time>
+	{% endif %}
+</span>

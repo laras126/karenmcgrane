@@ -1,11 +1,11 @@
 <?php
 
 /**
-   * Helper function to prepare a sources module for a category
-   * @param string slug of the category term
-   * @var int $POSTS_NUM Constant for number of posts to return
-   * @return array An array data to be used in the template
-   */
+ * Helper function to prepare a sources module for a category
+ * @param string slug of the category term
+ * @var int $POSTS_NUM Constant for number of posts to return
+ * @return array An array data to be used in the template
+ */
 
 function kmg_get_sources_module_data($slug) {
 
@@ -116,7 +116,7 @@ function kmg_get_array_of_categories_from_sorted_posts($posts_arr) {
 	}
 
 	$remove_dups = array_unique($categories_arr);
-	$cats_arr = array_values($remove_dups);
+	$cats_arr = array_filter(array_values($remove_dups));
 
 	return $cats_arr;
 }

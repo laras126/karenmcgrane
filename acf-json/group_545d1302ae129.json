@@ -71,6 +71,11 @@
                 "param": "post_type",
                 "operator": "!=",
                 "value": "source"
+            },
+            {
+                "param": "page_type",
+                "operator": "!=",
+                "value": "front_page"
             }
         ]
     ],
@@ -90,5 +95,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1516667846
+    "modified": 1522531845
 }

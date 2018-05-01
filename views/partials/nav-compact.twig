@@ -1,0 +1,14 @@
+
+{% set space = ' ' %}
+{% set dot = '.' %}
+{% set dash = '-' %}
+
+<nav class="nav-compact region">
+
+  <ul>
+    {% for item in menu.items %}
+      <li><a href="{{item.link}}">{{item.title}}</a></li>
+    {% endfor %}
+  </ul>
+
+</nav>

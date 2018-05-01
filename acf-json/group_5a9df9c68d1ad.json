@@ -16,7 +16,7 @@
                 "id": ""
             },
             "taxonomy": "category",
-            "field_type": "multi_select",
+            "field_type": "select",
             "allow_null": 0,
             "add_term": 1,
             "save_terms": 0,
@@ -42,5 +42,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1520302728
+    "modified": 1522541098
 }

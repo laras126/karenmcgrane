@@ -1,16 +1,15 @@
-<header class="region" role="banner">
 
-  <div class="site-mast">
-    <h1 class="logo"><a href="{{site.link}}" rel="home">Karen McGrane<span>.</span></a></h1>
-    {% include 'partials/site-nav.twig' %}
-  </div>{# /end .site-mast #}
-
-  {% if fn('is_front_page', true) %}
-    <div class="site-tagline">
-      <p>{{ site.description }}</p>
-    </div>{# /end .site-tagline #}
-  {% endif %}
-
-</header>
+{% if fn('is_front_page', true) %}
+  <header>
+    {% include 'partials/nav-compact.twig' %}
+  </header>
+{% else %}
+  <header class="region site-nav">
+    <div class="site-mast">
+        {% include 'partials/nav.twig' %}
+        <h1 class="logo"><a href="{{site.link}}"><cite class="name-km">Karen M<b>c</b>Grane</cite> helps giant, messy businesses manage their digital content</a></h1>
+    </div>
+  </header>
+{% endif %}
 
 <main class="site-content">
