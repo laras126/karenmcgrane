@@ -11,30 +11,66 @@ require("inc/header.php" );
             <div class="group">
                 <h2 class="hed-section-sub">Contact Karen</h2>
 
-                <form class="contact-form" action="/contact/">
-                    <p>
-                        <label for="contact-name">Name</label>
-                        <input id="contact-name" name="contact-name" type="text" required />
-                    </p>
+                <form enctype="multipart/form-data" method="post" class="frm-show-form contact-form" id="form_contact-form2">
 
-                    <p>
-                        <label for="contact-email">Email</label>
-                        <input id="contact-email" name="contact-email" type="email" required />
-                    </p>
+                    <div class="frm_error_style">There was a problem with your submission. Errors are marked below.</div>
 
-                    <p>
-                        <label for="contact-subject">Subject</label>
-                        <input id="contact-subject" name="contact-subject" type="email" />
-                    </p>
+                    <div class="frm_form_fields ">
+                        <fieldset>
 
-                    <p>
-                        <label for="contact-body">Message</label>
-                        <textarea id="contact-body" name="contact-body" cols="30" rows="10" required></textarea>
-                    </p>
+                            <legend class="frm_hidden">Contact Karen</legend>
 
-                    <p class="cap"><input class="btn" type="submit" value="Send" /></p>
+                            <div class="frm_fields_container">
+                                <input name="frm_action" value="create" type="hidden">
+                                <input name="form_id" value="3" type="hidden">
+                                <input name="frm_hide_fields_3" id="frm_hide_fields_3" value="" type="hidden">
+                                <input name="form_key" value="contact-form2" type="hidden">
+                                <input name="item_meta[0]" value="" type="hidden">
+                                <input id="frm_submit_entry_3" name="frm_submit_entry_3" value="5c2f3000e0" type="hidden"><input name="_wp_http_referer" value="/contact/" type="hidden"><label for="frm_verify_3" class="frm_screen_reader frm_hidden">If you are human, leave this field blank.</label>
+                                <input class="frm_hidden frm_verify" id="frm_verify_3" name="frm_verify" value="" style="display:none;" type="text">
 
-                </form><!-- /end .contact-form -->
+                                <div id="frm_field_11_container" class="frm_form_field form-field  frm_required_field frm_blank_field frm_top_container frm_full">
+                                    <label for="field_qh4icy22" class="frm_primary_label">Name
+                                        <span class="frm_required frm_hidden">*</span>
+                                    </label>
+                                    <input id="field_qh4icy22" name="item_meta[11]" value="" data-reqmsg="This field cannot be blank." data-invmsg="Name is invalid" type="text">
+
+                                    <div class="frm_error">This field cannot be blank.</div>
+                                </div>
+                                <div id="frm_field_12_container" class="frm_form_field form-field  frm_required_field frm_blank_field frm_top_container frm_full">
+                                    <label for="field_29yf4d22" class="frm_primary_label">Email
+                                        <span class="frm_required frm_hidden">*</span>
+                                    </label>
+                                    <input id="field_29yf4d22" name="item_meta[12]" value="" data-reqmsg="This field cannot be blank." data-invmsg="Please enter a valid email address" type="email">
+
+                                    <div class="frm_error">This field cannot be blank.</div>
+                                </div>
+                                <div id="frm_field_13_container" class="frm_form_field form-field  frm_required_field frm_blank_field frm_top_container frm_full">
+                                    <label for="field_e6lis622" class="frm_primary_label">Subject
+                                        <span class="frm_required frm_hidden">*</span>
+                                    </label>
+                                    <input id="field_e6lis622" name="item_meta[13]" value="" data-reqmsg="This field cannot be blank." data-invmsg="Subject is invalid" type="text">
+
+                                    <div class="frm_error">This field cannot be blank.</div>
+                                </div>
+                                <div id="frm_field_14_container" class="frm_form_field form-field  frm_required_field frm_blank_field frm_top_container frm_full">
+                                    <label for="field_9jv0r122" class="frm_primary_label">Message
+                                        <span class="frm_required frm_hidden">*</span>
+                                    </label>
+                                    <textarea name="item_meta[14]" id="field_9jv0r122" rows="5" data-reqmsg="This field cannot be blank." data-invmsg="Message is invalid"></textarea>
+
+                                    <div class="frm_error">This field cannot be blank.</div>
+                                </div>
+                                <input name="item_key" value="" type="hidden">
+                                <div class="frm_submit cap">
+                                    <button class="btn frm_button_submit" type="submit">Submit</button>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                    </div>
+
+                </form>
 
                 <h2 class="hed-section-sub">Connect with Karen</h2>
 
