@@ -3,6 +3,6 @@
 {% block content %}
 	<div class="teaser-inner">
 		<h3 class="hed-teaser"><a class="hed-teaser-link" href="{{ post.source_url }}">{{ post.title }}</a></h3>
-		<p class="teaser-meta">{{ post.source_author ? 'By ' ~ post.source_author ~ ', '}}<time datetime="{{ post.source_date|date("y-m-d") }}">{{ post.source_date|date("M d, Y") }}</time></p>
+		<p class="teaser-meta">{{ post.source_author ? 'By ' ~ post.source_author ~ ', '}}<time datetime="{{ post.source_date|date("y-m-d") }}">{{ post.source_date|date("F j, Y") }}</time></p>
 	</div><!-- /end .teaser-inner -->
 {% endblock %}

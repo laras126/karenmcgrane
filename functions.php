@@ -154,14 +154,21 @@ function kmg_excerpt_label( $translation, $original ) {
 }
 
 
+/**
+ * Return array of categories excluding a few whose IDs are retrieved by name.
+ */
+function kmg_get_additional_sources() {
+	$excluded_cats = array(
+		get_cat_ID( 'By Karen' ),
+		get_cat_ID( 'About Karen' ),
+		get_cat_ID( 'Uncategorized' )
+	);
 
+	$categories = get_terms( 'category',
+		array(
+			'exclude' => $excluded_cats
+		)
+	);
 
-// function custom_pre_get_posts($query)
-// {
-//     if (is_category()) {
-//         $query->set('page_val', get_query_var('paged'));
-//         $query->set('paged', 0);
-//     }
-// }
-
-// add_action('pre_get_posts', 'custom_pre_get_posts');
+	return $categories;
+}
