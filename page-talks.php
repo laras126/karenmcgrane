@@ -8,11 +8,11 @@ $talk_args = array(
 	'posts_per_page' => -1
 );
 
-$data = kmg_sources_archive($module_count, $excluded_cats);
-$context = Timber::get_context();
 $post = new TimberPost();
+
+$context = Timber::get_context();
 $context['post'] = $post;
 $context['talks'] = Timber::get_posts($talk_args);
-$context['remaining_cat_ids'] = $data['remaining_cat_ids'];
+$context['sources_cats'] = kmg_get_additional_sources();
 
 Timber::render( array( 'page-talks.twig', 'page.twig' ), $context );
