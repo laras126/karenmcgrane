@@ -1,0 +1,13 @@
+
+<nav>
+	<ul class="nav-list">
+    {% for item in menu.items %}
+			<li class="nav-item"{{ 'current-menu-item' in item.classes ? ' aria-describedby="current-page"' }}>
+				<a href="{{ item.link }}">
+					{{fn('kmg_get_menu_icon', item.title)}}
+					{{ item.title }}
+				</a>
+			</li>
+    {% endfor %}
+	</ul>
+</nav>

@@ -1,11 +1,11 @@
 <?php
 
 /**
-   * Helper function to prepare a sources module for a category
-   * @param string slug of the category term
-   * @var int $POSTS_NUM Constant for number of posts to return
-   * @return array An array data to be used in the template
-   */
+ * Helper function to prepare a sources module for a category
+ * @param string slug of the category term
+ * @var int $POSTS_NUM Constant for number of posts to return
+ * @return array An array data to be used in the template
+ */
 
 function kmg_get_sources_module_data($slug) {
 
@@ -57,20 +57,20 @@ function kmg_post_date_comparison($a, $b) {
 /**
  * Helper function to prepare a sources module
  * @var array $categories Array of all categories
+ * @param array $excluded_cat_ids Array of excluded category IDs
  * @return array An array containing the newest post from each category
  */
 
-function kmg_get_array_of_posts_from_each_category($excluded_cats = null) {
+function kmg_get_array_of_posts_from_each_category($excluded_cat_ids) {
 
 	$category_args = array(
 		'hide_empty' => true,
 		'orderby' => 'count',
 		'order' => 'DESC',
-		// TODO Confirm this:
-		'exclude' => $excluded_cats
+		'exclude' => $excluded_cat_ids
 	);
 
-	$categories = get_categories($category_args);
+	$categories = get_terms('category', $category_args);
 	$newest_posts_arr = [];
 
 	foreach ($categories as $cat) {
@@ -111,12 +111,18 @@ function kmg_get_array_of_categories_from_sorted_posts($posts_arr) {
 	$categories_arr = [];
 
 	foreach ($posts_arr as $post) {
-		$cat = get_the_category( $post->ID )[0]; // Problem area
+
+		// Account for posts with multiple categories, the first of which is one of the excluded categories.
+		$cat = get_the_category( $post->ID )[0];
+		if( $cat->name == "By Karen" || $cat->name == "About Karen" ) {
+			$cat = get_the_category( $post->ID )[1];
+		}
+
 		array_push($categories_arr, get_cat_ID($cat->name));
 	}
 
 	$remove_dups = array_unique($categories_arr);
-	$cats_arr = array_values($remove_dups);
+	$cats_arr = array_filter(array_values($remove_dups));
 
 	return $cats_arr;
 }
@@ -134,10 +140,16 @@ function kmg_get_array_of_categories_from_sorted_posts($posts_arr) {
  * @return array Array of data to be used in the to template context
  */
 
-function kmg_sources_archive($module_count = 4, $excluded_cat_ids) {
+function kmg_sources_archive($module_count = 4) {
+
+	$excluded_cat_ids = array(
+		get_cat_ID( 'By Karen' ),
+		get_cat_ID( 'About Karen' ),
+		get_cat_ID( 'Uncategorized' )
+	);
 
 	// First, build an array of posts containing the most recent post from each category
-	$post_from_each_category = kmg_get_array_of_posts_from_each_category($excluded_cats);
+	$post_from_each_category = kmg_get_array_of_posts_from_each_category($excluded_cat_ids);
 
 	// Sort that array by date
 	usort($post_from_each_category, "kmg_post_date_comparison");
@@ -157,7 +169,7 @@ function kmg_sources_archive($module_count = 4, $excluded_cat_ids) {
 	// Return the template data, including the module objects and an array of the remaining categories
 	$template_data = array(
 		'modules' => $sources_modules_arr,
-		'remaining_cat_ids' => array_slice($sorted_cats, 4),
+		'additional_sources' => array_slice($sorted_cats, 4),
 		'cats' => $sorted_cats
 	);
 

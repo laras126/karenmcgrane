@@ -1,11 +1,10 @@
 {% extends "base.twig" %}
 
 {% block content %}
-
   <div class="region content-main">
 		<div class="l-sole">
 			<div class="group">
-				<h1 class="hed-lead">Posts</h1>
+				<h1 class="hed-lead">Articles By Karen, Page {{fn('get_query_var', 'page')}}</h1>
 				<ol class="teaser-list">
 					{% for post in posts %}
 						{% include ['partials/tease-'~post.post_type~'.twig', 'partials/tease.twig'] %}
@@ -13,5 +12,8 @@
 				</ol>
 			</div>
 		</div>
+		{% include "partials/pagination.twig" %}
 	</div>
+
+	<!-- /.pagination -->
 {% endblock %}

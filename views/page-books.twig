@@ -2,11 +2,14 @@
 
 {% block content %}
 	<div class="region content-main">
+		<h1 class="hed-lead">{{post.title}}</h1>
 		<div class="l-50-50">
 			{% for book in post.get_field('books') %}
 				<div class="group">
+					<header>
+						<h2 class="hed-section-sub">{{ book.book_title }}</h2>
+					</header>
 					<section class="book">
-						<h2 class="hed book-title">{{ book.book_title }}</h2>
 						<img src="{{ TimberImage(book.book_image).src }}" alt="Image of the {{ book.book_title }} book cover">
 
 						<div class="book-desc">

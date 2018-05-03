@@ -7,7 +7,10 @@
 		<article class="group" datetime="{{ post.date|date("y-m-d")}}">
 			<footer>
 				<div class="article-meta">
-						<p>Presented at <a href="#">TKTKTKTK</a> <time datetime="{{ post.date|date("Y-m-d H:i") }}">{{ post.date }}</time>.</p>
+					{% if post.connected_source %}
+						{% set source = TimberPost(post.connected_source) %}
+						<p>Presented at <a href="#">{{ source.title }}</a> <time datetime="{{ source.source_date|date("Y-m-d") }}">{{source.source_date|date('F j, Y')}}</time>.</p>
+					{% endif %}
 				</div>
 			</footer>
 

@@ -11,27 +11,7 @@
 		{% endfor %}
 	</div>
 
-	<div class="group-full">
-		<h2 class="hed-section-sub">Additional Sources</h2>
-		<ol class="sources-count-list">
-			{% for id in remaining_cat_ids %}
-				{% set cat = TimberTerm(id) %}
-				<li>
-					<a href="{{ cat.link }}">
-						<dl class="source-count">
-							<dt>{{ cat.name }}
-								
-							</dt>
-							<dd>
-								{{ cat.count }}
-								<span class="a11y">articles</span>
-							</dd>
-						</dl>
-					</a>
-				</li>
-			{% endfor %}
-		</ol>
-	</div> <!-- /end .group -->
+	{% include 'partials/additional-sources.twig' with { cats: additional_sources } %}
 </div>
 
 {% endblock %}
