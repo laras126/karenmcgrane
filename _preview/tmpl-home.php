@@ -6,18 +6,6 @@ $pageTitle = "Welcome to Karen McGrane’s website";
 require( "inc/header.php" );
 ?>
 
-    <header>
-        <nav class="nav-compact region">
-            <ul>
-                <li><a href="#">Articles</a></li>
-                <li><a href="#">Talks</a></li>
-                <li><a href="#">Books</a></li>
-                <li><a href="#">Sources</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
     <section class="region about-karen">
         <h2 class="hed about-hed"><cite class="name-km">Karen M<b>c</b>Grane</cite> has to write a paragraph about herself</h2>
 

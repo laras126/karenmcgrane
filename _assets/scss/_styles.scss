@@ -1008,6 +1008,8 @@ About module
     background:
         url( "/wp-content/themes/karenmcgrane/_assets/fpo/intro-headshot.jpg" ) no-repeat 50% 0 / 100% auto;
     color: #FFF;
+    margin-top: 20px;
+    margin-bottom: 20px;
     outline: 20px solid #382645;
     padding-top: 52.2%;    /* 522/1000 */
 }
@@ -1035,9 +1037,6 @@ About module
 }
 .about-content p {
     margin-bottom: 0.75em;
-}
-.about-content p:last-child {
-    margin: 0;
 }
 @media ( min-width: 43em ) {
     .about-karen {
