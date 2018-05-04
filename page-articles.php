@@ -46,7 +46,4 @@ $sources_count = get_term($source_cat, 'category')->count;
 $context['by_karen_count'] = $posts_count - $POSTS_PER_PAGE;
 $context['about_karen_count'] = $sources_count - $POSTS_PER_PAGE;
 
-// Get data for additional sources module.
-$context['sources_cats'] = kmg_get_additional_sources();
-
 Timber::render( 'page-articles.twig', $context );
