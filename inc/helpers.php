@@ -84,9 +84,11 @@ function kmg_get_array_of_posts_from_each_category($excluded_cat_ids) {
 		);
 
 		$query = new Timber\PostQuery($newest_post_args);
-		$post = $query[0];
-
-		array_push($newest_posts_arr, $post);
+		
+		if( count($query) ) {
+			$post = $query[0];
+			array_push($newest_posts_arr, $post);
+		}
 	}
 
 	return $newest_posts_arr;
@@ -149,7 +151,7 @@ function kmg_sources_archive($module_count = 4) {
 	);
 
 	// First, build an array of posts containing the most recent post from each category
-	$post_from_each_category = kmg_get_array_of_posts_from_each_category($excluded_cat_ids);
+	$post_from_each_category = array_filter(kmg_get_array_of_posts_from_each_category($excluded_cat_ids));
 
 	// Sort that array by date
 	usort($post_from_each_category, "kmg_post_date_comparison");
