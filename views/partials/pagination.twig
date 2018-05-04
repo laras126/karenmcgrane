@@ -1,7 +1,9 @@
-<nav class="prevnext-nav">
-    {% if posts.pagination.prev %}
-        <a href="{{posts.pagination.prev.link}}" class="prev {{posts.pagination.prev.link|length ? '' : 'squelch'}}">&larr; Previous</a>
-    {% endif %} {% if posts.pagination.next %}
-        <a href="{{posts.pagination.next.link}}" class="next {{posts.pagination.next.link|length ? '' : 'squelch'}}">Next &rarr;</a>
-    {% endif %}
+<nav class="l-sole">
+    <div class="group prevnext-nav">
+        {% if posts.pagination.prev %}
+            <a href="{{posts.pagination.prev.link}}" class="prev {{posts.pagination.prev.link|length ? '' : 'squelch'}}">&larr; Previous</a>
+        {% endif %} {% if posts.pagination.next %}
+            <a href="{{posts.pagination.next.link}}" class="next {{posts.pagination.next.link|length ? '' : 'squelch'}}">Next &rarr;</a>
+        {% endif %}
+    </div>
 </nav>
