@@ -4,7 +4,8 @@
   <div class="region content-main">
 		<div class="l-sole">
 			<div class="group">
-				<h1 class="hed-lead">Articles By Karen, Page {{fn('get_query_var', 'page')}}</h1>
+				<p class="hed-section-sub">Page {{ posts.pagination.current }} of {{ posts.pagination.total }}</p>
+				<h1 class="hed-lead">Articles By Karen</h1>
 				<ol class="teaser-list">
 					{% for post in posts %}
 						{% include ['partials/tease-'~post.post_type~'.twig', 'partials/tease.twig'] %}
