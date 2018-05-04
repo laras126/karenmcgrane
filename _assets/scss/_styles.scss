@@ -74,6 +74,10 @@ a:focus {
     text-decoration: none;
 }
 
+button {
+    font-family: inherit;
+}
+
 img,
 iframe {
     max-width: 100%;
@@ -1257,9 +1261,6 @@ Books
 Contact
 
 */
-.contact-form {
-    max-width: 40em;
-}
 .contact-form label,
 .contact-form [type=email],
 .contact-form [type=text],
