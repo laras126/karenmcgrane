@@ -50,6 +50,7 @@ class KMGSite extends TimberSite {
 	function add_to_context( $context ) {
 		$context['menu'] = new TimberMenu();
 		$context['site'] = $this;
+		$context['options'] = get_fields('options');
 		$context['initial_js'] = file_get_contents(get_template_directory() . '/dist/assets/js/initial.js');
 
 		return $context;
