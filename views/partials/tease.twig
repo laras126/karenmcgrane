@@ -1,6 +1,9 @@
 <li class="teaser">
 	{% block content %}
-		<img src="{{ post.thumbnail.src('thumbnail') }}" alt="{{ post.thumbnail.alt }}" />
+	
+		{% if post.thumbnail %}
+			<img src="{{ post.thumbnail.src('thumbnail') }}" alt="{{ post.thumbnail.alt }}" />
+		{% endif %}
 
 		<div class="teaser-inner">
 			<time datetime="{{ post.date|date("y-m-d") }}">{{ post.date|date("F j, Y") }}</time>
@@ -8,9 +11,11 @@
 			<h3 class="hed-teaser">
 				<a class="hed-teaser-link" href="{{ post.link }}">{{ post.title }}</a>
 			</h3>
+
 			<p>{{ post.header_tagline }}
 				<a class="read-more" href="{{ post.link }}">Read more</a>
 			</p>
+
 		</div> <!-- /end .teaser-inner -->
 	{% endblock %}
 </li> <!-- /end .teaser -->
