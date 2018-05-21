@@ -9,7 +9,7 @@
 
 				{{ post.content }}
 
-				<h2 class="hed-section-sub">Connect with Karen:</h2>
+				<h2 class="hed-section-sub">{{ post.social_title }}</h2>
 
 				<ul class="links-social">
 					{% for social in post.get_field('social') %}
@@ -17,7 +17,7 @@
 					{% endfor %}
 				</ul><!-- /end .links-social -->
 
-				<h2 class="hed-section-sub">Assets</h2>
+				<h2 class="hed-section-sub">{{ post.headshots_title }}</h2>
 
 				<ul>
 					{% for shot in post.get_field('headshots') %}
@@ -25,13 +25,13 @@
 					{% endfor %}
 				</ul>
 
-				<h2 class="hed-section-sub">Short Bio</h2>
+				<h2 class="hed-section-sub">{{ post.short_bio_title }}</h2>
 				<p>{{ post.short_bio }}</p>
 
-				<h2 class="hed-section-sub">Medium Bio</h2>
+				<h2 class="hed-section-sub">{{ post.medium_bio_title }}</h2>
 				<p>{{ post.medium_bio }}</p>
 
-				<h2 class="hed-section-sub">Long Bio</h3>
+				<h2 class="hed-section-sub">{{ post.long_bio_title }}</h3>
 				{{ post.long_bio|wpautop }}
 
 			</div><!-- /end .group -->
