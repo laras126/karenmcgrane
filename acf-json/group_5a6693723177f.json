@@ -216,6 +216,25 @@
             "new_lines": "wpautop"
         },
         {
+            "key": "field_5b02120f9f696",
+            "label": "Medium Bio Title",
+            "name": "medium_bio_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Medium Bio",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_5a6693776bf95",
             "label": "Medium Bio",
             "name": "medium_bio",
@@ -235,6 +254,25 @@
             "new_lines": "wpautop"
         },
         {
+            "key": "field_5b0212249f697",
+            "label": "Long Bio Title",
+            "name": "long_bio_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Long Bio",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_5a6694966bf96",
             "label": "Long Bio",
             "name": "long_bio",
@@ -247,7 +285,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "Long Bio",
+            "default_value": "",
             "tabs": "all",
             "toolbar": "text_based",
             "media_upload": 0,
@@ -271,5 +309,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1526860802
+    "modified": 1526862513
 }
