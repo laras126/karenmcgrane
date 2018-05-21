@@ -3,10 +3,10 @@
     "title": "Contact",
     "fields": [
         {
-            "key": "field_5a6694a46bf97",
-            "label": "Short Bio",
-            "name": "short_bio",
-            "type": "textarea",
+            "key": "field_5b020b8c7c06e",
+            "label": "Headshots & Social",
+            "name": "",
+            "type": "tab",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -15,17 +15,14 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": "",
-            "maxlength": "",
-            "rows": 4,
-            "new_lines": "wpautop"
+            "placement": "top",
+            "endpoint": 0
         },
         {
-            "key": "field_5a6693776bf95",
-            "label": "Medium Bio",
-            "name": "medium_bio",
-            "type": "textarea",
+            "key": "field_5b020bb77c070",
+            "label": "Headshots Title",
+            "name": "headshots_title",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -34,30 +31,11 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
+            "default_value": "Assets",
             "placeholder": "",
-            "maxlength": "",
-            "rows": 8,
-            "new_lines": "wpautop"
-        },
-        {
-            "key": "field_5a6694966bf96",
-            "label": "Long Bio",
-            "name": "long_bio",
-            "type": "wysiwyg",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "text_based",
-            "media_upload": 0,
-            "delay": 0
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         },
         {
             "key": "field_5a66952243a81",
@@ -83,6 +61,25 @@
             "max_height": "",
             "max_size": "",
             "mime_types": ""
+        },
+        {
+            "key": "field_5b020b9d7c06f",
+            "label": "Social Title",
+            "name": "social_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Connect With Karen",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         },
         {
             "key": "field_5a6697518bf08",
@@ -163,6 +160,98 @@
                     "placeholder": ""
                 }
             ]
+        },
+        {
+            "key": "field_5b020b667c06d",
+            "label": "Bios",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5b020b467c06c",
+            "label": "Short Bio Title",
+            "name": "short_bio_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Short Bio",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5a6694a46bf97",
+            "label": "Short Bio",
+            "name": "short_bio",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 4,
+            "new_lines": "wpautop"
+        },
+        {
+            "key": "field_5a6693776bf95",
+            "label": "Medium Bio",
+            "name": "medium_bio",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Medium Bio",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 8,
+            "new_lines": "wpautop"
+        },
+        {
+            "key": "field_5a6694966bf96",
+            "label": "Long Bio",
+            "name": "long_bio",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Long Bio",
+            "tabs": "all",
+            "toolbar": "text_based",
+            "media_upload": 0,
+            "delay": 0
         }
     ],
     "location": [
@@ -182,5 +271,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1516673310
+    "modified": 1526860802
 }
